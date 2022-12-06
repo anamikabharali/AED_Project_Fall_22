@@ -13,7 +13,7 @@ public class Bbank {
        
      private DeliveryManDirectory deliveryDirectory;
 
-    public static Bbank getBusiness() {
+    public static Bbank  getBusiness() {
         return business;
     }
 
