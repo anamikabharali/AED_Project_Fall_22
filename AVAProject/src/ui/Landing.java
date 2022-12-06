@@ -30,7 +30,7 @@ public class Landing extends javax.swing.JPanel {
         analysisbtn = new java.awt.Button();
         donorregbtn = new java.awt.Button();
         requestbtn = new java.awt.Button();
-        ngoregbtn = new java.awt.Button();
+        ngoadminregbtn = new java.awt.Button();
         usernamertxt = new java.awt.TextField();
         passwordtxt = new java.awt.TextField();
         usernamelabel = new java.awt.Label();
@@ -57,8 +57,13 @@ public class Landing extends javax.swing.JPanel {
         requestbtn.setLabel("Request For Blood");
         add(requestbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(469, 184, 130, 40));
 
-        ngoregbtn.setLabel("NGO Registration");
-        add(ngoregbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 184, 130, 40));
+        ngoadminregbtn.setLabel("NGO Admin Registration");
+        ngoadminregbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ngoadminregbtnActionPerformed(evt);
+            }
+        });
+        add(ngoadminregbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(255, 184, 170, 40));
         add(usernamertxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 300, 240, 30));
         add(passwordtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 350, 240, 30));
 
@@ -79,6 +84,10 @@ public class Landing extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_donorregbtnActionPerformed
 
+    private void ngoadminregbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ngoadminregbtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ngoadminregbtnActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private java.awt.Button analysisbtn;
@@ -86,7 +95,7 @@ public class Landing extends javax.swing.JPanel {
     private javax.swing.JLabel background;
     private java.awt.Button donorregbtn;
     private java.awt.Button loginbtn;
-    private java.awt.Button ngoregbtn;
+    private java.awt.Button ngoadminregbtn;
     private java.awt.Label passwordlabel;
     private java.awt.TextField passwordtxt;
     private java.awt.Button requestbtn;
