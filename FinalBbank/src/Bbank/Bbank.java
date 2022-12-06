@@ -2,15 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package bbank;
+package Bbank;
 import bbank.Donor.DeliveryManDirectory;
-//import bbank.UserAccount.UserAccountDirectory;
 /**
  *
-
  */
 public class Bbank {
     
+
     private static Bbank business;
        
      private DeliveryManDirectory deliveryDirectory;
@@ -33,6 +32,7 @@ public class Bbank {
     public Bbank() {
              
         deliveryDirectory=new DeliveryManDirectory();
+
     }
 
     public DeliveryManDirectory getDeliveryDirectory() {
@@ -44,4 +44,3 @@ public class Bbank {
     }
     
 }
-    
