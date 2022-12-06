@@ -54,23 +54,22 @@ public class Landing extends javax.swing.JPanel {
         });
         add(donorregbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(75, 184, 140, 40));
 
-        requestbtn.setActionCommand("");
         requestbtn.setLabel("Request For Blood");
         add(requestbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(469, 184, 130, 40));
 
         ngoregbtn.setLabel("NGO Registration");
         add(ngoregbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 184, 130, 40));
-        add(usernamertxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 300, 240, 30));
-        add(passwordtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 350, 240, 30));
+        add(usernamertxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 300, 240, 30));
+        add(passwordtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 350, 240, 30));
 
         usernamelabel.setText("Username");
-        add(usernamelabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 300, 110, 30));
+        add(usernamelabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 300, 110, 30));
 
         passwordlabel.setText("Password");
-        add(passwordlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 350, 110, 30));
+        add(passwordlabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 350, 110, 30));
 
         loginbtn.setLabel("Login");
-        add(loginbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 440, -1, -1));
+        add(loginbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 430, -1, -1));
 
         background.setIcon(new javax.swing.ImageIcon("/Users/anamikabharali/Downloads/BLOOD DONATION MANAGEMENT.png")); // NOI18N
         add(background, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 550));
