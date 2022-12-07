@@ -14,13 +14,15 @@ import java.util.ArrayList;
  * @author srivaishnaviaekkati
  */
 public class ResidentialHallEnterprise extends Enterprise {
-    public ResidentialHallEnterprise(String name){
+    public ResidentialHallEnterprise(String name) {
         super(name,Enterprise.EnterpriseType.ResidentialHall);
     }
+    
     @Override
     public ArrayList<Role> getSupportedRole() {
         return null;
     }
+    
      @Override
       public ArrayList<Type> getOrganizations() {
         ArrayList<Type> orgs = new ArrayList();
