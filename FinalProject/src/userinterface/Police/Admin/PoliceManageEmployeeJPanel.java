@@ -78,6 +78,7 @@ public class PoliceManageEmployeeJPanel extends javax.swing.JPanel {
         jLabel6 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(76, 89, 115));
         setPreferredSize(new java.awt.Dimension(788, 600));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -123,7 +124,7 @@ public class PoliceManageEmployeeJPanel extends javax.swing.JPanel {
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 880, 180));
 
         addJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        addJButton.setText("CREATE");
+        addJButton.setText("Create");
         addJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         addJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -142,6 +143,7 @@ public class PoliceManageEmployeeJPanel extends javax.swing.JPanel {
         add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, -1, 30));
 
         jLabel2.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Name");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, -1, -1));
 
@@ -158,10 +160,12 @@ public class PoliceManageEmployeeJPanel extends javax.swing.JPanel {
         add(organizationEmpJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 360, 250, -1));
 
         jLabel4.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Organization");
         add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("CREATING A NEW EMPLOYEE");
         add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, -1, -1));
 
@@ -171,6 +175,7 @@ public class PoliceManageEmployeeJPanel extends javax.swing.JPanel {
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 450, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("EXISTING EMPLOYEES");
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
