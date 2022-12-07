@@ -58,7 +58,6 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(961, 550));
 
         jPanel1.setBackground(new java.awt.Color(113, 128, 152));
 
@@ -158,9 +157,9 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/anamikabharali/Desktop/Screen Shot 2022-12-07 at 10.45.45 AM.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/anamikabharali/Desktop/Screen Shot 2022-12-07 at 2.07.44 PM.png")); // NOI18N
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 790, 550));
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 550));
 
         jSplitPane1.setRightComponent(jPanel3);
 

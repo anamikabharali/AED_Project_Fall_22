@@ -17,7 +17,7 @@ import java.sql.PreparedStatement;
  */
 public class SQLDatabaseConnection {
     // Connect to your database.
-    // Replace server name, username, and password with your credentials
+    // Replace server name, username,sword with your credentials
     public static void main(String[] args) {
         String connectionUrl =
                 "jdbc:sqlserver://avaproject.database.windows.net:1433;"

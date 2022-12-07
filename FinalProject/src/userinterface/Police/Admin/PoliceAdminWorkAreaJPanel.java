@@ -60,12 +60,13 @@ public class PoliceAdminWorkAreaJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(76, 89, 115));
         setMaximumSize(new java.awt.Dimension(788, 600));
         setMinimumSize(new java.awt.Dimension(788, 600));
+        setPreferredSize(new java.awt.Dimension(788, 600));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("POLICE ADMINISTRATION");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 100, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, -1, -1));
 
         manageordbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         manageordbtn.setText("MANAGE ORGANISATION");
@@ -75,7 +76,7 @@ public class PoliceAdminWorkAreaJPanel extends javax.swing.JPanel {
                 manageordbtnActionPerformed(evt);
             }
         });
-        add(manageordbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 450, 185, 38));
+        add(manageordbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 450, 185, 38));
 
         manageuserbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         manageuserbtn.setText("MANAGE USER");
@@ -84,7 +85,7 @@ public class PoliceAdminWorkAreaJPanel extends javax.swing.JPanel {
                 manageuserbtnActionPerformed(evt);
             }
         });
-        add(manageuserbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 450, 142, 38));
+        add(manageuserbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 450, 142, 38));
 
         manageempbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         manageempbtn.setText("MANAGE EMPLOYEE");
@@ -94,21 +95,23 @@ public class PoliceAdminWorkAreaJPanel extends javax.swing.JPanel {
                 manageempbtnActionPerformed(evt);
             }
         });
-        add(manageempbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 450, -1, 38));
+        add(manageempbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 450, -1, 38));
 
         jLabel2.setFont(new java.awt.Font("Optima", 0, 16)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Enterprise:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 330, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 330, -1, -1));
 
         enterprisetxt.setBackground(new java.awt.Color(255, 255, 255));
         enterprisetxt.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         enterprisetxt.setToolTipText("");
         enterprisetxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        add(enterprisetxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 330, 165, 20));
+        add(enterprisetxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 330, 165, 20));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("/Users/anamikabharali/Downloads/imageedit_3_2921333366.jpg")); // NOI18N
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 230));
+        jLabel3.setIcon(new javax.swing.ImageIcon("/Users/anamikabharali/Documents/imageedit_5_4363260202.jpg")); // NOI18N
+        jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLabel3.setPreferredSize(new java.awt.Dimension(790, 550));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 270));
     }// </editor-fold>//GEN-END:initComponents
 
     private void manageordbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageordbtnActionPerformed
