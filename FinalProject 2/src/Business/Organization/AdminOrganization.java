@@ -12,7 +12,7 @@ import java.util.ArrayList;
  *
  * @author srivaishnaviaekkati
  */
-public class AdminOrganization extends Organization{
+public class AdminOrganization extends Organization {
 
     public AdminOrganization() {
         super(Type.Admin.getValue());

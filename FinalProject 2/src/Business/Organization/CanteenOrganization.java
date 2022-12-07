@@ -12,7 +12,7 @@ import java.util.ArrayList;
  *
  * @author srivaishnaviaekkati
  */
-public class CanteenOrganization extends Organization{
+public class CanteenOrganization extends Organization {
 
     public CanteenOrganization() {
         super(Organization.Type.Canteen.getValue());
