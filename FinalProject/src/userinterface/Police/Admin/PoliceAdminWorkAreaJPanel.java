@@ -12,17 +12,32 @@ import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
+
 /**
  *
  * @author anamikabharali
  */
+
 public class PoliceAdminWorkAreaJPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form PoliceAdminWorkAreaJPanel
      */
-    public PoliceAdminWorkAreaJPanel() {
+    
+    private JPanel userProcessContainer;
+    private EcoSystem business;
+    private UserAccount userAccount;
+    private Enterprise enterprise;
+    private Network network;
+    
+    public PoliceAdminWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Enterprise enterprise, EcoSystem business,Network network) {
         initComponents();
+        this.enterprise=enterprise;
+        this.userProcessContainer = userProcessContainer;
+        this.userAccount = account;
+        this.business = business;
+        this.network=network;
+        enterprisetxt.setText(enterprise.getName());
     }
 
     /**
@@ -60,10 +75,20 @@ public class PoliceAdminWorkAreaJPanel extends javax.swing.JPanel {
 
         manageuserbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         manageuserbtn.setText("MANAGE USER");
+        manageuserbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                manageuserbtnActionPerformed(evt);
+            }
+        });
 
         manageempbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         manageempbtn.setText("MANAGE EMPLOYEE");
         manageempbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        manageempbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                manageempbtnActionPerformed(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Optima", 0, 16)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -117,7 +142,27 @@ public class PoliceAdminWorkAreaJPanel extends javax.swing.JPanel {
 
     private void manageordbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageordbtnActionPerformed
         // TODO add your handling code here:
+        PoliceManageOrganizationJPanel manageOrganizationJPanel = new PoliceManageOrganizationJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
+        userProcessContainer.add("PolicemanageOrganizationJPanel", manageOrganizationJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_manageordbtnActionPerformed
+
+    private void manageuserbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageuserbtnActionPerformed
+        // TODO add your handling code here:
+        PoliceManageUserAccountJPanel muajp = new PoliceManageUserAccountJPanel(userProcessContainer, enterprise,network);
+        userProcessContainer.add("PoliceManageUserAccountJPanel", muajp);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_manageuserbtnActionPerformed
+
+    private void manageempbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageempbtnActionPerformed
+        // TODO add your handling code here:
+        PoliceManageEmployeeJPanel manageEmployeeJPanel = new PoliceManageEmployeeJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
+        userProcessContainer.add("PolicemanageEmployeeJPanel", manageEmployeeJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_manageempbtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -109,6 +109,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="MANAGE USER"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="manageuserbtnActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="manageempbtn">
       <Properties>
@@ -122,6 +125,9 @@
           </Border>
         </Property>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="manageempbtnActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">
       <Properties>
