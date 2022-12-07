@@ -26,9 +26,10 @@ public abstract class Enterprise extends Organization{
         this.organizationDirectory = organizationDirectory;
     }
     
-    public enum EnterpriseType{
+    public enum EnterpriseType
+    {
         ResidentialHall("ResidentialHall"),
-         Police("Police");
+        Police("Police");
         private String value;
         
         private EnterpriseType(String value){
@@ -37,12 +38,15 @@ public abstract class Enterprise extends Organization{
         public String getValue() {
             return value;
         }
+        
         @Override
         public String toString(){
         return value;
+        }
     }
-    }
+    
     public abstract ArrayList<Type> getOrganizations();
+    
     public EnterpriseType getEnterpriseType() {
         return enterpriseType;
     }
@@ -51,7 +55,7 @@ public abstract class Enterprise extends Organization{
         this.enterpriseType = enterpriseType;
     }
     
-    public Enterprise(String name,EnterpriseType type){
+    public Enterprise(String name,EnterpriseType type) {
         super(name);
         this.enterpriseType=type;
         organizationDirectory=new OrganizationDirectory();
