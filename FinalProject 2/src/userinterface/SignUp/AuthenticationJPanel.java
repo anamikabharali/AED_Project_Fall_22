@@ -27,8 +27,8 @@ public class AuthenticationJPanel extends javax.swing.JPanel {
      */
     Random rand = new Random();
 
-int n = rand.nextInt(10000);
-JPanel container;
+    int n = rand.nextInt(10000);
+    JPanel container;
     EcoSystem sys;
     public AuthenticationJPanel(JPanel container,EcoSystem sys ) {
         initComponents();
@@ -148,10 +148,9 @@ JPanel container;
         Integer num=Integer.parseInt(authtxtfield.getText());
         if(num.equals(n))
         {
-        
-                 CardLayout layout = (CardLayout) container.getLayout();
-        container.add("SignUpJPanel", new SignUpJPanel(container, sys,emailtxtfield.getText()));
-        layout.next(container);
+            CardLayout layout = (CardLayout) container.getLayout();
+            container.add("SignUpJPanel", new SignUpJPanel(container, sys,emailtxtfield.getText()));
+            layout.next(container);
         
         }
         else
