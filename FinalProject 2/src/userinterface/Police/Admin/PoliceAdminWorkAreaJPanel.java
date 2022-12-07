@@ -14,10 +14,10 @@ import javax.swing.JPanel;
 /**
  *
  * @author  srivaishnaviaekkati
- */
+ */ 
 public class PoliceAdminWorkAreaJPanel extends javax.swing.JPanel {
     
-      private JPanel userProcessContainer;
+    private JPanel userProcessContainer;
     private EcoSystem business;
     private UserAccount userAccount;
     
@@ -105,7 +105,6 @@ public class PoliceAdminWorkAreaJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         PoliceManageUserAccountJPanel muajp = new PoliceManageUserAccountJPanel(userProcessContainer, enterprise,network);
         userProcessContainer.add("PoliceManageUserAccountJPanel", muajp);
-
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_userJButtonActionPerformed
@@ -114,7 +113,6 @@ public class PoliceAdminWorkAreaJPanel extends javax.swing.JPanel {
 
         PoliceManageEmployeeJPanel manageEmployeeJPanel = new PoliceManageEmployeeJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
         userProcessContainer.add("PolicemanageEmployeeJPanel", manageEmployeeJPanel);
-
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
         
