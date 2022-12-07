@@ -111,14 +111,14 @@ public class PoliceManageEmployeeJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(orgtbl);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 710, 92));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 690, 92));
 
         jLabel1.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("POLICE EMPLOYEE MANAGEMENT");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 50, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("/Users/anamikabharali/Documents/imageedit_5_4363260202.jpg")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon("/Users/anamikabharali/Downloads/imageedit_5_4363260202.jpg")); // NOI18N
         jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jLabel3.setPreferredSize(new java.awt.Dimension(790, 550));
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 880, 180));
@@ -131,7 +131,7 @@ public class PoliceManageEmployeeJPanel extends javax.swing.JPanel {
                 addJButtonActionPerformed(evt);
             }
         });
-        add(addJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 410, 80, 30));
+        add(addJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 450, 80, 30));
 
         backJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         backJButton.setText("<< Back");
@@ -145,10 +145,10 @@ public class PoliceManageEmployeeJPanel extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Name");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, -1, -1));
 
         nametxt.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        add(nametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 310, 250, -1));
+        add(nametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 350, 250, -1));
 
         organizationEmpJComboBox.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         organizationEmpJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -157,17 +157,17 @@ public class PoliceManageEmployeeJPanel extends javax.swing.JPanel {
                 organizationEmpJComboBoxActionPerformed(evt);
             }
         });
-        add(organizationEmpJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 360, 250, -1));
+        add(organizationEmpJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 400, 250, -1));
 
         jLabel4.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Organization");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 360, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 400, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("CREATING A NEW EMPLOYEE");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 280, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 320, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -177,7 +177,7 @@ public class PoliceManageEmployeeJPanel extends javax.swing.JPanel {
         jLabel10.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("EXISTING EMPLOYEES");
-        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, -1, -1));
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 170, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void addJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJButtonActionPerformed

@@ -145,7 +145,7 @@ public class PoliceManageOrganizationJPanel extends javax.swing.JPanel {
         jLabel4.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("POLICE ORGANIZATION MANAGEMENT");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -157,7 +157,7 @@ public class PoliceManageOrganizationJPanel extends javax.swing.JPanel {
         jLabel6.setText("EXISTING ORGANIZATIONS");
         add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 130, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("/Users/anamikabharali/Documents/imageedit_5_4363260202.jpg")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon("/Users/anamikabharali/Downloads/imageedit_5_4363260202.jpg")); // NOI18N
         jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jLabel3.setPreferredSize(new java.awt.Dimension(790, 550));
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -40, 880, 150));

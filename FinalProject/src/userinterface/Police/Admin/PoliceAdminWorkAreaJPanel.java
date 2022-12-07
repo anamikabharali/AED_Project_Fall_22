@@ -108,7 +108,7 @@ public class PoliceAdminWorkAreaJPanel extends javax.swing.JPanel {
         enterprisetxt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         add(enterprisetxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 330, 165, 20));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon("/Users/anamikabharali/Documents/imageedit_5_4363260202.jpg")); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon("/Users/anamikabharali/Downloads/imageedit_5_4363260202.jpg")); // NOI18N
         jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         jLabel3.setPreferredSize(new java.awt.Dimension(790, 550));
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 880, 270));

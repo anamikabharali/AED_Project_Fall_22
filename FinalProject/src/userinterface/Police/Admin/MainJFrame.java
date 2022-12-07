@@ -157,7 +157,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/anamikabharali/Desktop/Screen Shot 2022-12-07 at 2.07.44 PM.png")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/anamikabharali/Desktop/Screen Shot 2022-12-07 at 4.28.25 PM.png")); // NOI18N
         jLabel1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 550));
 
