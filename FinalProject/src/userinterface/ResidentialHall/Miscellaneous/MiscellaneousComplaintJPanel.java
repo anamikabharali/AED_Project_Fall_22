@@ -18,14 +18,14 @@ import java.awt.Component;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-/**
+/**  
  *
  * @author srivaishnaviaekkati
  */
 public class MiscellaneousComplaintJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form DinerComplaintJPanel
+     * Creates new form DinerComplaintJPanel 
      */
      private JPanel userProcessContainer;
     private Enterprise enterprise;

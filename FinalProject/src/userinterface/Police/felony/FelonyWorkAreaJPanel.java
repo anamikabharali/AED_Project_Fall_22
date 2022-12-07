@@ -2,7 +2,7 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package userinterface.Police.felony;
+package userinterface.Police.Felony;
 
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;

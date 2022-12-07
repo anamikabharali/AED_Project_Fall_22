@@ -17,8 +17,8 @@ import javax.swing.JPanel;
 import userinterface.SignUp.AuthenticationJPanel;
 import userinterface.SignUp.SignUpJPanel;
 
-/**
- *
+/** 
+ * 
  * @author srivaishnaviaekkati
  */
 public class MainJFrame extends javax.swing.JFrame {

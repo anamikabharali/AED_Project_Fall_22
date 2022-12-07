@@ -22,7 +22,7 @@ import javax.mail.MessagingException;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
-import userinterface.Police.felony.FelonyWorkAreaJPanel;
+import userinterface.Police.Felony.FelonyWorkAreaJPanel;
 import utility.Validate;
 
 /**

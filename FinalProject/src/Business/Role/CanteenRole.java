@@ -14,19 +14,19 @@ import userinterface.ResidentialHall.Tenant.TenantAreaJPanel;
 import javax.swing.JPanel;
 import userinterface.ResidentialHall.Canteen.CanteenWorkAreaJPanel;
 
-/**
+/**  
  *
  * @author srivaishnaviaekkati
  */
 public class CanteenRole extends Role{
 
-    @Override
+    @Override  //
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,Network network) {
    return new CanteenWorkAreaJPanel(userProcessContainer, account,(CanteenOrganization) organization, enterprise,business,network);
     }
-      @Override
+      @Override 
     public String toString(){
-        return RoleType.Canteen.getValue();
+        return Role.RoleType.Canteen.getValue();
     }
     
 }

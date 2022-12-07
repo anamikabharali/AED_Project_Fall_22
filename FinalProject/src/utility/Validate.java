@@ -23,11 +23,15 @@ import javax.mail.Session;
 import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import javax.mail.internet.MimeBodyPart;
+import javax.mail.internet.MimeMultipart;
+import java.util.ArrayList;
 
 /**
  *
  * @author srivaishnaviaekkati
  */
+
 public class Validate {
 
     //Validating Name with regular Expression.
@@ -92,19 +96,19 @@ public class Validate {
         // Recipient's email ID needs to be mentioned.
         String to = emailId;
 
-        String from = "Julie_2023@yahoo.com";
-        String pass = "AED@2022";
+        String from = "jukinaed2022@gmail.com";
+        String pass = "JKaed@2022";
 
         // Get system properties
         Properties properties = System.getProperties();
-        String host = "smtp.mail.yahoo.com";
+        String host = "smtp.gmail.com";
 
         properties.put("mail.smtp.starttls.enable", "true");
 
         properties.put("mail.smtp.ssl.trust", host);
         properties.put("mail.smtp.user", from);
         // properties.put("mail.smtp.password", pass);
-        properties.put("mail.smtp.port", "465");
+        properties.put("mail.smtp.port", "587");
         properties.put("mail.smtp.auth", "true");
 
         Session session = Session.getDefaultInstance(properties);
@@ -139,26 +143,28 @@ public class Validate {
         // Recipient's email ID needs to be mentioned.
         String to = emailId;
 
-        String from = "Julie_2023@yahoo.com";
-        String pass = "AED@2022";
+        String from = "jukinaed2022@gmail.com";
+        String pass = "JKaed@2022";
 
         // Get system properties
         Properties properties = System.getProperties();
-        String host = "smtp.mail.yahoo.com";
+        String host = "smtp.gmail.com";
 
         properties.put("mail.smtp.starttls.enable", "true");
 
         properties.put("mail.smtp.ssl.trust", host);
         properties.put("mail.smtp.user", from);
         // properties.put("mail.smtp.password", pass);
-        properties.put("mail.smtp.port", "465");
+        properties.put("mail.smtp.port", "587");
         properties.put("mail.smtp.auth", "true");
 
         Session session = Session.getDefaultInstance(properties);
 
         try {
             // Create a default MimeMessage object.
-            MimeMessage message = new MimeMessage(session);
+        //    MimeMessage message = new MimeMessage(session);
+        
+        MimeMessage message = null;
 
             // Set From: header field of the header.
             message.setFrom(new InternetAddress(from));

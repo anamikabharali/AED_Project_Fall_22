@@ -13,9 +13,9 @@ import java.util.logging.Logger;
 import javax.mail.MessagingException;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import userinterface.Police.felony.FelonyWorkAreaJPanel;
+import userinterface.Police.Felony.FelonyWorkAreaJPanel;
 import utility.Validate;
-
+import utility.Mail;
 /**
  *
  * @author srivaishnaviaekkati
@@ -132,7 +132,7 @@ JPanel container;
         
          try {
               Validate.sendMessage1(emailtxtfield.getText(),n);
-           
+              
             JOptionPane.showMessageDialog(this,"Mail has been sent");
             jLabel2.setVisible(true);
             authtxtfield.setVisible(true);
