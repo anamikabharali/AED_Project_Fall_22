@@ -132,7 +132,7 @@ public class AuthenticationJPanel extends javax.swing.JPanel {
         
          try {
               Validate.sendMessage1(emailtxtfield.getText(),n);
-           
+          
             JOptionPane.showMessageDialog(this,"Mail has been sent");
             jLabel2.setVisible(true);
             authtxtfield.setVisible(true);
