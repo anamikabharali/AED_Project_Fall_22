@@ -277,7 +277,7 @@ public class MainJFrame extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
-       // utility.Validator.sendMessage("malireddy.v@husky.neu.edu", "hi");
+       // utility.Validator.sendMessage("bharali.a@northeastern.edu", "hi");
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MainJFrame().setVisible(true);

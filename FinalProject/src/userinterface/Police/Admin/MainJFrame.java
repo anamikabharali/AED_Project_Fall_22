@@ -87,10 +87,20 @@ public class MainJFrame extends javax.swing.JFrame {
         logoutbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         logoutbtn.setText("LOG OUT");
         logoutbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        logoutbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                logoutbtnActionPerformed(evt);
+            }
+        });
 
         signupbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         signupbtn.setText("SIGN UP !");
         signupbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        signupbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                signupbtnActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -181,10 +191,11 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void loginbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginbtnActionPerformed
         // TODO add your handling code here:
-         // Get user name
-        String userName = userNameJTextField.getText();
+        
+         // Get user name   
+        String userName = usernametxt.getText();
         // Get Password
-        char[] passwordCharArray = passwordField.getPassword();
+        char[] passwordCharArray = passwordtxt.getPassword();
         String password = String.valueOf(passwordCharArray);
         
         //Step1: Check in the system admin user account directory if you have the user
@@ -239,17 +250,48 @@ public class MainJFrame extends javax.swing.JFrame {
             layout.next(container);
         }
         
-        loginJButton.setEnabled(false);
-        logoutJButton.setEnabled(true);
-        userNameJTextField.setEnabled(false);
-        passwordField.setEnabled(false);
-        btnsignup.setEnabled(false);
+        loginbtn.setEnabled(false);
+        logoutbtn.setEnabled(true);
+        usernametxt.setEnabled(false);
+        passwordtxt.setEnabled(false);
+        signupbtn.setEnabled(false);
+        
     }//GEN-LAST:event_loginbtnActionPerformed
+
+    private void logoutbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutbtnActionPerformed
+        // TODO add your handling code here:
+        
+        logoutbtn.setEnabled(false);
+        usernametxt.setEnabled(true);
+        passwordtxt.setEnabled(true);
+        loginbtn.setEnabled(true);
+        signupbtn.setEnabled(true);
+        usernametxt.setText("");
+        passwordtxt.setText("");
+
+        container.removeAll();
+        JPanel blankJP = new JPanel();
+        container.add("blank", blankJP);
+        CardLayout crdLyt = (CardLayout) container.getLayout();
+        crdLyt.next(container);
+        dB4OUtil.storeSystem(system);
+        
+    }//GEN-LAST:event_logoutbtnActionPerformed
+
+    private void signupbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupbtnActionPerformed
+        // TODO add your handling code here:
+        
+        CardLayout layout = (CardLayout) container.getLayout();
+        container.add("AuthenticateJPanel", new AuthenticationJPanel(container, system));
+        layout.next(container);
+        
+    }//GEN-LAST:event_signupbtnActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
+    
+    public static void main(String args[]) throws MessagingException {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
@@ -274,6 +316,7 @@ public class MainJFrame extends javax.swing.JFrame {
         //</editor-fold>
 
         /* Create and display the form */
+       // utility.Validator.sendMessage("bharali.a@northeastern.edu", "hi");
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new MainJFrame().setVisible(true);
