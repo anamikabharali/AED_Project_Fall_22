@@ -118,11 +118,11 @@ public class MisconductProcessStatusRequestJPanel extends javax.swing.JPanel {
         {
         request.setResponse(resultJTextField.getText());
         request.setStatus("Completed");
-        JOptionPane.showMessageDialog(null,"Your response has been sent");
+        JOptionPane.showMessageDialog(null,"Your response has been sent!");
         }
         else
         {
-           JOptionPane.showMessageDialog(null,"Text Field is Empty");
+           JOptionPane.showMessageDialog(null,"Text Field is Empty!");
         }
     }//GEN-LAST:event_submitJButtonActionPerformed
 

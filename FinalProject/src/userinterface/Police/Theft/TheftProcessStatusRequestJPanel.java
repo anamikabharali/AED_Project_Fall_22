@@ -118,15 +118,16 @@ public class TheftProcessStatusRequestJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_backJButtonActionPerformed
 
     private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
+        
         if(resultJTextField.getText()!=null)
         {
         request.setResponse(resultJTextField.getText());
         request.setStatus("Completed");
-        JOptionPane.showMessageDialog(null,"Your response has been sent");
+        JOptionPane.showMessageDialog(null,"Your response has been sent!");
         }
         else
         {
-           JOptionPane.showMessageDialog(null,"Text Field is Empty");
+           JOptionPane.showMessageDialog(null,"Text Field is Empty!");
         }
     }//GEN-LAST:event_submitJButtonActionPerformed
 
