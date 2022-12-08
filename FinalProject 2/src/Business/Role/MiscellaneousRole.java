@@ -27,8 +27,10 @@ public class MiscellaneousRole extends Role {
      
     
     @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,Network network) {
-   return new MiscellaneousWorkAreaJPanel(userProcessContainer, account,(MiscellaneousOrganization) organization,enterprise, business,network);
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, 
+            Organization organization, Enterprise enterprise, EcoSystem business,Network network) {
+   return new MiscellaneousWorkAreaJPanel(userProcessContainer, account,(MiscellaneousOrganization) 
+           organization,enterprise, business,network);
     }
      @Override
     public String toString(){

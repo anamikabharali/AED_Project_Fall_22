@@ -26,8 +26,10 @@ public class MisconductRole extends Role {
      
     
     @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,Network network) {
-   return new MisconductWorkAreaJPanel(userProcessContainer, account,(MisconductOrganization) organization,enterprise,business,network);
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, 
+            Organization organization, Enterprise enterprise, EcoSystem business,Network network) {
+   return new MisconductWorkAreaJPanel(userProcessContainer, account,(MisconductOrganization) 
+           organization,enterprise,business,network);
     }
     
      @Override
