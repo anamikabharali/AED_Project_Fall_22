@@ -3,18 +3,58 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package userinterface.ResidentialHall.AdminRole;
+import Business.Employee.Employee;
+import Business.Organization.Organization;
+import Business.Organization.OrganizationDirectory;
+import java.awt.CardLayout;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author anamikabharali
  */
+
+
 public class ResidentialHallManageEmployeeJPanel extends javax.swing.JPanel {
 
+    private OrganizationDirectory organizationDir;
+    private JPanel userProcessContainer;
+    
     /**
-     * Creates new form ResidentialHallManageEmployeeJPanel
+     * Creates a new form ManageOrganizationJPanel
      */
-    public ResidentialHallManageEmployeeJPanel() {
+    public ResidentialHallManageEmployeeJPanel(JPanel userProcessContainer,OrganizationDirectory organizationDir) {
         initComponents();
+        this.userProcessContainer = userProcessContainer;
+        this.organizationDir = organizationDir;
+        
+       // populateOrganizationComboBox();
+        populateOrganizationEmpComboBox();
+    }
+    
+    
+    
+    public void populateOrganizationEmpComboBox(){
+        organizationEmpJComboBox.removeAllItems();
+        
+        for (Organization organization : organizationDir.getOrganizationList()){
+            organizationEmpJComboBox.addItem(organization);
+        }
+    }
+
+    private void populateTable(Organization organization){
+        DefaultTableModel model = (DefaultTableModel) organizationJTable.getModel();
+        
+        model.setRowCount(0);
+        
+        for (Employee employee : organization.getEmployeeDirectory().getEmployeeList()){
+            Object[] row = new Object[1];
+          
+            row[0] = employee.getName();
+            model.addRow(row);
+        }
     }
 
     /**
@@ -134,17 +174,19 @@ public class ResidentialHallManageEmployeeJPanel extends javax.swing.JPanel {
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
+        
     }//GEN-LAST:event_backJButtonActionPerformed
 
     private void addJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJButtonActionPerformed
 
         Organization organization = (Organization) organizationEmpJComboBox.getSelectedItem();
         String name = nameJTextField.getText();
-
+        
         organization.getEmployeeDirectory().createEmployee(name);
         populateTable(organization);
         nameJTextField.setText("");
-        JOptionPane.showMessageDialog(null,"Employee Created");
+         JOptionPane.showMessageDialog(null,"Employee Created");
+         
     }//GEN-LAST:event_addJButtonActionPerformed
 
 
