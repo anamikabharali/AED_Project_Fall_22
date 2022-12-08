@@ -104,7 +104,7 @@ public class ResidentialHallManageUserAccountJPanel extends javax.swing.JPanel {
 
     public void popData() {
 
-         try {
+        try {
             
             DefaultTableModel model = (DefaultTableModel) userJTable.getModel();
 
@@ -293,47 +293,48 @@ public class ResidentialHallManageUserAccountJPanel extends javax.swing.JPanel {
     private void createUserJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createUserJButtonActionPerformed
 
         String email = emailtxtfield.getText();
-        String userName = nameJTextField.getText();
-        String password = passwordJTextField.getText();
-        if (employeeJComboBox.getSelectedItem() != null) {
-            if (!((userName.equals("")))) {
-                if (!(password.equals(""))) {
-                    if(!email.equals("")){
-                        if (EcoSystem.checkIfUsernameIsUnique(userName,net)) {
-
+            String userName = nameJTextField.getText();
+            String password = passwordJTextField.getText();
+            if (employeeJComboBox.getSelectedItem() != null) {
+                if (!((userName.equals("")))) {
+                    if (!(password.equals(""))) {
+                        if(!email.equals("")){
+                         if (EcoSystem.checkIfUsernameIsUnique(userName,net)) {
+                            
                             Organization organization = (Organization) organizationJComboBox.getSelectedItem();
                             Employee employee = (Employee) employeeJComboBox.getSelectedItem();
                             Role role = (Role) roleJComboBox.getSelectedItem();
                             if (!Validate.validatePassword(password)) {
                                 JOptionPane.showMessageDialog(null, "Password should Contain \n"
-                                    + "       - At least one digit\n"
-                                    + "       - At least one lower case letter\n"
-                                    + "       - At least one upper case letter\n"
-                                    + "       - At least one special character(!@#$%^&+=~|?)\n"
-                                    + "       - no whitespace allowed in the entire string\n"
-                                    + "       - at least eight characters");
+                                        + "       - At least one digit\n"
+                                        + "       - At least one lower case letter\n"
+                                        + "       - At least one upper case letter\n"
+                                        + "       - At least one special character(!@#$%^&+=~|?)\n"
+                                        + "       - no whitespace allowed in the entire string\n"
+                                        + "       - at least eight characters");
                                 passwordJTextField.setText("");
                                 return;
                             }
                             if(!Validate.validateEmail(email))
                             {
-                                JOptionPane.showMessageDialog(null,"Enter valid email id ");
-
+                                 JOptionPane.showMessageDialog(null,"Enter valid email id ");
+                            
                             }
+                           
 
                             organization.getUserAccountDirectory().createUserAccount(userName, password,email ,employee, role);
                             JOptionPane.showMessageDialog(null, "Account created succesfull");
                             nameJTextField.setText("");
                             passwordJTextField.setText("");
                             popData();
-                        } else {
+                       } else {
                             JOptionPane.showMessageDialog(null, "Please enter unique username", "Warning", JOptionPane.WARNING_MESSAGE);
                         }
                     }
-                    else{
-                        JOptionPane.showMessageDialog(null, "Enter value for email", "Warning", JOptionPane.WARNING_MESSAGE);
-                    }}
-                    else {
+                        else{
+                            JOptionPane.showMessageDialog(null, "Enter value for email", "Warning", JOptionPane.WARNING_MESSAGE);
+                        }}
+                        else {
                         JOptionPane.showMessageDialog(null, "Enter value for password", "Warning", JOptionPane.WARNING_MESSAGE);
                     }
                 } else {
