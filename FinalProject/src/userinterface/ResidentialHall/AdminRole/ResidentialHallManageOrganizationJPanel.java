@@ -3,6 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package userinterface.ResidentialHall.AdminRole;
+import Business.Organization.Organization;
+import Business.Organization.Organization.Type;
+import Business.Organization.OrganizationDirectory;
+import java.awt.CardLayout;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -10,11 +17,43 @@ package userinterface.ResidentialHall.AdminRole;
  */
 public class ResidentialHallManageOrganizationJPanel extends javax.swing.JPanel {
 
+    private OrganizationDirectory directory;
+    private JPanel userProcessContainer;
+    
     /**
-     * Creates new form ResidentialHallManageOrganizationJPanel
+     * Creates new form ManageOrganizationJPanel
      */
-    public ResidentialHallManageOrganizationJPanel() {
+    public ResidentialHallManageOrganizationJPanel(JPanel userProcessContainer,OrganizationDirectory directory) {
         initComponents();
+        this.userProcessContainer = userProcessContainer;
+        this.directory = directory;
+        
+        populateTable();
+        populateCombo();
+    }
+    
+    private void populateCombo(){
+        organizationJComboBox.removeAllItems();
+         organizationJComboBox.addItem(Type.Canteen);
+        organizationJComboBox.addItem(Type.Tenant);
+        organizationJComboBox.addItem(Type.Supervisor);
+        organizationJComboBox.addItem(Type.Miscellaneous);
+        
+        
+    }
+
+    private void populateTable(){
+        DefaultTableModel model = (DefaultTableModel) organizationJTable.getModel();
+        
+        model.setRowCount(0);
+        
+        for (Organization organization : directory.getOrganizationList()){
+            Object[] row = new Object[1];
+         
+            row[0] = organization.getName();
+            
+            model.addRow(row);
+        }
     }
 
     /**
