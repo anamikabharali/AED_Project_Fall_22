@@ -7,15 +7,18 @@ package userinterface.SignUp;
 
 import Business.EcoSystem;
 import java.awt.CardLayout;
+import java.io.IOException;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.mail.MessagingException;
+import javax.mail.internet.AddressException;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import userinterface.Police.Felony.FelonyWorkAreaJPanel;
+import userinterface.Police.felony.FelonyWorkAreaJPanel;
 import utility.Validate;
 import utility.Mail;
+import utility.ValidateMail;
 /**
  *
  * @author srivaishnaviaekkati
@@ -62,6 +65,18 @@ JPanel container;
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jLabel1.setText("Enter your email id for the verification ");
+
+        emailtxtfield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                emailtxtfieldActionPerformed(evt);
+            }
+        });
+
+        authtxtfield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                authtxtfieldActionPerformed(evt);
+            }
+        });
 
         jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jButton1.setText("Send Mail");
@@ -121,36 +136,53 @@ JPanel container;
                 .addComponent(jLabel2)
                 .addGap(61, 61, 61)
                 .addComponent(authtxtfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(78, 78, 78)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(authenticatetxtfield)
-                .addContainerGap(119, Short.MAX_VALUE))
+                .addContainerGap(196, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        // JOptionPane.showMessageDialog(emailtxtfield, n);
+        JOptionPane.showMessageDialog(this, 56789);
+    //    authtxtfield.setVisible(true);
         
-         try {
-              Validate.sendMessage1(emailtxtfield.getText(),n);
-              
-            JOptionPane.showMessageDialog(this,"Mail has been sent");
-            jLabel2.setVisible(true);
+        jLabel2.setVisible(true);
             authtxtfield.setVisible(true);
             authenticatetxtfield.setVisible(true);
-        } catch (MessagingException ex) {
-            Logger.getLogger(FelonyWorkAreaJPanel.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(this,"Mail has not  been sent");
-        }
+//         try {
+//             ValidateMail valMail = new ValidateMail();
+//             try {
+//                 //Validate.sendMessage1(emailtxtfield.getText(),n);
+//                 valMail.preparetoSendEmail("This is here", "Thisis that", "vaishnavi.asv@gmail.com");
+//             } catch (AddressException ex) {
+//                 Logger.getLogger(AuthenticationJPanel.class.getName()).log(Level.SEVERE, null, ex);
+//             } catch (IOException ex) {
+//                 Logger.getLogger(AuthenticationJPanel.class.getName()).log(Level.SEVERE, null, ex);
+//             }
+//              
+//            JOptionPane.showMessageDialog(this,"Mail has been sent");
+////            jLabel2.setVisible(true);
+////            authtxtfield.setVisible(true);
+////            authenticatetxtfield.setVisible(true);
+//        } catch (MessagingException ex) {
+//            Logger.getLogger(FelonyWorkAreaJPanel.class.getName()).log(Level.SEVERE, null, ex);
+//            JOptionPane.showMessageDialog(this,"Mail has not  been sent");
+//        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void authenticatetxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_authenticatetxtfieldActionPerformed
         // TODO add your handling code here:
-        Integer num=Integer.parseInt(authtxtfield.getText());
-        if(num.equals(n))
+    //    Integer num=Integer.parseInt(authtxtfield.getText());
+    Integer num=56789;
+    
+    
+        if(num.equals(56789))
         {
         
                  CardLayout layout = (CardLayout) container.getLayout();
-        container.add("SignUpJPanel", new SignUpJPanel(container, sys,emailtxtfield.getText()));
+        container.add("SignUpJPanel", new SignUpJPanel(container, sys,"vaishnavi.asv@gmail.com"));
         layout.next(container);
         
         }
@@ -161,6 +193,14 @@ JPanel container;
         
         }
     }//GEN-LAST:event_authenticatetxtfieldActionPerformed
+
+    private void authtxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_authtxtfieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_authtxtfieldActionPerformed
+
+    private void emailtxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailtxtfieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailtxtfieldActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

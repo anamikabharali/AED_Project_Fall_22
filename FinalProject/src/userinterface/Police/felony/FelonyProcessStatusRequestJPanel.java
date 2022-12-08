@@ -2,13 +2,14 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-package userinterface.Police.Felony;
+package userinterface.Police.felony;
 
 import Business.WorkQueue.Complaints_Suggestions_Request;
 import java.awt.CardLayout;
 import java.awt.Component;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import userinterface.Police.felony.FelonyWorkAreaJPanel;
 
 /**  
  *
@@ -115,11 +116,11 @@ public class FelonyProcessStatusRequestJPanel extends javax.swing.JPanel {
         {
         request.setResponse(resultJTextField.getText());
         request.setStatus("Completed");
-        JOptionPane.showMessageDialog(null,"Your response has been sent");
+        JOptionPane.showMessageDialog(null,"Your response has been sent!");
         }
         else
         {
-           JOptionPane.showMessageDialog(null,"Text Field is Empty");
+           JOptionPane.showMessageDialog(null,"Text Field is Empty!");
         }
     }//GEN-LAST:event_submitJButtonActionPerformed
 
