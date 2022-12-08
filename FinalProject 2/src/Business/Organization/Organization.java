@@ -21,13 +21,13 @@ public abstract class Organization {
     private EmployeeDirectory employeeDirectory;
     private UserAccountDirectory userAccountDirectory;
     private int organizationID;
-    private static int counter=0;
+    private static int counter = 0;
     
     public enum Type{
-        Admin("Admin Organization"),Miscellaneous("Miscellaneous Organization"), 
+        Admin("Admin Organization"), Miscellaneous("Miscellaneous Organization"), 
         Canteen("Canteen Organization"), Tenant("Tenant Organization"),
         Supervisor("Supervisor Organization"), Felony("Felony Organization"),
-        Misconduct("Misconduct Organization"),Theft("Theft Organization");
+        Misconduct("Misconduct Organization"), Theft("Theft Organization");
         private String value;
         private Type(String value) {
             this.value = value;
