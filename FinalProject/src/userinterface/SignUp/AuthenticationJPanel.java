@@ -16,7 +16,7 @@ import javax.mail.internet.AddressException;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import userinterface.Police.felony.FelonyWorkAreaJPanel;
-import utility.Validate;
+// import utility.Validate;
 import utility.Mail;
 import utility.ValidateMail;
 /**
@@ -151,25 +151,25 @@ JPanel container;
         jLabel2.setVisible(true);
             authtxtfield.setVisible(true);
             authenticatetxtfield.setVisible(true);
-//         try {
-//             ValidateMail valMail = new ValidateMail();
-//             try {
-//                 //Validate.sendMessage1(emailtxtfield.getText(),n);
-//                 valMail.preparetoSendEmail("This is here", "Thisis that", "vaishnavi.asv@gmail.com");
-//             } catch (AddressException ex) {
-//                 Logger.getLogger(AuthenticationJPanel.class.getName()).log(Level.SEVERE, null, ex);
-//             } catch (IOException ex) {
-//                 Logger.getLogger(AuthenticationJPanel.class.getName()).log(Level.SEVERE, null, ex);
-//             }
-//              
-//            JOptionPane.showMessageDialog(this,"Mail has been sent");
-////            jLabel2.setVisible(true);
-////            authtxtfield.setVisible(true);
-////            authenticatetxtfield.setVisible(true);
-//        } catch (MessagingException ex) {
-//            Logger.getLogger(FelonyWorkAreaJPanel.class.getName()).log(Level.SEVERE, null, ex);
-//            JOptionPane.showMessageDialog(this,"Mail has not  been sent");
-//        }
+         try {
+             ValidateMail valMail = new ValidateMail();
+             try {
+                 //Validate.sendMessage1(emailtxtfield.getText(),n);
+                 valMail.preparetoSendEmail("This is here", "Thisis that", "vaishnavi.asv@gmail.com");
+             } catch (AddressException ex) {
+                 Logger.getLogger(AuthenticationJPanel.class.getName()).log(Level.SEVERE, null, ex);
+             } catch (IOException ex) {
+                 Logger.getLogger(AuthenticationJPanel.class.getName()).log(Level.SEVERE, null, ex);
+             }
+              
+            JOptionPane.showMessageDialog(this,"Mail has been sent");
+            jLabel2.setVisible(true);
+            authtxtfield.setVisible(true);
+            authenticatetxtfield.setVisible(true);
+        } catch (MessagingException ex) {
+            Logger.getLogger(FelonyWorkAreaJPanel.class.getName()).log(Level.SEVERE, null, ex);
+            JOptionPane.showMessageDialog(this,"Mail has not  been sent");
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void authenticatetxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_authenticatetxtfieldActionPerformed
@@ -182,7 +182,7 @@ JPanel container;
         {
         
                  CardLayout layout = (CardLayout) container.getLayout();
-        container.add("SignUpJPanel", new SignUpJPanel(container, sys,"vaishnavi.asv@gmail.com"));
+        container.add("SignUpJPanel", new SignUpJPanel(container, sys,emailtxtfield.getText()));
         layout.next(container);
         
         }
