@@ -4,17 +4,28 @@
  */
 package userinterface.ResidentialHall.Miscellaneous;
 
+import Business.WorkQueue.Complaints_Suggestions_Request;
+import java.awt.CardLayout;
+import java.awt.Component;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
 /**
  *
  * @author anamikabharali
  */
+
 public class MiscellaneousProcessStatusRequestJPanel extends javax.swing.JPanel {
 
+    JPanel userProcessContainer;
+    Complaints_Suggestions_Request request;
     /**
-     * Creates new form MiscellaneousProcessStatusRequestJPanel
+     * Creates new form ProcessWorkRequestJPanel
      */
-    public MiscellaneousProcessStatusRequestJPanel() {
+    public MiscellaneousProcessStatusRequestJPanel(JPanel userProcessContainer, Complaints_Suggestions_Request request) {
         initComponents();
+        this.userProcessContainer = userProcessContainer;
+        this.request = request;
     }
 
     /**
@@ -26,19 +37,89 @@ public class MiscellaneousProcessStatusRequestJPanel extends javax.swing.JPanel 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        backJButton = new javax.swing.JButton();
+        resultJTextField = new javax.swing.JTextField();
+        submitJButton = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+
+        setBackground(new java.awt.Color(76, 89, 115));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        backJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        backJButton.setText("<< Back  ");
+        backJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        backJButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backJButtonActionPerformed(evt);
+            }
+        });
+        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 490, 90, -1));
+
+        resultJTextField.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        add(resultJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 310, 280, 30));
+
+        submitJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        submitJButton.setText("Submit Response");
+        submitJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        submitJButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitJButtonActionPerformed(evt);
+            }
+        });
+        add(submitJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 380, 150, 30));
+
+        jLabel1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Response :");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, 100, 30));
+
+        jLabel2.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("CANTEEN ALERT  STATUS  REQUEST ");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, -1, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("/Users/anamikabharali/Downloads/imageedit_13_4677416373.jpg")); // NOI18N
+        jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLabel3.setPreferredSize(new java.awt.Dimension(790, 550));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-150, -30, 880, 260));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+
+        userProcessContainer.remove(this);
+        Component[] componentArray = userProcessContainer.getComponents();
+        Component component = componentArray[componentArray.length - 1];
+        MiscellaneousWorkAreaJPanel dwjp = (MiscellaneousWorkAreaJPanel) component;
+        dwjp.populateTable();
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+        
+    }//GEN-LAST:event_backJButtonActionPerformed
+
+    private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
+          
+        if(resultJTextField.getText()!=null)
+        {
+        request.setResponse(resultJTextField.getText());
+        request.setStatus("Completed");
+        JOptionPane.showMessageDialog(null,"Your response has been sent");
+        }
+        else
+        {
+           JOptionPane.showMessageDialog(null,"Text Field is Empty");
+        }
+        
+    }//GEN-LAST:event_submitJButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton backJButton;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JTextField resultJTextField;
+    private javax.swing.JButton submitJButton;
     // End of variables declaration//GEN-END:variables
 }
