@@ -48,56 +48,38 @@ public class SignUpJPanel extends javax.swing.JPanel {
     public void PopNetworkCombo()
            
     { 
-        
-        
         if(sys.getNetworkList().size()>0)
-    {
-        
-          combonetwork.removeAllItems();
-       for(Network net: sys.getNetworkList())
-       {
-             
-           combonetwork.addItem(net);
-       
-       
-       }
-       comboenterprise.setEnabled(true);
-        
-       
-    }
-    else 
-    {
-            
-        JOptionPane.showMessageDialog(null,"No network available ");
-       
-     }
+        {
+            combonetwork.removeAllItems();
+            for(Network net: sys.getNetworkList())
+            {
+                combonetwork.addItem(net);
+            }
+            comboenterprise.setEnabled(true); 
+        }
+        else 
+        {    
+            JOptionPane.showMessageDialog(null,"No network available ");
+        }
     }
     
-     public void PopEnterpriseCombo(Network network)
+    public void PopEnterpriseCombo(Network network)
     {        
-       comboenterprise.removeAllItems();
+        comboenterprise.removeAllItems();
              //Network network = (Network) combonetwork.getSelectedItem();
-         
-           if(network.getEnterpriseDirectory().getEnterpriseList().size()>0)
-           {
-               
-               
-           for(Enterprise en: network.getEnterpriseDirectory().getEnterpriseList())
-           {
+        if(network.getEnterpriseDirectory().getEnterpriseList().size()>0)
+        {  
+            for(Enterprise en: network.getEnterpriseDirectory().getEnterpriseList())
+            {
                 comboenterprise.addItem(en);
-           }
-  
-          
-           }
-           
-           else
-           {
-                combo_organization.setEnabled(false);
-                comborole.setEnabled(false);
-                JOptionPane.showMessageDialog(null,"Sorry !No enterprise available for this network");
-           
-               
-           }
+            }
+        }
+        else
+        {
+            combo_organization.setEnabled(false);
+            comborole.setEnabled(false);
+            JOptionPane.showMessageDialog(null,"Sorry !No enterprise available for this network");    
+        }
     }
      
        
@@ -108,42 +90,31 @@ public class SignUpJPanel extends javax.swing.JPanel {
         
           combo_organization.setEnabled(true);
                   
-             if (ent.getOrganizationDirectory().getOrganizationList().size() > 0) {
+            if (ent.getOrganizationDirectory().getOrganizationList().size() > 0) {
                 for (Organization organization : ent.getOrganizationDirectory().getOrganizationList()) {
-                    combo_organization.addItem(organization);
+                combo_organization.addItem(organization);
                 }
             }
-             else
-             {
-             
-                  comborole.setEnabled(false);
-                 JOptionPane.showMessageDialog(null,"Sorry !No organization available for this network");
-             
-             }
-           
-    
+            else
+            {
+                comborole.setEnabled(false);
+                JOptionPane.showMessageDialog(null,"Sorry !No organization available for this network");
+            }
     }
     
-     public void PopRoleCombo(Organization org)
+    public void PopRoleCombo(Organization org)
     { 
-        
-            comborole.removeAllItems();
-             comborole.setEnabled(true);
+        comborole.removeAllItems();
+        comborole.setEnabled(true);
      
              
-                  
-             if (org.getSupportedRole().size()>0) {
-                for (Role role : org.getSupportedRole()) {
-                    comborole.addItem(role);
-                }
+        if (org.getSupportedRole().size()>0) {
+            for (Role role : org.getSupportedRole()) {
+                comborole.addItem(role);
             }
-           
-    
+        }
     }
-    
-    
-    
-    
+
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -311,10 +282,9 @@ public class SignUpJPanel extends javax.swing.JPanel {
 
     private void combo_organizationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_organizationActionPerformed
         // TODO add your handling code here:
-         Organization org = (Organization) combo_organization.getSelectedItem();
-        if (org != null){
+        Organization org = (Organization) combo_organization.getSelectedItem();
+        if (org != null) {
             PopRoleCombo(org);
-         
         }
         
     }//GEN-LAST:event_combo_organizationActionPerformed
@@ -326,14 +296,10 @@ public class SignUpJPanel extends javax.swing.JPanel {
     private void combonetworkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combonetworkActionPerformed
         // TODO add your handling code here:
     Network network = (Network) combonetwork.getSelectedItem();
-        if (network != null){
+        if (network != null) {
             PopEnterpriseCombo(network);
-      
         }
-            
-            
-        
-        
+ 
     }//GEN-LAST:event_combonetworkActionPerformed
 
     private void signupbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupbtnActionPerformed

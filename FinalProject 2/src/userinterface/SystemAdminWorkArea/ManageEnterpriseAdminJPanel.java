@@ -60,8 +60,9 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         }
     }
 
-    private void populateNetworkComboBox(){
-             networkJComboBox.removeAllItems();
+    private void populateNetworkComboBox() {
+        
+        networkJComboBox.removeAllItems();
         if(system.getNetworkList().size()!=0){                     //Checking whether system contains any network
            for (Network network : system.getNetworkList()) {
                 networkJComboBox.addItem(network);
@@ -70,13 +71,12 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
            
         }
         else{
+            usernameJTextField.setEnabled(false);
+            passwordJPasswordField.setEnabled(false);
+            nameJTextField.setEnabled(false);
+            submitJButton.setEnabled(false);
              
-             usernameJTextField.setEnabled(false);
-             passwordJPasswordField.setEnabled(false);
-             nameJTextField.setEnabled(false);
-             submitJButton.setEnabled(false);
-             
-             networkJComboBox.addItem("Please Add Networks");
+            networkJComboBox.addItem("Please Add Networks");
         }
     }
     
