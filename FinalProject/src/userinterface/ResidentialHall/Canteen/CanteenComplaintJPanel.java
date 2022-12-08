@@ -34,7 +34,7 @@ public class CanteenComplaintJPanel extends javax.swing.JPanel {
     public CanteenComplaintJPanel(JPanel userProcessContainer, UserAccount userAccount, Enterprise enterprise,Network network ) {
         initComponents();
         this.network=network;
-         this.userProcessContainer = userProcessContainer;
+        this.userProcessContainer = userProcessContainer;
         this.enterprise = enterprise;
         this.userAccount = userAccount;
         populateComboBox();
@@ -57,6 +57,8 @@ public class CanteenComplaintJPanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         messageJTextField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(76, 89, 115));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -97,6 +99,16 @@ public class CanteenComplaintJPanel extends javax.swing.JPanel {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Message :");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("CANTEEN COMPLAINTS REGISTRATION");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, -1, 50));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon("/Users/anamikabharali/Downloads/imageedit_13_4677416373.jpg")); // NOI18N
+        jLabel4.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLabel4.setPreferredSize(new java.awt.Dimension(790, 550));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-150, -30, 880, 260));
     }// </editor-fold>//GEN-END:initComponents
     
     private void populateComboBox() {
@@ -117,81 +129,82 @@ public class CanteenComplaintJPanel extends javax.swing.JPanel {
         dwjp.populateRequestTable();
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
+        
     }//GEN-LAST:event_backJButtonActionPerformed
 
     private void sendComplaintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendComplaintActionPerformed
 
         String message = messageJTextField.getText();
-        if(message!=null)
+         if(message!=null)
+         {
+        request.setMessage(message);
+
+        request.setSender(userAccount);
+        request.setStatus("Sent");
+
+        Organization org = null;
+
+         Organization.Type sel = (Organization.Type) combo.getSelectedItem();
+        if(sel.equals(Organization.Type.Felony))
         {
-            request.setMessage(message);
-
-            request.setSender(userAccount);
-            request.setStatus("Sent");
-
-            Organization org = null;
-
-            Organization.Type sel = (Organization.Type) combo.getSelectedItem();
-            if(sel.equals(Organization.Type.Felony))
+             for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
             {
-                for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
-                {
-                    for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
-                    {
-                        if (organization instanceof FelonyOrganization){
-                            org = organization;
-                            break;
-                        }
-                    }
-                }
-                if (org!=null){
-                    org.getStatusQueue().getStatusRequestList().add(request);
-                    userAccount.getStatusQueue().getStatusRequestList().add(request);
-                }
+                  for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
+                  {
+                if (organization instanceof FelonyOrganization){
+                    org = organization;
+                    break;
+                } 
+                  }
             }
-            else if(sel.equals(Organization.Type.Misconduct))
-            {
-
-                for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
-                {
-                    for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
-                    {
-                        if (organization instanceof MisconductOrganization){
-                            org = organization;
-                            break;
-                        }
-                    }
-                }
-                if (org!=null){
-                    org.getStatusQueue().getStatusRequestList().add(request);
-                    userAccount.getStatusQueue().getStatusRequestList().add(request);
-                }
-
+            if (org!=null){
+                org.getStatusQueue().getStatusRequestList().add(request);
+                userAccount.getStatusQueue().getStatusRequestList().add(request);
             }
-            else if(sel.equals(Organization.Type.Theft))
-            {
-                for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
-                {
-                    for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
-                    {
-                        if (organization instanceof TheftOrganization){
-                            org = organization;
-                            break;
-                        }
-                    }
-                }
-                if (org!=null){
-                    org.getStatusQueue().getStatusRequestList().add(request);
-                    userAccount.getStatusQueue().getStatusRequestList().add(request);
-                }
-
-            }
-            JOptionPane.showMessageDialog(null,"Your complaint has been sent");
         }
-        else
+        else if(sel.equals(Organization.Type.Misconduct))
         {
-            JOptionPane.showMessageDialog(null,"Message field is empty");
+
+            for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
+            {
+                  for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
+                  {
+                if (organization instanceof MisconductOrganization){
+                    org = organization;
+                    break;
+                } 
+            }
+            }
+            if (org!=null){
+                org.getStatusQueue().getStatusRequestList().add(request);
+                userAccount.getStatusQueue().getStatusRequestList().add(request);
+            }
+
         }
+        else if(sel.equals(Organization.Type.Theft))
+        {
+             for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
+            {
+                  for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
+                  {
+                if (organization instanceof TheftOrganization){
+                    org = organization;
+                    break;
+                } 
+                  }
+            }
+            if (org!=null){
+                org.getStatusQueue().getStatusRequestList().add(request);
+                userAccount.getStatusQueue().getStatusRequestList().add(request);
+            }
+
+        }
+        JOptionPane.showMessageDialog(null,"Your complaint has been sent");
+         }
+         else
+         {
+           JOptionPane.showMessageDialog(null,"Message field is empty");
+         }
     }//GEN-LAST:event_sendComplaintActionPerformed
 
 
@@ -199,7 +212,9 @@ public class CanteenComplaintJPanel extends javax.swing.JPanel {
     private javax.swing.JButton backJButton;
     private javax.swing.JComboBox combo;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JTextField messageJTextField;
     private javax.swing.JButton sendComplaint;
     // End of variables declaration//GEN-END:variables
