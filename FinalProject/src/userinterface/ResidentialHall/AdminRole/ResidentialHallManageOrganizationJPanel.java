@@ -166,16 +166,18 @@ public class ResidentialHallManageOrganizationJPanel extends javax.swing.JPanel 
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
+        
     }//GEN-LAST:event_backJButtonActionPerformed
 
     private void addJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJButtonActionPerformed
 
         Type type = (Type) organizationJComboBox.getSelectedItem();
-
+       
         directory.createOrganization(type);
         JOptionPane.showMessageDialog(null,"Organization added");
-
+       
         populateTable();
+        
     }//GEN-LAST:event_addJButtonActionPerformed
 
 
