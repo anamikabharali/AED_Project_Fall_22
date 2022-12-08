@@ -82,10 +82,10 @@ public class SignUpJPanel extends javax.swing.JPanel {
            {
                
                
-           for(Enterprise en: network.getEnterpriseDirectory().getEnterpriseList())
-           {
-                comboenterprise.addItem(en);
-           }
+                for(Enterprise en: network.getEnterpriseDirectory().getEnterpriseList())
+                {
+                     comboenterprise.addItem(en);
+                }
   
           
            }
