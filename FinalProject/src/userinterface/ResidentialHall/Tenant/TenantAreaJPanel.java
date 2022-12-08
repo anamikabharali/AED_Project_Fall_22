@@ -1,9 +1,8 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package userinterface.ResidentialHall.Tenant;
-
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
@@ -19,8 +18,9 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author srivaishnaviaekkati
+ * @author anamikabharali
  */
+
 public class TenantAreaJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
@@ -85,15 +85,7 @@ public class TenantAreaJPanel extends javax.swing.JPanel {
         }
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -103,22 +95,33 @@ public class TenantAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        addcomplaintbtn = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         workRequestJTable = new javax.swing.JTable();
-        addcomplaintbtn = new javax.swing.JButton();
-        refreshTestJButton = new javax.swing.JButton();
-        enterpriseLabel = new javax.swing.JLabel();
-        valueLabel = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        addcomplaint = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         workRequestJTable1 = new javax.swing.JTable();
+        addcomplaint = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        valueLabel = new javax.swing.JLabel();
+        enterpriseLabel = new javax.swing.JLabel();
+        refreshTestJButton = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 153));
-        setMaximumSize(new java.awt.Dimension(750, 750));
-        setMinimumSize(new java.awt.Dimension(750, 750));
+        setBackground(new java.awt.Color(76, 89, 115));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        addcomplaintbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        addcomplaintbtn.setText("Add a Compalint/Suggestion");
+        addcomplaintbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        addcomplaintbtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addcomplaintbtnActionPerformed(evt);
+            }
+        });
+        add(addcomplaintbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 300, -1, -1));
 
         workRequestJTable.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -148,59 +151,10 @@ public class TenantAreaJPanel extends javax.swing.JPanel {
             }
         });
         jScrollPane1.setViewportView(workRequestJTable);
-        if (workRequestJTable.getColumnModel().getColumnCount() > 0) {
-            workRequestJTable.getColumnModel().getColumn(0).setResizable(false);
-            workRequestJTable.getColumnModel().getColumn(1).setResizable(false);
-            workRequestJTable.getColumnModel().getColumn(2).setResizable(false);
-            workRequestJTable.getColumnModel().getColumn(3).setResizable(false);
-            workRequestJTable.getColumnModel().getColumn(4).setResizable(false);
-        }
 
-        addcomplaintbtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        addcomplaintbtn.setText("Add a Compalint/Suggestion");
-        addcomplaintbtn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addcomplaintbtnActionPerformed(evt);
-            }
-        });
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 660, 92));
 
-        refreshTestJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        refreshTestJButton.setText("Refresh");
-        refreshTestJButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                refreshTestJButtonActionPerformed(evt);
-            }
-        });
-
-        enterpriseLabel.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        enterpriseLabel.setText("EnterPrise :");
-
-        valueLabel.setText("<value>");
-
-        jButton1.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 0, 0));
-        jButton1.setText("Emergency!!");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel1.setText("For University:");
-
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel2.setText("For Police:");
-
-        addcomplaint.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        addcomplaint.setText("Add Complaint");
-        addcomplaint.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addcomplaintActionPerformed(evt);
-            }
-        });
-
-        workRequestJTable1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        workRequestJTable1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         workRequestJTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -229,82 +183,74 @@ public class TenantAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(workRequestJTable1);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(200, 200, 200)
-                        .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(39, 39, 39)
-                        .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(71, 71, 71)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 190, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(188, 188, 188)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(addcomplaintbtn, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2)
-                            .addComponent(addcomplaint, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jLabel1)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(refreshTestJButton))
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 497, Short.MAX_VALUE)
-                            .addComponent(jScrollPane2))))
-                .addContainerGap(202, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(86, 86, 86)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(refreshTestJButton))
-                .addGap(41, 41, 41)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(48, 48, 48)
-                .addComponent(addcomplaintbtn)
-                .addGap(80, 80, 80)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(31, 31, 31)
-                .addComponent(addcomplaint)
-                .addGap(97, 97, 97)
-                .addComponent(jButton1)
-                .addGap(49, 49, 49))
-        );
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, 650, 90));
+
+        addcomplaint.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        addcomplaint.setText("Add Complaint");
+        addcomplaint.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        addcomplaint.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addcomplaintActionPerformed(evt);
+            }
+        });
+        add(addcomplaint, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 470, 200, 20));
+
+        jLabel2.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("For Police:");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 330, -1, -1));
+
+        jLabel1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("For Residential Management:");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, -1, -1));
+
+        valueLabel.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        valueLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 120, 158, 26));
+
+        enterpriseLabel.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        enterpriseLabel.setForeground(new java.awt.Color(255, 255, 255));
+        enterpriseLabel.setText("Enterprise :");
+        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, 127, 30));
+
+        refreshTestJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        refreshTestJButton.setText("Refresh");
+        refreshTestJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        refreshTestJButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                refreshTestJButtonActionPerformed(evt);
+            }
+        });
+        add(refreshTestJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 160, 80, -1));
+
+        jButton1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 0, 0));
+        jButton1.setText("Emergency!!");
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 500, 140, 30));
+
+        jLabel4.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("COMPLAINT REGISTRATION");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 50, -1, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("/Users/anamikabharali/Downloads/imageedit_1_4791170951.jpg")); // NOI18N
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-210, 0, 1060, 110));
     }// </editor-fold>//GEN-END:initComponents
 
     private void addcomplaintbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addcomplaintbtnActionPerformed
-        
+
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         userProcessContainer.add("StudentCompalinJPanel", new Tenant_Complain_Suggest_JPanel(userProcessContainer, userAccount, enterprise));
         layout.next(userProcessContainer);
-        
+
     }//GEN-LAST:event_addcomplaintbtnActionPerformed
-
-    private void refreshTestJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshTestJButtonActionPerformed
-
-        populateRequestTable();
-        
-    }//GEN-LAST:event_refreshTestJButtonActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        userProcessContainer.add("StudentemergencyrequestJpanel", new TenantEmergencyRequestJPanel(userProcessContainer, userAccount, enterprise,network));
-        layout.next(userProcessContainer);
-        
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void addcomplaintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addcomplaintActionPerformed
         // TODO add your handling code here:
@@ -312,8 +258,24 @@ public class TenantAreaJPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         userProcessContainer.add("StudentComplaintJPanel", new TenantComplaintJPanel(userProcessContainer, userAccount, enterprise,network));
         layout.next(userProcessContainer);
-
+        
     }//GEN-LAST:event_addcomplaintActionPerformed
+
+    private void refreshTestJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshTestJButtonActionPerformed
+
+        populateRequestTable();
+
+    }//GEN-LAST:event_refreshTestJButtonActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        userProcessContainer.add("StudentemergencyrequestJpanel", new TenantEmergencyRequestJPanel(userProcessContainer, userAccount, enterprise,network));
+        layout.next(userProcessContainer);
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addcomplaint;
@@ -322,6 +284,8 @@ public class TenantAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JButton refreshTestJButton;
@@ -329,6 +293,4 @@ public class TenantAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JTable workRequestJTable;
     private javax.swing.JTable workRequestJTable1;
     // End of variables declaration//GEN-END:variables
-
-   
 }

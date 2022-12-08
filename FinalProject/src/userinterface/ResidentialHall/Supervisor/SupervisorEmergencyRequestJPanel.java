@@ -1,10 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package userinterface.ResidentialHall.Supervisor;
-
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.FelonyOrganization;
@@ -20,8 +18,9 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author srivaishnaviaekkati
+ * @author anamikabharali
  */
+
 public class SupervisorEmergencyRequestJPanel extends javax.swing.JPanel {
 
     /**
@@ -34,12 +33,13 @@ public class SupervisorEmergencyRequestJPanel extends javax.swing.JPanel {
     public SupervisorEmergencyRequestJPanel(JPanel userProcessContainer, UserAccount userAccount, Enterprise enterprise,Network network) {
         initComponents();
         this.network=network;
-       this.userProcessContainer = userProcessContainer;
+        this.userProcessContainer = userProcessContainer;
         this.enterprise = enterprise;
         this.userAccount = userAccount;
-     populateComboBox();
+        populateComboBox();
     }
 EmergencyRequest  erequest = new EmergencyRequest();
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -49,97 +49,70 @@ EmergencyRequest  erequest = new EmergencyRequest();
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        locationlbl = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        locationlbl1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        combo = new javax.swing.JComboBox();
         locationtxtfield = new javax.swing.JTextField();
         sendemergecy = new javax.swing.JButton();
-        combo = new javax.swing.JComboBox();
         backJButton = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(0, 153, 153));
-        setMaximumSize(new java.awt.Dimension(750, 750));
-        setMinimumSize(new java.awt.Dimension(750, 750));
+        setBackground(new java.awt.Color(76, 89, 115));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel1.setText("Emergency Type");
+        jLabel9.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel9.setText("SUPERVISOR EMERGENCY REQUESTS");
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 110, -1, -1));
 
-        locationlbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        locationlbl.setText("Location");
+        jLabel2.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Emergency Type :");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 310, -1, -1));
 
-        locationtxtfield.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        locationlbl1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        locationlbl1.setForeground(new java.awt.Color(255, 255, 255));
+        locationlbl1.setText("Location :");
+        add(locationlbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, -1, -1));
 
-        sendemergecy.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel3.setIcon(new javax.swing.ImageIcon("/Users/anamikabharali/Downloads/imageedit_13_4677416373.jpg")); // NOI18N
+        jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLabel3.setPreferredSize(new java.awt.Dimension(790, 550));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(-150, -30, 880, 260));
+
+        combo.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        combo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(combo, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 303, 330, 20));
+
+        locationtxtfield.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        add(locationtxtfield, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 350, 290, 20));
+
+        sendemergecy.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         sendemergecy.setText("Send Emergency");
+        sendemergecy.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         sendemergecy.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sendemergecyActionPerformed(evt);
             }
         });
+        add(sendemergecy, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 430, 170, 30));
 
-        combo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        combo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        backJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        backJButton.setText("Back");
+        backJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        backJButton.setText("<< Back  ");
+        backJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(154, 154, 154)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
-                        .addComponent(combo, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(locationlbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(locationtxtfield, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(213, 213, 213))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(75, 75, 75)
-                        .addComponent(backJButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(296, 296, 296)
-                        .addComponent(sendemergecy)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(185, 185, 185)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
-                        .addComponent(locationlbl)
-                        .addGap(131, 131, 131))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addComponent(locationtxtfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addComponent(sendemergecy)
-                .addGap(116, 116, 116)
-                .addComponent(backJButton)
-                .addGap(129, 129, 129))
-        );
+        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 500, 90, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void sendemergecyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendemergecyActionPerformed
         // TODO add your handling code here:
-        
-         String location = locationtxtfield.getText();
+
+        String location = locationtxtfield.getText();
         erequest.setLocation(location);
         erequest.setEmergencytype((Organization.Type) combo.getSelectedItem());
         erequest.setEmail(userAccount.getEmail());
@@ -212,14 +185,17 @@ EmergencyRequest  erequest = new EmergencyRequest();
         
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
+        
     }//GEN-LAST:event_backJButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backJButton;
     private javax.swing.JComboBox combo;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel locationlbl;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel locationlbl1;
     private javax.swing.JTextField locationtxtfield;
     private javax.swing.JButton sendemergecy;
     // End of variables declaration//GEN-END:variables
@@ -230,4 +206,5 @@ EmergencyRequest  erequest = new EmergencyRequest();
         combo.addItem(Organization.Type.Felony);
         combo.addItem(Organization.Type.Misconduct);
     }
+
 }
