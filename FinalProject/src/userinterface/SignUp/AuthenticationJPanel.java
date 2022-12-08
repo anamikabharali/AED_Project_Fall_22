@@ -175,7 +175,7 @@ JPanel container;
     private void authenticatetxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_authenticatetxtfieldActionPerformed
         // TODO add your handling code here:
     //    Integer num=Integer.parseInt(authtxtfield.getText());
-    Integer num=56789;
+        Integer num = 56789; 
     
     
         if(num.equals(56789))

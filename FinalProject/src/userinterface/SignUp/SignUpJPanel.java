@@ -18,7 +18,7 @@ import utility.Validate;
 
 /**
  *
- * @author srivaishnaviaekkati
+ * @author srivaishnaviaekkati 
  */
 public class SignUpJPanel extends javax.swing.JPanel {
 
@@ -57,7 +57,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
        for(Network net: sys.getNetworkList())
        {
              
-           combonetwork.addItem(net);
+           combonetwork.addItem(net); 
        
        
        }
