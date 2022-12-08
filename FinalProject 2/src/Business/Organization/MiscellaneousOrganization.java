@@ -14,11 +14,12 @@ import java.util.ArrayList;
  *
  * @author srivaishnaviaekkati
  */
-public class MiscellaneousOrganization extends Organization{
+public class MiscellaneousOrganization extends Organization {
 
     public MiscellaneousOrganization() {
         super(Organization.Type.Miscellaneous.getValue());
     }
+    
     @Override
     public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> roles = new ArrayList();

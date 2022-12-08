@@ -25,27 +25,32 @@ public class OrganizationDirectory {
     
     public Organization createOrganization(Type type){
         Organization organization = null;
+        
         if (type.getValue().equals(Type.Canteen.getValue())){
             organization = new CanteenOrganization();
             organizationList.add(organization);
         }
+        
         else if (type.getValue().equals(Type.Supervisor.getValue())){
             organization = new SupervisorOrganization();
             organizationList.add(organization);
         }
         
-         else if (type.getValue().equals(Type.Tenant.getValue())){
+        else if (type.getValue().equals(Type.Tenant.getValue())){
            organization = new TenantOrganization();
             organizationList.add(organization);
         }
+        
         else if (type.getValue().equals(Type.Felony.getValue())){
            organization = new FelonyOrganization();
             organizationList.add(organization);
         }
+        
         else if (type.getValue().equals(Type.Miscellaneous.getValue())){
            organization = new MiscellaneousOrganization();
             organizationList.add(organization);
         }
+        
         else if (type.getValue().equals(Type.Misconduct.getValue())){
            organization = new MisconductOrganization();
             organizationList.add(organization);
