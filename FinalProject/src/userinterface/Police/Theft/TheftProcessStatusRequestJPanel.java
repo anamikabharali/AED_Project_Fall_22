@@ -16,11 +16,15 @@ import javax.swing.JPanel;
 
 public class TheftProcessStatusRequestJPanel extends javax.swing.JPanel {
 
+    JPanel userProcessContainer;
+    Complaints_Suggestions_Request request;
     /**
-     * Creates new form TheftProcessStatusRequestJPanel
+     * Creates new form ProcessWorkRequestJPanel
      */
-    public TheftProcessStatusRequestJPanel() {
+    public TheftProcessStatusRequestJPanel(JPanel userProcessContainer, Complaints_Suggestions_Request request) {
         initComponents();
+        this.userProcessContainer = userProcessContainer;
+        this.request = request;
     }
 
     /**
@@ -93,6 +97,7 @@ public class TheftProcessStatusRequestJPanel extends javax.swing.JPanel {
         dwjp.populateTable();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
+        
     }//GEN-LAST:event_backJButtonActionPerformed
 
     private void resultJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultJTextFieldActionPerformed
@@ -100,16 +105,18 @@ public class TheftProcessStatusRequestJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_resultJTextFieldActionPerformed
 
     private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
+        
         if(resultJTextField.getText()!=null)
         {
-            request.setResponse(resultJTextField.getText());
-            request.setStatus("Completed");
-            JOptionPane.showMessageDialog(null,"Your response has been sent");
+        request.setResponse(resultJTextField.getText());
+        request.setStatus("Completed");
+        JOptionPane.showMessageDialog(null,"Your response has been sent");
         }
         else
         {
-            JOptionPane.showMessageDialog(null,"Text Field is Empty");
+           JOptionPane.showMessageDialog(null,"Text Field is Empty");
         }
+        
     }//GEN-LAST:event_submitJButtonActionPerformed
 
 
