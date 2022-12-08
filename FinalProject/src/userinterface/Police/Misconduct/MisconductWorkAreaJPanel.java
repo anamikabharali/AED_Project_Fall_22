@@ -205,7 +205,7 @@ public class MisconductWorkAreaJPanel extends javax.swing.JPanel {
         jLabel4.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("MISCONDUCT  ALERTS  MANAGEMENT");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 50, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Optima", 1, 16)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));

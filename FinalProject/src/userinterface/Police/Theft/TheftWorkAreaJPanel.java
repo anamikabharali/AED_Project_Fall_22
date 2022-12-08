@@ -103,11 +103,13 @@ public class TheftWorkAreaJPanel extends javax.swing.JPanel {
         emergencytable = new javax.swing.JTable();
         senteam = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(76, 89, 115));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        workRequestJTable.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        workRequestJTable.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -136,35 +138,39 @@ public class TheftWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(workRequestJTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 375, 96));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 570, 140));
 
-        assignJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        assignJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         assignJButton.setText("Assign to me");
+        assignJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         assignJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 assignJButtonActionPerformed(evt);
             }
         });
-        add(assignJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 340, -1, -1));
+        add(assignJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 310, 120, -1));
 
-        processJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        processJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         processJButton.setText("Process");
+        processJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         processJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 processJButtonActionPerformed(evt);
             }
         });
-        add(processJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 340, -1, -1));
+        add(processJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 310, 120, -1));
 
-        refreshJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        refreshJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         refreshJButton.setText("Refresh");
+        refreshJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         refreshJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 refreshJButtonActionPerformed(evt);
             }
         });
-        add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 140, -1, -1));
+        add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 150, -1, -1));
 
+        emergencytable.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         emergencytable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -175,30 +181,41 @@ public class TheftWorkAreaJPanel extends javax.swing.JPanel {
         ));
         jScrollPane2.setViewportView(emergencytable);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 510, 340, 90));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 420, 410, 90));
 
+        senteam.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         senteam.setText("Send Team");
+        senteam.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         senteam.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 senteamActionPerformed(evt);
             }
         });
-        add(senteam, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 650, -1, -1));
+        add(senteam, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 420, 120, -1));
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
+        jLabel2.setFont(new java.awt.Font("Optima", 1, 16)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Emergency:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 440, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 90, 30));
+
+        jLabel4.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("THEFT  ALERTS  MANAGEMENT");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/anamikabharali/Downloads/imageedit_5_4363260202.jpg")); // NOI18N
+        jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -30, 730, 150));
     }// </editor-fold>//GEN-END:initComponents
 
     private void assignJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButtonActionPerformed
 
         int selectedRow = workRequestJTable.getSelectedRow();
-
+        
         if (selectedRow < 0){
             return;
         }
-
+        
         StatusRequest request = (StatusRequest)workRequestJTable.getValueAt(selectedRow, 0);
         if(request.getReceiver()!=null)
         {
@@ -206,15 +223,15 @@ public class TheftWorkAreaJPanel extends javax.swing.JPanel {
         }
         else
         {
-
-            if(request.getStatus()=="Completed")
-            {
-                JOptionPane.showMessageDialog(null,"Request has been completed already");
-            }
-            else
-            request.setReceiver(userAccount);
-            request.setStatus("Pending");
-
+        
+        if( request.getStatus() == "Completed" )
+        {
+           JOptionPane.showMessageDialog(null,"Request has been completed already");
+        }
+        else
+             request.setReceiver(userAccount);
+        request.setStatus("Pending");
+        
         }
         populateTable();
 
@@ -223,31 +240,32 @@ public class TheftWorkAreaJPanel extends javax.swing.JPanel {
     private void processJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processJButtonActionPerformed
 
         int selectedRow = workRequestJTable.getSelectedRow();
-
+        
         if (selectedRow < 0){
             return;
         }
-
+        
         Complaints_Suggestions_Request request = (Complaints_Suggestions_Request)workRequestJTable.getValueAt(selectedRow, 0);
-        if(request.getStatus()=="Completed")
-        {
-            JOptionPane.showMessageDialog(null,"Request has been completed already");
-
-        }
-        else if(request.getStatus()=="Sent"   || request.getStatus()==null)
-        {
-            JOptionPane.showMessageDialog(null,"Request has to be assigned first");
-        }
-        else
-        {
-
-            request.setStatus("Processing");
-
-            TheftProcessStatusRequestJPanel processWorkRequestJPanel = new TheftProcessStatusRequestJPanel(userProcessContainer, request);
-            userProcessContainer.add("processWorkRequestJPanel", processWorkRequestJPanel);
-            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-            layout.next(userProcessContainer);
-        }
+          if(request.getStatus()=="Completed")
+          {    
+               JOptionPane.showMessageDialog(null,"Request has been completed already");  
+              
+          
+          }
+           else if(request.getStatus()=="Sent"   || request.getStatus()==null)
+          {
+                   JOptionPane.showMessageDialog(null,"Request has to be assigned first");  
+          }
+          else
+          {
+              
+        request.setStatus("Processing");
+        
+        TheftProcessStatusRequestJPanel processWorkRequestJPanel = new TheftProcessStatusRequestJPanel(userProcessContainer, request);
+        userProcessContainer.add("processWorkRequestJPanel", processWorkRequestJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+          }
 
     }//GEN-LAST:event_processJButtonActionPerformed
 
@@ -267,8 +285,8 @@ public class TheftWorkAreaJPanel extends javax.swing.JPanel {
         EmergencyRequest request = (EmergencyRequest)emergencytable.getValueAt(selectedRow, 0);
         request.setReceiver(userAccount);
         try {
-            Validate.sendMessage(request.getEmail(),"A team will approach to your location immediately");
-
+             Validate.sendMessage(request.getEmail(),"A team will approach to your location immediately");
+           
             JOptionPane.showMessageDialog(this,"Mail has been sent");
         } catch (MessagingException ex) {
             Logger.getLogger(FelonyWorkAreaJPanel.class.getName()).log(Level.SEVERE, null, ex);
@@ -281,7 +299,9 @@ public class TheftWorkAreaJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton assignJButton;
     private javax.swing.JTable emergencytable;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JButton processJButton;
