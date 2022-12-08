@@ -1,15 +1,14 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package userinterface.Police.Misconduct;
 
+package userinterface.Police.Misconduct;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.CanteenOrganization;
 import Business.Organization.MisconductOrganization;
-
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.Complaints_Suggestions_Request;
@@ -27,23 +26,25 @@ import utility.Validate;
 
 /**
  *
- * @author srivaishnaviaekkati
+ * @author anamikabharali
  */
 public class MisconductWorkAreaJPanel extends javax.swing.JPanel {
-
+    
     private JPanel userProcessContainer;
     private EcoSystem business;
     private UserAccount userAccount;
     private MisconductOrganization misconductOrganization;
     private Enterprise enterprise;
     private Network network;
+    
     /**
      * Creates new form LabAssistantWorkAreaJPanel
      */
+    
     public MisconductWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise,EcoSystem business,Network network) {
+        
         initComponents();
         this.network=network;
-                
         this.userProcessContainer = userProcessContainer;
         this.userAccount = account;
         this.business = business;
@@ -51,13 +52,13 @@ public class MisconductWorkAreaJPanel extends javax.swing.JPanel {
         this.enterprise= enterprise;
         populateTable();
         populateEmergencyTable();
+        
     }
     
     public void populateTable(){
+        
         DefaultTableModel model = (DefaultTableModel)workRequestJTable.getModel();
-        
         model.setRowCount(0);
-        
         for(StatusRequest request : misconductOrganization.getStatusQueue().getStatusRequestList()){
             if (request instanceof Complaints_Suggestions_Request) {
             Object[] row = new Object[4];
@@ -65,10 +66,11 @@ public class MisconductWorkAreaJPanel extends javax.swing.JPanel {
             row[1] = request.getSender().getEmployee().getName();
             row[2] = request.getReceiver() == null ? null : request.getReceiver().getEmployee().getName();
             row[3] = request.getStatus();
-            
             model.addRow(row);
+            
         }
     }}
+    
      public void populateEmergencyTable()
     {
     
@@ -82,9 +84,7 @@ public class MisconductWorkAreaJPanel extends javax.swing.JPanel {
                         EmergencyRequest s = (EmergencyRequest) request;
                         Object[] row = new Object[1];
                         row[0] = s;
-                        
                          model.addRow(row);
-        
         }
         }
     }
@@ -106,15 +106,15 @@ public class MisconductWorkAreaJPanel extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         emergencytable = new javax.swing.JTable();
         senteam = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
         processJButton = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 153));
-        setMaximumSize(new java.awt.Dimension(750, 750));
-        setMinimumSize(new java.awt.Dimension(750, 750));
+        setBackground(new java.awt.Color(76, 89, 115));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        workRequestJTable.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        workRequestJTable.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -143,31 +143,33 @@ public class MisconductWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(workRequestJTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, 375, 96));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, 550, 120));
 
-        assignJButton.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        assignJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         assignJButton.setText("Assign to me");
         assignJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 assignJButtonActionPerformed(evt);
             }
         });
-        add(assignJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 350, -1, -1));
+        add(assignJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 310, 130, -1));
 
-        refreshJButton.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        refreshJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         refreshJButton.setText("Refresh");
+        refreshJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         refreshJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 refreshJButtonActionPerformed(evt);
             }
         });
-        add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 150, -1, -1));
+        add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 170, 100, -1));
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel2.setText("Emergency:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 490, -1, -1));
+        jLabel2.setFont(new java.awt.Font("Optima", 1, 16)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Present misconduct alerts:");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, -1, -1));
 
+        emergencytable.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         emergencytable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -178,38 +180,51 @@ public class MisconductWorkAreaJPanel extends javax.swing.JPanel {
         ));
         jScrollPane2.setViewportView(emergencytable);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 560, 340, 90));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 400, 430, 120));
 
+        senteam.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         senteam.setText("Send Team");
+        senteam.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         senteam.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 senteamActionPerformed(evt);
             }
         });
-        add(senteam, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 710, -1, -1));
+        add(senteam, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 400, 90, -1));
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        jLabel1.setText("Misconduct Department Work Area");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, -1, -1));
-
-        processJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        processJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         processJButton.setText("Process");
+        processJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         processJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 processJButtonActionPerformed(evt);
             }
         });
-        add(processJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 350, -1, -1));
+        add(processJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 310, 120, -1));
+
+        jLabel4.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("MISCONDUCT  ALERTS  MANAGEMENT");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 50, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Optima", 1, 16)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Emergency:");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, -1, -1));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/anamikabharali/Downloads/imageedit_5_4363260202.jpg")); // NOI18N
+        jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 730, 110));
     }// </editor-fold>//GEN-END:initComponents
 
     private void assignJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButtonActionPerformed
 
         int selectedRow = workRequestJTable.getSelectedRow();
-        
+
         if (selectedRow < 0){
             return;
         }
-        
+
         StatusRequest request = (StatusRequest)workRequestJTable.getValueAt(selectedRow, 0);
         if(request.getReceiver()!=null)
         {
@@ -217,19 +232,18 @@ public class MisconductWorkAreaJPanel extends javax.swing.JPanel {
         }
         else
         {
-        
-       if(request.getStatus()=="Completed")
-        {
-           JOptionPane.showMessageDialog(null,"Request has been completed already");
-        }
-       else
-             request.setReceiver(userAccount);
-       request.setStatus("Pending");
-        
+
+            if(request.getStatus()=="Completed")
+            {
+                JOptionPane.showMessageDialog(null,"Request has been completed already");
+            }
+            else
+            request.setReceiver(userAccount);
+            request.setStatus("Pending");
+
         }
         populateTable();
-        
-        
+
     }//GEN-LAST:event_assignJButtonActionPerformed
 
     private void refreshJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshJButtonActionPerformed
@@ -255,6 +269,7 @@ public class MisconductWorkAreaJPanel extends javax.swing.JPanel {
             Logger.getLogger(FelonyWorkAreaJPanel.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(this,"Mail has not  been sent");
         }
+        
     }//GEN-LAST:event_senteamActionPerformed
 
     private void processJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processJButtonActionPerformed
@@ -285,14 +300,17 @@ public class MisconductWorkAreaJPanel extends javax.swing.JPanel {
             CardLayout layout = (CardLayout) userProcessContainer.getLayout();
             layout.next(userProcessContainer);
         }
-
+        
     }//GEN-LAST:event_processJButtonActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton assignJButton;
     private javax.swing.JTable emergencytable;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JButton processJButton;

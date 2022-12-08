@@ -24,7 +24,7 @@ public class PoliceManageEmployeeJPanel extends javax.swing.JPanel {
     /**
      * Creates new form PoliceManageEmployeeJPanel
      */
-    public PoliceManageEmployeeJPanel() {
+    public PoliceManageEmployeeJPanel(JPanel userProcessContainer,OrganizationDirectory organizationDir) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.organizationDir = organizationDir;

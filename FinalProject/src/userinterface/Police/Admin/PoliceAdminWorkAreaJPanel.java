@@ -66,7 +66,7 @@ public class PoliceAdminWorkAreaJPanel extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("POLICE ADMINISTRATION");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, -1, -1));
 
         manageordbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         manageordbtn.setText("MANAGE ORGANISATION");

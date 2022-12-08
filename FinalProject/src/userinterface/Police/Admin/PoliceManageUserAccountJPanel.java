@@ -33,7 +33,7 @@ public class PoliceManageUserAccountJPanel extends javax.swing.JPanel {
     private Enterprise enterprise;
     Network net;
     
-    public PoliceManageUserAccountJPanel() {
+    public PoliceManageUserAccountJPanel(JPanel container, Enterprise enterprise,Network net) {
         initComponents();
         
         this.enterprise = enterprise;
