@@ -12,7 +12,7 @@ import javax.swing.JPanel;
  * @author  srivaishnaviaekkati
  */
 public class ResidentialHallAdminWorkAreaJPanel extends javax.swing.JPanel {
-    
+     
     JPanel userProcessContainer;
     Network network;
     Enterprise enterprise;

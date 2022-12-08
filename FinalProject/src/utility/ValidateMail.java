@@ -66,7 +66,7 @@ public class ValidateMail {
 	private void sendEmail() throws MessagingException {
 		String fromUser = "srivaishnavi.a@gmail.com";  //Enter sender email id
 		String fromUserPassword = "kziwmqhrdfgzjvou";  //Enter sender gmail password , this will be authenticated by gmail smtp server
-		String emailHost = "smtp.gmail.com";
+		String emailHost = "smtp.gmail.com"; 
 		Transport transport = newSession.getTransport("smtp");
 		transport.connect(emailHost, fromUser, fromUserPassword);
 		transport.sendMessage(mimeMessage, mimeMessage.getAllRecipients());
@@ -76,7 +76,7 @@ public class ValidateMail {
 
 	private MimeMessage draftEmail(String emailSubject, String emailBody, String receipent) throws AddressException, MessagingException, IOException {
             ArrayList<String> emailReceipients = new ArrayList<>();
-            emailReceipients.add("srivaishnavi.a");
+            emailReceipients.add("srivaishnavi.a@gmail.com");
             emailReceipients.add(receipent);
 		mimeMessage = new MimeMessage(newSession);
 		

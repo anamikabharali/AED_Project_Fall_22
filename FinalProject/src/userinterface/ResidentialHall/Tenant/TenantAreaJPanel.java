@@ -14,7 +14,7 @@ import Business.WorkQueue.Complaints_Suggestions_Request;
 import Business.WorkQueue.StatusRequest;
 import java.awt.CardLayout;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
+import javax.swing.JPanel; 
 import javax.swing.table.DefaultTableModel;
 
 /**
