@@ -144,18 +144,18 @@ JPanel container;
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        // JOptionPane.showMessageDialog(emailtxtfield, n);
-        JOptionPane.showMessageDialog(this, 56789);
+    //     JOptionPane.showMessageDialog(emailtxtfield, n);
+    //    JOptionPane.showMessageDialog(this, 56789);
     //    authtxtfield.setVisible(true);
         
-        jLabel2.setVisible(true);
-            authtxtfield.setVisible(true);
-            authenticatetxtfield.setVisible(true);
+//        jLabel2.setVisible(true);
+//            authtxtfield.setVisible(true);
+//            authenticatetxtfield.setVisible(true);
          try {
              ValidateMail valMail = new ValidateMail();
              try {
                  //Validate.sendMessage1(emailtxtfield.getText(),n);
-                 valMail.preparetoSendEmail("This is here", "Thisis that", "vaishnavi.asv@gmail.com");
+                 valMail.preparetoSendEmail("This is Subject", "This is Verification code" + n, emailtxtfield.getText());
              } catch (AddressException ex) {
                  Logger.getLogger(AuthenticationJPanel.class.getName()).log(Level.SEVERE, null, ex);
              } catch (IOException ex) {
@@ -175,10 +175,10 @@ JPanel container;
     private void authenticatetxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_authenticatetxtfieldActionPerformed
         // TODO add your handling code here:
     //    Integer num=Integer.parseInt(authtxtfield.getText());
-        Integer num = 12345; 
+        Integer num = n; 
     
     
-        if(num.equals(12345))
+        if(num.equals(n))
         {
         
         CardLayout layout = (CardLayout) container.getLayout();

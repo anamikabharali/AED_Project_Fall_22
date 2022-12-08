@@ -74,8 +74,8 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
              
              usernameJTextField.setEnabled(false);
              passwordJPasswordField.setEnabled(false);
-             nameJTextField.setEnabled(false);  
              submitJButton.setEnabled(false); 
+             nameJTextField.setEnabled(false);              
              networkJComboBox.addItem("Please Add Networks");
         }
     }

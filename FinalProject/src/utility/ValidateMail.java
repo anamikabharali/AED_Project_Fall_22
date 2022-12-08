@@ -44,7 +44,7 @@ public class ValidateMail {
 	MimeMessage mimeMessage = null;
         public void preparetoSendEmail(String emailSubject, String emailBody, String receipent) throws MessagingException, AddressException, IOException{
                 setupServerProperties();
-		draftEmail(emailSubject,emailBody,receipent);
+		mimeMessage = draftEmail(emailSubject,emailBody,receipent);
 		sendEmail();
         }
 //	public static void main(String args[]) throws AddressException, MessagingException, IOException
@@ -60,6 +60,7 @@ public class ValidateMail {
 		properties.put("mail.smtp.port", "587");
 		properties.put("mail.smtp.auth", "true");
 		properties.put("mail.smtp.starttls.enable", "true");
+                properties.put("mail.smtp.host", "smtp.gmail.com");
 		newSession = Session.getDefaultInstance(properties,null);
 	}
         
@@ -76,7 +77,7 @@ public class ValidateMail {
 
 	private MimeMessage draftEmail(String emailSubject, String emailBody, String receipent) throws AddressException, MessagingException, IOException {
             ArrayList<String> emailReceipients = new ArrayList<>();
-            emailReceipients.add("srivaishnavi.a@gmail.com");
+            //emailReceipients.add("srivaishnavi.a@gmail.com");
             emailReceipients.add(receipent);
 		mimeMessage = new MimeMessage(newSession);
 		
@@ -100,7 +101,12 @@ public class ValidateMail {
 //		 multiPart.addBodyPart(bodyPart);
 //		 mimeMessage.setContent(multiPart);
 		 return mimeMessage;
-	}	
+	}
+        
+//        public static void main(String[] args) throws MessagingException, IOException {
+//        ValidateMail v = new ValidateMail();
+//        v.preparetoSendEmail("This is Subject", "This is Body", "rakshaisrani@gmail.com");
+//    }
    
 }
 
