@@ -3,18 +3,28 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package userinterface.Police.felony;
+import Business.WorkQueue.Complaints_Suggestions_Request;
+import java.awt.CardLayout;
+import java.awt.Component;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 /**
  *
  * @author anamikabharali
  */
+
 public class FelonyProcessStatusRequestJPanel extends javax.swing.JPanel {
 
+    JPanel userProcessContainer;
+    Complaints_Suggestions_Request request;
     /**
-     * Creates new form FelonyProcessStatusRequestJPanel
+     * Creates new form ProcessWorkRequestJPanel
      */
-    public FelonyProcessStatusRequestJPanel() {
+    public FelonyProcessStatusRequestJPanel(JPanel userProcessContainer, Complaints_Suggestions_Request request) {
         initComponents();
+        this.userProcessContainer = userProcessContainer;
+        this.request = request;
     }
 
     /**
@@ -26,21 +36,86 @@ public class FelonyProcessStatusRequestJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        setBackground(new java.awt.Color(76, 89, 115));
+        backJButton = new javax.swing.JButton();
+        resultJTextField = new javax.swing.JTextField();
+        submitJButton = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 730, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 550, Short.MAX_VALUE)
-        );
+        setBackground(new java.awt.Color(76, 89, 115));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        backJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        backJButton.setText("<< Back");
+        backJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        backJButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backJButtonActionPerformed(evt);
+            }
+        });
+        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 490, 100, -1));
+        add(resultJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 260, 210, 37));
+
+        submitJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        submitJButton.setText("Submit Response");
+        submitJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        submitJButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                submitJButtonActionPerformed(evt);
+            }
+        });
+        add(submitJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 340, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("FELONY  ALERT  STATUS  REQUEST ");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 70, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Optima", 0, 16)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Response:");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 270, -1, -1));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("/Users/anamikabharali/Downloads/imageedit_5_4363260202.jpg")); // NOI18N
+        jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -110, 730, 250));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+
+        userProcessContainer.remove(this);
+        Component[] componentArray = userProcessContainer.getComponents();
+        Component component = componentArray[componentArray.length - 1];
+        FelonyWorkAreaJPanel dwjp = (FelonyWorkAreaJPanel) component;
+        dwjp.populateTable();
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+        
+    }//GEN-LAST:event_backJButtonActionPerformed
+
+    private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
+        
+        if(resultJTextField.getText()!=null)
+        {
+        request.setResponse(resultJTextField.getText());
+        request.setStatus("Completed");
+        JOptionPane.showMessageDialog(null,"Your response has been sent");
+        }
+        else
+        {
+           JOptionPane.showMessageDialog(null,"Text Field is Empty");
+        }
+        
+    }//GEN-LAST:event_submitJButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton backJButton;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JTextField resultJTextField;
+    private javax.swing.JButton submitJButton;
     // End of variables declaration//GEN-END:variables
 }
