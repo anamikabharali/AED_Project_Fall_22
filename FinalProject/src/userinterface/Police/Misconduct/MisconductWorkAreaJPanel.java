@@ -190,7 +190,7 @@ public class MisconductWorkAreaJPanel extends javax.swing.JPanel {
                 senteamActionPerformed(evt);
             }
         });
-        add(senteam, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 400, 90, -1));
+        add(senteam, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 400, 90, -1));
 
         processJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         processJButton.setText("Process");
