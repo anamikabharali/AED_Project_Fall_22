@@ -160,8 +160,8 @@ public class ResidentialHallManageEmployeeJPanel extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("RESIDENCE ADMINISTRATION");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 70, -1, -1));
+        jLabel1.setText("RESIDENCE EMPLOYEE MANAGEMENT");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 90, -1, -1));
 
         jLabel3.setIcon(new javax.swing.ImageIcon("/Users/anamikabharali/Downloads/imageedit_13_4677416373.jpg")); // NOI18N
         jLabel3.setVerticalAlignment(javax.swing.SwingConstants.TOP);

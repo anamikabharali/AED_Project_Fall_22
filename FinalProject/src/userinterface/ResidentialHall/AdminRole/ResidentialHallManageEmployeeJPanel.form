@@ -192,11 +192,11 @@
         <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="RESIDENCE ADMINISTRATION"/>
+        <Property name="text" type="java.lang.String" value="RESIDENCE EMPLOYEE MANAGEMENT"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="210" y="70" width="-1" height="-1"/>
+          <AbsoluteConstraints x="160" y="90" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>
