@@ -95,7 +95,7 @@ public class PoliceAdminWorkAreaJPanel extends javax.swing.JPanel {
                 manageempbtnActionPerformed(evt);
             }
         });
-        add(manageempbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 450, -1, 38));
+        add(manageempbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 450, 160, 38));
 
         jLabel2.setFont(new java.awt.Font("Optima", 0, 16)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));

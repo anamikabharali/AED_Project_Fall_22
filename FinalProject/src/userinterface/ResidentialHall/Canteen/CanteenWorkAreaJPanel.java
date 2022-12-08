@@ -1,6 +1,6 @@
 /*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package userinterface.ResidentialHall.Canteen;
 
@@ -8,7 +8,6 @@ import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.CanteenOrganization;
-
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
 import Business.WorkQueue.Complaints_Suggestions_Request;
@@ -22,8 +21,9 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author srivaishnaviaekkati
+ * @author anamikabharali
  */
+
 public class CanteenWorkAreaJPanel extends javax.swing.JPanel {
 
     private JPanel userProcessContainer;
@@ -32,9 +32,11 @@ public class CanteenWorkAreaJPanel extends javax.swing.JPanel {
     private CanteenOrganization diningOrganization;
     private Enterprise enterprise;
     private Network network;
+    
     /**
      * Creates new form LabAssistantWorkAreaJPanel
      */
+    
     public CanteenWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization organization,Enterprise enterprise ,EcoSystem business,Network network) {
         initComponents();
         this.network=network;
@@ -81,6 +83,7 @@ public class CanteenWorkAreaJPanel extends javax.swing.JPanel {
         }
         }
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -99,14 +102,15 @@ public class CanteenWorkAreaJPanel extends javax.swing.JPanel {
         workRequestJTable1 = new javax.swing.JTable();
         emergencybtn = new javax.swing.JButton();
         complaintbtn = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 153));
-        setMaximumSize(new java.awt.Dimension(750, 750));
-        setMinimumSize(new java.awt.Dimension(750, 750));
+        setBackground(new java.awt.Color(76, 89, 115));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        workRequestJTable.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        workRequestJTable.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -135,36 +139,39 @@ public class CanteenWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(workRequestJTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 450, 90));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 180, 580, 90));
 
-        assignJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        assignJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         assignJButton.setText("Assign to me");
+        assignJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         assignJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 assignJButtonActionPerformed(evt);
             }
         });
-        add(assignJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, -1, -1));
+        add(assignJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 290, 170, -1));
 
-        processJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        processJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         processJButton.setText("Process");
+        processJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         processJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 processJButtonActionPerformed(evt);
             }
         });
-        add(processJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 270, -1, -1));
+        add(processJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 290, 170, -1));
 
-        refreshJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        refreshJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         refreshJButton.setText("Refresh");
+        refreshJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         refreshJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 refreshJButtonActionPerformed(evt);
             }
         });
-        add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 110, -1, -1));
+        add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 180, 70, -1));
 
-        workRequestJTable1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        workRequestJTable1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         workRequestJTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -193,40 +200,58 @@ public class CanteenWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(workRequestJTable1);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, -1, 90));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 390, 510, 90));
 
-        emergencybtn.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
-        emergencybtn.setForeground(new java.awt.Color(255, 51, 0));
+        emergencybtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        emergencybtn.setForeground(new java.awt.Color(255, 0, 51));
         emergencybtn.setText("Emergency!!");
+        emergencybtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         emergencybtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emergencybtnActionPerformed(evt);
             }
         });
-        add(emergencybtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 630, 190, -1));
+        add(emergencybtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 500, 190, -1));
 
-        complaintbtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        complaintbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         complaintbtn.setText("Add Complaint");
+        complaintbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         complaintbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 complaintbtnActionPerformed(evt);
             }
         });
-        add(complaintbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 510, 130, -1));
+        add(complaintbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 390, 130, -1));
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        jLabel1.setText("Diner Work Area");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 30, -1, -1));
+        jLabel4.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("DINER  ALERTS  MANAGEMENT");
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, -1, -1));
+
+        jLabel2.setFont(new java.awt.Font("Optima", 1, 16)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Present diner alerts:");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Optima", 1, 16)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Emergency:");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 360, -1, -1));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon("/Users/anamikabharali/Downloads/imageedit_13_4677416373.jpg")); // NOI18N
+        jLabel10.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLabel10.setPreferredSize(new java.awt.Dimension(790, 550));
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(-140, -110, 880, 230));
     }// </editor-fold>//GEN-END:initComponents
 
     private void assignJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButtonActionPerformed
 
         int selectedRow = workRequestJTable.getSelectedRow();
-        
+
         if (selectedRow < 0){
             return;
         }
-        
+
         StatusRequest request = (StatusRequest)workRequestJTable.getValueAt(selectedRow, 0);
         if(request.getReceiver()!=null)
         {
@@ -234,80 +259,81 @@ public class CanteenWorkAreaJPanel extends javax.swing.JPanel {
         }
         else
         {
-        
-        if(request.getStatus()=="Completed")
-        {
-           JOptionPane.showMessageDialog(null,"Request has been completed already");
-        }
-        else
-             request.setReceiver(userAccount);
-        request.setStatus("Pending");
-        
+
+            if(request.getStatus()=="Completed")
+            {
+                JOptionPane.showMessageDialog(null,"Request has been completed already");
+            }
+            else
+            request.setReceiver(userAccount);
+            request.setStatus("Pending");
+
         }
         populateTable();
-        
+
     }//GEN-LAST:event_assignJButtonActionPerformed
 
     private void processJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processJButtonActionPerformed
-        
+
         int selectedRow = workRequestJTable.getSelectedRow();
-        
+
         if (selectedRow < 0){
             return;
         }
-        
+
         Complaints_Suggestions_Request request = (Complaints_Suggestions_Request)workRequestJTable.getValueAt(selectedRow, 0);
-          if(request.getStatus()=="Completed")
-          {    
-               JOptionPane.showMessageDialog(null,"Request has been completed already");  
-              
-          
-          }
-          else if(request.getStatus()=="Sent" || request.getReceiver()==null)
-          {
-                   JOptionPane.showMessageDialog(null,"Request has to be assigned first");  
-          }
-          else
-          {
-              
-        request.setStatus("Processing");
-        
-        CanteenProcessStatusRequestJPanel processWorkRequestJPanel = new CanteenProcessStatusRequestJPanel(userProcessContainer, request);
-        userProcessContainer.add("diningprocessWorkRequestJPanel", processWorkRequestJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
-          }
-        
+        if(request.getStatus()=="Completed")
+        {
+            JOptionPane.showMessageDialog(null,"Request has been completed already");
+
+        }
+        else if(request.getStatus()=="Sent" || request.getReceiver()==null)
+        {
+            JOptionPane.showMessageDialog(null,"Request has to be assigned first");
+        }
+        else
+        {
+
+            request.setStatus("Processing");
+
+            CanteenProcessStatusRequestJPanel processWorkRequestJPanel = new CanteenProcessStatusRequestJPanel(userProcessContainer, request);
+            userProcessContainer.add("diningprocessWorkRequestJPanel", processWorkRequestJPanel);
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
+        }
+
     }//GEN-LAST:event_processJButtonActionPerformed
 
     private void refreshJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshJButtonActionPerformed
         populateTable();
     }//GEN-LAST:event_refreshJButtonActionPerformed
 
-    private void complaintbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_complaintbtnActionPerformed
-        // TODO add your handling code here:
-        
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        userProcessContainer.add("DinerComplaintJpanel", new CanteenComplaintJPanel(userProcessContainer, userAccount, enterprise,network));
-        layout.next(userProcessContainer);
-        
-        
-        
-    }//GEN-LAST:event_complaintbtnActionPerformed
-
     private void emergencybtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emergencybtnActionPerformed
         // TODO add your handling code here:
-        
-         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         userProcessContainer.add("DineremergencyrequestJpanel", new CanteenEmergencyRequestJPanel(userProcessContainer, userAccount, enterprise,network));
         layout.next(userProcessContainer);
     }//GEN-LAST:event_emergencybtnActionPerformed
+
+    private void complaintbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_complaintbtnActionPerformed
+        // TODO add your handling code here:
+
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        userProcessContainer.add("DinerComplaintJpanel", new CanteenComplaintJPanel(userProcessContainer, userAccount, enterprise,network));
+        layout.next(userProcessContainer);
+
+    }//GEN-LAST:event_complaintbtnActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton assignJButton;
     private javax.swing.JButton complaintbtn;
     private javax.swing.JButton emergencybtn;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JButton processJButton;
