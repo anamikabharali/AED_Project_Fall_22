@@ -88,7 +88,7 @@ public class ResidentialHallManageOrganizationJPanel extends javax.swing.JPanel 
                 backJButtonActionPerformed(evt);
             }
         });
-        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 540, 90, -1));
+        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 500, 90, -1));
 
         addJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         addJButton.setText("Add Organization");
@@ -98,7 +98,7 @@ public class ResidentialHallManageOrganizationJPanel extends javax.swing.JPanel 
                 addJButtonActionPerformed(evt);
             }
         });
-        add(addJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 480, 220, -1));
+        add(addJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 450, 220, -1));
 
         organizationJTable.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         organizationJTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -133,7 +133,7 @@ public class ResidentialHallManageOrganizationJPanel extends javax.swing.JPanel 
 
         organizationJComboBox.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         organizationJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(organizationJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 410, 200, -1));
+        add(organizationJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 400, 200, -1));
 
         jLabel5.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -143,7 +143,7 @@ public class ResidentialHallManageOrganizationJPanel extends javax.swing.JPanel 
         jLabel1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Organization :  ");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 420, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 410, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));

@@ -174,12 +174,12 @@ public class PoliceManageUserAccountJPanel extends javax.swing.JPanel {
         jLabel4.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Role");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 400, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("User Name");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 320, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 320, -1, -1));
 
         roleJComboBox.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         roleJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -188,7 +188,7 @@ public class PoliceManageUserAccountJPanel extends javax.swing.JPanel {
                 roleJComboBoxActionPerformed(evt);
             }
         });
-        add(roleJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, 170, -1));
+        add(roleJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 400, 170, -1));
 
         userJTable.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         userJTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -221,12 +221,12 @@ public class PoliceManageUserAccountJPanel extends javax.swing.JPanel {
         jLabel6.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Email id");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 400, -1, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 400, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Password");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 360, -1, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 360, -1, -1));
 
         emailtxtfield.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         emailtxtfield.addActionListener(new java.awt.event.ActionListener() {
@@ -234,7 +234,7 @@ public class PoliceManageUserAccountJPanel extends javax.swing.JPanel {
                 emailtxtfieldActionPerformed(evt);
             }
         });
-        add(emailtxtfield, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 390, 200, -1));
+        add(emailtxtfield, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 400, 200, -1));
 
         passwordJTextField.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         passwordJTextField.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -242,16 +242,16 @@ public class PoliceManageUserAccountJPanel extends javax.swing.JPanel {
                 passwordJTextFieldFocusLost(evt);
             }
         });
-        add(passwordJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 350, 200, -1));
+        add(passwordJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 360, 200, -1));
 
         jLabel5.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Employee");
-        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, -1, -1));
 
         employeeJComboBox.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         employeeJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(employeeJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 360, 170, -1));
+        add(employeeJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 360, 170, -1));
 
         backjButton1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         backjButton1.setText("<< Back");
@@ -265,7 +265,7 @@ public class PoliceManageUserAccountJPanel extends javax.swing.JPanel {
         jLabel7.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Organization");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 320, -1, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, -1, -1));
 
         createUserJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         createUserJButton.setText("Create");
@@ -283,10 +283,10 @@ public class PoliceManageUserAccountJPanel extends javax.swing.JPanel {
                 organizationJComboBoxActionPerformed(evt);
             }
         });
-        add(organizationJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, 170, -1));
+        add(organizationJComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 320, 170, -1));
 
         nameJTextField.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        add(nameJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 310, 200, -1));
+        add(nameJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 320, 200, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon("/Users/anamikabharali/Downloads/imageedit_5_4363260202.jpg")); // NOI18N
         jLabel8.setVerticalAlignment(javax.swing.SwingConstants.TOP);
