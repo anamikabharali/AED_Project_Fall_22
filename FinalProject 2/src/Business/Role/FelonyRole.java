@@ -24,8 +24,10 @@ public class FelonyRole extends Role{
      
     
     @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,Network network) {
-   return new FelonyWorkAreaJPanel(userProcessContainer, account,(FelonyOrganization) organization,enterprise, business,network);
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, 
+            Organization organization, Enterprise enterprise, EcoSystem business,Network network) {
+        return new FelonyWorkAreaJPanel(userProcessContainer, account,(FelonyOrganization) 
+                organization,enterprise, business,network);
     }
      @Override
     public String toString(){
