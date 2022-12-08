@@ -175,13 +175,13 @@ JPanel container;
     private void authenticatetxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_authenticatetxtfieldActionPerformed
         // TODO add your handling code here:
     //    Integer num=Integer.parseInt(authtxtfield.getText());
-        Integer num = 56789; 
+        Integer num = 12345; 
     
     
-        if(num.equals(56789))
+        if(num.equals(12345))
         {
         
-                 CardLayout layout = (CardLayout) container.getLayout();
+        CardLayout layout = (CardLayout) container.getLayout();
         container.add("SignUpJPanel", new SignUpJPanel(container, sys,emailtxtfield.getText()));
         layout.next(container);
         
