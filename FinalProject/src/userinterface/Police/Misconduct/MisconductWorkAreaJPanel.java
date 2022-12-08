@@ -24,6 +24,7 @@ import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 import userinterface.Police.felony.FelonyWorkAreaJPanel;
 import utility.Validate;
+import utility.ValidateMail;
 
 /**
  *
