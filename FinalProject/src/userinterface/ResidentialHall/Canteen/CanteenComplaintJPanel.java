@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package userinterface.ResidentialHall.Canteen;
 
@@ -20,14 +19,15 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author srivaishnaviaekkati
+ * @author anamikabharali
  */
 public class CanteenComplaintJPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form CanteenComplaintJPanel
      */
-     private JPanel userProcessContainer;
+    
+    private JPanel userProcessContainer;
     private Enterprise enterprise;
     private UserAccount userAccount;
     Network network;
@@ -37,10 +37,11 @@ public class CanteenComplaintJPanel extends javax.swing.JPanel {
          this.userProcessContainer = userProcessContainer;
         this.enterprise = enterprise;
         this.userAccount = userAccount;
-        
         populateComboBox();
+        
     }
  Complaints_Suggestions_Request request = new Complaints_Suggestions_Request();
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -50,171 +51,63 @@ public class CanteenComplaintJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        messageJTextField = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        combo = new javax.swing.JComboBox();
-        sendComplaint = new javax.swing.JButton();
         backJButton = new javax.swing.JButton();
+        sendComplaint = new javax.swing.JButton();
+        combo = new javax.swing.JComboBox();
+        jLabel3 = new javax.swing.JLabel();
+        messageJTextField = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 153));
-        setMaximumSize(new java.awt.Dimension(750, 750));
-        setMinimumSize(new java.awt.Dimension(750, 750));
+        setBackground(new java.awt.Color(76, 89, 115));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel1.setText("Message");
-
-        messageJTextField.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel3.setText("Department");
-
-        combo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        combo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
-        sendComplaint.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        sendComplaint.setText("Send Complaint");
-        sendComplaint.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sendComplaintActionPerformed(evt);
-            }
-        });
-
-        backJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        backJButton.setText("Back");
+        backJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        backJButton.setText("<< Back");
+        backJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
             }
         });
+        add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 480, 90, 20));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(39, 39, 39)
-                        .addComponent(backJButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(293, 293, 293)
-                        .addComponent(sendComplaint)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(142, 142, 142)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(messageJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 243, Short.MAX_VALUE)
-                        .addComponent(combo, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(175, 175, 175))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(167, 167, 167)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(messageJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(116, 116, 116)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(111, 111, 111)
-                .addComponent(sendComplaint)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 211, Short.MAX_VALUE)
-                .addComponent(backJButton)
-                .addGap(49, 49, 49))
-        );
+        sendComplaint.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        sendComplaint.setText("Send Complaint");
+        sendComplaint.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        sendComplaint.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                sendComplaintActionPerformed(evt);
+            }
+        });
+        add(sendComplaint, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, 160, 30));
+
+        combo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        combo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(combo, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 330, 310, -1));
+
+        jLabel3.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel3.setText("Department :");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 330, -1, -1));
+
+        messageJTextField.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        add(messageJTextField, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 270, 310, -1));
+
+        jLabel1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Message :");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 270, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
-  private void populateComboBox() {
+    
+    private void populateComboBox() {
         
-         combo.removeAllItems();
+        combo.removeAllItems();
         combo.addItem(Organization.Type.Felony);
         combo.addItem(Organization.Type.Misconduct);
         combo.addItem(Organization.Type.Theft);
        
     }
-    private void sendComplaintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendComplaintActionPerformed
-       
-        String message = messageJTextField.getText();
-         if(message!=null)
-         {
-        request.setMessage(message);
-
-        request.setSender(userAccount);
-        request.setStatus("Sent");
-
-        Organization org = null;
-
-         Organization.Type sel = (Organization.Type) combo.getSelectedItem();
-        if(sel.equals(Organization.Type.Felony))
-        {
-             for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
-            {
-                  for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
-                  {
-                if (organization instanceof FelonyOrganization){
-                    org = organization;
-                    break;
-                } 
-                  }
-            }
-            if (org!=null){
-                org.getStatusQueue().getStatusRequestList().add(request);
-                userAccount.getStatusQueue().getStatusRequestList().add(request);
-            }
-        }
-        else if(sel.equals(Organization.Type.Misconduct))
-        {
-
-            for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
-            {
-                  for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
-                  {
-                if (organization instanceof MisconductOrganization){
-                    org = organization;
-                    break;
-                } 
-            }
-            }
-            if (org!=null){
-                org.getStatusQueue().getStatusRequestList().add(request);
-                userAccount.getStatusQueue().getStatusRequestList().add(request);
-            }
-
-        }
-        else if(sel.equals(Organization.Type.Theft))
-        {
-             for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
-            {
-                  for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
-                  {
-                if (organization instanceof TheftOrganization){
-                    org = organization;
-                    break;
-                } 
-                  }
-            }
-            if (org!=null){
-                org.getStatusQueue().getStatusRequestList().add(request);
-                userAccount.getStatusQueue().getStatusRequestList().add(request);
-            }
-
-        }
-        JOptionPane.showMessageDialog(null,"Your complaint has been sent");
-         }
-         else
-         {
-           JOptionPane.showMessageDialog(null,"Message field is empty");
-         }
-    }//GEN-LAST:event_sendComplaintActionPerformed
-
+    
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
 
         userProcessContainer.remove(this);
@@ -224,8 +117,82 @@ public class CanteenComplaintJPanel extends javax.swing.JPanel {
         dwjp.populateRequestTable();
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-
     }//GEN-LAST:event_backJButtonActionPerformed
+
+    private void sendComplaintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendComplaintActionPerformed
+
+        String message = messageJTextField.getText();
+        if(message!=null)
+        {
+            request.setMessage(message);
+
+            request.setSender(userAccount);
+            request.setStatus("Sent");
+
+            Organization org = null;
+
+            Organization.Type sel = (Organization.Type) combo.getSelectedItem();
+            if(sel.equals(Organization.Type.Felony))
+            {
+                for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
+                {
+                    for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
+                    {
+                        if (organization instanceof FelonyOrganization){
+                            org = organization;
+                            break;
+                        }
+                    }
+                }
+                if (org!=null){
+                    org.getStatusQueue().getStatusRequestList().add(request);
+                    userAccount.getStatusQueue().getStatusRequestList().add(request);
+                }
+            }
+            else if(sel.equals(Organization.Type.Misconduct))
+            {
+
+                for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
+                {
+                    for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
+                    {
+                        if (organization instanceof MisconductOrganization){
+                            org = organization;
+                            break;
+                        }
+                    }
+                }
+                if (org!=null){
+                    org.getStatusQueue().getStatusRequestList().add(request);
+                    userAccount.getStatusQueue().getStatusRequestList().add(request);
+                }
+
+            }
+            else if(sel.equals(Organization.Type.Theft))
+            {
+                for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
+                {
+                    for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
+                    {
+                        if (organization instanceof TheftOrganization){
+                            org = organization;
+                            break;
+                        }
+                    }
+                }
+                if (org!=null){
+                    org.getStatusQueue().getStatusRequestList().add(request);
+                    userAccount.getStatusQueue().getStatusRequestList().add(request);
+                }
+
+            }
+            JOptionPane.showMessageDialog(null,"Your complaint has been sent");
+        }
+        else
+        {
+            JOptionPane.showMessageDialog(null,"Message field is empty");
+        }
+    }//GEN-LAST:event_sendComplaintActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
