@@ -13,13 +13,20 @@ import javax.swing.JPanel;
  *
  * @author anamikabharali
  */
+
 public class MisconductProcessStatusRequestJPanel extends javax.swing.JPanel {
 
+    JPanel userProcessContainer;
+    Complaints_Suggestions_Request request;
+    
     /**
-     * Creates new form MisconductProcessStatusRequestJPanel
+     * Creates new form ProcessWorkRequestJPanel
      */
-    public MisconductProcessStatusRequestJPanel() {
+    
+    public MisconductProcessStatusRequestJPanel(JPanel userProcessContainer, Complaints_Suggestions_Request request) {
         initComponents();
+        this.userProcessContainer = userProcessContainer;
+        this.request = request;
     }
 
     /**
