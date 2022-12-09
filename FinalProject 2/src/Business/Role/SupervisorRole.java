@@ -24,8 +24,10 @@ public class SupervisorRole extends Role {
     
     
     @Override
-    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,Network network) {
-   return new SupervisorWorkAreaJPanel(userProcessContainer, account,(SupervisorOrganization) organization, enterprise,business,network);
+    public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, 
+            Organization organization, Enterprise enterprise, EcoSystem business,Network network) {
+    return new SupervisorWorkAreaJPanel(userProcessContainer, account,
+            (SupervisorOrganization) organization, enterprise,business,network);
     }
     
       @Override

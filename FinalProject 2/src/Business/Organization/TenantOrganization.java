@@ -16,7 +16,7 @@ import java.util.ArrayList;
  */
 public class TenantOrganization extends Organization
  {
-     public TenantOrganization() {
+    public TenantOrganization() {
         super(Organization.Type.Tenant.getValue());
     }
     
