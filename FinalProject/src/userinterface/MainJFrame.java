@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package userinterface;
+
 import Business.EcoSystem;
 import Business.DB4OUtil.DB4OUtil;
 import Business.Enterprise.Enterprise;
@@ -31,7 +32,7 @@ public class MainJFrame extends javax.swing.JFrame {
     public MainJFrame() {
         initComponents();
         system = dB4OUtil.retrieveSystem();
-        this.setSize(961, 550);
+        this.setSize(1680, 1050);
     }
 
     /**
@@ -54,8 +55,8 @@ public class MainJFrame extends javax.swing.JFrame {
         loginbtn = new javax.swing.JButton();
         logoutbtn = new javax.swing.JButton();
         signupbtn = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
+        container = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -112,12 +113,12 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jSplitPane1.setLeftComponent(jPanel2);
 
-        jPanel3.setLayout(new java.awt.CardLayout());
+        container.setLayout(new java.awt.CardLayout());
 
-        jLabel4.setIcon(new javax.swing.ImageIcon("/Users/anamikabharali/Desktop/Screen Shot 2022-12-09 at 12.41.19 PM.png")); // NOI18N
-        jPanel3.add(jLabel4, "card2");
+        jLabel1.setIcon(new javax.swing.ImageIcon("/Users/anamikabharali/Desktop/Screen Shot 2022-12-09 at 1.14.39 PM.png")); // NOI18N
+        container.add(jLabel1, "card2");
 
-        jSplitPane1.setRightComponent(jPanel3);
+        jSplitPane1.setRightComponent(container);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -146,11 +147,10 @@ public class MainJFrame extends javax.swing.JFrame {
 
     private void loginbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginbtnActionPerformed
         // TODO add your handling code here:
-        
-         // Get user name   
+        // Get user name
         String userName = usernametxt.getText();
         // Get Password
-        char[] passwordCharArray = passwordtxt.getPassword();
+        char[] passwordCharArray = passwordField.getPassword();
         String password = String.valueOf(passwordCharArray);
         
         //Step1: Check in the system admin user account directory if you have the user
@@ -205,24 +205,24 @@ public class MainJFrame extends javax.swing.JFrame {
             layout.next(container);
         }
         
-        loginbtn.setEnabled(false);
-        logoutbtn.setEnabled(true);
+        loginJButton.setEnabled(false);
+        logoutJButton.setEnabled(true);
         usernametxt.setEnabled(false);
-        passwordtxt.setEnabled(false);
-        signupbtn.setEnabled(false);
+        passwordField.setEnabled(false);
+        btnsignup.setEnabled(false);
         
     }//GEN-LAST:event_loginbtnActionPerformed
 
     private void logoutbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutbtnActionPerformed
         // TODO add your handling code here:
         
-        logoutbtn.setEnabled(false);
+        logoutJButton.setEnabled(false);
         usernametxt.setEnabled(true);
-        passwordtxt.setEnabled(true);
-        loginbtn.setEnabled(true);
-        signupbtn.setEnabled(true);
+        passwordField.setEnabled(true);
+        loginJButton.setEnabled(true);
+        btnsignup.setEnabled(true);
         usernametxt.setText("");
-        passwordtxt.setText("");
+        passwordField.setText("");
 
         container.removeAll();
         JPanel blankJP = new JPanel();
@@ -238,7 +238,7 @@ public class MainJFrame extends javax.swing.JFrame {
         
         CardLayout layout = (CardLayout) container.getLayout();
         container.add("AuthenticateJPanel", new AuthenticationJPanel(container, system));
-        layout.next(container);
+        layout.next(container);;
         
     }//GEN-LAST:event_signupbtnActionPerformed
 
@@ -280,12 +280,12 @@ public class MainJFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel container;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JButton loginbtn;
     private javax.swing.JLabel logolbl;
