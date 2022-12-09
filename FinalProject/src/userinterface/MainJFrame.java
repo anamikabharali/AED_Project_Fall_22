@@ -21,6 +21,7 @@ import userinterface.SignUp.SignUpJPanel;
  *
  * @author anamikabharali
  */
+
 public class MainJFrame extends javax.swing.JFrame {
 
     /**
@@ -209,7 +210,7 @@ public class MainJFrame extends javax.swing.JFrame {
         logoutbtn.setEnabled(true);
         usernametxt.setEnabled(false);
         passwordtxt.setEnabled(false);
-        btnsignup.setEnabled(false);
+        signupbtn.setEnabled(false);
         
     }//GEN-LAST:event_loginbtnActionPerformed
 
@@ -220,7 +221,7 @@ public class MainJFrame extends javax.swing.JFrame {
         usernametxt.setEnabled(true);
         passwordtxt.setEnabled(true);
         loginbtn.setEnabled(true);
-        btnsignup.setEnabled(true);
+        signupbtn.setEnabled(true);
         usernametxt.setText("");
         passwordtxt.setText("");
 
