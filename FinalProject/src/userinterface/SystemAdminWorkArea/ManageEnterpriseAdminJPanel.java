@@ -328,24 +328,18 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
             nameJTextField.setText("");
             emailtxtfield.setText("");
             populateTable();
-                
-        
-        
+            
          }
         else
         {
         
-           JOptionPane.showMessageDialog(null,"Please enter valid email address");
+           JOptionPane.showMessageDialog(null,"Please enter valid password");
         
         }
          }
          else{
              JOptionPane.showMessageDialog(null, "Enter all the value", "Warning", JOptionPane.WARNING_MESSAGE);
         }
-        
-                 
-        
-         
         
     }//GEN-LAST:event_submitJButtonActionPerformed
 
