@@ -131,7 +131,7 @@ public class AuthenticationJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         
          try {
-              Validate.sendMessage1(emailtxtfield.getText(),n);
+             Validate.sendMessage1(emailtxtfield.getText(),n);
           
             JOptionPane.showMessageDialog(this,"Mail has been sent");
             jLabel2.setVisible(true);
