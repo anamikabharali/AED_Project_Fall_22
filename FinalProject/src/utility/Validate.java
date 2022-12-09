@@ -96,8 +96,8 @@ public class Validate {
         // Recipient's email ID needs to be mentioned.
         String to = emailId;
 
-        String from = "jukinaed2022@gmail.com";
-        String pass = "JKaed@2022";
+        String from = "srivaishnavi.a@gmail.com";
+        String pass = "kziwmqhrdfgzjvou";
 
         // Get system properties
         Properties properties = System.getProperties();
@@ -143,8 +143,8 @@ public class Validate {
         // Recipient's email ID needs to be mentioned.
         String to = emailId;
 
-        String from = "jukinaed2022@gmail.com";
-        String pass = "JKaed@2022";
+        String from = "srivaishnavi.a@gmail.com";
+        String pass = "kziwmqhrdfgzjvou";
 
         // Get system properties
         Properties properties = System.getProperties();
