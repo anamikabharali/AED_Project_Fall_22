@@ -150,7 +150,7 @@ public class MainJFrame extends javax.swing.JFrame {
         // Get user name
         String userName = usernametxt.getText();
         // Get Password
-        char[] passwordCharArray = passwordField.getPassword();
+        char[] passwordCharArray = passwordtxt.getPassword();
         String password = String.valueOf(passwordCharArray);
         
         //Step1: Check in the system admin user account directory if you have the user
@@ -205,10 +205,10 @@ public class MainJFrame extends javax.swing.JFrame {
             layout.next(container);
         }
         
-        loginJButton.setEnabled(false);
-        logoutJButton.setEnabled(true);
+        loginbtn.setEnabled(false);
+        logoutbtn.setEnabled(true);
         usernametxt.setEnabled(false);
-        passwordField.setEnabled(false);
+        passwordtxt.setEnabled(false);
         btnsignup.setEnabled(false);
         
     }//GEN-LAST:event_loginbtnActionPerformed
@@ -216,13 +216,13 @@ public class MainJFrame extends javax.swing.JFrame {
     private void logoutbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutbtnActionPerformed
         // TODO add your handling code here:
         
-        logoutJButton.setEnabled(false);
+        logoutbtn.setEnabled(false);
         usernametxt.setEnabled(true);
-        passwordField.setEnabled(true);
-        loginJButton.setEnabled(true);
+        passwordtxt.setEnabled(true);
+        loginbtn.setEnabled(true);
         btnsignup.setEnabled(true);
         usernametxt.setText("");
-        passwordField.setText("");
+        passwordtxt.setText("");
 
         container.removeAll();
         JPanel blankJP = new JPanel();
