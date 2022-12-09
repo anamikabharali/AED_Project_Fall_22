@@ -37,27 +37,27 @@ public class OrganizationDirectory {
         }
         
         else if (type.getValue().equals(Type.Tenant.getValue())){
-           organization = new TenantOrganization();
+            organization = new TenantOrganization();
             organizationList.add(organization);
         }
         
         else if (type.getValue().equals(Type.Felony.getValue())){
-           organization = new FelonyOrganization();
+            organization = new FelonyOrganization();
             organizationList.add(organization);
         }
         
         else if (type.getValue().equals(Type.Miscellaneous.getValue())){
-           organization = new MiscellaneousOrganization();
+            organization = new MiscellaneousOrganization();
             organizationList.add(organization);
         }
         
         else if (type.getValue().equals(Type.Misconduct.getValue())){
-           organization = new MisconductOrganization();
+            organization = new MisconductOrganization();
             organizationList.add(organization);
         }
         
         else if (type.getValue().equals(Type.Theft.getValue())){
-           organization = new TheftOrganization();
+            organization = new TheftOrganization();
             organizationList.add(organization);
         }
         

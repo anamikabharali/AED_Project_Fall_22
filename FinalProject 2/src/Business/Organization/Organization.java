@@ -23,15 +23,17 @@ public abstract class Organization {
     private int organizationID;
     private static int counter = 0;
     
-    public enum Type{
+    public enum Type {
         Admin("Admin Organization"), Miscellaneous("Miscellaneous Organization"), 
         Canteen("Canteen Organization"), Tenant("Tenant Organization"),
         Supervisor("Supervisor Organization"), Felony("Felony Organization"),
         Misconduct("Misconduct Organization"), Theft("Theft Organization");
         private String value;
+        
         private Type(String value) {
             this.value = value;
         }
+        
         public String getValue() {
             return value;
         }
