@@ -52,10 +52,10 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         usernametxt = new javax.swing.JTextField();
-        passwordtxt = new javax.swing.JTextField();
         loginbtn = new javax.swing.JButton();
         logoutbtn = new javax.swing.JButton();
         signupbtn = new javax.swing.JButton();
+        passwordtxt = new javax.swing.JPasswordField();
         container = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
 
@@ -80,7 +80,6 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel3.setText("PASSWORD");
         jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 330, -1, -1));
         jPanel2.add(usernametxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 279, 154, -1));
-        jPanel2.add(passwordtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 366, 154, -1));
 
         loginbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         loginbtn.setText("LOG IN");
@@ -111,6 +110,9 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
         jPanel2.add(signupbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 513, -1, -1));
+
+        passwordtxt.setText("jPasswordField1");
+        jPanel2.add(passwordtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 150, -1));
 
         jSplitPane1.setLeftComponent(jPanel2);
 
@@ -291,7 +293,7 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JButton loginbtn;
     private javax.swing.JLabel logolbl;
     private javax.swing.JButton logoutbtn;
-    private javax.swing.JTextField passwordtxt;
+    private javax.swing.JPasswordField passwordtxt;
     private javax.swing.JButton signupbtn;
     private javax.swing.JTextField usernametxt;
     // End of variables declaration//GEN-END:variables
