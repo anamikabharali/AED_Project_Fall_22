@@ -6,6 +6,7 @@
 package utility;
 
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Properties;
@@ -26,6 +27,9 @@ import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMultipart;
 import java.util.ArrayList;
+import javax.mail.internet.AddressException;
+import userinterface.Police.felony.FelonyWorkAreaJPanel;
+import userinterface.SignUp.AuthenticationJPanel;
 
 /**
  *
@@ -92,7 +96,7 @@ public class Validate {
     }
 
 
-    public static void sendMessage(String emailId, String mes) throws SendFailedException, MessagingException {
+    public static void sendMessage2(String emailId, String mes) throws SendFailedException, MessagingException {
         // Recipient's email ID needs to be mentioned.
         String to = emailId;
 
@@ -139,6 +143,28 @@ public class Validate {
         }
     }
        
+     public static void sendMessage(String emailId, String mes) throws SendFailedException, MessagingException {
+         try {
+             ValidateMail valMail = new ValidateMail();
+                try {
+                 //Validate.sendMessage1(emailtxtfield.getText(),n);
+                 valMail.preparetoSendEmail("This is Subject", "We will send the Team shortly : " , "vaishnavi.asv@gmail.com");
+                } catch (AddressException ex) {
+                    Logger.getLogger(AuthenticationJPanel.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (IOException ex) {
+                    Logger.getLogger(AuthenticationJPanel.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                
+                System.out.println("Mail has been sent....");
+              
+        //    JOptionPane.showMessageDialog("Mail has been sent");
+       
+        } catch (MessagingException ex) {
+            Logger.getLogger(FelonyWorkAreaJPanel.class.getName()).log(Level.SEVERE, null, ex);
+         //   JOptionPane.showMessageDialog(this,"Mail has not  been sent");
+        }
+     }
+    
      public static void sendMessage1(String emailId, int mes) throws SendFailedException, MessagingException {
         // Recipient's email ID needs to be mentioned.
         String to = emailId;
