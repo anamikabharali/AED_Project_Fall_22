@@ -3,17 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/Users/srivaishnaviaekkati/Documents/AED%20LAB%20Codes/FinalProject/src/userinterface/Police/felony/FelonyProcessStatusRequestJPanel.java</file>
-            <file>file:/Users/srivaishnaviaekkati/Documents/AED%20LAB%20Codes/FinalProject/src/userinterface/Police/Admin/PoliceManageUserAccountJPanel.java</file>
-            <file>file:/Users/srivaishnaviaekkati/Documents/AED%20LAB%20Codes/FinalProject/src/utility/ValidateMail.java</file>
-            <file>file:/Users/srivaishnaviaekkati/Documents/AED%20LAB%20Codes/FinalProject/src/userinterface/ResidentialHall/Miscellaneous/MiscellaneousComplaintJPanel.java</file>
-            <file>file:/Users/srivaishnaviaekkati/Documents/AED%20LAB%20Codes/FinalProject/src/utility/Mail.java</file>
-            <file>file:/Users/srivaishnaviaekkati/Documents/AED%20LAB%20Codes/FinalProject/src/Business/SQL/SQLDatabaseConnection.java</file>
-            <file>file:/Users/srivaishnaviaekkati/Documents/AED%20LAB%20Codes/FinalProject/src/Business/Role/Role.java</file>
-            <file>file:/Users/srivaishnaviaekkati/Documents/AED%20LAB%20Codes/FinalProject/src/userinterface/Police/Admin/PoliceAdminWorkAreaJPanel.java</file>
-            <file>file:/Users/srivaishnaviaekkati/Documents/AED%20LAB%20Codes/FinalProject/src/userinterface/MainJFrame.java</file>
-            <file>file:/Users/srivaishnaviaekkati/Documents/AED%20LAB%20Codes/FinalProject/src/Business/DB4OUtil/DB4OUtil.java</file>
-            <file>file:/Users/srivaishnaviaekkati/Documents/AED%20LAB%20Codes/FinalProject/src/Business/Role/CanteenRole.java</file>
+            <file>file:/Users/srivaishnaviaekkati/Documents/GitHub/AED_Project_Fall_22/FinalProject/src/userinterface/MainJFrame.java</file>
+            <file>file:/Users/srivaishnaviaekkati/Documents/GitHub/AED_Project_Fall_22/FinalProject/src/userinterface/SystemAdminWorkArea/ManageNetworkJPanel.java</file>
+            <file>file:/Users/srivaishnaviaekkati/Documents/GitHub/AED_Project_Fall_22/FinalProject/src/Business/DB4OUtil/DB4OUtil.java</file>
+            <file>file:/Users/srivaishnaviaekkati/Documents/GitHub/AED_Project_Fall_22/FinalProject/src/userinterface/SignUp/AuthenticationJPanel.java</file>
+            <file>file:/Users/srivaishnaviaekkati/Documents/GitHub/AED_Project_Fall_22/FinalProject/src/Business/Organization/AdminOrganization.java</file>
+            <file>file:/Users/srivaishnaviaekkati/Documents/GitHub/AED_Project_Fall_22/FinalProject/src/Business/Organization/Organization.java</file>
+            <file>file:/Users/srivaishnaviaekkati/Documents/GitHub/AED_Project_Fall_22/FinalProject/src/Business/Role/SystemAdminRole.java</file>
+            <file>file:/Users/srivaishnaviaekkati/Documents/GitHub/AED_Project_Fall_22/FinalProject/src/utility/ValidateMail.java</file>
+            <file>file:/Users/srivaishnaviaekkati/Documents/GitHub/AED_Project_Fall_22/FinalProject/src/Business/Network/Network.java</file>
+            <file>file:/Users/srivaishnaviaekkati/Documents/GitHub/AED_Project_Fall_22/FinalProject/src/Business/Role/Role.java</file>
         </group>
     </open-files>
 </project-private>
