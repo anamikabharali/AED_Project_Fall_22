@@ -27,7 +27,7 @@ public class PoliceEnterprise extends Enterprise {
         orgs.add(Organization.Type.Felony);
         orgs.add(Organization.Type.Misconduct);
         orgs.add(Organization.Type.Theft);
-        return orgs;
+        return orgs; 
       }
 }
 
