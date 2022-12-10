@@ -329,10 +329,10 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
                 account = enterprise.getUserAccountDirectory().createUserAccount(username, password,email ,employee, new PoliceAdminRole());
             }
            else if (enterprise.getEnterpriseType() == Enterprise.EnterpriseType.Maintenance) {
-                account = enterprise.getUserAccountDirectory().createUserAccount(username, password,email ,employee, new PoliceAdminRole());
+                account = enterprise.getUserAccountDirectory().createUserAccount(username, password,email ,employee, new MaintenanceAdminRole());
             }
            else if (enterprise.getEnterpriseType() == Enterprise.EnterpriseType.Facility) {
-                account = enterprise.getUserAccountDirectory().createUserAccount(username, password,email ,employee, new PoliceAdminRole());
+                account = enterprise.getUserAccountDirectory().createUserAccount(username, password,email ,employee, new FacilitiesAdminRole());
             }
           JOptionPane.showMessageDialog(null, "UserAccount created successfully", "Information", JOptionPane.INFORMATION_MESSAGE);
             usernameJTextField.setText("");

@@ -5,28 +5,11 @@
 package utility;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Properties;
-import javax.mail.Message;
-import javax.mail.MessagingException;
-import javax.mail.Session;
-import javax.mail.Transport;
-import javax.mail.internet.AddressException;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeBodyPart;
-import javax.mail.internet.MimeMessage;
-import javax.mail.internet.MimeMultipart;
-
-import javax.mail.Session;
-
-import javax.mail.Session;
-
-import javax.mail.internet.MimeMessage;
-  
-import java.util.ArrayList;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import javax.mail.SendFailedException;
+import java.util.*;
+import javax.mail.*;
+import javax.mail.internet.*;
+import java.util.regex.*;
+import javax.activation.*;
 import javax.swing.JOptionPane;
 
 
@@ -47,6 +30,12 @@ public class ValidateMail {
 		mimeMessage = draftEmail(emailSubject,emailBody,receipent);
 		sendEmail();
         }
+        
+//        public void preparetoSendAttachment() throws MessagingException, AddressException, IOException{
+//                setupServerProperties();
+//	//	mimeMessage = draftEmail(emailSubject,emailBody,receipent);
+//		sendAttachment();
+//        }
 //	public static void main(String args[]) throws AddressException, MessagingException, IOException
 //	{
 //		Mail mail = new Mail();
@@ -74,6 +63,70 @@ public class ValidateMail {
 		transport.close();
 		System.out.println("Email successfully sent!!!");
 	}
+        
+        
+//        private void sendAttachment1() throws MessagingException {
+//		String fromUser = "srivaishnavi.a@gmail.com";  //Enter sender email id
+//		String fromUserPassword = "kziwmqhrdfgzjvou";  //Enter sender gmail password , this will be authenticated by gmail smtp server
+//		String emailHost = "smtp.gmail.com"; 
+//		Transport transport = newSession.getTransport("smtp");
+//		transport.connect(emailHost, fromUser, fromUserPassword);
+//		transport.sendMessage(mimeMessage, mimeMessage.getAllRecipients());
+//		transport.close();
+//		System.out.println("Email successfully sent!!!");
+//                
+//                
+//	}
+        public void sendAttachment() {
+		Properties properties = System.getProperties();
+		properties.put("mail.smtp.port", "587");
+		properties.put("mail.smtp.auth", "true");
+		properties.put("mail.smtp.starttls.enable", "true");
+                properties.put("mail.smtp.host", "smtp.gmail.com");
+                System.out.println("Before new session");
+		newSession = Session.getDefaultInstance(properties,new javax.mail.Authenticator() {
+                   
+                public PasswordAuthentication getPasswordAuthentication() {
+                    return new PasswordAuthentication("srivaishnavi.a@gmail.com","kziwmqhrdfgzjvou");
+                }
+                
+                });
+                 System.out.println("After new session");
+                try {
+                    
+                    Message message = new MimeMessage(newSession);
+                    message.setFrom(new InternetAddress("srivaishnavi.a@gmail.com"));//ur email
+                    message.setRecipients(Message.RecipientType.TO,
+                InternetAddress.parse("vaishnavi.asv@gmail.com"));//u will send to
+                    message.setSubject("Subject");    
+                    message.setText("Attachment Inside");
+                    MimeBodyPart messageBodyPart = new MimeBodyPart();
+                    Multipart multipart = new MimeMultipart();
+
+
+     
+     
+                    String file = "//Users//srivaishnaviaekkati//Downloads//model_diag.jpeg";
+                    String fileName = "Hello";
+                    messageBodyPart = new MimeBodyPart();   
+                    DataSource source = new FileDataSource(file);      
+                    messageBodyPart.setDataHandler(new DataHandler(source));
+                    messageBodyPart.setFileName(fileName);
+                    multipart.addBodyPart(messageBodyPart);
+                    message.setContent(multipart);
+
+       
+                    System.out.println("sending");
+                    Transport.send(message);
+                    
+                    System.out.println("Done");
+        
+   
+
+                    }catch (MessagingException e) {
+                        e.printStackTrace();
+                    }
+        }
 
 	private MimeMessage draftEmail(String emailSubject, String emailBody, String receipent) throws AddressException, MessagingException, IOException {
             ArrayList<String> emailReceipients = new ArrayList<>();

@@ -36,12 +36,8 @@ public class FacilitiesManageOrganizationJPanel extends javax.swing.JPanel {
     
     private void populateCombo(){
         organizationJComboBox.removeAllItems();
-         organizationJComboBox.addItem(Type.Canteen);
-        organizationJComboBox.addItem(Type.Tenant);
-        organizationJComboBox.addItem(Type.Supervisor);
-        organizationJComboBox.addItem(Type.Miscellaneous);
-        
-        
+        organizationJComboBox.addItem(Type.Canteen);
+            
     }
 
     private void populateTable(){

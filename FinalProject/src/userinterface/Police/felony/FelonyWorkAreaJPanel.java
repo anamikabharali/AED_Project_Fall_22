@@ -23,6 +23,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 import utility.Validate;
+import utility.ValidateMail;
 
 /**
  *
@@ -281,14 +282,12 @@ public class FelonyWorkAreaJPanel extends javax.swing.JPanel {
 
         EmergencyRequest request = (EmergencyRequest)emergencytable.getValueAt(selectedRow, 0);
         request.setReceiver(userAccount);
-        try {
-              Validate.sendMessage(request.getEmail(),"A team will approach to your location immediately");
+        
+            ValidateMail valMail = new ValidateMail();
+              valMail.sendAttachment();
            
             JOptionPane.showMessageDialog(this,"Mail has been sent");
-        } catch (MessagingException ex) {
-            Logger.getLogger(FelonyWorkAreaJPanel.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(this,"Mail has not  been sent");
-        }
+        
     }//GEN-LAST:event_senteamActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

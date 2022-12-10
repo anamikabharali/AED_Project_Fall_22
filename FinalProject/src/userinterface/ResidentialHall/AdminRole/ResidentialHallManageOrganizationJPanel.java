@@ -34,13 +34,10 @@ public class ResidentialHallManageOrganizationJPanel extends javax.swing.JPanel 
     }
     
     private void populateCombo(){
-        organizationJComboBox.removeAllItems();
-         organizationJComboBox.addItem(Type.Canteen);
+        organizationJComboBox.removeAllItems();         
         organizationJComboBox.addItem(Type.Tenant);
         organizationJComboBox.addItem(Type.Supervisor);
-        organizationJComboBox.addItem(Type.Miscellaneous);
-        
-        
+      
     }
 
     private void populateTable(){

@@ -4,13 +4,10 @@
  */
 package userinterface.Maintenance.Miscellaneous;
 
-import userinterface.Maintenance.Miscellaneous.MiscellaneousProcessStatusRequestJPanel;
-import userinterface.Maintenance.Miscellaneous.MiscellaneousEmergencyRequestJPanel;
-import userinterface.Maintenance.Miscellaneous.MiscellaneousComplaintJPanel;
+import userinterface.Maintenance.Miscellaneous.*;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
-import Business.Organization.SupervisorOrganization;
 import Business.Organization.MiscellaneousOrganization;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
@@ -20,7 +17,6 @@ import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
-import userinterface.ResidentialHall.Tenant.TenantEmergencyRequestJPanel;
 
 /**
  *
@@ -31,19 +27,19 @@ public class MiscellaneousWorkAreaJPanel extends javax.swing.JPanel {
     private JPanel userProcessContainer;
     private EcoSystem business;
     private UserAccount userAccount;
-    private MiscellaneousOrganization miscellaneousOrganization;
+    private MiscellaneousOrganization facultyOrganization;
     private Enterprise enterprise;
     private Network network;
     /**
      * Creates new form LabAssistantWorkAreaJPanel
      */
-    public MiscellaneousWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization organization,Enterprise enterprise ,EcoSystem business,Network network) {
+    public MiscellaneousWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise,EcoSystem business,Network network) {
         initComponents();
         this.enterprise=enterprise;
         this.userProcessContainer = userProcessContainer;
         this.userAccount = account;
         this.business = business;
-        this.miscellaneousOrganization = (MiscellaneousOrganization)organization;
+        this.facultyOrganization = (MiscellaneousOrganization)organization;
         this.network=network;
         populateTable();
         populateRequestTable();
@@ -54,7 +50,7 @@ public class MiscellaneousWorkAreaJPanel extends javax.swing.JPanel {
         
         model.setRowCount(0);
         
-        for(StatusRequest request : miscellaneousOrganization.getStatusQueue().getStatusRequestList()){
+        for(StatusRequest request : facultyOrganization.getStatusQueue().getStatusRequestList()){
             Object[] row = new Object[4];
             row[0] = request;
             row[1] = request.getSender().getEmployee().getName();
@@ -64,15 +60,12 @@ public class MiscellaneousWorkAreaJPanel extends javax.swing.JPanel {
             model.addRow(row);
         }
     }
-     
      public void populateRequestTable(){
         DefaultTableModel model = (DefaultTableModel) workRequestJTable1.getModel();
         
         model.setRowCount(0);
         for (StatusRequest request : userAccount.getStatusQueue().getStatusRequestList()){
-            if (request instanceof Complaints_Suggestions_Request)
-                
-            {
+            if (request instanceof Complaints_Suggestions_Request){
             Object[] row = new Object[4];
             row[0] = request.getMessage();
            
@@ -83,8 +76,8 @@ public class MiscellaneousWorkAreaJPanel extends javax.swing.JPanel {
             
             model.addRow(row);
         }
-        }
-    }
+    }}
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -101,8 +94,8 @@ public class MiscellaneousWorkAreaJPanel extends javax.swing.JPanel {
         refreshJButton = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         workRequestJTable1 = new javax.swing.JTable();
-        addcomplaint = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        addcomplaintbtn = new javax.swing.JButton();
+        emergencybtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 153, 153));
@@ -138,8 +131,12 @@ public class MiscellaneousWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         jScrollPane1.setViewportView(workRequestJTable);
+        if (workRequestJTable.getColumnModel().getColumnCount() > 0) {
+            workRequestJTable.getColumnModel().getColumn(1).setResizable(false);
+            workRequestJTable.getColumnModel().getColumn(3).setResizable(false);
+        }
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 150, 460, 96));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, 490, 96));
 
         assignJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         assignJButton.setText("Assign to me");
@@ -157,7 +154,7 @@ public class MiscellaneousWorkAreaJPanel extends javax.swing.JPanel {
                 processJButtonActionPerformed(evt);
             }
         });
-        add(processJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 270, -1, -1));
+        add(processJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 270, -1, -1));
 
         refreshJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         refreshJButton.setText("Refresh");
@@ -166,7 +163,7 @@ public class MiscellaneousWorkAreaJPanel extends javax.swing.JPanel {
                 refreshJButtonActionPerformed(evt);
             }
         });
-        add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 100, -1, -1));
+        add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 90, -1, -1));
 
         workRequestJTable1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         workRequestJTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -197,35 +194,35 @@ public class MiscellaneousWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(workRequestJTable1);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 400, -1, 90));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 390, 480, 90));
 
-        addcomplaint.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        addcomplaint.setText("Add Complaint");
-        addcomplaint.addActionListener(new java.awt.event.ActionListener() {
+        addcomplaintbtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        addcomplaintbtn.setText("Add Complaint");
+        addcomplaintbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addcomplaintActionPerformed(evt);
+                addcomplaintbtnActionPerformed(evt);
             }
         });
-        add(addcomplaint, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 530, 130, -1));
+        add(addcomplaintbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 530, -1, -1));
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 0, 0));
-        jButton1.setText("Emergency!!");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        emergencybtn.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
+        emergencybtn.setForeground(new java.awt.Color(255, 0, 0));
+        emergencybtn.setText("Emergency!!");
+        emergencybtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                emergencybtnActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 640, 190, -1));
+        add(emergencybtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 650, 190, -1));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        jLabel1.setText("Maintenance - Miscellaneous Work Area");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 30, -1, -1));
+        jLabel1.setText("Faculty Work Area");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 30, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void assignJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButtonActionPerformed
 
-        int selectedRow = workRequestJTable.getSelectedRow();
+         int selectedRow = workRequestJTable.getSelectedRow();
         
         if (selectedRow < 0){
             return;
@@ -239,15 +236,14 @@ public class MiscellaneousWorkAreaJPanel extends javax.swing.JPanel {
         else
         {
         
-        
+       
          if(request.getStatus()=="Completed")
         {
            JOptionPane.showMessageDialog(null,"Request has been completed already");
         }
          else
              request.setReceiver(userAccount);
-              request.setStatus("Pending");
-        
+         request.setStatus("Pending");
         }
         populateTable();
         
@@ -262,54 +258,58 @@ public class MiscellaneousWorkAreaJPanel extends javax.swing.JPanel {
         }
         
         Complaints_Suggestions_Request request = (Complaints_Suggestions_Request)workRequestJTable.getValueAt(selectedRow, 0);
-        if(request.getStatus()=="Completed")
+    
+          if(request.getStatus()=="Completed")
           {    
                JOptionPane.showMessageDialog(null,"Request has been completed already");  
               
           
           }
-          else if(request.getStatus()=="Sent" || request.getReceiver()==null)
+          else if(request.getStatus()=="Sent")
           {
                    JOptionPane.showMessageDialog(null,"Request has to be assigned first");  
           }
           else
           {
+              
+        
         request.setStatus("Processing");
         
         MiscellaneousProcessStatusRequestJPanel processWorkRequestJPanel = new MiscellaneousProcessStatusRequestJPanel(userProcessContainer, request);
-        userProcessContainer.add("processWorkRequestJPanel", processWorkRequestJPanel);
+        userProcessContainer.add("facultyprocessWorkRequestJPanel", processWorkRequestJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
           }
-        
     }//GEN-LAST:event_processJButtonActionPerformed
 
     private void refreshJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshJButtonActionPerformed
         populateTable();
     }//GEN-LAST:event_refreshJButtonActionPerformed
 
-    private void addcomplaintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addcomplaintActionPerformed
+    private void addcomplaintbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addcomplaintbtnActionPerformed
         // TODO add your handling code here:
         
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        userProcessContainer.add("MiscellaneousComplaintJPanel", new MiscellaneousComplaintJPanel(userProcessContainer, userAccount, enterprise,network));
+         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        userProcessContainer.add("FacultyComplaintJPanel", new MiscellaneousComplaintJPanel(userProcessContainer, userAccount, enterprise,network));
         layout.next(userProcessContainer);
         
+         
         
-    }//GEN-LAST:event_addcomplaintActionPerformed
+    }//GEN-LAST:event_addcomplaintbtnActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void emergencybtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emergencybtnActionPerformed
         // TODO add your handling code here:
         
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        userProcessContainer.add("MiscellaneousemergencyrequestJpanel", new MiscellaneousEmergencyRequestJPanel(userProcessContainer, userAccount, enterprise,network));
+        userProcessContainer.add("FacultyemergencyrequestJpanel", new MiscellaneousEmergencyRequestJPanel(userProcessContainer, userAccount, enterprise,network));
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_jButton1ActionPerformed
+        
+    }//GEN-LAST:event_emergencybtnActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton addcomplaint;
+    private javax.swing.JButton addcomplaintbtn;
     private javax.swing.JButton assignJButton;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton emergencybtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;

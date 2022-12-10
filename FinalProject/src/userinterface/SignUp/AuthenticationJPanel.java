@@ -155,7 +155,9 @@ JPanel container;
              ValidateMail valMail = new ValidateMail();
              try {
                  //Validate.sendMessage1(emailtxtfield.getText(),n);
-                 valMail.preparetoSendEmail("This is Subject", "This is Verification code : " + n, emailtxtfield.getText());
+             //    valMail.preparetoSendEmail("This is Subject", "This is Verification code : " + n, emailtxtfield.getText());
+             valMail.preparetoSendEmail("This is Subject", "This is Verification code : " + n, emailtxtfield.getText());
+
              } catch (AddressException ex) {
                  Logger.getLogger(AuthenticationJPanel.class.getName()).log(Level.SEVERE, null, ex);
              } catch (IOException ex) {

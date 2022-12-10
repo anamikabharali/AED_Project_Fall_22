@@ -4,7 +4,6 @@
  */
 package userinterface.Maintenance.Admin;
 
-//import userinterface.ResidentialHall.AdminRole.*;
 import userinterface.Maintenance.Admin.*;
 import Business.EcoSystem;
 import Business.Employee.Employee;
@@ -29,7 +28,7 @@ import utility.Validate;
 public class MaintenanceManageUserAccountJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form ResidentialHallManageUserAccountJPanel
+     * Creates new form MaintenanceManageUserAccountJPanel
      */
     private JPanel container;
     private Enterprise enterprise;

@@ -5,6 +5,7 @@
  */
 package userinterface.Maintenance.Miscellaneous;
 
+import userinterface.Maintenance.Miscellaneous.*;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.FelonyOrganization;
@@ -23,12 +24,11 @@ import javax.swing.JPanel;
  * @author srivaishnaviaekkati
  */
 public class MiscellaneousEmergencyRequestJPanel extends javax.swing.JPanel {
-   
 
     /**
      * Creates new form DinerEmergencyRequestJPanel
      */
-     private JPanel userProcessContainer;
+    private JPanel userProcessContainer;
     private Enterprise enterprise;
     private UserAccount userAccount; 
     private Network network;
@@ -40,8 +40,7 @@ public class MiscellaneousEmergencyRequestJPanel extends javax.swing.JPanel {
         this.userAccount = userAccount;
      populateComboBox();
     }
-
-    EmergencyRequest  erequest = new EmergencyRequest();
+EmergencyRequest  erequest = new EmergencyRequest();
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -54,7 +53,7 @@ public class MiscellaneousEmergencyRequestJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         locationlbl = new javax.swing.JLabel();
         locationtxtfield = new javax.swing.JTextField();
-        btnsendemergency = new javax.swing.JButton();
+        sendemergecy = new javax.swing.JButton();
         combo = new javax.swing.JComboBox();
         backJButton = new javax.swing.JButton();
 
@@ -70,11 +69,11 @@ public class MiscellaneousEmergencyRequestJPanel extends javax.swing.JPanel {
 
         locationtxtfield.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
 
-        btnsendemergency.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        btnsendemergency.setText("Send Emergency");
-        btnsendemergency.addActionListener(new java.awt.event.ActionListener() {
+        sendemergecy.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        sendemergecy.setText("Send Emergency");
+        sendemergecy.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnsendemergencyActionPerformed(evt);
+                sendemergecyActionPerformed(evt);
             }
         });
 
@@ -94,57 +93,51 @@ public class MiscellaneousEmergencyRequestJPanel extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(backJButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(299, 299, 299)
-                        .addComponent(btnsendemergency)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(123, 123, 123)
+                .addGap(154, 154, 154)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 236, Short.MAX_VALUE)
-                        .addComponent(combo, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
+                        .addComponent(combo, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(locationlbl)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(locationtxtfield, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(191, 191, 191))
+                        .addComponent(locationtxtfield, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(213, 213, 213))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(75, 75, 75)
+                        .addComponent(backJButton))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(296, 296, 296)
+                        .addComponent(sendemergecy)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(178, 178, 178)
+                .addGap(185, 185, 185)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 88, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(locationlbl)
-                    .addComponent(locationtxtfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(128, 128, 128)
-                .addComponent(btnsendemergency)
-                .addGap(201, 201, 201)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
+                        .addComponent(locationlbl)
+                        .addGap(131, 131, 131))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(97, 97, 97)
+                        .addComponent(locationtxtfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addComponent(sendemergecy)
+                .addGap(116, 116, 116)
                 .addComponent(backJButton)
-                .addGap(59, 59, 59))
+                .addGap(129, 129, 129))
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
-
-        userProcessContainer.remove(this);
-        Component[] componentArray = userProcessContainer.getComponents();
-        Component component = componentArray[componentArray.length - 1];
-        MiscellaneousWorkAreaJPanel fwajp = (MiscellaneousWorkAreaJPanel) component;
-        CardLayout layout = (CardLayout)userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
-
-    private void btnsendemergencyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsendemergencyActionPerformed
+    private void sendemergecyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendemergecyActionPerformed
         // TODO add your handling code here:
         
          String location = locationtxtfield.getText();
@@ -162,7 +155,7 @@ public class MiscellaneousEmergencyRequestJPanel extends javax.swing.JPanel {
             if (organization instanceof TheftOrganization){
                 org = organization;
                 break;
-            }
+            } 
                   }
         }
         if (org!=null){
@@ -180,8 +173,7 @@ public class MiscellaneousEmergencyRequestJPanel extends javax.swing.JPanel {
             if (organization instanceof FelonyOrganization){
                 org = organization;
                 break;
-            } 
-            }
+            } }
         }
         if (org!=null){
             org.getStatusQueue().getStatusRequestList().add(erequest);
@@ -208,26 +200,32 @@ public class MiscellaneousEmergencyRequestJPanel extends javax.swing.JPanel {
         }
         }
         
-        
-        
-        
-        
-        
          JOptionPane.showMessageDialog(null,"Your emergency request has been sent! An officer will notify you shortly");
-    }//GEN-LAST:event_btnsendemergencyActionPerformed
+        
+    }//GEN-LAST:event_sendemergecyActionPerformed
+
+    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+
+        userProcessContainer.remove(this);
+        Component[] componentArray = userProcessContainer.getComponents();
+        Component component = componentArray[componentArray.length - 1];
+        MiscellaneousWorkAreaJPanel fwajp = (MiscellaneousWorkAreaJPanel) component;
+        
+        CardLayout layout = (CardLayout)userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+    }//GEN-LAST:event_backJButtonActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backJButton;
-    private javax.swing.JButton btnsendemergency;
     private javax.swing.JComboBox combo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel locationlbl;
     private javax.swing.JTextField locationtxtfield;
+    private javax.swing.JButton sendemergecy;
     // End of variables declaration//GEN-END:variables
 
     private void populateComboBox() {
-          
          combo.removeAllItems();
         combo.addItem(Organization.Type.Theft);
         combo.addItem(Organization.Type.Felony);

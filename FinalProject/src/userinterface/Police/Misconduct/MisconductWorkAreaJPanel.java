@@ -248,14 +248,11 @@ public class MisconductWorkAreaJPanel extends javax.swing.JPanel {
 
         EmergencyRequest request = (EmergencyRequest)emergencytable.getValueAt(selectedRow, 0);
         request.setReceiver(userAccount);
-        try {
-            Validate.sendMessage(request.getEmail(),"A team will approach to your location immediately");
+         ValidateMail valMail = new ValidateMail();
+              valMail.sendAttachment();
            
             JOptionPane.showMessageDialog(this,"Mail has been sent");
-        } catch (MessagingException ex) {
-            Logger.getLogger(FelonyWorkAreaJPanel.class.getName()).log(Level.SEVERE, null, ex);
-            JOptionPane.showMessageDialog(this,"Mail has not  been sent");
-        }
+        
     }//GEN-LAST:event_senteamActionPerformed
 
     private void processJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processJButtonActionPerformed

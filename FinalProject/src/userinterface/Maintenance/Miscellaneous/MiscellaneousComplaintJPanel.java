@@ -5,6 +5,7 @@
  */
 package userinterface.Maintenance.Miscellaneous;
 
+import userinterface.Maintenance.Miscellaneous.*;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.FelonyOrganization;
@@ -18,22 +19,22 @@ import java.awt.Component;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-/**  
+/**
  *
  * @author srivaishnaviaekkati
  */
 public class MiscellaneousComplaintJPanel extends javax.swing.JPanel {
 
     /**
-     * Creates new form DinerComplaintJPanel 
+     * Creates new form DinerComplaintJPanel
      */
      private JPanel userProcessContainer;
     private Enterprise enterprise;
     private UserAccount userAccount;
-    Network network;
+    private Network network;
     public MiscellaneousComplaintJPanel(JPanel userProcessContainer, UserAccount userAccount, Enterprise enterprise,Network network) {
         initComponents();
-        this.network=network;
+        this.network= network;
          this.userProcessContainer = userProcessContainer;
         this.enterprise = enterprise;
         this.userAccount = userAccount;
@@ -95,14 +96,14 @@ public class MiscellaneousComplaintJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
+                        .addGap(39, 39, 39)
                         .addComponent(backJButton))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(281, 281, 281)
+                        .addGap(314, 314, 314)
                         .addComponent(sendComplaint)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addGap(126, 126, 126)
+                .addGap(155, 155, 155)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
@@ -110,26 +111,26 @@ public class MiscellaneousComplaintJPanel extends javax.swing.JPanel {
                         .addComponent(messageJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 272, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 237, Short.MAX_VALUE)
                         .addComponent(combo, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(162, 162, 162))
+                .addGap(168, 168, 168))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(158, 158, 158)
+                .addGap(198, 198, 198)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(messageJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 112, Short.MAX_VALUE)
+                .addGap(96, 96, 96)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(141, 141, 141)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 143, Short.MAX_VALUE)
                 .addComponent(sendComplaint)
-                .addGap(154, 154, 154)
+                .addGap(168, 168, 168)
                 .addComponent(backJButton)
-                .addGap(89, 89, 89))
+                .addGap(49, 49, 49))
         );
     }// </editor-fold>//GEN-END:initComponents
   private void populateComboBox() {
@@ -141,10 +142,10 @@ public class MiscellaneousComplaintJPanel extends javax.swing.JPanel {
        
     }
     private void sendComplaintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendComplaintActionPerformed
-
+     
         String message = messageJTextField.getText();
-           if(message!=null)
-           {
+     if(message!=null)
+     {
         request.setMessage(message);
 
         request.setSender(userAccount);
@@ -154,14 +155,15 @@ public class MiscellaneousComplaintJPanel extends javax.swing.JPanel {
           Organization.Type sel = (Organization.Type) combo.getSelectedItem();
         if(sel.equals(Organization.Type.Felony))
         {
-            for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
+             for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
             {
                   for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
                   {
                 if (organization instanceof FelonyOrganization){
                     org = organization;
                     break;
-                } }
+                }
+            }
             }
             if (org!=null){
                 org.getStatusQueue().getStatusRequestList().add(request);
@@ -171,14 +173,15 @@ public class MiscellaneousComplaintJPanel extends javax.swing.JPanel {
         else if(sel.equals(Organization.Type.Misconduct))
         {
 
-            for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
+             for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
             {
                   for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
                   {
                 if (organization instanceof MisconductOrganization){
                     org = organization;
                     break;
-                } }
+                } 
+            }
             }
             if (org!=null){
                 org.getStatusQueue().getStatusRequestList().add(request);
@@ -196,7 +199,7 @@ public class MiscellaneousComplaintJPanel extends javax.swing.JPanel {
                     org = organization;
                     break;
                 } 
-            }
+                  }
             }
             if (org!=null){
                 org.getStatusQueue().getStatusRequestList().add(request);
@@ -204,9 +207,9 @@ public class MiscellaneousComplaintJPanel extends javax.swing.JPanel {
             }
 
         }
-            JOptionPane.showMessageDialog(null,"Your complaint has been sent");
-           }
-             else
+        JOptionPane.showMessageDialog(null,"Your complaint has been sent");
+     }
+        else
          {
            JOptionPane.showMessageDialog(null,"Message field is empty");
          }
