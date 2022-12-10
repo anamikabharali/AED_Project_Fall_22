@@ -59,6 +59,8 @@ JPanel container;
         jLabel2 = new javax.swing.JLabel();
         authenticatetxtfield = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(76, 89, 115));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -66,9 +68,9 @@ JPanel container;
         jLabel1.setFont(new java.awt.Font("Optima", 1, 18)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Enter your email id for the verification ");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 250, -1, -1));
-        add(emailtxtfield, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 300, 238, -1));
-        add(authtxtfield, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 460, 110, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, -1, -1));
+        add(emailtxtfield, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, 238, -1));
+        add(authtxtfield, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 410, 110, -1));
 
         jButton1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jButton1.setText("Send Mail");
@@ -78,12 +80,12 @@ JPanel container;
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, 120, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 290, 120, -1));
 
         jLabel2.setFont(new java.awt.Font("Optima", 1, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Please enter the four digit code that has been sent to your email entered above");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 430, 500, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 380, 500, -1));
 
         authenticatetxtfield.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         authenticatetxtfield.setText("Authenticate");
@@ -93,12 +95,16 @@ JPanel container;
                 authenticatetxtfieldActionPerformed(evt);
             }
         });
-        add(authenticatetxtfield, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 500, -1, -1));
+        add(authenticatetxtfield, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 450, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Optima", 1, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("AUTHENTICATION FORM");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 120, -1, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 550));
+
+        jLabel10.setIcon(new javax.swing.ImageIcon("/Users/anamikabharali/Downloads/imageedit_3_6208310258.png")); // NOI18N
+        add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(-400, -140, 1140, 840));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -153,7 +159,9 @@ try {
     private javax.swing.JTextField emailtxtfield;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     // End of variables declaration//GEN-END:variables
 }
