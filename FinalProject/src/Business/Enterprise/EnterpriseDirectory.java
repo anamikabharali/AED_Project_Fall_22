@@ -41,12 +41,12 @@ public class EnterpriseDirectory {
         }
         
         else if(type==Enterprise.EnterpriseType.Maintenance){
-            enterprise = new PoliceEnterprise(name);
+            enterprise = new MaintenanceEnterprise(name);
             enterpriseList.add(enterprise);
         }
         
         else if(type==Enterprise.EnterpriseType.Facility){
-            enterprise = new PoliceEnterprise(name);
+            enterprise = new FacilitiesEnterprise(name);
             enterpriseList.add(enterprise);
         }
        
