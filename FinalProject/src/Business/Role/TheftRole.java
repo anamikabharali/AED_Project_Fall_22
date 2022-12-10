@@ -14,7 +14,7 @@ import Business.Organization.TheftOrganization;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
 import userinterface.Police.Theft.TheftWorkAreaJPanel;
-import userinterface.ResidentialHall.Canteen.CanteenWorkAreaJPanel;
+import userinterface.Facilities.Canteen.CanteenWorkAreaJPanel;
 
 /**
  *

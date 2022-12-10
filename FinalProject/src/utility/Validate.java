@@ -6,6 +6,7 @@
 package utility;
 
 import java.awt.event.KeyEvent;
+import java.io.IOException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Properties;
@@ -21,8 +22,11 @@ import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Session;
 import javax.mail.Transport;
+import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
+import userinterface.Police.felony.FelonyWorkAreaJPanel;
+import userinterface.SignUp.AuthenticationJPanel;
 
 /**
  *
@@ -86,79 +90,55 @@ public class Validate {
         matcher = pattern.matcher(pwd);
         return matcher.matches();
     }
-
-
+    
     public static void sendMessage(String emailId, String mes) throws SendFailedException, MessagingException {
-        // Recipient's email ID needs to be mentioned.
-        String to = emailId;
-
-        String from = "Julie_2023@yahoo.com";
-        String pass = "AED@2022";
-
-        // Get system properties
-        Properties properties = System.getProperties();
-        String host = "smtp.mail.yahoo.com";
-
-        properties.put("mail.smtp.starttls.enable", "true");
-
-        properties.put("mail.smtp.ssl.trust", host);
-        properties.put("mail.smtp.user", from);
-        // properties.put("mail.smtp.password", pass);
-        properties.put("mail.smtp.port", "465");
-        properties.put("mail.smtp.auth", "true");
-
-        Session session = Session.getDefaultInstance(properties);
-
-        try {
-            // Create a default MimeMessage object.
-            MimeMessage message = new MimeMessage(session);
-
-            // Set From: header field of the header.
-            message.setFrom(new InternetAddress(from));
-
-            // Set To: header field of the header.
-            message.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
-
-            // Set Subject: header field
-            message.setSubject("Police");
-
-            message.setText(mes);
-            // Send message
-            Transport transport = session.getTransport("smtp");
-            transport.connect(host, from, pass);
-            transport.sendMessage(message, message.getAllRecipients());
-            transport.close();
-            System.out.println("Sent message successfully....");
-        } catch (MessagingException mex) {
-            //mex.printStackTrace();
-            JOptionPane.showMessageDialog(null, "Invalid email id");
-        }
-    }
+         try {
+             ValidateMail valMail = new ValidateMail();
+                try {
+                 //Validate.sendMessage1(emailtxtfield.getText(),n);
+                 valMail.preparetoSendEmail("This is Subject", "We will send the Team shortly : " , "vaishnavi.asv@gmail.com");
+                } catch (AddressException ex) {
+                    Logger.getLogger(AuthenticationJPanel.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (IOException ex) {
+                    Logger.getLogger(AuthenticationJPanel.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                
+                System.out.println("Mail has been sent....");
+              
+        //    JOptionPane.showMessageDialog("Mail has been sent");
        
-     public static void sendMessage1(String emailId, int mes) throws SendFailedException, MessagingException {
+        } catch (MessagingException ex) {
+            Logger.getLogger(FelonyWorkAreaJPanel.class.getName()).log(Level.SEVERE, null, ex);
+         //   JOptionPane.showMessageDialog(this,"Mail has not  been sent");
+        }
+     }
+    
+    public static void sendMessage1(String emailId, int mes) throws SendFailedException, MessagingException {
         // Recipient's email ID needs to be mentioned.
         String to = emailId;
 
-        String from = "Julie_2023@yahoo.com";
-        String pass = "AED@2022";
+        String from = "srivaishnavi.a@gmail.com";
+        String pass = "kziwmqhrdfgzjvou";
 
         // Get system properties
         Properties properties = System.getProperties();
-        String host = "smtp.mail.yahoo.com";
+        String host = "smtp.gmail.com";
 
         properties.put("mail.smtp.starttls.enable", "true");
 
         properties.put("mail.smtp.ssl.trust", host);
         properties.put("mail.smtp.user", from);
         // properties.put("mail.smtp.password", pass);
-        properties.put("mail.smtp.port", "465");
+        properties.put("mail.smtp.port", "587");
         properties.put("mail.smtp.auth", "true");
 
         Session session = Session.getDefaultInstance(properties);
 
         try {
             // Create a default MimeMessage object.
-            MimeMessage message = new MimeMessage(session);
+        //    MimeMessage message = new MimeMessage(session);
+        
+        MimeMessage message = null;
 
             // Set From: header field of the header.
             message.setFrom(new InternetAddress(from));
@@ -181,8 +161,4 @@ public class Validate {
             JOptionPane.showMessageDialog(null, "Invalid email id");
         }
     }
-  
-
-  
-
 }

@@ -11,14 +11,18 @@ package userinterface.SignUp;
 
 import Business.EcoSystem;
 import java.awt.CardLayout;
+import java.io.IOException;
 import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.mail.MessagingException;
+import javax.mail.internet.AddressException;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import userinterface.Police.felony.FelonyWorkAreaJPanel;
+import utility.ValidateMail;
 import utility.Validate;
+//import utility.Mail;
 
 public class AuthenticationJPanel extends javax.swing.JPanel {
 
@@ -99,10 +103,17 @@ JPanel container;
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-
-        try {
-              Validate.sendMessage1(emailtxtfield.getText(),n);
-           
+try {
+             ValidateMail valMail = new ValidateMail();
+             try {
+                 //Validate.sendMessage1(emailtxtfield.getText(),n);
+                 valMail.preparetoSendEmail("This is Subject", "This is Verification code : " + n, emailtxtfield.getText());
+             } catch (AddressException ex) {
+                 Logger.getLogger(AuthenticationJPanel.class.getName()).log(Level.SEVERE, null, ex);
+             } catch (IOException ex) {
+                 Logger.getLogger(AuthenticationJPanel.class.getName()).log(Level.SEVERE, null, ex);
+             }
+              
             JOptionPane.showMessageDialog(this,"Mail has been sent");
             jLabel2.setVisible(true);
             authtxtfield.setVisible(true);
@@ -116,11 +127,13 @@ JPanel container;
 
     private void authenticatetxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_authenticatetxtfieldActionPerformed
         // TODO add your handling code here:
-        Integer num=Integer.parseInt(authtxtfield.getText());
+        Integer num = n; 
+    
+    
         if(num.equals(n))
         {
         
-                 CardLayout layout = (CardLayout) container.getLayout();
+        CardLayout layout = (CardLayout) container.getLayout();
         container.add("SignUpJPanel", new SignUpJPanel(container, sys,emailtxtfield.getText()));
         layout.next(container);
         

@@ -110,8 +110,6 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
         jPanel2.add(signupbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 513, -1, -1));
-
-        passwordtxt.setText("jPasswordField1");
         jPanel2.add(passwordtxt, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, 150, -1));
 
         jSplitPane1.setLeftComponent(jPanel2);

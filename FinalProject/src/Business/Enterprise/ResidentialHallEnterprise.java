@@ -25,7 +25,6 @@ public class ResidentialHallEnterprise extends Enterprise {
       public ArrayList<Type> getOrganizations() {
         ArrayList<Type> orgs = new ArrayList();
         orgs.add(Organization.Type.Supervisor);
-        orgs.add(Organization.Type.Canteen);
         orgs.add(Organization.Type.Miscellaneous);
         orgs.add(Organization.Type.Tenant);
         

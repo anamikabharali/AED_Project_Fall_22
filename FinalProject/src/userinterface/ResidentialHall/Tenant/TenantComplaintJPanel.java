@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package userinterface.ResidentialHall.Tenant;
-import userinterface.ResidentialHall.Miscellaneous.MiscellaneousWorkAreaJPanel;
+import userinterface.Maintenance.Miscellaneous.MiscellaneousWorkAreaJPanel;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.FelonyOrganization;
