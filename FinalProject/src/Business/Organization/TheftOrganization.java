@@ -5,7 +5,6 @@
  */
 package Business.Organization;
 
-import Business.Role.CanteenRole;
 import Business.Role.Role;
 import Business.Role.TheftRole;
 import java.util.ArrayList;

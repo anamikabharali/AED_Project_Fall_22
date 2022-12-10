@@ -5,7 +5,7 @@
  */
 package userinterface.ResidentialHall.Tenant;
 
-import userinterface.ResidentialHall.Miscellaneous.MiscellaneousWorkAreaJPanel;
+import userinterface.Maintenance.Miscellaneous.MiscellaneousWorkAreaJPanel;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.FelonyOrganization;

@@ -16,8 +16,8 @@ import javax.mail.internet.AddressException;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import userinterface.Police.felony.FelonyWorkAreaJPanel;
-// import utility.Validate;
-import utility.Mail;
+ import utility.Validate;
+//import utility.Mail;
 import utility.ValidateMail;
 /**
  *

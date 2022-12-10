@@ -10,6 +10,8 @@ import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Role.PoliceAdminRole;
 import Business.Role.HousingAdminRole;
+import Business.Role.FacilitiesAdminRole;
+import Business.Role.MaintenanceAdminRole;
 import Business.UserAccount.UserAccount;
 import java.awt.CardLayout;
 import java.awt.Component;
@@ -163,6 +165,11 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
 
         enterpriseJComboBox.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         enterpriseJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        enterpriseJComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                enterpriseJComboBoxActionPerformed(evt);
+            }
+        });
 
         submitJButton.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         submitJButton.setText("Submit");
@@ -239,20 +246,18 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
                             .addComponent(emailtxtfield, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(usernameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(154, 154, 154))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addContainerGap()
-                    .addComponent(backJButton)
-                    .addContainerGap(670, Short.MAX_VALUE))
-                .addGroup(layout.createSequentialGroup()
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(244, 244, 244)
-                            .addComponent(jLabel6))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(106, 106, 106)
-                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 523, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(backJButton))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(244, 244, 244)
+                        .addComponent(jLabel6))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(106, 106, 106)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 523, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -319,7 +324,14 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         UserAccount account = null;
           if (enterprise.getEnterpriseType() == Enterprise.EnterpriseType.ResidentialHall) {
                 account = enterprise.getUserAccountDirectory().createUserAccount(username, password,email ,employee, new HousingAdminRole());
-            } else if (enterprise.getEnterpriseType() == Enterprise.EnterpriseType.Police) {
+            } 
+           else if (enterprise.getEnterpriseType() == Enterprise.EnterpriseType.Police) {
+                account = enterprise.getUserAccountDirectory().createUserAccount(username, password,email ,employee, new PoliceAdminRole());
+            }
+           else if (enterprise.getEnterpriseType() == Enterprise.EnterpriseType.Maintenance) {
+                account = enterprise.getUserAccountDirectory().createUserAccount(username, password,email ,employee, new PoliceAdminRole());
+            }
+           else if (enterprise.getEnterpriseType() == Enterprise.EnterpriseType.Facility) {
                 account = enterprise.getUserAccountDirectory().createUserAccount(username, password,email ,employee, new PoliceAdminRole());
             }
           JOptionPane.showMessageDialog(null, "UserAccount created successfully", "Information", JOptionPane.INFORMATION_MESSAGE);
@@ -356,6 +368,10 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
     private void emailtxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailtxtfieldActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_emailtxtfieldActionPerformed
+
+    private void enterpriseJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterpriseJComboBoxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_enterpriseJComboBoxActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backJButton;

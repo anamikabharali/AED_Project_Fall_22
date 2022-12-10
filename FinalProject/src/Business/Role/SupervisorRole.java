@@ -13,7 +13,7 @@ import Business.Organization.SupervisorOrganization;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
-import userinterface.ResidentialHall.Canteen.CanteenWorkAreaJPanel;
+import userinterface.Facilities.Canteen.CanteenWorkAreaJPanel;
 import userinterface.ResidentialHall.Supervisor.SupervisorWorkAreaJPanel;
 
 /**

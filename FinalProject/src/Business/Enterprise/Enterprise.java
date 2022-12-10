@@ -28,7 +28,10 @@ public abstract class Enterprise extends Organization{
     
     public enum EnterpriseType{
         ResidentialHall("ResidentialHall"),
-         Police("Police");
+        Police("Police"),
+        Maintenance("Maintenance"),
+        Facility("Facility");
+         
         private String value;
         
         private EnterpriseType(String value){
