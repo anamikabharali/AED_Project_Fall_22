@@ -134,8 +134,8 @@ public class TenantWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(emergencybtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 190, -1));
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        jLabel1.setText("Tenent Panel");
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setText("Tenent Org Panel");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 30, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 

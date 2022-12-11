@@ -45,9 +45,9 @@ public class ResidentialHallAdminWorkAreaJPanel extends javax.swing.JPanel {
         setMinimumSize(new java.awt.Dimension(750, 750));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        jLabel1.setText("Admin Work Area");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, -1, -1));
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setText("Residential Enterprise Panel");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 60, -1, -1));
 
         userJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         userJButton.setText("Manage User");
@@ -56,7 +56,7 @@ public class ResidentialHallAdminWorkAreaJPanel extends javax.swing.JPanel {
                 userJButtonActionPerformed(evt);
             }
         });
-        add(userJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 490, 150, 50));
+        add(userJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 270, 150, 60));
 
         manageEmployeeJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         manageEmployeeJButton.setText("Manage Employee");
@@ -65,7 +65,7 @@ public class ResidentialHallAdminWorkAreaJPanel extends javax.swing.JPanel {
                 manageEmployeeJButtonActionPerformed(evt);
             }
         });
-        add(manageEmployeeJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 270, 150, 60));
+        add(manageEmployeeJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 150, 60));
 
         manageOrganizationJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         manageOrganizationJButton.setText("Manage Organization");
@@ -74,14 +74,14 @@ public class ResidentialHallAdminWorkAreaJPanel extends javax.swing.JPanel {
                 manageOrganizationJButtonActionPerformed(evt);
             }
         });
-        add(manageOrganizationJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, -1, 60));
+        add(manageOrganizationJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, -1, 60));
 
         enterpriseLabel.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
         enterpriseLabel.setText("EnterPrise :");
         add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, 120, 30));
 
         valueLabel.setText("<value>");
-        add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, 130, -1));
+        add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 150, 140, 40));
     }// </editor-fold>//GEN-END:initComponents
 
     private void userJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userJButtonActionPerformed

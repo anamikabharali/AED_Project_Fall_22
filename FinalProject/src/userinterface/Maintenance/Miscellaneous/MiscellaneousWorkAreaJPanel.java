@@ -113,7 +113,7 @@ public class MiscellaneousWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(workRequestJTable1);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 110, 480, 90));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 130, 480, 90));
 
         addcomplaintbtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         addcomplaintbtn.setText("Add Complaint");
@@ -122,7 +122,7 @@ public class MiscellaneousWorkAreaJPanel extends javax.swing.JPanel {
                 addcomplaintbtnActionPerformed(evt);
             }
         });
-        add(addcomplaintbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 70, -1, -1));
+        add(addcomplaintbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, -1, -1));
 
         emergencybtn.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
         emergencybtn.setForeground(new java.awt.Color(255, 0, 0));
@@ -132,11 +132,11 @@ public class MiscellaneousWorkAreaJPanel extends javax.swing.JPanel {
                 emergencybtnActionPerformed(evt);
             }
         });
-        add(emergencybtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 230, 190, -1));
+        add(emergencybtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 240, 190, -1));
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        jLabel1.setText("Faculty Work Area");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 30, -1, -1));
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setText("Miscellaneous Org Panel");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 30, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void addcomplaintbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addcomplaintbtnActionPerformed

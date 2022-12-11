@@ -173,9 +173,9 @@ public class FelonyWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        jLabel1.setText("Felony Work Area Panel");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 50, -1, -1));
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setText("Felony Org Panel");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, -1, -1));
 
         emergencytable.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         emergencytable.setModel(new javax.swing.table.DefaultTableModel(

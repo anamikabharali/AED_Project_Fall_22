@@ -46,9 +46,9 @@ public class MaintenanceAdminWorkAreaJPanel extends javax.swing.JPanel {
         setMinimumSize(new java.awt.Dimension(750, 750));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        jLabel1.setText("Maintenance Admin Work Area");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 60, -1, -1));
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setText("Maintenance Enterprise Panel");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 60, -1, -1));
 
         userJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         userJButton.setText("Manage User");
@@ -57,7 +57,7 @@ public class MaintenanceAdminWorkAreaJPanel extends javax.swing.JPanel {
                 userJButtonActionPerformed(evt);
             }
         });
-        add(userJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 490, 150, 50));
+        add(userJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 270, 150, 60));
 
         manageEmployeeJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         manageEmployeeJButton.setText("Manage Employee");
@@ -66,7 +66,7 @@ public class MaintenanceAdminWorkAreaJPanel extends javax.swing.JPanel {
                 manageEmployeeJButtonActionPerformed(evt);
             }
         });
-        add(manageEmployeeJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 270, 150, 60));
+        add(manageEmployeeJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 270, 150, 60));
 
         manageOrganizationJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         manageOrganizationJButton.setText("Manage Organization");
@@ -82,7 +82,7 @@ public class MaintenanceAdminWorkAreaJPanel extends javax.swing.JPanel {
         add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, 120, 30));
 
         valueLabel.setText("<value>");
-        add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, 130, -1));
+        add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 160, 130, 40));
     }// </editor-fold>//GEN-END:initComponents
 
     private void userJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userJButtonActionPerformed

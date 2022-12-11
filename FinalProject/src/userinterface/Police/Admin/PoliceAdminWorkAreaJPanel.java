@@ -63,7 +63,7 @@ public class PoliceAdminWorkAreaJPanel extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel1.setText("Police Adminstrative Role");
+        jLabel1.setText("Police Enterprise Panel");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 50, -1, -1));
 
         userJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
