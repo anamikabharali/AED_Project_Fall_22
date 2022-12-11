@@ -17,6 +17,7 @@ import java.awt.CardLayout;
 import java.awt.Component;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import userinterface.MainJFrame;
 
 /**
  *
@@ -24,6 +25,10 @@ import javax.swing.JPanel;
  */
 public class SupervisorComplaintJPanel extends javax.swing.JPanel {
 
+    public int overallcounter;
+    public int misconductcounter;
+    public int theftcounter;
+    public int felonycounter;
     /**
      * Creates new form DinerComplaintJPanel
      */
@@ -37,6 +42,10 @@ public class SupervisorComplaintJPanel extends javax.swing.JPanel {
          this.userProcessContainer = userProcessContainer;
         this.enterprise = enterprise;
         this.userAccount = userAccount;
+        this.felonycounter= MainJFrame.felonycounter;
+        this.overallcounter = MainJFrame.overallcounter;
+        this.misconductcounter = MainJFrame.misconductcounter;
+        this.theftcounter= MainJFrame.theftcounter;
         
         populateComboBox();
     }
@@ -141,7 +150,8 @@ public class SupervisorComplaintJPanel extends javax.swing.JPanel {
        
     }
     private void sendComplaintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendComplaintActionPerformed
-     
+        overallcounter +=1;
+        
         String message = messageJTextField.getText();
      if(message!=null)
      {
@@ -160,6 +170,7 @@ public class SupervisorComplaintJPanel extends javax.swing.JPanel {
                   {
                 if (organization instanceof FelonyOrganization){
                     org = organization;
+                    felonycounter = felonycounter + 1;
                     break;
                 }
             }
@@ -178,6 +189,7 @@ public class SupervisorComplaintJPanel extends javax.swing.JPanel {
                   {
                 if (organization instanceof MisconductOrganization){
                     org = organization;
+                    misconductcounter = misconductcounter + 1;
                     break;
                 } 
             }
@@ -196,6 +208,7 @@ public class SupervisorComplaintJPanel extends javax.swing.JPanel {
                   {
                 if (organization instanceof TheftOrganization){
                     org = organization;
+                    theftcounter = theftcounter + 1;
                     break;
                 } 
                   }
@@ -212,6 +225,11 @@ public class SupervisorComplaintJPanel extends javax.swing.JPanel {
          {
            JOptionPane.showMessageDialog(null,"Message field is empty");
          }
+     
+         MainJFrame.felonycounter = this.felonycounter;
+        MainJFrame.overallcounter = this.overallcounter;
+        MainJFrame.misconductcounter = this.misconductcounter;
+        MainJFrame.theftcounter = this.theftcounter;
     }//GEN-LAST:event_sendComplaintActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed

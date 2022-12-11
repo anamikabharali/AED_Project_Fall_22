@@ -23,6 +23,10 @@ import userinterface.SignUp.SignUpJPanel;
  */
 public class MainJFrame extends javax.swing.JFrame {
 
+    public static int overallcounter = 0;
+    public static int misconductcounter= 0;
+    public static int theftcounter= 0;
+    public static int felonycounter= 0;
     /**
      * Creates new form MainJFrame
      */
