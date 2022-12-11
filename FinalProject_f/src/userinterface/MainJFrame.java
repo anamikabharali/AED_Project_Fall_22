@@ -155,8 +155,8 @@ public class MainJFrame extends javax.swing.JFrame {
                         .addComponent(logoutJButton)))
                 .addGap(162, 162, 162)
                 .addComponent(btnsignup)
-                .addGap(154, 154, 154)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(165, 165, 165)
+                .addComponent(jButton1)
                 .addContainerGap(134, Short.MAX_VALUE))
         );
 

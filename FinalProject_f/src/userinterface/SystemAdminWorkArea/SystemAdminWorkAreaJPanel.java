@@ -262,28 +262,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         ChartFrame frame = new ChartFrame("Pie Chart",chart);
         frame.setVisible(true);
         frame.setSize(450,500);
-//        
-//        DefaultPieDataset PDataset = new DefaultPieDataset();  
-//
-//        PDataset.setValue("Misconduct Issues" ,MainJFrame.misconductcounter);   
-//        PDataset.setValue( "Felony Issues" , MainJFrame.felonycounter);    
-//        PDataset.setValue( "Theft Issues" , MainJFrame.theftcounter );  
-//      
-//        JFreeChart chart = ChartFactory.createPieChart("Pie Chart",PDataset, true,true,true);
-//        PiePlot pie = (PiePlot) chart.getPlot();
-////        pie.setForegroundAlpha(TOP_ALIGNMENT);
-//        
-//        ChartFrame frame = new ChartFrame("Pie Chart",chart);
-//        frame.setVisible(true);
-//        frame.setSize(450,500);
-//        
-        
 
-              
-        
-        
-        
-        
     }//GEN-LAST:event_jButton1ActionPerformed
 
 
