@@ -32,12 +32,13 @@ public class SupervisorComplaintJPanel extends javax.swing.JPanel {
     /**
      * Creates new form DinerComplaintJPanel
      */
-     private JPanel userProcessContainer;
+    private JPanel userProcessContainer;
     private Enterprise enterprise;
     private UserAccount userAccount;
     private Network network;
     public SupervisorComplaintJPanel(JPanel userProcessContainer, UserAccount userAccount, Enterprise enterprise,Network network) {
         initComponents();
+        
         this.network= network;
         this.userProcessContainer = userProcessContainer;
         this.enterprise = enterprise;
@@ -172,8 +173,8 @@ public class SupervisorComplaintJPanel extends javax.swing.JPanel {
                     
                     MainJFrame.felonycounter += 1;
                     break;
+                    }
                 }
-            }
             }
             if (org!=null){
                 org.getStatusQueue().getStatusRequestList().add(request);
@@ -185,47 +186,45 @@ public class SupervisorComplaintJPanel extends javax.swing.JPanel {
 
              for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
             {
-                  for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
-                  {
+                for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
+                {
                 if (organization instanceof MisconductOrganization){
                     org = organization;
                     
                     MainJFrame.misconductcounter +=1;
                     break;
-                } 
-            }
+                    } 
+                }
             }
             if (org!=null){
                 org.getStatusQueue().getStatusRequestList().add(request);
                 userAccount.getStatusQueue().getStatusRequestList().add(request);
             }
-
         }
         else if(sel.equals(Organization.Type.Theft))
         {
-             for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
+            for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
             {
-                  for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
-                  {
+                for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
+                {
                 if (organization instanceof TheftOrganization){
                     org = organization;
                     MainJFrame.theftcounter += 1;
                     break;
-                } 
-                  }
+                    } 
+                }
             }
             if (org!=null){
                 org.getStatusQueue().getStatusRequestList().add(request);
                 userAccount.getStatusQueue().getStatusRequestList().add(request);
+                }
             }
-
-        }
-        JOptionPane.showMessageDialog(null,"Your complaint has been sent");
-     }
-        else
-         {
-           JOptionPane.showMessageDialog(null,"Message field is empty");
-         }
+            JOptionPane.showMessageDialog(null,"Your complaint has been sent");
+    }
+    else
+    {
+        JOptionPane.showMessageDialog(null,"Message field is empty");
+    }
     }//GEN-LAST:event_sendComplaintActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed

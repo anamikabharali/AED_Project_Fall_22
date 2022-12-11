@@ -196,7 +196,7 @@ public class FacilitiesManageEmployeeJPanel extends javax.swing.JPanel {
         organization.getEmployeeDirectory().createEmployee(name);
         populateTable(organization);
         nameJTextField.setText("");
-         JOptionPane.showMessageDialog(null,"Employee Created");
+        JOptionPane.showMessageDialog(null,"Employee Created");
     }//GEN-LAST:event_addJButtonActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
