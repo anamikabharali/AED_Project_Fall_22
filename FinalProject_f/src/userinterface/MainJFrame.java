@@ -14,8 +14,12 @@ import java.awt.CardLayout;
 import javax.mail.MessagingException;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartFrame;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PiePlot;
+import org.jfree.data.general.DefaultPieDataset;
 import userinterface.SignUp.AuthenticationJPanel;
-import userinterface.SignUp.SignUpJPanel;
 
 /** 
  * 
@@ -58,6 +62,7 @@ public class MainJFrame extends javax.swing.JFrame {
         loginJLabel = new javax.swing.JLabel();
         logoutJButton = new javax.swing.JButton();
         btnsignup = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
         container = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -98,15 +103,23 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
+        jButton1.setText("Reporting Module");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnsignup, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnsignup, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                             .addComponent(passwordField)
                             .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING)
@@ -117,7 +130,7 @@ public class MainJFrame extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(loginJLabel)))
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(loginJButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(loginJButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -142,7 +155,9 @@ public class MainJFrame extends javax.swing.JFrame {
                         .addComponent(logoutJButton)))
                 .addGap(162, 162, 162)
                 .addComponent(btnsignup)
-                .addContainerGap(321, Short.MAX_VALUE))
+                .addGap(154, 154, 154)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(134, Short.MAX_VALUE))
         );
 
         jSplitPane1.setLeftComponent(jPanel1);
@@ -253,6 +268,38 @@ public class MainJFrame extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnsignupActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+//        DefaultPieDataset PDataset = new DefaultPieDataset();
+//
+//        PDataset.setValue("Misconduct Issues" ,MainJFrame.misconductcounter);
+//        PDataset.setValue( "Felony Issues" , MainJFrame.felonycounter);
+//        PDataset.setValue( "Theft Issues" , MainJFrame.theftcounter );
+//
+//        JFreeChart chart = ChartFactory.createPieChart("Pie Chart",PDataset, true,true,true);
+//        PiePlot pie = (PiePlot) chart.getPlot();
+//        //        pie.setForegroundAlpha(TOP_ALIGNMENT);
+//
+//        ChartFrame frame = new ChartFrame("Pie Chart",chart);
+//        frame.setVisible(true);
+//        frame.setSize(450,500);
+
+        DefaultPieDataset PDataset = new DefaultPieDataset();
+
+        PDataset.setValue("Number of Enterprises" ,new Integer (4));
+        PDataset.setValue( "Number of Organizations" , new Integer (8));
+        PDataset.setValue( "Number of Roles" , new Integer (12));
+
+        JFreeChart chart = ChartFactory.createPieChart("Pie Chart",PDataset, true,true,true);
+        PiePlot pie = (PiePlot) chart.getPlot();
+        //        pie.setForegroundAlpha(TOP_ALIGNMENT);
+
+        ChartFrame frame = new ChartFrame("Pie Chart for our ",chart);
+        frame.setVisible(true);
+        frame.setSize(450,500);
+
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -291,6 +338,7 @@ public class MainJFrame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnsignup;
     private javax.swing.JPanel container;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;

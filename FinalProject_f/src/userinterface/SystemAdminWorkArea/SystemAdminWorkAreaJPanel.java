@@ -7,17 +7,21 @@ package userinterface.SystemAdminWorkArea;
 
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
+import Business.Enterprise.EnterpriseDirectory;
 import Business.Network.Network;
 import Business.Organization.Organization;
+import Business.Organization.OrganizationDirectory;
 import java.awt.CardLayout;
 import java.awt.Color;
 import java.util.ArrayList;
+import java.util.Locale;
 import javax.swing.JPanel;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartFrame;
 import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PiePlot;
 import org.jfree.chart.plot.PiePlot3D;
 import org.jfree.data.general.DefaultPieDataset;
 import userinterface.MainJFrame;
@@ -245,28 +249,35 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        DefaultPieDataset PDataset = new DefaultPieDataset();
-        PDataset.setValue("Total" , MainJFrame.overallcounter);  
+        DefaultPieDataset PDataset = new DefaultPieDataset();  
+
         PDataset.setValue("Misconduct Issues" ,MainJFrame.misconductcounter);   
         PDataset.setValue( "Felony Issues" , MainJFrame.felonycounter);    
         PDataset.setValue( "Theft Issues" , MainJFrame.theftcounter );  
       
-      //create chart
-        JFreeChart chart = ChartFactory.createPieChart3D("Pie Chart",PDataset, true,true,true);
-      
-        PiePlot3D piePlot =(PiePlot3D) chart.getPlot();
+        JFreeChart chart = ChartFactory.createPieChart("Pie Chart",PDataset, true,true,true);
+        PiePlot pie = (PiePlot) chart.getPlot();
+//        pie.setForegroundAlpha(TOP_ALIGNMENT);
         
-       //changing pie chart blocks colors
-//        piePlot.setSectionPaint("Total", new Color(255,255,102));
-//        piePlot.setSectionPaint("Misconduct Issues", new Color(102,255,102));
-//        piePlot.setSectionPaint("Felony Issues", new Color(255,102,153));
-//        piePlot.setSectionPaint("Theft Issues", new Color(0,204,204));
-       
-        piePlot.setBackgroundPaint(Color.white);
-        //create chartPanel to display chart(graph)
         ChartFrame frame = new ChartFrame("Pie Chart",chart);
         frame.setVisible(true);
-        frame.setSize(600,600);
+        frame.setSize(450,500);
+//        
+//        DefaultPieDataset PDataset = new DefaultPieDataset();  
+//
+//        PDataset.setValue("Misconduct Issues" ,MainJFrame.misconductcounter);   
+//        PDataset.setValue( "Felony Issues" , MainJFrame.felonycounter);    
+//        PDataset.setValue( "Theft Issues" , MainJFrame.theftcounter );  
+//      
+//        JFreeChart chart = ChartFactory.createPieChart("Pie Chart",PDataset, true,true,true);
+//        PiePlot pie = (PiePlot) chart.getPlot();
+////        pie.setForegroundAlpha(TOP_ALIGNMENT);
+//        
+//        ChartFrame frame = new ChartFrame("Pie Chart",chart);
+//        frame.setVisible(true);
+//        frame.setSize(450,500);
+//        
+        
 
               
         
