@@ -286,15 +286,15 @@ public class MainJFrame extends javax.swing.JFrame {
 
         DefaultPieDataset PDataset = new DefaultPieDataset();
 
-        PDataset.setValue("Number of Enterprises" ,new Integer (4));
-        PDataset.setValue( "Number of Organizations" , new Integer (8));
-        PDataset.setValue( "Number of Roles" , new Integer (12));
+        PDataset.setValue("4 Enterprises " ,new Integer (4));
+        PDataset.setValue( "8 Organizations" , new Integer (8));
+        PDataset.setValue( "12 Roles" , new Integer (12));
 
-        JFreeChart chart = ChartFactory.createPieChart("Pie Chart",PDataset, true,true,true);
+        JFreeChart chart = ChartFactory.createPieChart("Pie Chart of our Project",PDataset, true,true,true);
         PiePlot pie = (PiePlot) chart.getPlot();
         //        pie.setForegroundAlpha(TOP_ALIGNMENT);
 
-        ChartFrame frame = new ChartFrame("Pie Chart for our ",chart);
+        ChartFrame frame = new ChartFrame("Pie Chart",chart);
         frame.setVisible(true);
         frame.setSize(450,500);
 
