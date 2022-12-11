@@ -87,7 +87,7 @@ JPanel container;
         });
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel2.setText("Please enter the four digit code that has been sent to your email entered above");
+        jLabel2.setText("Please enter the validation code that has been sent to your above email Id");
 
         authenticatetxtfield.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         authenticatetxtfield.setText("Authenticate");
@@ -107,12 +107,6 @@ JPanel container;
                         .addGap(225, 225, 225)
                         .addComponent(emailtxtfield, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(283, 283, 283)
-                        .addComponent(authtxtfield, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(275, 275, 275)
-                        .addComponent(authenticatetxtfield))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(291, 291, 291)
                         .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
@@ -120,8 +114,14 @@ JPanel container;
                         .addComponent(jLabel2))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(179, 179, 179)
-                        .addComponent(jLabel1)))
-                .addContainerGap(156, Short.MAX_VALUE))
+                        .addComponent(jLabel1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(283, 283, 283)
+                        .addComponent(authtxtfield, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(275, 275, 275)
+                        .addComponent(authenticatetxtfield, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(196, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -136,9 +136,9 @@ JPanel container;
                 .addComponent(jLabel2)
                 .addGap(61, 61, 61)
                 .addComponent(authtxtfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(authenticatetxtfield)
-                .addContainerGap(196, Short.MAX_VALUE))
+                .addContainerGap(190, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

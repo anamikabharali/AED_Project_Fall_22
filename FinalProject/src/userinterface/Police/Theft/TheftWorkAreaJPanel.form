@@ -138,11 +138,11 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="24" style="3"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="User Work Area"/>
+        <Property name="text" type="java.lang.String" value="Theft Work Area Panel"/>
       </Properties>
       <Constraints>
         <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-          <AbsoluteConstraints x="280" y="30" width="-1" height="-1"/>
+          <AbsoluteConstraints x="210" y="50" width="-1" height="-1"/>
         </Constraint>
       </Constraints>
     </Component>

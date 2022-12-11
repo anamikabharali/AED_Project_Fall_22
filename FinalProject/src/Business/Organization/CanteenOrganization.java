@@ -4,7 +4,7 @@
  */
 package Business.Organization;
 
-import Business.Role.CanteenRole;
+import Business.Role.CanteenInchargeRole;
 import Business.Role.Role;
 import java.util.ArrayList;
 
@@ -21,7 +21,7 @@ public class CanteenOrganization extends Organization{
     @Override
     public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> roles = new ArrayList();
-        roles.add(new CanteenRole());
+        roles.add(new CanteenInchargeRole());
         return roles;
     }
      

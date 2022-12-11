@@ -174,8 +174,8 @@ public class TheftWorkAreaJPanel extends javax.swing.JPanel {
         add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 140, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        jLabel1.setText("User Work Area");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 30, -1, -1));
+        jLabel1.setText("Theft Work Area Panel");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 50, -1, -1));
 
         emergencytable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

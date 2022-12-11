@@ -190,7 +190,7 @@ public class MisconductWorkAreaJPanel extends javax.swing.JPanel {
         add(senteam, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 710, -1, -1));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        jLabel1.setText("Misconduct Department Work Area");
+        jLabel1.setText("Misconduct Org Work Area Panel");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, -1, -1));
 
         processJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
