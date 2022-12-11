@@ -251,9 +251,9 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         DefaultPieDataset PDataset = new DefaultPieDataset();  
 
-        PDataset.setValue("Misconduct Issues" ,MainJFrame.misconductcounter);   
-        PDataset.setValue( "Felony Issues" , MainJFrame.felonycounter);    
-        PDataset.setValue( "Theft Issues" , MainJFrame.theftcounter );  
+        PDataset.setValue("Misconduct Issues" , new Integer(2));   
+        PDataset.setValue( "Felony Issues" , new Integer(2));    
+        PDataset.setValue( "Theft Issues" , new Integer(1));  
       
         JFreeChart chart = ChartFactory.createPieChart("Pie Chart",PDataset, true,true,true);
         PiePlot pie = (PiePlot) chart.getPlot();
