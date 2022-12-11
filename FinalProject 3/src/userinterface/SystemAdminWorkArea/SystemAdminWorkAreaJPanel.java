@@ -260,7 +260,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
        JFreeChart piechart = ChartFactory.createPieChart("Pie Chart",PDataset, true,true,true);//explain
       
         PiePlot piePlot =(PiePlot) piechart.getPlot();
-//        piePlot.setForegroundAlpha(TOP_ALIGNMENT);
+        piePlot.setForegroundAlpha(TOP_ALIGNMENT);
         
        //changing pie chart blocks colors
         piePlot.setSectionPaint("Total", new Color(255,255,102));
