@@ -4,7 +4,6 @@
  */
 package userinterface.Facilities.Canteen;
 
-import userinterface.Facilities.Canteen.CanteenProcessStatusRequestJPanel;
 import userinterface.Facilities.Canteen.CanteenEmergencyRequestJPanel;
 import userinterface.Facilities.Canteen.CanteenComplaintJPanel;
 import Business.EcoSystem;
