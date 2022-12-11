@@ -34,12 +34,14 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
      */
     public SupervisorWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise,EcoSystem business,Network network) {
         initComponents();
+        
         this.enterprise=enterprise;
         this.userProcessContainer = userProcessContainer;
         this.userAccount = account;
         this.business = business;
         this.facultyOrganization = (SupervisorOrganization)organization;
         this.network=network;
+        
         populateTable();
         populateRequestTable();
     }
@@ -59,23 +61,28 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
             model.addRow(row);
         }
     }
-     public void populateRequestTable(){
+    public void populateRequestTable()
+    {
+         
         DefaultTableModel model = (DefaultTableModel) workRequestJTable1.getModel();
         
         model.setRowCount(0);
-        for (StatusRequest request : userAccount.getStatusQueue().getStatusRequestList()){
-            if (request instanceof Complaints_Suggestions_Request){
-            Object[] row = new Object[4];
-            row[0] = request.getMessage();
-           
-            row[1] = request.getReceiver();
-            row[2] = request.getStatus();
-            String result = ((Complaints_Suggestions_Request) request).getResponse();
-            row[3] = result == null ? "Waiting" : result;
+        for (StatusRequest request : userAccount.getStatusQueue().getStatusRequestList())
+        {
+            if (request instanceof Complaints_Suggestions_Request)
+            {
+                Object[] row = new Object[4];
+                row[0] = request.getMessage();
+                row[1] = request.getReceiver();
+                row[2] = request.getStatus();
+                
+                String result = ((Complaints_Suggestions_Request) request).getResponse();
+                row[3] = result == null ? "Waiting" : result;
             
-            model.addRow(row);
+                model.addRow(row);
+            }
         }
-    }}
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -221,7 +228,7 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
 
     private void assignJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButtonActionPerformed
 
-         int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = workRequestJTable.getSelectedRow();
         
         if (selectedRow < 0){
             return;
@@ -234,16 +241,15 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
         }
         else
         {
+            if(request.getStatus()=="Completed")
+            {
+                JOptionPane.showMessageDialog(null,"Request has been completed already");
+            }
+            else
+            request.setReceiver(userAccount);
+            request.setStatus("Pending");
+        }
         
-       
-         if(request.getStatus()=="Completed")
-        {
-           JOptionPane.showMessageDialog(null,"Request has been completed already");
-        }
-         else
-             request.setReceiver(userAccount);
-         request.setStatus("Pending");
-        }
         populateTable();
         
     }//GEN-LAST:event_assignJButtonActionPerformed
@@ -257,38 +263,37 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
         }
         
         Complaints_Suggestions_Request request = (Complaints_Suggestions_Request)workRequestJTable.getValueAt(selectedRow, 0);
-    
-          if(request.getStatus()=="Completed")
-          {    
-               JOptionPane.showMessageDialog(null,"Request has been completed already");  
-              
-          
-          }
-          else if(request.getStatus()=="Sent")
-          {
-                   JOptionPane.showMessageDialog(null,"Request has to be assigned first");  
-          }
-          else
-          {
-              
+        if(request.getStatus()=="Completed")
+        {    
+            JOptionPane.showMessageDialog(null,"Request has been completed already");  
+        }
+        else if(request.getStatus()=="Sent")
+        {
+            JOptionPane.showMessageDialog(null,"Request has to be assigned first");  
+        }
+        else
+        {
+            request.setStatus("Processing");
         
-        request.setStatus("Processing");
+            SupervisorProcessStatusRequestJPanel processWorkRequestJPanel = new SupervisorProcessStatusRequestJPanel(userProcessContainer, request);
+            userProcessContainer.add("facultyprocessWorkRequestJPanel", processWorkRequestJPanel);
         
-        SupervisorProcessStatusRequestJPanel processWorkRequestJPanel = new SupervisorProcessStatusRequestJPanel(userProcessContainer, request);
-        userProcessContainer.add("facultyprocessWorkRequestJPanel", processWorkRequestJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
-          }
+            CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+            layout.next(userProcessContainer);
+            
+        }
     }//GEN-LAST:event_processJButtonActionPerformed
 
     private void refreshJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshJButtonActionPerformed
+        
         populateTable();
     }//GEN-LAST:event_refreshJButtonActionPerformed
 
     private void addcomplaintbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addcomplaintbtnActionPerformed
         // TODO add your handling code here:
         
-         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        
         userProcessContainer.add("FacultyComplaintJPanel", new SupervisorComplaintJPanel(userProcessContainer, userAccount, enterprise,network));
         layout.next(userProcessContainer);
         
@@ -300,6 +305,7 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
         
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        
         userProcessContainer.add("FacultyemergencyrequestJpanel", new SupervisorEmergencyRequestJPanel(userProcessContainer, userAccount, enterprise,network));
         layout.next(userProcessContainer);
         
