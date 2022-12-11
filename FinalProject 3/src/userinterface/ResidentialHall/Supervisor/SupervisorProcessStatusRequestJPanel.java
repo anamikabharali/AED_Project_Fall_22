@@ -23,6 +23,7 @@ public class SupervisorProcessStatusRequestJPanel extends javax.swing.JPanel {
      */
     public SupervisorProcessStatusRequestJPanel(JPanel userProcessContainer, Complaints_Suggestions_Request request) {
         initComponents();
+        
         this.userProcessContainer = userProcessContainer;
         this.request = request;
     }
@@ -116,9 +117,9 @@ public class SupervisorProcessStatusRequestJPanel extends javax.swing.JPanel {
     private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
         if(resultJTextField.getText()!=null)
         {
-        request.setResponse(resultJTextField.getText());
-        request.setStatus("Completed");
-        JOptionPane.showMessageDialog(null,"Your response has been sent");
+            request.setResponse(resultJTextField.getText());
+            request.setStatus("Completed");
+            JOptionPane.showMessageDialog(null,"Your response has been sent");
         }
         else
         {
