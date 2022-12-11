@@ -57,7 +57,6 @@ JPanel container;
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         authenticatetxtfield = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 153, 153));
         setMaximumSize(new java.awt.Dimension(750, 750));
@@ -88,7 +87,7 @@ JPanel container;
         });
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jLabel2.setText("Please enter the validation code that has been sent to your above email Id");
+        jLabel2.setText("Please enter the four digit code that has been sent to your email entered above");
 
         authenticatetxtfield.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         authenticatetxtfield.setText("Authenticate");
@@ -97,9 +96,6 @@ JPanel container;
                 authenticatetxtfieldActionPerformed(evt);
             }
         });
-
-        jLabel3.setFont(new java.awt.Font("Helvetica Neue", 1, 18)); // NOI18N
-        jLabel3.setText("Authentication Panel");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -111,6 +107,12 @@ JPanel container;
                         .addGap(225, 225, 225)
                         .addComponent(emailtxtfield, javax.swing.GroupLayout.PREFERRED_SIZE, 238, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(283, 283, 283)
+                        .addComponent(authtxtfield, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(275, 275, 275)
+                        .addComponent(authenticatetxtfield))
+                    .addGroup(layout.createSequentialGroup()
                         .addGap(291, 291, 291)
                         .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
@@ -118,24 +120,13 @@ JPanel container;
                         .addComponent(jLabel2))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(179, 179, 179)
-                        .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(283, 283, 283)
-                        .addComponent(authtxtfield, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(275, 275, 275)
-                        .addComponent(authenticatetxtfield, javax.swing.GroupLayout.PREFERRED_SIZE, 117, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(249, 249, 249)
-                        .addComponent(jLabel3)))
-                .addContainerGap(196, Short.MAX_VALUE))
+                        .addComponent(jLabel1)))
+                .addContainerGap(156, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(54, 54, 54)
-                .addComponent(jLabel3)
-                .addGap(58, 58, 58)
+                .addGap(129, 129, 129)
                 .addComponent(jLabel1)
                 .addGap(101, 101, 101)
                 .addComponent(emailtxtfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -145,9 +136,9 @@ JPanel container;
                 .addComponent(jLabel2)
                 .addGap(61, 61, 61)
                 .addComponent(authtxtfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(authenticatetxtfield)
-                .addContainerGap(184, Short.MAX_VALUE))
+                .addContainerGap(196, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -160,12 +151,24 @@ JPanel container;
 //        jLabel2.setVisible(true);
 //            authtxtfield.setVisible(true);
 //            authenticatetxtfield.setVisible(true);
+            String email = null;
+        if(emailtxtfield.getText()!=null)
+            {
+                if(Validate.validateEmail(emailtxtfield.getText()))
+                {
+                    email = emailtxtfield.getText();
+                    System.out.println("email .. "+ email);
+                    System.out.println("After If Statement .. ");
+                    
+                
+
          try {
              ValidateMail valMail = new ValidateMail();
              try {
                  //Validate.sendMessage1(emailtxtfield.getText(),n);
              //    valMail.preparetoSendEmail("This is Subject", "This is Verification code : " + n, emailtxtfield.getText());
-             valMail.preparetoSendEmail("This is Subject", "This is Verification code : " + n, emailtxtfield.getText());
+             System.out.println("Inside If Statement .. ");
+             valMail.preparetoSendEmail("This is Subject", "This is Verification code : " + n, email);
 
              } catch (AddressException ex) {
                  Logger.getLogger(AuthenticationJPanel.class.getName()).log(Level.SEVERE, null, ex);
@@ -181,6 +184,21 @@ JPanel container;
             Logger.getLogger(FelonyWorkAreaJPanel.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(this,"Mail has not  been sent");
         }
+         
+                }     
+                
+            else {
+            JOptionPane.showMessageDialog(null,"Please enter valid email id");
+             System.out.println("Inside else Statement .. ");
+            }
+         
+        }
+        else {
+            JOptionPane.showMessageDialog(null,"Please enter email id");
+             System.out.println("Inside else Statement .. ");
+            }
+
+         
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void authenticatetxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_authenticatetxtfieldActionPerformed
@@ -221,6 +239,5 @@ JPanel container;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }

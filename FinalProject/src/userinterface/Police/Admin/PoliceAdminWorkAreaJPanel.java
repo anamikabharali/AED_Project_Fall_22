@@ -64,7 +64,7 @@ public class PoliceAdminWorkAreaJPanel extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel1.setText("Police Enterprise Panel");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 50, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, -1, -1));
 
         userJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         userJButton.setText("Manage User");
@@ -73,7 +73,7 @@ public class PoliceAdminWorkAreaJPanel extends javax.swing.JPanel {
                 userJButtonActionPerformed(evt);
             }
         });
-        add(userJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 520, 170, 50));
+        add(userJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 290, 170, 50));
 
         manageEmployeeJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         manageEmployeeJButton.setText("Manage Employee");
@@ -82,7 +82,7 @@ public class PoliceAdminWorkAreaJPanel extends javax.swing.JPanel {
                 manageEmployeeJButtonActionPerformed(evt);
             }
         });
-        add(manageEmployeeJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 290, 190, 50));
+        add(manageEmployeeJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 290, 190, 50));
 
         manageOrganizationJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         manageOrganizationJButton.setText("Manage Organization");

@@ -5,8 +5,8 @@
  */
 package Business.Organization;
 
-import Business.Role.CanteenInchargeRole;
-import Business.Role.MisconductInchargeRole;
+import Business.Role.CanteenRole;
+import Business.Role.MisconductRole;
 import Business.Role.Role;
 import java.util.ArrayList;
 
@@ -22,7 +22,7 @@ public class MisconductOrganization extends Organization{
     @Override
     public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> roles = new ArrayList();
-        roles.add(new MisconductInchargeRole());
+        roles.add(new MisconductRole());
         return roles;
     }
 }

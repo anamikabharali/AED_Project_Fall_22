@@ -8,28 +8,30 @@ package Business.Role;
 import Business.EcoSystem;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
-import Business.Organization.FelonyOrganization;
 import Business.Organization.CanteenOrganization;
 import Business.Organization.Organization;
+import Business.Organization.TheftOrganization;
 import Business.UserAccount.UserAccount;
 import javax.swing.JPanel;
-import userinterface.Police.felony.FelonyWorkAreaJPanel;
+import userinterface.Police.Theft.TheftWorkAreaJPanel;
 import userinterface.Facilities.Canteen.CanteenWorkAreaJPanel;
 
 /**
  *
  * @author srivaishnaviaekkati
  */
-public class FelonyInchargeRole extends Role{
-     
+public class TheftRole  extends Role{
     
+    
+    
+   
     @Override
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account, Organization organization, Enterprise enterprise, EcoSystem business,Network network) {
-   return new FelonyWorkAreaJPanel(userProcessContainer, account,(FelonyOrganization) organization,enterprise, business,network);
+   return new TheftWorkAreaJPanel(userProcessContainer, account,(TheftOrganization) organization,enterprise, business,network);
     }
-     @Override
+       @Override
     public String toString(){
-        return RoleType.Felony.getValue();
+        return Role.RoleType.Theft.getValue();
     }
     
 }

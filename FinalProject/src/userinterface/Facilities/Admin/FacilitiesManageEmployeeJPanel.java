@@ -129,6 +129,12 @@ public class FacilitiesManageEmployeeJPanel extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel2.setText("Name");
 
+        nameJTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nameJTextFieldActionPerformed(evt);
+            }
+        });
+
         organizationEmpJComboBox.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         organizationEmpJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         organizationEmpJComboBox.addActionListener(new java.awt.event.ActionListener() {
@@ -209,6 +215,17 @@ public class FacilitiesManageEmployeeJPanel extends javax.swing.JPanel {
     private void organizationEmpJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organizationEmpJComboBoxActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_organizationEmpJComboBoxActionPerformed
+
+    private void nameJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameJTextFieldActionPerformed
+        // TODO add your handling code here:
+        
+//         if(messageJTextField.getText()!=""){
+//        message1 = messageJTextField.getText();
+//        System.out.println("sendComplaintActionPerformed 'messageJTextField' " + message1);
+//        }
+//        else JOptionPane.showMessageDialog(null,"Message field is empty");
+        
+    }//GEN-LAST:event_nameJTextFieldActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addJButton;

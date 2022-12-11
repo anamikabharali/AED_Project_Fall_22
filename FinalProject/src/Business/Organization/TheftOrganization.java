@@ -6,7 +6,7 @@
 package Business.Organization;
 
 import Business.Role.Role;
-import Business.Role.TheftInchargeRole;
+import Business.Role.TheftRole;
 import java.util.ArrayList;
 
 /**
@@ -22,7 +22,7 @@ public class TheftOrganization extends Organization {
     @Override
     public ArrayList<Role> getSupportedRole() {
         ArrayList<Role> roles = new ArrayList();
-        roles.add(new TheftInchargeRole());
+        roles.add(new TheftRole());
         return roles;
     }
 }

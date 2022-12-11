@@ -28,6 +28,7 @@ public class MiscellaneousComplaintJPanel extends javax.swing.JPanel {
     /**
      * Creates new form DinerComplaintJPanel
      */
+     public String message1 = null;
      private JPanel userProcessContainer;
     private Enterprise enterprise;
     private UserAccount userAccount;
@@ -66,6 +67,11 @@ public class MiscellaneousComplaintJPanel extends javax.swing.JPanel {
         jLabel1.setText("Message");
 
         messageJTextField.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        messageJTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                messageJTextFieldActionPerformed(evt);
+            }
+        });
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel3.setText("Department");
@@ -143,50 +149,55 @@ public class MiscellaneousComplaintJPanel extends javax.swing.JPanel {
     }
     private void sendComplaintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendComplaintActionPerformed
      
-        String message = messageJTextField.getText();
-     if(message!=null)
-     {
-        request.setMessage(message);
+        String message = message1;
+        System.out.println("sendComplaintActionPerformed 'messageJTextField' " + message);
+        System.out.println("sendComplaintActionPerformed 'messageJTextField' " + messageJTextField.getText());
+        
+    if(message != null)
+    {       
+                request.setMessage(message);
 
         request.setSender(userAccount);
         request.setStatus("Sent");
 
         Organization org = null;
-          Organization.Type sel = (Organization.Type) combo.getSelectedItem();
+        Organization.Type sel = (Organization.Type) combo.getSelectedItem();
         if(sel.equals(Organization.Type.Felony))
         {
-             for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
+            for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
             {
                   for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
                   {
                 if (organization instanceof FelonyOrganization){
                     org = organization;
                     break;
-                }
-            }
+                } }
             }
             if (org!=null){
                 org.getStatusQueue().getStatusRequestList().add(request);
                 userAccount.getStatusQueue().getStatusRequestList().add(request);
             }
+            JOptionPane.showMessageDialog(null,"Your Felony complaint has been sent");
+
         }
         else if(sel.equals(Organization.Type.Misconduct))
         {
 
-             for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
+            for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
             {
                   for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
                   {
                 if (organization instanceof MisconductOrganization){
                     org = organization;
                     break;
-                } 
-            }
+                } }
             }
             if (org!=null){
                 org.getStatusQueue().getStatusRequestList().add(request);
                 userAccount.getStatusQueue().getStatusRequestList().add(request);
             }
+            JOptionPane.showMessageDialog(null,"Your Misconduct complaint has been sent");
+
 
         }
         else if(sel.equals(Organization.Type.Theft))
@@ -199,20 +210,24 @@ public class MiscellaneousComplaintJPanel extends javax.swing.JPanel {
                     org = organization;
                     break;
                 } 
-                  }
+            }
             }
             if (org!=null){
                 org.getStatusQueue().getStatusRequestList().add(request);
                 userAccount.getStatusQueue().getStatusRequestList().add(request);
             }
+        JOptionPane.showMessageDialog(null,"Your Theft complaint has been sent");
 
         }
-        JOptionPane.showMessageDialog(null,"Your complaint has been sent");
-     }
+        
+            System.out.println("Inside if block of sendComplaintActionPerformed and is not Empty");
+
+                }
         else
-         {
-           JOptionPane.showMessageDialog(null,"Message field is empty");
-         }
+        {
+            System.out.println("Inside else block of sendComplaintActionPerformed ");
+            JOptionPane.showMessageDialog(null,"Message field is empty");
+        }
     }//GEN-LAST:event_sendComplaintActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
@@ -226,6 +241,17 @@ public class MiscellaneousComplaintJPanel extends javax.swing.JPanel {
         layout.previous(userProcessContainer);
 
     }//GEN-LAST:event_backJButtonActionPerformed
+
+    private void messageJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_messageJTextFieldActionPerformed
+        // TODO add your handling code here:
+        
+        if(messageJTextField.getText()!=""){
+        message1 = messageJTextField.getText();
+        System.out.println("sendComplaintActionPerformed 'messageJTextField' " + message1);
+        }
+        else JOptionPane.showMessageDialog(null,"Message field is empty");
+        
+    }//GEN-LAST:event_messageJTextFieldActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
