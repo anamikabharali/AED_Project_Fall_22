@@ -15,7 +15,8 @@ import javax.swing.JPanel;
  * @author srivaishnaviaekkati
  */
 public class TheftProcessStatusRequestJPanel extends javax.swing.JPanel {
-
+    
+    public String message1 = null; 
     JPanel userProcessContainer;
     Complaints_Suggestions_Request request;
     /**
@@ -119,20 +120,34 @@ public class TheftProcessStatusRequestJPanel extends javax.swing.JPanel {
 
     private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
         
-        if(resultJTextField.getText()!=null)
+        String message = message1;
+       
+        if(message1!=null)
         {
-        request.setResponse(resultJTextField.getText());
-        request.setStatus("Completed");
-        JOptionPane.showMessageDialog(null,"Your response has been sent!");
+            message1 = resultJTextField.getText();
+            System.out.println("submitJButtonActionPerformed 'messageJTextField' " + message1);
+            request.setResponse(message1);
+            request.setStatus("Completed");
+            JOptionPane.showMessageDialog(null,"Your response has been sent!");
+        }
+        else JOptionPane.showMessageDialog(null,"Response field is empty");
+        
+    }//GEN-LAST:event_submitJButtonActionPerformed
+
+    private void resultJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultJTextFieldActionPerformed
+        // TODO add your handling code here:
+
+        if(message1!=null)
+        {
+            request.setResponse(message1);
+            request.setStatus("Completed");
+            JOptionPane.showMessageDialog(null,"Your response has been sent!");
         }
         else
         {
            JOptionPane.showMessageDialog(null,"Text Field is Empty!");
         }
-    }//GEN-LAST:event_submitJButtonActionPerformed
 
-    private void resultJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultJTextFieldActionPerformed
-        // TODO add your handling code here:
     }//GEN-LAST:event_resultJTextFieldActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

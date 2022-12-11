@@ -30,8 +30,8 @@ public class CanteenEmergencyRequestJPanel extends javax.swing.JPanel {
      * Creates new form CanteenEmergencyRequestJPanel
      */
     
-    
-        private JPanel userProcessContainer;
+    public String message1 = null;
+    private JPanel userProcessContainer;
     private Enterprise enterprise;
     private UserAccount userAccount; 
     private Network network;
@@ -91,6 +91,11 @@ public class CanteenEmergencyRequestJPanel extends javax.swing.JPanel {
         });
 
         locationfiield.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        locationfiield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                locationfiieldActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -142,12 +147,14 @@ public class CanteenEmergencyRequestJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
        
         
-        String location = locationfiield.getText();
+        String location = null;
         erequest.setLocation(location);
         erequest.setEmergencytype((Organization.Type) combo.getSelectedItem());
         erequest.setEmail(userAccount.getEmail());
          Organization org = null;
          Organization.Type sel = (Organization.Type) combo.getSelectedItem();
+      if(location != null)
+      {   
         if(sel.equals(Organization.Type.Theft))
         {   
          for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
@@ -200,17 +207,17 @@ public class CanteenEmergencyRequestJPanel extends javax.swing.JPanel {
             org.getStatusQueue().getStatusRequestList().add(erequest);
             userAccount.getStatusQueue().getStatusRequestList().add(erequest);
         }
-        }
-        
-        
-        
-        
-        
+      }
         
          JOptionPane.showMessageDialog(null,"Your emergency request has been sent! An officer will notify you shortly");
         
+    }
         
-        
+        else
+        {
+            System.out.println("Inside else block of sendComplaintActionPerformed ");
+            JOptionPane.showMessageDialog(null,"Location field is empty");
+        }
         
     }//GEN-LAST:event_sendemergencyActionPerformed
 
@@ -225,6 +232,17 @@ public class CanteenEmergencyRequestJPanel extends javax.swing.JPanel {
         layout.previous(userProcessContainer);
 
     }//GEN-LAST:event_backJButtonActionPerformed
+
+    private void locationfiieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_locationfiieldActionPerformed
+        // TODO add your handling code here:
+        
+        if(locationfiield.getText()!=""){
+        message1 = locationfiield.getText();
+        System.out.println("sendComplaintActionPerformed 'messageJTextField' " + message1);
+        }
+        else JOptionPane.showMessageDialog(null,"Location field is empty");
+        
+    }//GEN-LAST:event_locationfiieldActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

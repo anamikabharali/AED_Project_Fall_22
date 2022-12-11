@@ -221,7 +221,7 @@ public class CanteenComplaintJPanel extends javax.swing.JPanel {
         
             System.out.println("Inside if block of sendComplaintActionPerformed and is not Empty");
 
-                }
+      }
         else
         {
             System.out.println("Inside else block of sendComplaintActionPerformed ");

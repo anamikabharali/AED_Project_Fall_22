@@ -16,7 +16,7 @@ import userinterface.Police.felony.FelonyWorkAreaJPanel;
  * @author srivaishnaviaekkati 
  */
 public class FelonyProcessStatusRequestJPanel extends javax.swing.JPanel {
-
+    public String message1 = null; 
     JPanel userProcessContainer;
     Complaints_Suggestions_Request request;
     /**
@@ -56,6 +56,12 @@ public class FelonyProcessStatusRequestJPanel extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel1.setText("Response");
+
+        resultJTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resultJTextFieldActionPerformed(evt);
+            }
+        });
 
         backJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         backJButton.setText("Back");
@@ -112,9 +118,27 @@ public class FelonyProcessStatusRequestJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_backJButtonActionPerformed
 
     private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
-        if(resultJTextField.getText()!=null)
+       
+        String message = message1;
+       
+        if(message1!=null)
         {
-        request.setResponse(resultJTextField.getText());
+            message1 = resultJTextField.getText();
+            System.out.println("submitJButtonActionPerformed 'messageJTextField' " + message1);
+            request.setResponse(message1);
+            request.setStatus("Completed");
+            JOptionPane.showMessageDialog(null,"Your response has been sent!");
+        }
+        else JOptionPane.showMessageDialog(null,"Response field is empty");
+        
+    }//GEN-LAST:event_submitJButtonActionPerformed
+
+    private void resultJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultJTextFieldActionPerformed
+        // TODO add your handling code here:
+        
+        if(message1!=null)
+        {
+        request.setResponse(message1);
         request.setStatus("Completed");
         JOptionPane.showMessageDialog(null,"Your response has been sent!");
         }
@@ -122,7 +146,9 @@ public class FelonyProcessStatusRequestJPanel extends javax.swing.JPanel {
         {
            JOptionPane.showMessageDialog(null,"Text Field is Empty!");
         }
-    }//GEN-LAST:event_submitJButtonActionPerformed
+        
+        
+    }//GEN-LAST:event_resultJTextFieldActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backJButton;

@@ -18,7 +18,8 @@ import javax.swing.table.DefaultTableModel;
  * @author srivaishnaviaekkati
  */
 public class FacilitiesManageEmployeeJPanel extends javax.swing.JPanel {
-
+    
+    public String message1 = null; 
     private OrganizationDirectory organizationDir;
     private JPanel userProcessContainer;
     
@@ -197,12 +198,20 @@ public class FacilitiesManageEmployeeJPanel extends javax.swing.JPanel {
     private void addJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJButtonActionPerformed
         
         Organization organization = (Organization) organizationEmpJComboBox.getSelectedItem();
-        String name = nameJTextField.getText();
-        
-        organization.getEmployeeDirectory().createEmployee(name);
-        populateTable(organization);
-        nameJTextField.setText("");
-         JOptionPane.showMessageDialog(null,"Employee Created");
+        String name = message1;
+        if(name != null)
+        {
+            System.out.println("Inside if block of addJButtonActionPerformed method ... ");
+            organization.getEmployeeDirectory().createEmployee(name);
+            populateTable(organization);
+            nameJTextField.setText("");
+            JOptionPane.showMessageDialog(null,"Employee Created");
+        }
+        else 
+        {
+            System.out.println("Inside else block of addJButtonActionPerformed method ... ");
+            JOptionPane.showMessageDialog(null,"Name field is empty");
+        }
     }//GEN-LAST:event_addJButtonActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
@@ -219,11 +228,11 @@ public class FacilitiesManageEmployeeJPanel extends javax.swing.JPanel {
     private void nameJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameJTextFieldActionPerformed
         // TODO add your handling code here:
         
-//         if(messageJTextField.getText()!=""){
-//        message1 = messageJTextField.getText();
-//        System.out.println("sendComplaintActionPerformed 'messageJTextField' " + message1);
-//        }
-//        else JOptionPane.showMessageDialog(null,"Message field is empty");
+         if(nameJTextField.getText()!=""){
+        message1 = nameJTextField.getText();
+        System.out.println("sendComplaintActionPerformed 'messageJTextField' " + message1);
+        }
+        else JOptionPane.showMessageDialog(null,"Message field is empty");
         
     }//GEN-LAST:event_nameJTextFieldActionPerformed
 

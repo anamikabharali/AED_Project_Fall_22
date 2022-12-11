@@ -27,6 +27,7 @@ public class SupervisorEmergencyRequestJPanel extends javax.swing.JPanel {
     /**
      * Creates new form DinerEmergencyRequestJPanel
      */
+    public String message1 = null;
     private JPanel userProcessContainer;
     private Enterprise enterprise;
     private UserAccount userAccount; 
@@ -67,6 +68,11 @@ EmergencyRequest  erequest = new EmergencyRequest();
         locationlbl.setText("Location");
 
         locationtxtfield.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        locationtxtfield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                locationtxtfieldActionPerformed(evt);
+            }
+        });
 
         sendemergecy.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         sendemergecy.setText("Send Emergency");
@@ -139,12 +145,14 @@ EmergencyRequest  erequest = new EmergencyRequest();
     private void sendemergecyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendemergecyActionPerformed
         // TODO add your handling code here:
         
-         String location = locationtxtfield.getText();
+         String location = message1;
         erequest.setLocation(location);
         erequest.setEmergencytype((Organization.Type) combo.getSelectedItem());
         erequest.setEmail(userAccount.getEmail());
          Organization org = null;
          Organization.Type sel = (Organization.Type) combo.getSelectedItem();
+      if(location != null)
+      {
         if(sel.equals(Organization.Type.Theft))
         {   
         for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
@@ -199,8 +207,15 @@ EmergencyRequest  erequest = new EmergencyRequest();
         }
         }
         
-         JOptionPane.showMessageDialog(null,"Your emergency request has been sent! An officer will notify you shortly");
+          JOptionPane.showMessageDialog(null,"Your emergency request has been sent! An officer will notify you shortly");
         
+    }
+        
+        else
+        {
+            System.out.println("Inside else block of sendComplaintActionPerformed ");
+            JOptionPane.showMessageDialog(null,"Location field is empty");
+        }
     }//GEN-LAST:event_sendemergecyActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
@@ -213,6 +228,18 @@ EmergencyRequest  erequest = new EmergencyRequest();
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_backJButtonActionPerformed
+
+    private void locationtxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_locationtxtfieldActionPerformed
+        // TODO add your handling code here:
+        
+        if(locationtxtfield.getText()!=""){
+        message1 = locationtxtfield.getText();
+        System.out.println("sendComplaintActionPerformed 'messageJTextField' " + message1);
+        }
+        else JOptionPane.showMessageDialog(null,"Location field is empty");
+        
+        
+    }//GEN-LAST:event_locationtxtfieldActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
