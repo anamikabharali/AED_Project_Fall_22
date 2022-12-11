@@ -138,7 +138,7 @@ public class TenantEmergencyRequestJPanel extends javax.swing.JPanel {
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
-        TenantAreaJPanel sajp = (TenantAreaJPanel) component;
+        TenantWorkAreaJPanel sajp = (TenantWorkAreaJPanel) component;
         sajp.populateRequestTable();
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.previous(userProcessContainer);

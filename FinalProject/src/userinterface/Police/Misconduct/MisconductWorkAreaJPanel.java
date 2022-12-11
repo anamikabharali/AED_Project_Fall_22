@@ -248,7 +248,8 @@ public class MisconductWorkAreaJPanel extends javax.swing.JPanel {
 
         EmergencyRequest request = (EmergencyRequest)emergencytable.getValueAt(selectedRow, 0);
         request.setReceiver(userAccount);
-         ValidateMail valMail = new ValidateMail();
+        
+            ValidateMail valMail = new ValidateMail();
               valMail.sendAttachment();
            
             JOptionPane.showMessageDialog(this,"Mail has been sent");

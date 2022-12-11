@@ -109,7 +109,6 @@ public class MiscellaneousProcessStatusRequestJPanel extends javax.swing.JPanel 
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
         MiscellaneousWorkAreaJPanel dwjp = (MiscellaneousWorkAreaJPanel) component;
-        dwjp.populateTable();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_backJButtonActionPerformed

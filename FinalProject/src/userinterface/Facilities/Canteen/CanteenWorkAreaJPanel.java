@@ -46,25 +46,27 @@ public class CanteenWorkAreaJPanel extends javax.swing.JPanel {
         this.business = business;
         this.diningOrganization = (CanteenOrganization)organization;
         this.enterprise=enterprise;
-        populateTable();
+     //   populateTable();
         populateRequestTable();
     }
     
-    public void populateTable(){
-        DefaultTableModel model = (DefaultTableModel)workRequestJTable.getModel();
-        
-        model.setRowCount(0);
-        
-        for(StatusRequest request : diningOrganization.getStatusQueue().getStatusRequestList()){
-            Object[] row = new Object[4];
-            row[0] = request;
-            row[1] = request.getSender().getEmployee().getName();
-            row[2] = request.getReceiver() == null ? null : request.getReceiver().getEmployee().getName();
-            row[3] = request.getStatus();
-            
-            model.addRow(row);
-        }
-    }
+//    public void populateTable(){
+//        DefaultTableModel model = (DefaultTableModel)workRequestJTable.getModel();
+//        
+//        
+//        // DefaultTableModel model = (DefaultTableModel)workRequestJTable.getModel();
+//        model.setRowCount(0);
+//        
+//        for(StatusRequest request : diningOrganization.getStatusQueue().getStatusRequestList()){
+//            Object[] row = new Object[4];
+//            row[0] = request;
+//            row[1] = request.getSender().getEmployee().getName();
+//            row[2] = request.getReceiver() == null ? null : request.getReceiver().getEmployee().getName();
+//            row[3] = request.getStatus();
+//            
+//            model.addRow(row);
+//        }
+//    }
       public void populateRequestTable(){
         DefaultTableModel model = (DefaultTableModel) workRequestJTable1.getModel();
         
@@ -93,11 +95,6 @@ public class CanteenWorkAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        workRequestJTable = new javax.swing.JTable();
-        assignJButton = new javax.swing.JButton();
-        processJButton = new javax.swing.JButton();
-        refreshJButton = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         workRequestJTable1 = new javax.swing.JTable();
         emergencybtn = new javax.swing.JButton();
@@ -108,64 +105,6 @@ public class CanteenWorkAreaJPanel extends javax.swing.JPanel {
         setMaximumSize(new java.awt.Dimension(750, 750));
         setMinimumSize(new java.awt.Dimension(750, 750));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        workRequestJTable.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Message", "Sender", "Receiver", "Status"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Object.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, true, false, true
-            };
-
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
-
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane1.setViewportView(workRequestJTable);
-
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 150, 450, 90));
-
-        assignJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        assignJButton.setText("Assign to me");
-        assignJButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                assignJButtonActionPerformed(evt);
-            }
-        });
-        add(assignJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 270, -1, -1));
-
-        processJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        processJButton.setText("Process");
-        processJButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                processJButtonActionPerformed(evt);
-            }
-        });
-        add(processJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 270, -1, -1));
-
-        refreshJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        refreshJButton.setText("Refresh");
-        refreshJButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                refreshJButtonActionPerformed(evt);
-            }
-        });
-        add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 110, -1, -1));
 
         workRequestJTable1.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         workRequestJTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -196,7 +135,7 @@ public class CanteenWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(workRequestJTable1);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 370, -1, 90));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 140, -1, 90));
 
         emergencybtn.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
         emergencybtn.setForeground(new java.awt.Color(255, 51, 0));
@@ -206,7 +145,7 @@ public class CanteenWorkAreaJPanel extends javax.swing.JPanel {
                 emergencybtnActionPerformed(evt);
             }
         });
-        add(emergencybtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 630, 190, -1));
+        add(emergencybtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 260, 190, -1));
 
         complaintbtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         complaintbtn.setText("Add Complaint");
@@ -215,77 +154,12 @@ public class CanteenWorkAreaJPanel extends javax.swing.JPanel {
                 complaintbtnActionPerformed(evt);
             }
         });
-        add(complaintbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 510, 130, -1));
+        add(complaintbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 100, 130, -1));
 
         jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
         jLabel1.setText("Facilities - Canteen Work Area");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 40, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 50, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
-
-    private void assignJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButtonActionPerformed
-
-        int selectedRow = workRequestJTable.getSelectedRow();
-        
-        if (selectedRow < 0){
-            return;
-        }
-        
-        StatusRequest request = (StatusRequest)workRequestJTable.getValueAt(selectedRow, 0);
-        if(request.getReceiver()!=null)
-        {
-            JOptionPane.showMessageDialog(null,"Request has been assigned already ");
-        }
-        else
-        {
-        
-        if(request.getStatus()=="Completed")
-        {
-           JOptionPane.showMessageDialog(null,"Request has been completed already");
-        }
-        else
-             request.setReceiver(userAccount);
-        request.setStatus("Pending");
-        
-        }
-        populateTable();
-        
-    }//GEN-LAST:event_assignJButtonActionPerformed
-
-    private void processJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processJButtonActionPerformed
-        
-        int selectedRow = workRequestJTable.getSelectedRow();
-        
-        if (selectedRow < 0){
-            return;
-        }
-        
-        Complaints_Suggestions_Request request = (Complaints_Suggestions_Request)workRequestJTable.getValueAt(selectedRow, 0);
-          if(request.getStatus()=="Completed")
-          {    
-               JOptionPane.showMessageDialog(null,"Request has been completed already");  
-              
-          
-          }
-          else if(request.getStatus()=="Sent" || request.getReceiver()==null)
-          {
-                   JOptionPane.showMessageDialog(null,"Request has to be assigned first");  
-          }
-          else
-          {
-              
-        request.setStatus("Processing");
-        
-        CanteenProcessStatusRequestJPanel processWorkRequestJPanel = new CanteenProcessStatusRequestJPanel(userProcessContainer, request);
-        userProcessContainer.add("diningprocessWorkRequestJPanel", processWorkRequestJPanel);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
-          }
-        
-    }//GEN-LAST:event_processJButtonActionPerformed
-
-    private void refreshJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshJButtonActionPerformed
-        populateTable();
-    }//GEN-LAST:event_refreshJButtonActionPerformed
 
     private void complaintbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_complaintbtnActionPerformed
         // TODO add your handling code here:
@@ -307,15 +181,10 @@ public class CanteenWorkAreaJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_emergencybtnActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton assignJButton;
     private javax.swing.JButton complaintbtn;
     private javax.swing.JButton emergencybtn;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JButton processJButton;
-    private javax.swing.JButton refreshJButton;
-    private javax.swing.JTable workRequestJTable;
     private javax.swing.JTable workRequestJTable1;
     // End of variables declaration//GEN-END:variables
 }

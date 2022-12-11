@@ -5,7 +5,7 @@
  */
 package userinterface.ResidentialHall.Tenant;
 
-import userinterface.Maintenance.Miscellaneous.MiscellaneousWorkAreaJPanel;
+import userinterface.ResidentialHall.Tenant.TenantWorkAreaJPanel;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.FelonyOrganization;
@@ -218,7 +218,7 @@ public class TenantComplaintJPanel extends javax.swing.JPanel {
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
-        MiscellaneousWorkAreaJPanel dwjp = (MiscellaneousWorkAreaJPanel) component;
+        TenantWorkAreaJPanel dwjp = (TenantWorkAreaJPanel) component;
         dwjp.populateRequestTable();
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.previous(userProcessContainer);

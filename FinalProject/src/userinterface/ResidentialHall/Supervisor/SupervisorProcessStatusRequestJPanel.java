@@ -108,7 +108,7 @@ public class SupervisorProcessStatusRequestJPanel extends javax.swing.JPanel {
         Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
         SupervisorWorkAreaJPanel dwjp = (SupervisorWorkAreaJPanel) component;
-        dwjp.populateTable();
+        
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_backJButtonActionPerformed

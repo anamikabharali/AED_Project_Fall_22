@@ -10,7 +10,7 @@ import Business.Network.Network;
 import Business.Organization.CanteenOrganization;
 import Business.Organization.Organization;
 import Business.UserAccount.UserAccount;
-import userinterface.ResidentialHall.Tenant.TenantAreaJPanel;
+import userinterface.ResidentialHall.Tenant.TenantWorkAreaJPanel;
 import javax.swing.JPanel;
 import userinterface.Facilities.Canteen.CanteenWorkAreaJPanel;
 
