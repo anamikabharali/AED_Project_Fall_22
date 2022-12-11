@@ -34,10 +34,10 @@ public class SupervisorEmergencyRequestJPanel extends javax.swing.JPanel {
     public SupervisorEmergencyRequestJPanel(JPanel userProcessContainer, UserAccount userAccount, Enterprise enterprise,Network network) {
         initComponents();
         this.network=network;
-       this.userProcessContainer = userProcessContainer;
+        this.userProcessContainer = userProcessContainer;
         this.enterprise = enterprise;
         this.userAccount = userAccount;
-     populateComboBox();
+        populateComboBox();
     }
 EmergencyRequest  erequest = new EmergencyRequest();
     /**
@@ -139,67 +139,64 @@ EmergencyRequest  erequest = new EmergencyRequest();
     private void sendemergecyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendemergecyActionPerformed
         // TODO add your handling code here:
         
-         String location = locationtxtfield.getText();
+        String location = locationtxtfield.getText();
         erequest.setLocation(location);
         erequest.setEmergencytype((Organization.Type) combo.getSelectedItem());
         erequest.setEmail(userAccount.getEmail());
-         Organization org = null;
-         Organization.Type sel = (Organization.Type) combo.getSelectedItem();
+        Organization org = null;
+        Organization.Type sel = (Organization.Type) combo.getSelectedItem();
         if(sel.equals(Organization.Type.Theft))
         {   
-        for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
+            for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
             {
-                  for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
-                  {
-            if (organization instanceof TheftOrganization){
-                org = organization;
-                break;
-            } 
-                  }
-        }
-        if (org!=null){
-            org.getStatusQueue().getStatusRequestList().add(erequest);
-            userAccount.getStatusQueue().getStatusRequestList().add(erequest);
-        }
-        }
-          else if(sel.equals(Organization.Type.Felony))
-        {
-        
-        for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
-            {
-                  for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
-                  {
-            if (organization instanceof FelonyOrganization){
-                org = organization;
-                break;
-            } }
-        }
-        if (org!=null){
-            org.getStatusQueue().getStatusRequestList().add(erequest);
-            userAccount.getStatusQueue().getStatusRequestList().add(erequest);
-        }
-        }
-        
-          else if(sel.equals(Organization.Type.Misconduct))
-        {
-        
-        for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
-            {
-                  for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
-                  {
-            if (organization instanceof MisconductOrganization){
-                org = organization;
-                break;
-            } 
+                for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
+                {
+                    if (organization instanceof TheftOrganization){
+                    org = organization;
+                    break;
+                    } 
+                }
+            }   
+            if (org!=null){
+                org.getStatusQueue().getStatusRequestList().add(erequest);
+                userAccount.getStatusQueue().getStatusRequestList().add(erequest);
             }
         }
-        if (org!=null){
-            org.getStatusQueue().getStatusRequestList().add(erequest);
-            userAccount.getStatusQueue().getStatusRequestList().add(erequest);
+        else if(sel.equals(Organization.Type.Felony))
+        {
+            for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
+            {
+                for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
+                {
+                    if (organization instanceof FelonyOrganization){
+                        org = organization;
+                        break;
+                    }
+                }
+            }
+            if (org!=null){
+                org.getStatusQueue().getStatusRequestList().add(erequest);
+                userAccount.getStatusQueue().getStatusRequestList().add(erequest);
+            }
         }
+        else if(sel.equals(Organization.Type.Misconduct))
+        {
+            for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
+            {
+                for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
+                {
+                    if (organization instanceof MisconductOrganization){
+                        org = organization;
+                        break;
+                    } 
+                }
+            }
+            if (org!=null){
+                org.getStatusQueue().getStatusRequestList().add(erequest);
+                userAccount.getStatusQueue().getStatusRequestList().add(erequest);
+            }
         }
-        
-         JOptionPane.showMessageDialog(null,"Your emergency request has been sent! An officer will notify you shortly");
+        JOptionPane.showMessageDialog(null,"Your emergency request has been sent! An officer will notify you shortly");
         
     }//GEN-LAST:event_sendemergecyActionPerformed
 
@@ -225,7 +222,8 @@ EmergencyRequest  erequest = new EmergencyRequest();
     // End of variables declaration//GEN-END:variables
 
     private void populateComboBox() {
-         combo.removeAllItems();
+        combo.removeAllItems();
+        
         combo.addItem(Organization.Type.Theft);
         combo.addItem(Organization.Type.Felony);
         combo.addItem(Organization.Type.Misconduct);
