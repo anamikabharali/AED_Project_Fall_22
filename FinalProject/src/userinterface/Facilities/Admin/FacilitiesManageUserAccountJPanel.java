@@ -374,6 +374,8 @@ Network net;
                             if(!Validate.validateEmail(email))
                             {
                                  JOptionPane.showMessageDialog(null,"Enter valid email id ");
+                                 emailtxtfield.setText("");
+                                return;
                             
                             }
                            
