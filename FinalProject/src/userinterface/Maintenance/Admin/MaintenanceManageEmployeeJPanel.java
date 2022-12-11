@@ -19,6 +19,7 @@ import javax.swing.table.DefaultTableModel;
  */
 public class MaintenanceManageEmployeeJPanel extends javax.swing.JPanel {
 
+    public String message1 = null; 
     private OrganizationDirectory organizationDir;
     private JPanel userProcessContainer;
     
@@ -129,6 +130,12 @@ public class MaintenanceManageEmployeeJPanel extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         jLabel2.setText("Name");
 
+        nameJTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                nameJTextFieldActionPerformed(evt);
+            }
+        });
+
         organizationEmpJComboBox.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
         organizationEmpJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -186,12 +193,20 @@ public class MaintenanceManageEmployeeJPanel extends javax.swing.JPanel {
     private void addJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJButtonActionPerformed
         
         Organization organization = (Organization) organizationEmpJComboBox.getSelectedItem();
-        String name = nameJTextField.getText();
-        
-        organization.getEmployeeDirectory().createEmployee(name);
-        populateTable(organization);
-        nameJTextField.setText("");
-         JOptionPane.showMessageDialog(null,"Employee Created");
+        String name = message1;
+        if(name != null)
+        {
+            System.out.println("Inside if block of addJButtonActionPerformed method ... ");
+            organization.getEmployeeDirectory().createEmployee(name);
+            populateTable(organization);
+            nameJTextField.setText("");
+            JOptionPane.showMessageDialog(null,"Employee Created");
+        }
+        else 
+        {
+            System.out.println("Inside else block of addJButtonActionPerformed method ... ");
+            JOptionPane.showMessageDialog(null,"Name field is empty");
+        }
     }//GEN-LAST:event_addJButtonActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
@@ -200,6 +215,19 @@ public class MaintenanceManageEmployeeJPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_backJButtonActionPerformed
+
+    private void nameJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameJTextFieldActionPerformed
+        // TODO add your handling code here:
+        
+        if(nameJTextField.getText()!="")
+     {
+        message1 = nameJTextField.getText();
+        System.out.println("nameJTextFieldActionPerformed 'messageJTextField' " + message1);
+     }
+        else JOptionPane.showMessageDialog(null,"Name field is empty");
+        
+        
+    }//GEN-LAST:event_nameJTextFieldActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addJButton;
