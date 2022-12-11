@@ -232,11 +232,12 @@ public class MainJFrame extends javax.swing.JFrame {
         userNameJTextField.setEnabled(true);
         passwordField.setEnabled(true);
         loginJButton.setEnabled(true);
-         btnsignup.setEnabled(true);
+        btnsignup.setEnabled(true);
         userNameJTextField.setText("");
         passwordField.setText("");
 
         container.removeAll();
+        
         JPanel blankJP = new JPanel();
         container.add("blank", blankJP);
         CardLayout crdLyt = (CardLayout) container.getLayout();

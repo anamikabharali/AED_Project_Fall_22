@@ -143,7 +143,7 @@ public class SupervisorComplaintJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
   private void populateComboBox() {
         
-         combo.removeAllItems();
+        combo.removeAllItems();
         combo.addItem(Organization.Type.Felony);
         combo.addItem(Organization.Type.Misconduct);
         combo.addItem(Organization.Type.Theft);
@@ -153,80 +153,80 @@ public class SupervisorComplaintJPanel extends javax.swing.JPanel {
         overallcounter +=1;
         
         String message = messageJTextField.getText();
-     if(message!=null)
-     {
-        request.setMessage(message);
-
-        request.setSender(userAccount);
-        request.setStatus("Sent");
-
-        Organization org = null;
-          Organization.Type sel = (Organization.Type) combo.getSelectedItem();
-        if(sel.equals(Organization.Type.Felony))
+        if(message!=null)
         {
-             for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
+            request.setMessage(message);
+            request.setSender(userAccount);
+            request.setStatus("Sent");
+
+            Organization org = null;
+            Organization.Type sel = (Organization.Type) combo.getSelectedItem();
+            if(sel.equals(Organization.Type.Felony))
             {
-                  for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
-                  {
-                if (organization instanceof FelonyOrganization){
-                    org = organization;
-                    felonycounter = felonycounter + 1;
-                    break;
+                for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
+                {
+                    for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
+                    {
+                        if (organization instanceof FelonyOrganization){
+                        org = organization;
+                        
+                        felonycounter = felonycounter + 1;
+                        break;
+                    }
                 }
             }
-            }
             if (org!=null){
                 org.getStatusQueue().getStatusRequestList().add(request);
                 userAccount.getStatusQueue().getStatusRequestList().add(request);
             }
-        }
-        else if(sel.equals(Organization.Type.Misconduct))
-        {
-
-             for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
+            }   
+            else if(sel.equals(Organization.Type.Misconduct))
             {
-                  for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
-                  {
-                if (organization instanceof MisconductOrganization){
-                    org = organization;
-                    misconductcounter = misconductcounter + 1;
-                    break;
-                } 
-            }
-            }
-            if (org!=null){
-                org.getStatusQueue().getStatusRequestList().add(request);
-                userAccount.getStatusQueue().getStatusRequestList().add(request);
-            }
+                for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
+                {
+                    for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
+                    {
+                        if (organization instanceof MisconductOrganization){
+                        org = organization;
+                        
+                        misconductcounter = misconductcounter + 1;
+                        break;
+                        } 
+                    }
+                }
+                if (org!=null){
+                    org.getStatusQueue().getStatusRequestList().add(request);
+                    userAccount.getStatusQueue().getStatusRequestList().add(request);
+                }
 
-        }
-        else if(sel.equals(Organization.Type.Theft))
-        {
-             for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
+            }
+            else if(sel.equals(Organization.Type.Theft))
             {
-                  for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
-                  {
-                if (organization instanceof TheftOrganization){
-                    org = organization;
-                    theftcounter = theftcounter + 1;
-                    break;
-                } 
-                  }
+                for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
+                {
+                    for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
+                    {
+                        if (organization instanceof TheftOrganization){
+                        org = organization;
+                        
+                        theftcounter = theftcounter + 1;
+                        break;
+                        } 
+                    }
+                }
+                if (org!=null){
+                    org.getStatusQueue().getStatusRequestList().add(request);
+                    userAccount.getStatusQueue().getStatusRequestList().add(request);
+                }
             }
-            if (org!=null){
-                org.getStatusQueue().getStatusRequestList().add(request);
-                userAccount.getStatusQueue().getStatusRequestList().add(request);
-            }
-
+            JOptionPane.showMessageDialog(null,"Your complaint has been sent");
         }
-        JOptionPane.showMessageDialog(null,"Your complaint has been sent");
-     }
         else
-         {
-           JOptionPane.showMessageDialog(null,"Message field is empty");
-         }
+        {
+            JOptionPane.showMessageDialog(null,"Message field is empty");
+        }
      
-         MainJFrame.felonycounter = this.felonycounter;
+        MainJFrame.felonycounter = this.felonycounter;
         MainJFrame.overallcounter = this.overallcounter;
         MainJFrame.misconductcounter = this.misconductcounter;
         MainJFrame.theftcounter = this.theftcounter;
