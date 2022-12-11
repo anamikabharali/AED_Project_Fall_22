@@ -11,7 +11,6 @@ import Business.Network.Network;
 import Business.Organization.Organization;
 import java.awt.CardLayout;
 import java.awt.Color;
-import static java.awt.Component.TOP_ALIGNMENT;
 import java.util.ArrayList;
 import javax.swing.JPanel;
 import javax.swing.tree.DefaultMutableTreeNode;
@@ -19,7 +18,7 @@ import javax.swing.tree.DefaultTreeModel;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartFrame;
 import org.jfree.chart.JFreeChart;
-import org.jfree.chart.plot.PiePlot;
+import org.jfree.chart.plot.PiePlot3D;
 import org.jfree.data.general.DefaultPieDataset;
 import userinterface.MainJFrame;
 
@@ -37,7 +36,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
     private Network network;
     public SystemAdminWorkAreaJPanel(JPanel userProcessContainer,EcoSystem ecosystem,Network network) {
         initComponents();
-        this.userProcessContainer=userProcessContainer;
+    //    this.userProcessContainer=userProcessContainer;
         this.ecosystem=ecosystem;
         this.network=network;
         populateTree();
@@ -253,22 +252,27 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         PDataset.setValue( "Theft Issues" , MainJFrame.theftcounter );  
       
       //create chart
-        JFreeChart piechart = ChartFactory.createPieChart("Pie Chart",PDataset, true,true,true);//explain
+        JFreeChart chart = ChartFactory.createPieChart3D("Pie Chart",PDataset, true,true,true);
       
-        PiePlot piePlot =(PiePlot) piechart.getPlot();
-        piePlot.setForegroundAlpha(TOP_ALIGNMENT);
+        PiePlot3D piePlot =(PiePlot3D) chart.getPlot();
         
        //changing pie chart blocks colors
-        piePlot.setSectionPaint("Total", new Color(255,255,102));
-        piePlot.setSectionPaint("Misconduct Issues", new Color(102,255,102));
-        piePlot.setSectionPaint("Felony Issues", new Color(255,102,153));
-        piePlot.setSectionPaint("Theft Issues", new Color(0,204,204));
+//        piePlot.setSectionPaint("Total", new Color(255,255,102));
+//        piePlot.setSectionPaint("Misconduct Issues", new Color(102,255,102));
+//        piePlot.setSectionPaint("Felony Issues", new Color(255,102,153));
+//        piePlot.setSectionPaint("Theft Issues", new Color(0,204,204));
        
         piePlot.setBackgroundPaint(Color.white);
         //create chartPanel to display chart(graph)
-        ChartFrame frame = new ChartFrame("Pie Chart",piechart);
+        ChartFrame frame = new ChartFrame("Pie Chart",chart);
         frame.setVisible(true);
-        frame.setSize(450,500);
+        frame.setSize(600,600);
+
+              
+        
+        
+        
+        
     }//GEN-LAST:event_jButton1ActionPerformed
 
 

@@ -25,10 +25,10 @@ import userinterface.MainJFrame;
  */
 public class SupervisorComplaintJPanel extends javax.swing.JPanel {
 
-    public int overallcounter;
-    public int misconductcounter;
-    public int theftcounter;
-    public int felonycounter;
+  //  public int overallcounter;
+  //  public int misconductcounter;
+  //  public int theftcounter;
+  //  public int felonycounter;
     /**
      * Creates new form DinerComplaintJPanel
      */
@@ -42,10 +42,10 @@ public class SupervisorComplaintJPanel extends javax.swing.JPanel {
         this.userProcessContainer = userProcessContainer;
         this.enterprise = enterprise;
         this.userAccount = userAccount;
-        this.felonycounter= MainJFrame.felonycounter;
-        this.overallcounter = MainJFrame.overallcounter;
-        this.misconductcounter = MainJFrame.misconductcounter;
-        this.theftcounter= MainJFrame.theftcounter;
+ //       this.felonycounter= MainJFrame.felonycounter;
+   //     this.overallcounter = MainJFrame.overallcounter;
+     //   this.misconductcounter = MainJFrame.misconductcounter;
+       // this.theftcounter= MainJFrame.theftcounter;
         
         populateComboBox();
     }
@@ -150,7 +150,7 @@ public class SupervisorComplaintJPanel extends javax.swing.JPanel {
        
     }
     private void sendComplaintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendComplaintActionPerformed
-     overallcounter = overallcounter + 1;
+     MainJFrame.overallcounter += 1;
         String message = messageJTextField.getText();
      if(message!=null)
      {
@@ -170,7 +170,7 @@ public class SupervisorComplaintJPanel extends javax.swing.JPanel {
                 if (organization instanceof FelonyOrganization){
                     org = organization;
                     
-                    felonycounter = felonycounter + 1;
+                    MainJFrame.felonycounter += 1;
                     break;
                 }
             }
@@ -190,7 +190,7 @@ public class SupervisorComplaintJPanel extends javax.swing.JPanel {
                 if (organization instanceof MisconductOrganization){
                     org = organization;
                     
-                    misconductcounter = misconductcounter + 1;
+                    MainJFrame.misconductcounter +=1;
                     break;
                 } 
             }
@@ -209,8 +209,7 @@ public class SupervisorComplaintJPanel extends javax.swing.JPanel {
                   {
                 if (organization instanceof TheftOrganization){
                     org = organization;
-                    
-                    theftcounter = theftcounter + 1;
+                    MainJFrame.theftcounter += 1;
                     break;
                 } 
                   }
