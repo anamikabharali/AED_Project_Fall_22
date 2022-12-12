@@ -46,7 +46,7 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
     
    
      public void populateRequestTable(){
-        DefaultTableModel model = (DefaultTableModel) workRequestJTable1.getModel();
+        DefaultTableModel model = (DefaultTableModel) workRequestJT.getModel();
         
         model.setRowCount(0);
         for (StatusRequest request : userAccount.getStatusQueue().getStatusRequestList()){
@@ -73,8 +73,8 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane2 = new javax.swing.JScrollPane();
-        workRequestJTable1 = new javax.swing.JTable();
-        addcomplaintbtn = new javax.swing.JButton();
+        workRequestJT = new javax.swing.JTable();
+        addcomplaintBtn = new javax.swing.JButton();
         emergencybtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
@@ -83,8 +83,8 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
         setMinimumSize(new java.awt.Dimension(750, 750));
         setLayout(null);
 
-        workRequestJTable1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        workRequestJTable1.setModel(new javax.swing.table.DefaultTableModel(
+        workRequestJT.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        workRequestJT.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -110,21 +110,21 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(workRequestJTable1);
+        jScrollPane2.setViewportView(workRequestJT);
 
         add(jScrollPane2);
         jScrollPane2.setBounds(60, 220, 610, 240);
 
-        addcomplaintbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        addcomplaintbtn.setText("Add Complaint");
-        addcomplaintbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        addcomplaintbtn.addActionListener(new java.awt.event.ActionListener() {
+        addcomplaintBtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        addcomplaintBtn.setText("Add Complaint");
+        addcomplaintBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        addcomplaintBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addcomplaintbtnActionPerformed(evt);
+                addcomplaintBtnActionPerformed(evt);
             }
         });
-        add(addcomplaintbtn);
-        addcomplaintbtn.setBounds(300, 150, 150, 22);
+        add(addcomplaintBtn);
+        addcomplaintBtn.setBounds(300, 150, 150, 22);
 
         emergencybtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         emergencybtn.setForeground(new java.awt.Color(255, 0, 0));
@@ -145,7 +145,7 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
         jLabel1.setBounds(210, 70, 340, 30);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void addcomplaintbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addcomplaintbtnActionPerformed
+    private void addcomplaintBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addcomplaintBtnActionPerformed
         // TODO add your handling code here:
         
          CardLayout layout = (CardLayout) userProcessContainer.getLayout();
@@ -154,7 +154,7 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
         
          
         
-    }//GEN-LAST:event_addcomplaintbtnActionPerformed
+    }//GEN-LAST:event_addcomplaintBtnActionPerformed
 
     private void emergencybtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emergencybtnActionPerformed
         // TODO add your handling code here:
@@ -166,10 +166,10 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_emergencybtnActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton addcomplaintbtn;
+    private javax.swing.JButton addcomplaintBtn;
     private javax.swing.JButton emergencybtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable workRequestJTable1;
+    private javax.swing.JTable workRequestJT;
     // End of variables declaration//GEN-END:variables
 }
