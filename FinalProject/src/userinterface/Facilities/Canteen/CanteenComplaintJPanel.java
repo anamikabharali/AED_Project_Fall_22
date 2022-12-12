@@ -56,7 +56,7 @@ public class CanteenComplaintJPanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         combo = new javax.swing.JComboBox();
         sendComplaint = new javax.swing.JButton();
-        backJButton = new javax.swing.JButton();
+        backbtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(76, 89, 115));
@@ -70,14 +70,14 @@ public class CanteenComplaintJPanel extends javax.swing.JPanel {
         add(jLabel1);
         jLabel1.setBounds(190, 240, 90, 30);
 
-        messageJTextField.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        messageJTextField.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         messageJTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 messageJTextFieldActionPerformed(evt);
             }
         });
         add(messageJTextField);
-        messageJTextField.setBounds(280, 240, 220, 23);
+        messageJTextField.setBounds(280, 240, 220, 24);
 
         jLabel3.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -85,10 +85,10 @@ public class CanteenComplaintJPanel extends javax.swing.JPanel {
         add(jLabel3);
         jLabel3.setBounds(170, 310, 100, 20);
 
-        combo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        combo.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         combo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(combo);
-        combo.setBounds(280, 300, 220, 23);
+        combo.setBounds(280, 300, 220, 24);
 
         sendComplaint.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         sendComplaint.setText("Send Complaint");
@@ -101,16 +101,16 @@ public class CanteenComplaintJPanel extends javax.swing.JPanel {
         add(sendComplaint);
         sendComplaint.setBounds(460, 470, 150, 22);
 
-        backJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        backJButton.setText("Back");
-        backJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        backbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        backbtn.setText("Back");
+        backbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        backbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                backbtnActionPerformed(evt);
             }
         });
-        add(backJButton);
-        backJButton.setBounds(120, 470, 100, 22);
+        add(backbtn);
+        backbtn.setBounds(120, 470, 100, 22);
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -209,7 +209,7 @@ public class CanteenComplaintJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_sendComplaintActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void backbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbtnActionPerformed
 
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
@@ -219,7 +219,7 @@ public class CanteenComplaintJPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
 
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_backbtnActionPerformed
 
     private void messageJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_messageJTextFieldActionPerformed
         // TODO add your handling code here:
@@ -234,7 +234,7 @@ public class CanteenComplaintJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
+    private javax.swing.JButton backbtn;
     private javax.swing.JComboBox combo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
