@@ -53,12 +53,12 @@ public class MiscellaneousComplaintJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        messageJTextField = new javax.swing.JTextField();
+        messagetxtfield = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        combo = new javax.swing.JComboBox();
-        sendComplaint = new javax.swing.JButton();
-        backJButton = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        fieldcombobox = new javax.swing.JComboBox();
+        sendCompbtn = new javax.swing.JButton();
+        backbtn = new javax.swing.JButton();
+        headinglbl = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(76, 89, 115));
         setMaximumSize(new java.awt.Dimension(750, 750));
@@ -71,14 +71,14 @@ public class MiscellaneousComplaintJPanel extends javax.swing.JPanel {
         add(jLabel1);
         jLabel1.setBounds(219, 197, 60, 30);
 
-        messageJTextField.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        messageJTextField.addActionListener(new java.awt.event.ActionListener() {
+        messagetxtfield.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        messagetxtfield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                messageJTextFieldActionPerformed(evt);
+                messagetxtfieldActionPerformed(evt);
             }
         });
-        add(messageJTextField);
-        messageJTextField.setBounds(320, 200, 170, 24);
+        add(messagetxtfield);
+        messagetxtfield.setBounds(320, 200, 170, 24);
 
         jLabel3.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -86,52 +86,52 @@ public class MiscellaneousComplaintJPanel extends javax.swing.JPanel {
         add(jLabel3);
         jLabel3.setBounds(203, 260, 80, 30);
 
-        combo.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        combo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(combo);
-        combo.setBounds(320, 260, 170, 24);
+        fieldcombobox.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        fieldcombobox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(fieldcombobox);
+        fieldcombobox.setBounds(320, 260, 170, 24);
 
-        sendComplaint.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        sendComplaint.setText("Send Complaint");
-        sendComplaint.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        sendComplaint.addActionListener(new java.awt.event.ActionListener() {
+        sendCompbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        sendCompbtn.setText("Send Complaint");
+        sendCompbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        sendCompbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sendComplaintActionPerformed(evt);
+                sendCompbtnActionPerformed(evt);
             }
         });
-        add(sendComplaint);
-        sendComplaint.setBounds(490, 430, 102, 22);
+        add(sendCompbtn);
+        sendCompbtn.setBounds(442, 430, 150, 22);
 
-        backJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        backJButton.setText("Back");
-        backJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        backbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        backbtn.setText("Back");
+        backbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        backbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                backbtnActionPerformed(evt);
             }
         });
-        add(backJButton);
-        backJButton.setBounds(110, 440, 34, 22);
+        add(backbtn);
+        backbtn.setBounds(110, 440, 70, 22);
 
-        jLabel2.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Miscellaneous Complaint Page");
-        add(jLabel2);
-        jLabel2.setBounds(200, 90, 360, 30);
+        headinglbl.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        headinglbl.setForeground(new java.awt.Color(255, 255, 255));
+        headinglbl.setText("Miscellaneous Complaint Page");
+        add(headinglbl);
+        headinglbl.setBounds(200, 90, 360, 30);
     }// </editor-fold>//GEN-END:initComponents
   private void populateComboBox() {
         
-         combo.removeAllItems();
-        combo.addItem(Organization.Type.Felony);
-        combo.addItem(Organization.Type.Misconduct);
-        combo.addItem(Organization.Type.Theft);
+         fieldcombobox.removeAllItems();
+        fieldcombobox.addItem(Organization.Type.Felony);
+        fieldcombobox.addItem(Organization.Type.Misconduct);
+        fieldcombobox.addItem(Organization.Type.Theft);
        
     }
-    private void sendComplaintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendComplaintActionPerformed
+    private void sendCompbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendCompbtnActionPerformed
      
         String message = message1;
         System.out.println("sendComplaintActionPerformed 'messageJTextField' " + message);
-        System.out.println("sendComplaintActionPerformed 'messageJTextField' " + messageJTextField.getText());
+        System.out.println("sendComplaintActionPerformed 'messageJTextField' " + messagetxtfield.getText());
         
     if(message != null)
     {       
@@ -141,7 +141,7 @@ public class MiscellaneousComplaintJPanel extends javax.swing.JPanel {
         request.setStatus("Sent");
 
         Organization org = null;
-        Organization.Type sel = (Organization.Type) combo.getSelectedItem();
+        Organization.Type sel = (Organization.Type) fieldcombobox.getSelectedItem();
         if(sel.equals(Organization.Type.Felony))
         {
             for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
@@ -208,9 +208,9 @@ public class MiscellaneousComplaintJPanel extends javax.swing.JPanel {
             System.out.println("Inside else block of sendComplaintActionPerformed ");
             JOptionPane.showMessageDialog(null,"Message field is empty");
         }
-    }//GEN-LAST:event_sendComplaintActionPerformed
+    }//GEN-LAST:event_sendCompbtnActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void backbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbtnActionPerformed
 
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
@@ -220,27 +220,27 @@ public class MiscellaneousComplaintJPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
 
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_backbtnActionPerformed
 
-    private void messageJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_messageJTextFieldActionPerformed
+    private void messagetxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_messagetxtfieldActionPerformed
         // TODO add your handling code here:
         
-        if(messageJTextField.getText()!=""){
-        message1 = messageJTextField.getText();
+        if(messagetxtfield.getText()!=""){
+        message1 = messagetxtfield.getText();
         System.out.println("sendComplaintActionPerformed 'messageJTextField' " + message1);
         }
         else JOptionPane.showMessageDialog(null,"Message field is empty");
         
-    }//GEN-LAST:event_messageJTextFieldActionPerformed
+    }//GEN-LAST:event_messagetxtfieldActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
-    private javax.swing.JComboBox combo;
+    private javax.swing.JButton backbtn;
+    private javax.swing.JComboBox fieldcombobox;
+    private javax.swing.JLabel headinglbl;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JTextField messageJTextField;
-    private javax.swing.JButton sendComplaint;
+    private javax.swing.JTextField messagetxtfield;
+    private javax.swing.JButton sendCompbtn;
     // End of variables declaration//GEN-END:variables
 }
