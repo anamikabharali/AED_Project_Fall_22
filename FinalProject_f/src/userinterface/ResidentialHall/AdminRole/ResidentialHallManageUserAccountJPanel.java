@@ -142,7 +142,7 @@ Network net;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        createUserJButton = new javax.swing.JButton();
+        createUserJBtn = new javax.swing.JButton();
         nameJTF = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -151,7 +151,7 @@ Network net;
         passwordJTF = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         employeeJCB = new javax.swing.JComboBox();
-        backjButton1 = new javax.swing.JButton();
+        backjBtn = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         organizationJCB = new javax.swing.JComboBox();
         jLabel4 = new javax.swing.JLabel();
@@ -166,16 +166,16 @@ Network net;
         setMinimumSize(new java.awt.Dimension(750, 750));
         setLayout(null);
 
-        createUserJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        createUserJButton.setText("Create");
-        createUserJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        createUserJButton.addActionListener(new java.awt.event.ActionListener() {
+        createUserJBtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        createUserJBtn.setText("Create");
+        createUserJBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        createUserJBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                createUserJButtonActionPerformed(evt);
+                createUserJBtnActionPerformed(evt);
             }
         });
-        add(createUserJButton);
-        createUserJButton.setBounds(450, 510, 43, 22);
+        add(createUserJBtn);
+        createUserJBtn.setBounds(450, 510, 43, 22);
 
         nameJTF.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         nameJTF.addActionListener(new java.awt.event.ActionListener() {
@@ -251,16 +251,16 @@ Network net;
         add(employeeJCB);
         employeeJCB.setBounds(180, 370, 146, 24);
 
-        backjButton1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        backjButton1.setText("<< Back");
-        backjButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        backjButton1.addActionListener(new java.awt.event.ActionListener() {
+        backjBtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        backjBtn.setText("<< Back");
+        backjBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        backjBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backjButton1ActionPerformed(evt);
+                backjBtnActionPerformed(evt);
             }
         });
-        add(backjButton1);
-        backjButton1.setBounds(160, 510, 54, 22);
+        add(backjBtn);
+        backjBtn.setBounds(160, 510, 54, 22);
 
         jLabel5.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -313,7 +313,7 @@ Network net;
         jLResHallMngUserAc.setBounds(170, 40, 420, 30);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void createUserJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createUserJButtonActionPerformed
+    private void createUserJBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createUserJBtnActionPerformed
          
             String email = emailTF.getText();
             String userName = nameJTF.getText();
@@ -369,14 +369,14 @@ Network net;
                 JOptionPane.showMessageDialog(null, "No Employee available", "Warning", JOptionPane.WARNING_MESSAGE);
             }
         
-    }//GEN-LAST:event_createUserJButtonActionPerformed
+    }//GEN-LAST:event_createUserJBtnActionPerformed
 
-    private void backjButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backjButton1ActionPerformed
+    private void backjBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backjBtnActionPerformed
         // TODO add your handling code here:
         container.remove(this);
         CardLayout layout = (CardLayout) container.getLayout();
         layout.previous(container);
-    }//GEN-LAST:event_backjButton1ActionPerformed
+    }//GEN-LAST:event_backjBtnActionPerformed
 
     private void organizationJCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organizationJCBActionPerformed
         Organization organization = (Organization) organizationJCB.getSelectedItem();
@@ -402,8 +402,8 @@ Network net;
     }//GEN-LAST:event_nameJTFActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backjButton1;
-    private javax.swing.JButton createUserJButton;
+    private javax.swing.JButton backjBtn;
+    private javax.swing.JButton createUserJBtn;
     private javax.swing.JTextField emailTF;
     private javax.swing.JComboBox employeeJCB;
     private javax.swing.JLabel jLResHallMngUserAc;
