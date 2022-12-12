@@ -75,8 +75,8 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         workRequestJT = new javax.swing.JTable();
         addcomplaintBtn = new javax.swing.JButton();
-        emergencybtn = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        emergencyBtn = new javax.swing.JButton();
+        jLSupOrgPanel = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(76, 89, 115));
         setMaximumSize(new java.awt.Dimension(750, 750));
@@ -126,23 +126,23 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
         add(addcomplaintBtn);
         addcomplaintBtn.setBounds(300, 150, 150, 22);
 
-        emergencybtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        emergencybtn.setForeground(new java.awt.Color(255, 0, 0));
-        emergencybtn.setText("Emergency!!");
-        emergencybtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        emergencybtn.addActionListener(new java.awt.event.ActionListener() {
+        emergencyBtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        emergencyBtn.setForeground(new java.awt.Color(255, 0, 0));
+        emergencyBtn.setText("Emergency!!");
+        emergencyBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        emergencyBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emergencybtnActionPerformed(evt);
+                emergencyBtnActionPerformed(evt);
             }
         });
-        add(emergencybtn);
-        emergencybtn.setBounds(290, 510, 190, 22);
+        add(emergencyBtn);
+        emergencyBtn.setBounds(290, 510, 190, 22);
 
-        jLabel1.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Supervisor Organisation Panel");
-        add(jLabel1);
-        jLabel1.setBounds(210, 70, 340, 30);
+        jLSupOrgPanel.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        jLSupOrgPanel.setForeground(new java.awt.Color(255, 255, 255));
+        jLSupOrgPanel.setText("Supervisor Organisation Panel");
+        add(jLSupOrgPanel);
+        jLSupOrgPanel.setBounds(210, 70, 340, 30);
     }// </editor-fold>//GEN-END:initComponents
 
     private void addcomplaintBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addcomplaintBtnActionPerformed
@@ -156,19 +156,19 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
         
     }//GEN-LAST:event_addcomplaintBtnActionPerformed
 
-    private void emergencybtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emergencybtnActionPerformed
+    private void emergencyBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emergencyBtnActionPerformed
         // TODO add your handling code here:
         
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         userProcessContainer.add("FacultyemergencyrequestJpanel", new SupervisorEmergencyRequestJPanel(userProcessContainer, userAccount, enterprise,network));
         layout.next(userProcessContainer);
         
-    }//GEN-LAST:event_emergencybtnActionPerformed
+    }//GEN-LAST:event_emergencyBtnActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addcomplaintBtn;
-    private javax.swing.JButton emergencybtn;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton emergencyBtn;
+    private javax.swing.JLabel jLSupOrgPanel;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable workRequestJT;
     // End of variables declaration//GEN-END:variables
