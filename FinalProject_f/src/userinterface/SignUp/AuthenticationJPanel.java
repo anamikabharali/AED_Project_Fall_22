@@ -39,8 +39,8 @@ JPanel container;
         this.container=container;
         this.sys=sys;
          jLabel2.setVisible(false);
-            authtxtfield.setVisible(false);
-            authenticatetxtfield.setVisible(false);
+            authTF.setVisible(false);
+            authenticateTF.setVisible(false);
     }
 
     /**
@@ -53,11 +53,11 @@ JPanel container;
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        emailtxtfield = new javax.swing.JTextField();
-        authtxtfield = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        emailTF = new javax.swing.JTextField();
+        authTF = new javax.swing.JTextField();
+        jBSendEmail = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        authenticatetxtfield = new javax.swing.JButton();
+        authenticateTF = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(76, 89, 115));
@@ -72,31 +72,31 @@ JPanel container;
         add(jLabel1);
         jLabel1.setBounds(200, 100, 320, 23);
 
-        emailtxtfield.addActionListener(new java.awt.event.ActionListener() {
+        emailTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailtxtfieldActionPerformed(evt);
+                emailTFActionPerformed(evt);
             }
         });
-        add(emailtxtfield);
-        emailtxtfield.setBounds(240, 130, 238, 23);
+        add(emailTF);
+        emailTF.setBounds(240, 130, 238, 23);
 
-        authtxtfield.addActionListener(new java.awt.event.ActionListener() {
+        authTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                authtxtfieldActionPerformed(evt);
+                authTFActionPerformed(evt);
             }
         });
-        add(authtxtfield);
-        authtxtfield.setBounds(310, 360, 101, 23);
+        add(authTF);
+        authTF.setBounds(310, 360, 101, 23);
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton1.setText("Send Mail");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jBSendEmail.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jBSendEmail.setText("Send Mail");
+        jBSendEmail.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jBSendEmailActionPerformed(evt);
             }
         });
-        add(jButton1);
-        jButton1.setBounds(320, 200, 92, 23);
+        add(jBSendEmail);
+        jBSendEmail.setBounds(320, 200, 92, 23);
 
         jLabel2.setFont(new java.awt.Font("Optima", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -104,22 +104,20 @@ JPanel container;
         add(jLabel2);
         jLabel2.setBounds(70, 310, 607, 23);
 
-        authenticatetxtfield.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        authenticatetxtfield.setText("Authenticate");
-        authenticatetxtfield.addActionListener(new java.awt.event.ActionListener() {
+        authenticateTF.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        authenticateTF.setText("Authenticate");
+        authenticateTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                authenticatetxtfieldActionPerformed(evt);
+                authenticateTFActionPerformed(evt);
             }
         });
-        add(authenticatetxtfield);
-        authenticatetxtfield.setBounds(300, 420, 129, 23);
-
-        jLabel3.setIcon(new javax.swing.ImageIcon("/Users/srivaishnaviaekkati/Downloads/AED_Project_Fall_22 2/back.png")); // NOI18N
+        add(authenticateTF);
+        authenticateTF.setBounds(300, 420, 129, 23);
         add(jLabel3);
         jLabel3.setBounds(0, 0, 750, 600);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jBSendEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBSendEmailActionPerformed
         // TODO add your handling code here:
     //     JOptionPane.showMessageDialog(emailtxtfield, n);
     //    JOptionPane.showMessageDialog(this, 56789);
@@ -129,11 +127,11 @@ JPanel container;
 //            authtxtfield.setVisible(true);
 //            authenticatetxtfield.setVisible(true);
             String email = null;
-        if(emailtxtfield.getText()!=null)
+        if(emailTF.getText()!=null)
             {
-                if(Validate.validateEmail(emailtxtfield.getText()))
+                if(Validate.validateEmail(emailTF.getText()))
                 {
-                    email = emailtxtfield.getText();
+                    email = emailTF.getText();
                     System.out.println("email .. "+ email);
                     System.out.println("After If Statement .. ");
                     
@@ -155,8 +153,8 @@ JPanel container;
               
             JOptionPane.showMessageDialog(this,"Mail has been sent");
             jLabel2.setVisible(true);
-            authtxtfield.setVisible(true);
-            authenticatetxtfield.setVisible(true);
+            authTF.setVisible(true);
+            authenticateTF.setVisible(true);
         } catch (MessagingException ex) {
             Logger.getLogger(FelonyWorkAreaJPanel.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(this,"Mail has not  been sent");
@@ -176,9 +174,9 @@ JPanel container;
             }
 
          
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jBSendEmailActionPerformed
 
-    private void authenticatetxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_authenticatetxtfieldActionPerformed
+    private void authenticateTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_authenticateTFActionPerformed
         // TODO add your handling code here:
     //    Integer num=Integer.parseInt(authtxtfield.getText());
         Integer num = n; 
@@ -188,7 +186,7 @@ JPanel container;
         {
         
         CardLayout layout = (CardLayout) container.getLayout();
-        container.add("SignUpJPanel", new SignUpJPanel(container, sys,emailtxtfield.getText()));
+        container.add("SignUpJPanel", new SignUpJPanel(container, sys,emailTF.getText()));
         layout.next(container);
         
         }
@@ -198,22 +196,22 @@ JPanel container;
           JOptionPane.showMessageDialog(null,"Authentication failed");
         
         }
-    }//GEN-LAST:event_authenticatetxtfieldActionPerformed
+    }//GEN-LAST:event_authenticateTFActionPerformed
 
-    private void authtxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_authtxtfieldActionPerformed
+    private void authTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_authTFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_authtxtfieldActionPerformed
+    }//GEN-LAST:event_authTFActionPerformed
 
-    private void emailtxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailtxtfieldActionPerformed
+    private void emailTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_emailtxtfieldActionPerformed
+    }//GEN-LAST:event_emailTFActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton authenticatetxtfield;
-    private javax.swing.JTextField authtxtfield;
-    private javax.swing.JTextField emailtxtfield;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JTextField authTF;
+    private javax.swing.JButton authenticateTF;
+    private javax.swing.JTextField emailTF;
+    private javax.swing.JButton jBSendEmail;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
