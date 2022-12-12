@@ -56,7 +56,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
           combonetwork.removeAllItems();
        for(Network net: sys.getNetworkList())
        {
-             
+           
            combonetwork.addItem(net); 
        
        
