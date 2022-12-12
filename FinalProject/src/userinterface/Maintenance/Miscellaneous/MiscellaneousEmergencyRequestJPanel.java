@@ -52,11 +52,11 @@ EmergencyRequest  erequest = new EmergencyRequest();
 
         jLabel1 = new javax.swing.JLabel();
         locationlbl = new javax.swing.JLabel();
-        locationtxtfield = new javax.swing.JTextField();
-        sendemergecy = new javax.swing.JButton();
-        combo = new javax.swing.JComboBox();
-        backJButton = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        locationtxtfield23456 = new javax.swing.JTextField();
+        sendemergecy56567 = new javax.swing.JButton();
+        combob = new javax.swing.JComboBox();
+        backJButton8900 = new javax.swing.JButton();
+        hj657hvjgvj = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(76, 89, 115));
         setMaximumSize(new java.awt.Dimension(750, 750));
@@ -75,53 +75,53 @@ EmergencyRequest  erequest = new EmergencyRequest();
         add(locationlbl);
         locationlbl.setBounds(233, 277, 70, 30);
 
-        locationtxtfield.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        add(locationtxtfield);
-        locationtxtfield.setBounds(330, 280, 114, 24);
+        locationtxtfield23456.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        add(locationtxtfield23456);
+        locationtxtfield23456.setBounds(330, 280, 114, 24);
 
-        sendemergecy.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        sendemergecy.setText("Send Emergency");
-        sendemergecy.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        sendemergecy.addActionListener(new java.awt.event.ActionListener() {
+        sendemergecy56567.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        sendemergecy56567.setText("Send Emergency");
+        sendemergecy56567.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        sendemergecy56567.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sendemergecyActionPerformed(evt);
+                sendemergecy56567ActionPerformed(evt);
             }
         });
-        add(sendemergecy);
-        sendemergecy.setBounds(520, 473, 110, 30);
+        add(sendemergecy56567);
+        sendemergecy56567.setBounds(520, 473, 110, 30);
 
-        combo.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        combo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(combo);
-        combo.setBounds(330, 210, 114, 24);
+        combob.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        combob.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(combob);
+        combob.setBounds(330, 210, 114, 24);
 
-        backJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        backJButton.setText("Back");
-        backJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        backJButton8900.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        backJButton8900.setText("Back");
+        backJButton8900.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        backJButton8900.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                backJButton8900ActionPerformed(evt);
             }
         });
-        add(backJButton);
-        backJButton.setBounds(104, 470, 60, 20);
+        add(backJButton8900);
+        backJButton8900.setBounds(104, 470, 60, 20);
 
-        jLabel2.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Miscellaneous Emergency Request");
-        add(jLabel2);
-        jLabel2.setBounds(176, 60, 360, 30);
+        hj657hvjgvj.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        hj657hvjgvj.setForeground(new java.awt.Color(255, 255, 255));
+        hj657hvjgvj.setText("Miscellaneous Emergency Request");
+        add(hj657hvjgvj);
+        hj657hvjgvj.setBounds(176, 60, 360, 30);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void sendemergecyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendemergecyActionPerformed
+    private void sendemergecy56567ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendemergecy56567ActionPerformed
         // TODO add your handling code here:
         
-         String location = locationtxtfield.getText();
+         String location = locationtxtfield23456.getText();
         erequest.setLocation(location);
-        erequest.setEmergencytype((Organization.Type) combo.getSelectedItem());
+        erequest.setEmergencytype((Organization.Type) combob.getSelectedItem());
         erequest.setEmail(userAccount.getEmail());
          Organization org = null;
-         Organization.Type sel = (Organization.Type) combo.getSelectedItem();
+         Organization.Type sel = (Organization.Type) combob.getSelectedItem();
       if(location.isEmpty())
       {
         System.out.println("Inside else block of sendComplaintActionPerformed ");
@@ -189,9 +189,9 @@ EmergencyRequest  erequest = new EmergencyRequest();
           JOptionPane.showMessageDialog(null,"Your emergency request has been sent! An officer will notify you shortly");
         
         }
-    }//GEN-LAST:event_sendemergecyActionPerformed
+    }//GEN-LAST:event_sendemergecy56567ActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void backJButton8900ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButton8900ActionPerformed
 
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
@@ -200,23 +200,23 @@ EmergencyRequest  erequest = new EmergencyRequest();
         
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_backJButton8900ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
-    private javax.swing.JComboBox combo;
+    private javax.swing.JButton backJButton8900;
+    private javax.swing.JComboBox combob;
+    private javax.swing.JLabel hj657hvjgvj;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel locationlbl;
-    private javax.swing.JTextField locationtxtfield;
-    private javax.swing.JButton sendemergecy;
+    private javax.swing.JTextField locationtxtfield23456;
+    private javax.swing.JButton sendemergecy56567;
     // End of variables declaration//GEN-END:variables
 
     private void populateComboBox() {
-         combo.removeAllItems();
-        combo.addItem(Organization.Type.Theft);
-        combo.addItem(Organization.Type.Felony);
-        combo.addItem(Organization.Type.Misconduct);
+         combob.removeAllItems();
+        combob.addItem(Organization.Type.Theft);
+        combob.addItem(Organization.Type.Felony);
+        combob.addItem(Organization.Type.Misconduct);
     }
 }
