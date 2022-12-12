@@ -57,7 +57,7 @@ public class MisconductProcessStatusRequestJPanel extends javax.swing.JPanel {
             }
         });
         add(submitJButton);
-        submitJButton.setBounds(460, 380, 140, 30);
+        submitJButton.setBounds(460, 430, 140, 30);
 
         jLabel1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -83,7 +83,7 @@ public class MisconductProcessStatusRequestJPanel extends javax.swing.JPanel {
             }
         });
         add(backJButton);
-        backJButton.setBounds(160, 378, 100, 22);
+        backJButton.setBounds(160, 430, 100, 22);
 
         jLabel3.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
