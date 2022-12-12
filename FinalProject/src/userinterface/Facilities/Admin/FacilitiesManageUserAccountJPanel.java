@@ -181,13 +181,13 @@ Network net;
 
         nameJTextField.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         add(nameJTextField);
-        nameJTextField.setBounds(520, 410, 146, 24);
+        nameJTextField.setBounds(520, 360, 150, 24);
 
         jLabel1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("User Name");
         add(jLabel1);
-        jLabel1.setBounds(370, 410, 69, 18);
+        jLabel1.setBounds(370, 360, 69, 18);
 
         userJTable.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         userJTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -226,7 +226,7 @@ Network net;
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Password");
         add(jLabel2);
-        jLabel2.setBounds(370, 450, 57, 18);
+        jLabel2.setBounds(370, 400, 57, 18);
 
         passwordJTextField.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         passwordJTextField.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -235,7 +235,7 @@ Network net;
             }
         });
         add(passwordJTextField);
-        passwordJTextField.setBounds(520, 450, 150, 24);
+        passwordJTextField.setBounds(520, 400, 150, 24);
 
         jLabel3.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -292,7 +292,7 @@ Network net;
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Email ID");
         add(jLabel7);
-        jLabel7.setBounds(370, 360, 53, 18);
+        jLabel7.setBounds(370, 440, 53, 18);
 
         emailtxtfield.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         emailtxtfield.addActionListener(new java.awt.event.ActionListener() {
@@ -301,7 +301,7 @@ Network net;
             }
         });
         add(emailtxtfield);
-        emailtxtfield.setBounds(520, 360, 146, 24);
+        emailtxtfield.setBounds(520, 440, 146, 24);
 
         jLabel8.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
