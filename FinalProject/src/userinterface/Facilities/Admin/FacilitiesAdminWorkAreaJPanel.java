@@ -87,6 +87,7 @@ public class FacilitiesAdminWorkAreaJPanel extends javax.swing.JPanel {
         add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 120, 30));
 
         valueLbl.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        valueLbl.setForeground(new java.awt.Color(255, 255, 255));
         valueLbl.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         add(valueLbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 217, 200, 30));
     }// </editor-fold>//GEN-END:initComponents
