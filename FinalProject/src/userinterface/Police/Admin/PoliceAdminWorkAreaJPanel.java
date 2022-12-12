@@ -32,7 +32,7 @@ public class PoliceAdminWorkAreaJPanel extends javax.swing.JPanel {
         this.business = business;
         this.network=network;
       
-        valueLabelghkj.setText(enterprise.getName());
+        valueLabelghjg.setText(enterprise.getName());
     }
     
     /** This method is called from within the constructor to
@@ -50,7 +50,7 @@ public class PoliceAdminWorkAreaJPanel extends javax.swing.JPanel {
         manageEmployeebtn = new javax.swing.JButton();
         manageOrganizationbtn = new javax.swing.JButton();
         enterpriseLabel = new javax.swing.JLabel();
-        valueLabelghkj = new javax.swing.JLabel();
+        valueLabelghjg = new javax.swing.JLabel();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -107,11 +107,11 @@ public class PoliceAdminWorkAreaJPanel extends javax.swing.JPanel {
         add(enterpriseLabel);
         enterpriseLabel.setBounds(230, 220, 80, 30);
 
-        valueLabelghkj.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        valueLabelghkj.setForeground(new java.awt.Color(255, 255, 255));
-        valueLabelghkj.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        add(valueLabelghkj);
-        valueLabelghkj.setBounds(330, 217, 200, 30);
+        valueLabelghjg.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        valueLabelghjg.setForeground(new java.awt.Color(255, 255, 255));
+        valueLabelghjg.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        add(valueLabelghjg);
+        valueLabelghjg.setBounds(330, 217, 200, 30);
     }// </editor-fold>//GEN-END:initComponents
 
     private void userbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userbtnActionPerformed
@@ -150,7 +150,7 @@ public class PoliceAdminWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton manageEmployeebtn;
     private javax.swing.JButton manageOrganizationbtn;
     private javax.swing.JButton userbtn;
-    private javax.swing.JLabel valueLabelghkj;
+    private javax.swing.JLabel valueLabelghjg;
     // End of variables declaration//GEN-END:variables
     
 }

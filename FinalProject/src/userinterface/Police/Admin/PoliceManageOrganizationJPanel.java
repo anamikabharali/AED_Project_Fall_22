@@ -34,10 +34,10 @@ public class PoliceManageOrganizationJPanel extends javax.swing.JPanel {
     }
     
      private void populateCombo() {
-        organizationJComboBox.removeAllItems();
-        organizationJComboBox.addItem(Type.Felony);
-        organizationJComboBox.addItem(Type.Theft);
-        organizationJComboBox.addItem(Type.Misconduct);
+        organizationcbox.removeAllItems();
+        organizationcbox.addItem(Type.Felony);
+        organizationcbox.addItem(Type.Theft);
+        organizationcbox.addItem(Type.Misconduct);
         
     }
 
@@ -65,11 +65,11 @@ public class PoliceManageOrganizationJPanel extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         organizationJTable = new javax.swing.JTable();
-        addJButton = new javax.swing.JButton();
-        organizationJComboBox = new javax.swing.JComboBox();
-        jLabel1 = new javax.swing.JLabel();
-        backJButton = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        addbtn = new javax.swing.JButton();
+        organizationcbox = new javax.swing.JComboBox();
+        bhjg = new javax.swing.JLabel();
+        backbtn = new javax.swing.JButton();
+        jLabel2gjfhc = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(76, 89, 115));
         setMaximumSize(new java.awt.Dimension(750, 750));
@@ -111,70 +111,70 @@ public class PoliceManageOrganizationJPanel extends javax.swing.JPanel {
         add(jScrollPane1);
         jScrollPane1.setBounds(80, 150, 590, 92);
 
-        addJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        addJButton.setText("Add Organization");
-        addJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        addJButton.addActionListener(new java.awt.event.ActionListener() {
+        addbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        addbtn.setText("Add Organization");
+        addbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        addbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addJButtonActionPerformed(evt);
+                addbtnActionPerformed(evt);
             }
         });
-        add(addJButton);
-        addJButton.setBounds(520, 480, 114, 22);
+        add(addbtn);
+        addbtn.setBounds(484, 480, 150, 22);
 
-        organizationJComboBox.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        organizationJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(organizationJComboBox);
-        organizationJComboBox.setBounds(350, 330, 220, 30);
+        organizationcbox.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        organizationcbox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(organizationcbox);
+        organizationcbox.setBounds(350, 330, 220, 30);
 
-        jLabel1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Organization  ");
-        add(jLabel1);
-        jLabel1.setBounds(218, 327, 100, 30);
+        bhjg.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        bhjg.setForeground(new java.awt.Color(255, 255, 255));
+        bhjg.setText("Organization  ");
+        add(bhjg);
+        bhjg.setBounds(218, 327, 100, 30);
 
-        backJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        backJButton.setText("<< Back");
-        backJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        backbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        backbtn.setText("<< Back");
+        backbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        backbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                backbtnActionPerformed(evt);
             }
         });
-        add(backJButton);
-        backJButton.setBounds(130, 480, 54, 22);
+        add(backbtn);
+        backbtn.setBounds(104, 480, 130, 22);
 
-        jLabel2.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Police Manage Organization");
-        add(jLabel2);
-        jLabel2.setBounds(210, 70, 320, 30);
+        jLabel2gjfhc.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        jLabel2gjfhc.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2gjfhc.setText("Police Manage Organization");
+        add(jLabel2gjfhc);
+        jLabel2gjfhc.setBounds(210, 70, 320, 30);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void addJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJButtonActionPerformed
+    private void addbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addbtnActionPerformed
            
-        Type type = (Type) organizationJComboBox.getSelectedItem();
+        Type type = (Type) organizationcbox.getSelectedItem();
         
         directory.createOrganization(type);
         JOptionPane.showMessageDialog(null,"Organization added");
         
         populateTable();
-    }//GEN-LAST:event_addJButtonActionPerformed
+    }//GEN-LAST:event_addbtnActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void backbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbtnActionPerformed
 
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_backbtnActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton addJButton;
-    private javax.swing.JButton backJButton;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton addbtn;
+    private javax.swing.JButton backbtn;
+    private javax.swing.JLabel bhjg;
+    private javax.swing.JLabel jLabel2gjfhc;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JComboBox organizationJComboBox;
     private javax.swing.JTable organizationJTable;
+    private javax.swing.JComboBox organizationcbox;
     // End of variables declaration//GEN-END:variables
 }
