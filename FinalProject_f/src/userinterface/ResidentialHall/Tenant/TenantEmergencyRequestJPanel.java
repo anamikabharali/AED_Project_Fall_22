@@ -53,9 +53,9 @@ public class TenantEmergencyRequestJPanel extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         locationlbl = new javax.swing.JLabel();
-        locationtxtfield = new javax.swing.JTextField();
+        locationTF = new javax.swing.JTextField();
         sendemergency = new javax.swing.JButton();
-        combo = new javax.swing.JComboBox();
+        jcomboEmertype = new javax.swing.JComboBox();
         backJButton = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
@@ -78,14 +78,14 @@ public class TenantEmergencyRequestJPanel extends javax.swing.JPanel {
         add(locationlbl);
         locationlbl.setBounds(210, 310, 60, 18);
 
-        locationtxtfield.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        locationtxtfield.addActionListener(new java.awt.event.ActionListener() {
+        locationTF.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        locationTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                locationtxtfieldActionPerformed(evt);
+                locationTFActionPerformed(evt);
             }
         });
-        add(locationtxtfield);
-        locationtxtfield.setBounds(310, 310, 240, 23);
+        add(locationTF);
+        locationTF.setBounds(310, 310, 240, 23);
 
         sendemergency.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         sendemergency.setText("Send Emergency");
@@ -98,10 +98,10 @@ public class TenantEmergencyRequestJPanel extends javax.swing.JPanel {
         add(sendemergency);
         sendemergency.setBounds(470, 440, 105, 22);
 
-        combo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        combo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(combo);
-        combo.setBounds(310, 210, 240, 23);
+        jcomboEmertype.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jcomboEmertype.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(jcomboEmertype);
+        jcomboEmertype.setBounds(310, 210, 240, 23);
 
         backJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         backJButton.setText("Back");
@@ -135,12 +135,12 @@ public class TenantEmergencyRequestJPanel extends javax.swing.JPanel {
     private void sendemergencyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendemergencyActionPerformed
         // TODO add your handling code here:
         
-        String location = locationtxtfield.getText();
+        String location = locationTF.getText();
         erequest.setLocation(location);
-        erequest.setEmergencytype((Organization.Type) combo.getSelectedItem());
+        erequest.setEmergencytype((Organization.Type) jcomboEmertype.getSelectedItem());
         erequest.setEmail(userAccount.getEmail());
          Organization org = null;
-         Organization.Type sel = (Organization.Type) combo.getSelectedItem();
+         Organization.Type sel = (Organization.Type) jcomboEmertype.getSelectedItem();
       if(location.isEmpty())
       {
         System.out.println("Inside else block of sendComplaintActionPerformed ");
@@ -211,32 +211,32 @@ public class TenantEmergencyRequestJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_sendemergencyActionPerformed
 
-    private void locationtxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_locationtxtfieldActionPerformed
+    private void locationTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_locationTFActionPerformed
         // TODO add your handling code here:
         
-        if(locationtxtfield.getText()!=""){
-        message1 = locationtxtfield.getText();
+        if(locationTF.getText()!=""){
+        message1 = locationTF.getText();
         System.out.println("sendComplaintActionPerformed 'messageJTextField' " + message1);
         }
         else JOptionPane.showMessageDialog(null,"Location field is empty");
         
-    }//GEN-LAST:event_locationtxtfieldActionPerformed
+    }//GEN-LAST:event_locationTFActionPerformed
 private void populateComboBox() {
         
-         combo.removeAllItems();
-        combo.addItem(Organization.Type.Theft);
-        combo.addItem(Organization.Type.Felony);
-        combo.addItem(Organization.Type.Misconduct);
+         jcomboEmertype.removeAllItems();
+        jcomboEmertype.addItem(Organization.Type.Theft);
+        jcomboEmertype.addItem(Organization.Type.Felony);
+        jcomboEmertype.addItem(Organization.Type.Misconduct);
        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backJButton;
-    private javax.swing.JComboBox combo;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JComboBox jcomboEmertype;
+    private javax.swing.JTextField locationTF;
     private javax.swing.JLabel locationlbl;
-    private javax.swing.JTextField locationtxtfield;
     private javax.swing.JButton sendemergency;
     // End of variables declaration//GEN-END:variables
 }
