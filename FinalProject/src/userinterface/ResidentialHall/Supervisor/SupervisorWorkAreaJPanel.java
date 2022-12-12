@@ -78,12 +78,12 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
         emergencybtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 153));
+        setBackground(new java.awt.Color(76, 89, 115));
         setMaximumSize(new java.awt.Dimension(750, 750));
         setMinimumSize(new java.awt.Dimension(750, 750));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setLayout(null);
 
-        workRequestJTable1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        workRequestJTable1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         workRequestJTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -112,30 +112,37 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(workRequestJTable1);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 120, 480, 90));
+        add(jScrollPane2);
+        jScrollPane2.setBounds(60, 220, 610, 240);
 
-        addcomplaintbtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        addcomplaintbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         addcomplaintbtn.setText("Add Complaint");
+        addcomplaintbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         addcomplaintbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addcomplaintbtnActionPerformed(evt);
             }
         });
-        add(addcomplaintbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 80, -1, -1));
+        add(addcomplaintbtn);
+        addcomplaintbtn.setBounds(300, 150, 150, 22);
 
-        emergencybtn.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
+        emergencybtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         emergencybtn.setForeground(new java.awt.Color(255, 0, 0));
         emergencybtn.setText("Emergency!!");
+        emergencybtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         emergencybtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emergencybtnActionPerformed(evt);
             }
         });
-        add(emergencybtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 240, 190, -1));
+        add(emergencybtn);
+        emergencybtn.setBounds(290, 510, 190, 22);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel1.setText("Supervisor Org Panel");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 30, -1, -1));
+        jLabel1.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Supervisor Organisation Panel");
+        add(jLabel1);
+        jLabel1.setBounds(210, 70, 340, 30);
     }// </editor-fold>//GEN-END:initComponents
 
     private void addcomplaintbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addcomplaintbtnActionPerformed

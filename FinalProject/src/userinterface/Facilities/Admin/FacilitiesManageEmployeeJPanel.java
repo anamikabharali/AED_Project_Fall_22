@@ -38,10 +38,10 @@ public class FacilitiesManageEmployeeJPanel extends javax.swing.JPanel {
     
     
     public void populateOrganizationEmpComboBox(){
-        organizationEmpJComboBox.removeAllItems();
+        organizationEmpcbox.removeAllItems();
         
         for (Organization organization : organizationDir.getOrganizationList()){
-            organizationEmpJComboBox.addItem(organization);
+            organizationEmpcbox.addItem(organization);
         }
     }
 
@@ -68,18 +68,20 @@ public class FacilitiesManageEmployeeJPanel extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         organizationJTable = new javax.swing.JTable();
-        addJButton = new javax.swing.JButton();
-        backJButton = new javax.swing.JButton();
+        addbtn = new javax.swing.JButton();
+        backbtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         nameJTextField = new javax.swing.JTextField();
-        organizationEmpJComboBox = new javax.swing.JComboBox();
+        organizationEmpcbox = new javax.swing.JComboBox();
         jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 153));
+        setBackground(new java.awt.Color(76, 89, 115));
         setMaximumSize(new java.awt.Dimension(750, 750));
         setMinimumSize(new java.awt.Dimension(750, 750));
+        setLayout(null);
 
-        organizationJTable.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        organizationJTable.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         organizationJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null},
@@ -111,119 +113,99 @@ public class FacilitiesManageEmployeeJPanel extends javax.swing.JPanel {
             organizationJTable.getColumnModel().getColumn(0).setResizable(false);
         }
 
-        addJButton.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        addJButton.setText("Create Employee");
-        addJButton.addActionListener(new java.awt.event.ActionListener() {
+        add(jScrollPane1);
+        jScrollPane1.setBounds(37, 133, 641, 122);
+
+        addbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        addbtn.setText("Create Employee");
+        addbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        addbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addJButtonActionPerformed(evt);
+                addbtnActionPerformed(evt);
             }
         });
+        add(addbtn);
+        addbtn.setBounds(311, 411, 130, 22);
 
-        backJButton.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        backJButton.setText("<< Back");
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        backbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        backbtn.setText("<< Back");
+        backbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        backbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                backbtnActionPerformed(evt);
             }
         });
+        add(backbtn);
+        backbtn.setBounds(89, 496, 80, 22);
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Name");
+        add(jLabel2);
+        jLabel2.setBounds(253, 351, 37, 18);
 
+        nameJTextField.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         nameJTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nameJTextFieldActionPerformed(evt);
             }
         });
+        add(nameJTextField);
+        nameJTextField.setBounds(348, 348, 213, 24);
 
-        organizationEmpJComboBox.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        organizationEmpJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        organizationEmpJComboBox.addActionListener(new java.awt.event.ActionListener() {
+        organizationEmpcbox.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        organizationEmpcbox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        organizationEmpcbox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                organizationEmpJComboBoxActionPerformed(evt);
+                organizationEmpcboxActionPerformed(evt);
             }
         });
+        add(organizationEmpcbox);
+        organizationEmpcbox.setBounds(348, 290, 213, 24);
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Organization");
+        add(jLabel3);
+        jLabel3.setBounds(209, 293, 81, 18);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(129, 129, 129))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(backJButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(228, 228, 228)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2))
-                        .addGap(125, 125, 125)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(organizationEmpJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(279, 279, 279)
-                        .addComponent(addJButton)))
-                .addGap(175, 200, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(114, 114, 114)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(149, 149, 149)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3)
-                    .addComponent(organizationEmpJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(60, 60, 60)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(nameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
-                .addComponent(addJButton)
-                .addGap(87, 87, 87)
-                .addComponent(backJButton)
-                .addGap(48, 48, 48))
-        );
+        jLabel1.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Facilities Manage Employee");
+        add(jLabel1);
+        jLabel1.setBounds(209, 59, 305, 30);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void addJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJButtonActionPerformed
+    private void addbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addbtnActionPerformed
         
-        Organization organization = (Organization) organizationEmpJComboBox.getSelectedItem();
-        String name = message1;
-        if(name != null)
+        Organization organization = (Organization) organizationEmpcbox.getSelectedItem();
+        if(nameJTextField.getText().isEmpty())
         {
+            
+            System.out.println("Inside else block of addJButtonActionPerformed method ... ");
+            JOptionPane.showMessageDialog(null," Enter the Organisation Name ");
+        }
+        else 
+        {
+            
             System.out.println("Inside if block of addJButtonActionPerformed method ... ");
-            organization.getEmployeeDirectory().createEmployee(name);
+            organization.getEmployeeDirectory().createEmployee(nameJTextField.getText());
             populateTable(organization);
             nameJTextField.setText("");
             JOptionPane.showMessageDialog(null,"Employee Created");
         }
-        else 
-        {
-            System.out.println("Inside else block of addJButtonActionPerformed method ... ");
-            JOptionPane.showMessageDialog(null,"Name field is empty");
-        }
-    }//GEN-LAST:event_addJButtonActionPerformed
+    }//GEN-LAST:event_addbtnActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void backbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbtnActionPerformed
 
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_backbtnActionPerformed
 
-    private void organizationEmpJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organizationEmpJComboBoxActionPerformed
+    private void organizationEmpcboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organizationEmpcboxActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_organizationEmpJComboBoxActionPerformed
+    }//GEN-LAST:event_organizationEmpcboxActionPerformed
 
     private void nameJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameJTextFieldActionPerformed
         // TODO add your handling code here:
@@ -237,13 +219,14 @@ public class FacilitiesManageEmployeeJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_nameJTextFieldActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton addJButton;
-    private javax.swing.JButton backJButton;
+    private javax.swing.JButton addbtn;
+    private javax.swing.JButton backbtn;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField nameJTextField;
-    private javax.swing.JComboBox organizationEmpJComboBox;
+    private javax.swing.JComboBox organizationEmpcbox;
     private javax.swing.JTable organizationJTable;
     // End of variables declaration//GEN-END:variables
 }

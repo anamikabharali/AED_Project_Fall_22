@@ -108,14 +108,14 @@ public class FelonyWorkAreaJPanel extends javax.swing.JPanel {
         senteam = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 153));
+        setBackground(new java.awt.Color(76, 89, 115));
         setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         setMaximumSize(new java.awt.Dimension(750, 750));
         setMinimumSize(new java.awt.Dimension(750, 750));
         setPreferredSize(new java.awt.Dimension(750, 750));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        workRequestJTable.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        workRequestJTable.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -144,40 +144,44 @@ public class FelonyWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(workRequestJTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 375, 96));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 560, 160));
 
-        assignJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        assignJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         assignJButton.setText("Assign to me");
+        assignJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         assignJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 assignJButtonActionPerformed(evt);
             }
         });
-        add(assignJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 320, -1, -1));
+        add(assignJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 120, -1));
 
-        processJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        processJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         processJButton.setText("Process");
+        processJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         processJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 processJButtonActionPerformed(evt);
             }
         });
-        add(processJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 320, -1, -1));
+        add(processJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 330, 80, -1));
 
-        refreshJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        refreshJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         refreshJButton.setText("Refresh");
+        refreshJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         refreshJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 refreshJButtonActionPerformed(evt);
             }
         });
-        add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, -1, -1));
+        add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 140, 90, -1));
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel1.setText("Felony Org Panel");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 50, -1, -1));
+        jLabel1.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Felony Organization Panel");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, -1, -1));
 
-        emergencytable.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        emergencytable.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         emergencytable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -188,21 +192,22 @@ public class FelonyWorkAreaJPanel extends javax.swing.JPanel {
         ));
         jScrollPane2.setViewportView(emergencytable);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 470, 340, 90));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 550, 130));
 
-        senteam.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        senteam.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         senteam.setText("Send Team");
+        senteam.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         senteam.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 senteamActionPerformed(evt);
             }
         });
-        add(senteam, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 600, -1, -1));
+        add(senteam, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 430, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 0, 0));
         jLabel2.setText("Emergency:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 410, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 90, 20));
     }// </editor-fold>//GEN-END:initComponents
 
     private void assignJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButtonActionPerformed

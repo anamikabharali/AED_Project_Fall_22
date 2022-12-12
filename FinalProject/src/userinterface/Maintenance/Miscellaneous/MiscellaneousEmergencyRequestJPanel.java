@@ -56,85 +56,61 @@ EmergencyRequest  erequest = new EmergencyRequest();
         sendemergecy = new javax.swing.JButton();
         combo = new javax.swing.JComboBox();
         backJButton = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 153));
+        setBackground(new java.awt.Color(76, 89, 115));
         setMaximumSize(new java.awt.Dimension(750, 750));
         setMinimumSize(new java.awt.Dimension(750, 750));
+        setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Emergency Type");
+        add(jLabel1);
+        jLabel1.setBounds(191, 210, 110, 30);
 
-        locationlbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        locationlbl.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        locationlbl.setForeground(new java.awt.Color(255, 255, 255));
         locationlbl.setText("Location");
+        add(locationlbl);
+        locationlbl.setBounds(233, 277, 70, 30);
 
-        locationtxtfield.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        locationtxtfield.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        add(locationtxtfield);
+        locationtxtfield.setBounds(330, 280, 114, 24);
 
-        sendemergecy.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        sendemergecy.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         sendemergecy.setText("Send Emergency");
+        sendemergecy.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         sendemergecy.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sendemergecyActionPerformed(evt);
             }
         });
+        add(sendemergecy);
+        sendemergecy.setBounds(520, 473, 110, 30);
 
-        combo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        combo.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         combo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(combo);
+        combo.setBounds(330, 210, 114, 24);
 
-        backJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        backJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         backJButton.setText("Back");
+        backJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
             }
         });
+        add(backJButton);
+        backJButton.setBounds(104, 470, 60, 20);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(154, 154, 154)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 168, Short.MAX_VALUE)
-                        .addComponent(combo, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(locationlbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(locationtxtfield, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(213, 213, 213))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(75, 75, 75)
-                        .addComponent(backJButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(296, 296, 296)
-                        .addComponent(sendemergecy)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(185, 185, 185)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 99, Short.MAX_VALUE)
-                        .addComponent(locationlbl)
-                        .addGap(131, 131, 131))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addComponent(locationtxtfield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addComponent(sendemergecy)
-                .addGap(116, 116, 116)
-                .addComponent(backJButton)
-                .addGap(129, 129, 129))
-        );
+        jLabel2.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Miscellaneous Emergency Request");
+        add(jLabel2);
+        jLabel2.setBounds(176, 60, 360, 30);
     }// </editor-fold>//GEN-END:initComponents
 
     private void sendemergecyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendemergecyActionPerformed
@@ -220,6 +196,7 @@ EmergencyRequest  erequest = new EmergencyRequest();
     private javax.swing.JButton backJButton;
     private javax.swing.JComboBox combo;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel locationlbl;
     private javax.swing.JTextField locationtxtfield;
     private javax.swing.JButton sendemergecy;

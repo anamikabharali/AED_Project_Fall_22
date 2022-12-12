@@ -73,12 +73,14 @@ public class ResidentialHallManageEmployeeJPanel extends javax.swing.JPanel {
         nameJTextField = new javax.swing.JTextField();
         organizationEmpJComboBox = new javax.swing.JComboBox();
         jLabel3 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 153));
+        setBackground(new java.awt.Color(76, 89, 115));
         setMaximumSize(new java.awt.Dimension(750, 750));
         setMinimumSize(new java.awt.Dimension(750, 750));
+        setLayout(null);
 
-        organizationJTable.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        organizationJTable.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         organizationJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null},
@@ -110,106 +112,88 @@ public class ResidentialHallManageEmployeeJPanel extends javax.swing.JPanel {
             organizationJTable.getColumnModel().getColumn(0).setResizable(false);
         }
 
-        addJButton.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        add(jScrollPane1);
+        jScrollPane1.setBounds(50, 110, 640, 160);
+
+        addJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         addJButton.setText("Create Employee");
+        addJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         addJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addJButtonActionPerformed(evt);
             }
         });
+        add(addJButton);
+        addJButton.setBounds(490, 500, 107, 22);
 
-        backJButton.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        backJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         backJButton.setText("<< Back");
+        backJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
             }
         });
+        add(backJButton);
+        backJButton.setBounds(180, 500, 54, 22);
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Name");
+        add(jLabel2);
+        jLabel2.setBounds(230, 380, 60, 18);
 
+        nameJTextField.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         nameJTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nameJTextFieldActionPerformed(evt);
             }
         });
+        add(nameJTextField);
+        nameJTextField.setBounds(330, 380, 190, 24);
 
-        organizationEmpJComboBox.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        organizationEmpJComboBox.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         organizationEmpJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         organizationEmpJComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 organizationEmpJComboBoxActionPerformed(evt);
             }
         });
+        add(organizationEmpJComboBox);
+        organizationEmpJComboBox.setBounds(330, 320, 190, 24);
 
-        jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Organization");
+        add(jLabel3);
+        jLabel3.setBounds(197, 320, 100, 18);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(129, 129, 129))
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(66, 66, 66)
-                        .addComponent(backJButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(228, 228, 228)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jLabel2))
-                        .addGap(125, 125, 125)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(nameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(organizationEmpJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(279, 279, 279)
-                        .addComponent(addJButton)))
-                .addGap(175, 200, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(114, 114, 114)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 92, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(149, 149, 149)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3)
-                    .addComponent(organizationEmpJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(60, 60, 60)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(nameJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
-                .addComponent(addJButton)
-                .addGap(87, 87, 87)
-                .addComponent(backJButton)
-                .addGap(48, 48, 48))
-        );
+        jLabel1.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Residential Hall Enterprise Panel");
+        add(jLabel1);
+        jLabel1.setBounds(180, 60, 360, 30);
     }// </editor-fold>//GEN-END:initComponents
 
     private void addJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJButtonActionPerformed
         
         Organization organization = (Organization) organizationEmpJComboBox.getSelectedItem();
-        String name = message1;
-        if(name != null)
+    //    String name = nameJTextField.getText();
+       // String name = message1;
+        if(nameJTextField.getText().isEmpty())
         {
-            System.out.println("Inside if block of addJButtonActionPerformed method ... ");
-            organization.getEmployeeDirectory().createEmployee(name);
-            populateTable(organization);
-            nameJTextField.setText("");
-            JOptionPane.showMessageDialog(null,"Employee Created");
+            
+            System.out.println("Inside else block of addJButtonActionPerformed method ... ");
+            JOptionPane.showMessageDialog(null," Enter the Organisation Name ");
         }
         else 
         {
-            System.out.println("Inside else block of addJButtonActionPerformed method ... ");
-            JOptionPane.showMessageDialog(null,"Name field is empty");
+            
+            System.out.println("Inside if block of addJButtonActionPerformed method ... ");
+            organization.getEmployeeDirectory().createEmployee(nameJTextField.getText());
+            populateTable(organization);
+            nameJTextField.setText("");
+            JOptionPane.showMessageDialog(null,"Employee Created");
         }
     }//GEN-LAST:event_addJButtonActionPerformed
 
@@ -232,7 +216,7 @@ public class ResidentialHallManageEmployeeJPanel extends javax.swing.JPanel {
         message1 = nameJTextField.getText();
         System.out.println("nameJTextFieldActionPerformed 'messageJTextField' " + message1);
      }
-        else JOptionPane.showMessageDialog(null,"Name field is empty");
+        else JOptionPane.showMessageDialog(null,"Name field is empty!!");
         
         
     }//GEN-LAST:event_nameJTextFieldActionPerformed
@@ -240,6 +224,7 @@ public class ResidentialHallManageEmployeeJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addJButton;
     private javax.swing.JButton backJButton;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;

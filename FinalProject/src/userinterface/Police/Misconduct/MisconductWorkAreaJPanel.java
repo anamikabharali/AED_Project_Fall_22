@@ -110,12 +110,12 @@ public class MisconductWorkAreaJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         processJButton = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(0, 153, 153));
+        setBackground(new java.awt.Color(76, 89, 115));
         setMaximumSize(new java.awt.Dimension(750, 750));
         setMinimumSize(new java.awt.Dimension(750, 750));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        workRequestJTable.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        workRequestJTable.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -144,31 +144,34 @@ public class MisconductWorkAreaJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(workRequestJTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 200, 375, 96));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 560, 160));
 
-        assignJButton.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        assignJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         assignJButton.setText("Assign to me");
+        assignJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         assignJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 assignJButtonActionPerformed(evt);
             }
         });
-        add(assignJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 350, -1, -1));
+        add(assignJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 310, 110, -1));
 
-        refreshJButton.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        refreshJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         refreshJButton.setText("Refresh");
+        refreshJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         refreshJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 refreshJButtonActionPerformed(evt);
             }
         });
-        add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 150, -1, -1));
+        add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 130, -1, -1));
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 0, 0));
         jLabel2.setText("Emergency:");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 490, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 370, -1, -1));
 
+        emergencytable.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         emergencytable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -179,28 +182,32 @@ public class MisconductWorkAreaJPanel extends javax.swing.JPanel {
         ));
         jScrollPane2.setViewportView(emergencytable);
 
-        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 560, 340, 90));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 400, 650, 130));
 
+        senteam.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         senteam.setText("Send Team");
+        senteam.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         senteam.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 senteamActionPerformed(evt);
             }
         });
-        add(senteam, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 710, -1, -1));
+        add(senteam, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 550, -1, -1));
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
-        jLabel1.setText("Misconduct Org Panel");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 50, -1, -1));
+        jLabel1.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Misconduct Process Status Request");
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(213, 50, 370, -1));
 
-        processJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        processJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         processJButton.setText("Process");
+        processJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         processJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 processJButtonActionPerformed(evt);
             }
         });
-        add(processJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 350, -1, -1));
+        add(processJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 310, 60, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void assignJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButtonActionPerformed

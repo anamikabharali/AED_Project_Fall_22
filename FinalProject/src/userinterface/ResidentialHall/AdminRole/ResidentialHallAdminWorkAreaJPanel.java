@@ -40,48 +40,60 @@ public class ResidentialHallAdminWorkAreaJPanel extends javax.swing.JPanel {
         enterpriseLabel = new javax.swing.JLabel();
         valueLabel = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 153));
+        setBackground(new java.awt.Color(76, 89, 115));
         setMaximumSize(new java.awt.Dimension(750, 750));
         setMinimumSize(new java.awt.Dimension(750, 750));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 3, 24)); // NOI18N
-        jLabel1.setText("ResidentialHall Enterprise Panel");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 60, -1, -1));
+        jLabel1.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel1.setText("Residential Hall Enterprise Panel");
+        add(jLabel1);
+        jLabel1.setBounds(181, 100, 360, 30);
 
-        userJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        userJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         userJButton.setText("Manage User");
+        userJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         userJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 userJButtonActionPerformed(evt);
             }
         });
-        add(userJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 270, 150, 60));
+        add(userJButton);
+        userJButton.setBounds(500, 350, 150, 60);
 
-        manageEmployeeJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        manageEmployeeJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         manageEmployeeJButton.setText("Manage Employee");
+        manageEmployeeJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         manageEmployeeJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 manageEmployeeJButtonActionPerformed(evt);
             }
         });
-        add(manageEmployeeJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, 150, 60));
+        add(manageEmployeeJButton);
+        manageEmployeeJButton.setBounds(290, 350, 150, 60);
 
-        manageOrganizationJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        manageOrganizationJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         manageOrganizationJButton.setText("Manage Organization");
+        manageOrganizationJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         manageOrganizationJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 manageOrganizationJButtonActionPerformed(evt);
             }
         });
-        add(manageOrganizationJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 270, -1, 60));
+        add(manageOrganizationJButton);
+        manageOrganizationJButton.setBounds(70, 350, 137, 60);
 
-        enterpriseLabel.setFont(new java.awt.Font("Times New Roman", 3, 18)); // NOI18N
+        enterpriseLabel.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        enterpriseLabel.setForeground(new java.awt.Color(255, 255, 255));
         enterpriseLabel.setText("EnterPrise :");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, 120, 30));
+        add(enterpriseLabel);
+        enterpriseLabel.setBounds(220, 200, 120, 40);
 
-        valueLabel.setText("<value>");
-        add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 160, 130, -1));
+        valueLabel.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        valueLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        add(valueLabel);
+        valueLabel.setBounds(320, 207, 170, 20);
     }// </editor-fold>//GEN-END:initComponents
 
     private void userJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userJButtonActionPerformed
