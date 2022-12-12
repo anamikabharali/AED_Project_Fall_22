@@ -54,9 +54,9 @@ public class TenantEmergencyRequestJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         locationlbl = new javax.swing.JLabel();
         locationTF = new javax.swing.JTextField();
-        sendemergency = new javax.swing.JButton();
+        sendemergencyBtn = new javax.swing.JButton();
         jcomboEmertype = new javax.swing.JComboBox();
-        backJButton = new javax.swing.JButton();
+        backJB = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(76, 89, 115));
@@ -87,32 +87,32 @@ public class TenantEmergencyRequestJPanel extends javax.swing.JPanel {
         add(locationTF);
         locationTF.setBounds(310, 310, 240, 23);
 
-        sendemergency.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        sendemergency.setText("Send Emergency");
-        sendemergency.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        sendemergency.addActionListener(new java.awt.event.ActionListener() {
+        sendemergencyBtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        sendemergencyBtn.setText("Send Emergency");
+        sendemergencyBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        sendemergencyBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sendemergencyActionPerformed(evt);
+                sendemergencyBtnActionPerformed(evt);
             }
         });
-        add(sendemergency);
-        sendemergency.setBounds(470, 440, 105, 22);
+        add(sendemergencyBtn);
+        sendemergencyBtn.setBounds(470, 440, 105, 22);
 
         jcomboEmertype.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jcomboEmertype.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         add(jcomboEmertype);
         jcomboEmertype.setBounds(310, 210, 240, 23);
 
-        backJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        backJButton.setText("Back");
-        backJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        backJB.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        backJB.setText("Back");
+        backJB.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        backJB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                backJBActionPerformed(evt);
             }
         });
-        add(backJButton);
-        backJButton.setBounds(180, 450, 34, 22);
+        add(backJB);
+        backJB.setBounds(180, 450, 34, 22);
 
         jLabel2.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -121,7 +121,7 @@ public class TenantEmergencyRequestJPanel extends javax.swing.JPanel {
         jLabel2.setBounds(220, 60, 320, 30);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void backJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJBActionPerformed
 
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
@@ -130,9 +130,9 @@ public class TenantEmergencyRequestJPanel extends javax.swing.JPanel {
         sajp.populateRequestTable();
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_backJBActionPerformed
 
-    private void sendemergencyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendemergencyActionPerformed
+    private void sendemergencyBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendemergencyBtnActionPerformed
         // TODO add your handling code here:
         
         String location = locationTF.getText();
@@ -209,7 +209,7 @@ public class TenantEmergencyRequestJPanel extends javax.swing.JPanel {
         
             
         }
-    }//GEN-LAST:event_sendemergencyActionPerformed
+    }//GEN-LAST:event_sendemergencyBtnActionPerformed
 
     private void locationTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_locationTFActionPerformed
         // TODO add your handling code here:
@@ -231,12 +231,12 @@ private void populateComboBox() {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
+    private javax.swing.JButton backJB;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JComboBox jcomboEmertype;
     private javax.swing.JTextField locationTF;
     private javax.swing.JLabel locationlbl;
-    private javax.swing.JButton sendemergency;
+    private javax.swing.JButton sendemergencyBtn;
     // End of variables declaration//GEN-END:variables
 }
