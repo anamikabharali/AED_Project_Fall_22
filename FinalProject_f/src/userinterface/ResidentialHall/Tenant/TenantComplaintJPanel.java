@@ -56,8 +56,8 @@ public class TenantComplaintJPanel extends javax.swing.JPanel {
         messageJTF = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         comboDept = new javax.swing.JComboBox();
-        sendComplaint = new javax.swing.JButton();
-        backJButton = new javax.swing.JButton();
+        sendComplaintBtn = new javax.swing.JButton();
+        backJBtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(76, 89, 115));
@@ -91,27 +91,27 @@ public class TenantComplaintJPanel extends javax.swing.JPanel {
         add(comboDept);
         comboDept.setBounds(320, 270, 210, 24);
 
-        sendComplaint.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        sendComplaint.setText("Send Complaint");
-        sendComplaint.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        sendComplaint.addActionListener(new java.awt.event.ActionListener() {
+        sendComplaintBtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        sendComplaintBtn.setText("Send Complaint");
+        sendComplaintBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        sendComplaintBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sendComplaintActionPerformed(evt);
+                sendComplaintBtnActionPerformed(evt);
             }
         });
-        add(sendComplaint);
-        sendComplaint.setBounds(520, 430, 102, 22);
+        add(sendComplaintBtn);
+        sendComplaintBtn.setBounds(520, 430, 102, 22);
 
-        backJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        backJButton.setText("Back");
-        backJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        backJBtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        backJBtn.setText("Back");
+        backJBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        backJBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                backJBtnActionPerformed(evt);
             }
         });
-        add(backJButton);
-        backJButton.setBounds(120, 430, 34, 22);
+        add(backJBtn);
+        backJBtn.setBounds(120, 430, 34, 22);
 
         jLabel2.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -127,7 +127,7 @@ public class TenantComplaintJPanel extends javax.swing.JPanel {
         comboDept.addItem(Organization.Type.Theft);
        
     }
-    private void sendComplaintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendComplaintActionPerformed
+    private void sendComplaintBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendComplaintBtnActionPerformed
 
         String message = message1;
         System.out.println("sendComplaintActionPerformed 'messageJTextField' " + message);
@@ -208,9 +208,9 @@ public class TenantComplaintJPanel extends javax.swing.JPanel {
             System.out.println("Inside else block of sendComplaintActionPerformed ");
             JOptionPane.showMessageDialog(null,"Message field is empty");
         }
-    }//GEN-LAST:event_sendComplaintActionPerformed
+    }//GEN-LAST:event_sendComplaintBtnActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void backJBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJBtnActionPerformed
 
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
@@ -220,7 +220,7 @@ public class TenantComplaintJPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
 
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_backJBtnActionPerformed
 
     private void messageJTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_messageJTFActionPerformed
         // TODO add your handling code here:
@@ -236,12 +236,12 @@ public class TenantComplaintJPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
+    private javax.swing.JButton backJBtn;
     private javax.swing.JComboBox comboDept;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JTextField messageJTF;
-    private javax.swing.JButton sendComplaint;
+    private javax.swing.JButton sendComplaintBtn;
     // End of variables declaration//GEN-END:variables
 }
