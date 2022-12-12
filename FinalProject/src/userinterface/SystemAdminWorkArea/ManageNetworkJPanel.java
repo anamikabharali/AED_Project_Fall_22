@@ -118,6 +118,12 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         });
         add(btnSubmit);
         btnSubmit.setBounds(580, 500, 47, 22);
+
+        txtName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtNameActionPerformed(evt);
+            }
+        });
         add(txtName);
         txtName.setBounds(300, 360, 210, 23);
 
@@ -142,24 +148,33 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
     private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
 
         String name = txtName.getText();int cou=0;
-        for(Network network : system.getNetworkList())
+        if(name.isEmpty())
         {
-            if(network.getName() == null ? name == null : network.getName().equals(name))
-            cou=1;
-        }
-        if(cou==0)
-        {
-        Network network1 = system.createAndAddNetwork();
-        network1.setName(name);
-
-        populateNetworkTable();
-        txtName.setText("");
+            JOptionPane.showMessageDialog(null,"Enter a Network");
+            
         }
         else
-        {
-        
-        JOptionPane.showMessageDialog(null,"Network already exits");
+        {           
+            for(Network network : system.getNetworkList())
+            {
+                if(network.getName() == null ? name == null : network.getName().equals(name))
+                cou=1;
+            }
+            if(cou==0)
+            {
+            Network network1 = system.createAndAddNetwork();
+            network1.setName(name);
+
+            populateNetworkTable();
+            txtName.setText("");
+            }
+            else
+            {
+
+                JOptionPane.showMessageDialog(null,"Network already exits");
+            }
         }
+        
         
     }//GEN-LAST:event_btnSubmitActionPerformed
 
@@ -172,6 +187,10 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_btnBackActionPerformed
+
+    private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtNameActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
