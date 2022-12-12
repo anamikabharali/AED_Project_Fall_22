@@ -56,11 +56,11 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         networkJTable = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
-        submitJButton = new javax.swing.JButton();
-        nameJTextField = new javax.swing.JTextField();
-        backJButton = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
+        jLName = new javax.swing.JLabel();
+        submitJB = new javax.swing.JButton();
+        nameJTF = new javax.swing.JTextField();
+        backJB = new javax.swing.JButton();
+        jLMngNetwork = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(76, 89, 115));
         setMaximumSize(new java.awt.Dimension(750, 750));
@@ -102,46 +102,46 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         add(jScrollPane1);
         jScrollPane1.setBounds(50, 150, 640, 160);
 
-        jLabel1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Name");
-        add(jLabel1);
-        jLabel1.setBounds(225, 360, 50, 20);
+        jLName.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        jLName.setForeground(new java.awt.Color(255, 255, 255));
+        jLName.setText("Name");
+        add(jLName);
+        jLName.setBounds(225, 360, 50, 20);
 
-        submitJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        submitJButton.setText("Submit");
-        submitJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        submitJButton.addActionListener(new java.awt.event.ActionListener() {
+        submitJB.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        submitJB.setText("Submit");
+        submitJB.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        submitJB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitJButtonActionPerformed(evt);
+                submitJBActionPerformed(evt);
             }
         });
-        add(submitJButton);
-        submitJButton.setBounds(580, 500, 47, 22);
-        add(nameJTextField);
-        nameJTextField.setBounds(300, 360, 210, 23);
+        add(submitJB);
+        submitJB.setBounds(580, 500, 47, 22);
+        add(nameJTF);
+        nameJTF.setBounds(300, 360, 210, 23);
 
-        backJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        backJButton.setText("<< Back");
-        backJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        backJB.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        backJB.setText("<< Back");
+        backJB.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        backJB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                backJBActionPerformed(evt);
             }
         });
-        add(backJButton);
-        backJButton.setBounds(90, 490, 54, 22);
+        add(backJB);
+        backJB.setBounds(90, 490, 54, 22);
 
-        jLabel6.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Manage Network ");
-        add(jLabel6);
-        jLabel6.setBounds(270, 80, 188, 30);
+        jLMngNetwork.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        jLMngNetwork.setForeground(new java.awt.Color(255, 255, 255));
+        jLMngNetwork.setText("Manage Network ");
+        add(jLMngNetwork);
+        jLMngNetwork.setBounds(270, 80, 188, 30);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
+    private void submitJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJBActionPerformed
 
-        String name = nameJTextField.getText();int cou=0;
+        String name = nameJTF.getText();int cou=0;
         for(Network network : system.getNetworkList())
         {
             if(network.getName() == null ? name == null : network.getName().equals(name))
@@ -153,7 +153,7 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         network1.setName(name);
 
         populateNetworkTable();
-        nameJTextField.setText("");
+        nameJTF.setText("");
         }
         else
         {
@@ -161,9 +161,9 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         JOptionPane.showMessageDialog(null,"Network already exits");
         }
         
-    }//GEN-LAST:event_submitJButtonActionPerformed
+    }//GEN-LAST:event_submitJBActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void backJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJBActionPerformed
         userProcessContainer.remove(this);
          Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
@@ -171,15 +171,15 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         sysAdminwjp.populateTree();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_backJBActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JButton backJB;
+    private javax.swing.JLabel jLMngNetwork;
+    private javax.swing.JLabel jLName;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField nameJTextField;
+    private javax.swing.JTextField nameJTF;
     private javax.swing.JTable networkJTable;
-    private javax.swing.JButton submitJButton;
+    private javax.swing.JButton submitJB;
     // End of variables declaration//GEN-END:variables
 }
