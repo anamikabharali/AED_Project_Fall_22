@@ -46,7 +46,7 @@ public class FacilitiesManageEmployeeJPanel extends javax.swing.JPanel {
     }
 
     private void populateTable(Organization organization){
-        DefaultTableModel model = (DefaultTableModel) organizationJTable.getModel();
+        DefaultTableModel model = (DefaultTableModel) organizationtble.getModel();
         
         model.setRowCount(0);
         
@@ -67,11 +67,11 @@ public class FacilitiesManageEmployeeJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        organizationJTable = new javax.swing.JTable();
+        organizationtble = new javax.swing.JTable();
         addbtn = new javax.swing.JButton();
         backbtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        nameJTextField = new javax.swing.JTextField();
+        nameTxt = new javax.swing.JTextField();
         organizationEmpcbox = new javax.swing.JComboBox();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -81,8 +81,8 @@ public class FacilitiesManageEmployeeJPanel extends javax.swing.JPanel {
         setMinimumSize(new java.awt.Dimension(750, 750));
         setLayout(null);
 
-        organizationJTable.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        organizationJTable.setModel(new javax.swing.table.DefaultTableModel(
+        organizationtble.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        organizationtble.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null},
                 {null},
@@ -108,9 +108,9 @@ public class FacilitiesManageEmployeeJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(organizationJTable);
-        if (organizationJTable.getColumnModel().getColumnCount() > 0) {
-            organizationJTable.getColumnModel().getColumn(0).setResizable(false);
+        jScrollPane1.setViewportView(organizationtble);
+        if (organizationtble.getColumnModel().getColumnCount() > 0) {
+            organizationtble.getColumnModel().getColumn(0).setResizable(false);
         }
 
         add(jScrollPane1);
@@ -144,14 +144,14 @@ public class FacilitiesManageEmployeeJPanel extends javax.swing.JPanel {
         add(jLabel2);
         jLabel2.setBounds(253, 351, 37, 18);
 
-        nameJTextField.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        nameJTextField.addActionListener(new java.awt.event.ActionListener() {
+        nameTxt.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        nameTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nameJTextFieldActionPerformed(evt);
+                nameTxtActionPerformed(evt);
             }
         });
-        add(nameJTextField);
-        nameJTextField.setBounds(348, 348, 213, 24);
+        add(nameTxt);
+        nameTxt.setBounds(348, 348, 213, 24);
 
         organizationEmpcbox.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         organizationEmpcbox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -179,7 +179,7 @@ public class FacilitiesManageEmployeeJPanel extends javax.swing.JPanel {
     private void addbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addbtnActionPerformed
         
         Organization organization = (Organization) organizationEmpcbox.getSelectedItem();
-        if(nameJTextField.getText().isEmpty())
+        if(nameTxt.getText().isEmpty())
         {
             
             System.out.println("Inside else block of addJButtonActionPerformed method ... ");
@@ -189,9 +189,9 @@ public class FacilitiesManageEmployeeJPanel extends javax.swing.JPanel {
         {
             
             System.out.println("Inside if block of addJButtonActionPerformed method ... ");
-            organization.getEmployeeDirectory().createEmployee(nameJTextField.getText());
+            organization.getEmployeeDirectory().createEmployee(nameTxt.getText());
             populateTable(organization);
-            nameJTextField.setText("");
+            nameTxt.setText("");
             JOptionPane.showMessageDialog(null,"Employee Created");
         }
     }//GEN-LAST:event_addbtnActionPerformed
@@ -207,16 +207,16 @@ public class FacilitiesManageEmployeeJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_organizationEmpcboxActionPerformed
 
-    private void nameJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameJTextFieldActionPerformed
+    private void nameTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameTxtActionPerformed
         // TODO add your handling code here:
         
-         if(nameJTextField.getText()!=""){
-        message1 = nameJTextField.getText();
+         if(nameTxt.getText()!=""){
+        message1 = nameTxt.getText();
         System.out.println("sendComplaintActionPerformed 'messageJTextField' " + message1);
         }
         else JOptionPane.showMessageDialog(null,"Message field is empty");
         
-    }//GEN-LAST:event_nameJTextFieldActionPerformed
+    }//GEN-LAST:event_nameTxtActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addbtn;
@@ -225,8 +225,8 @@ public class FacilitiesManageEmployeeJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField nameJTextField;
+    private javax.swing.JTextField nameTxt;
     private javax.swing.JComboBox organizationEmpcbox;
-    private javax.swing.JTable organizationJTable;
+    private javax.swing.JTable organizationtble;
     // End of variables declaration//GEN-END:variables
 }
