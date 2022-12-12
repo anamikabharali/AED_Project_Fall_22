@@ -47,13 +47,13 @@ public class PoliceManageUserAccountJPanel extends javax.swing.JPanel {
     public void popOrganizationComboBox() {
         try {
             
-            organizationJComboBox.removeAllItems();
+            organizcbox.removeAllItems();
             if (enterprise.getOrganizationDirectory() == null) {
                 enterprise.setOrganizationDirectory(new OrganizationDirectory());
             }
             if (enterprise.getOrganizationDirectory().getOrganizationList().size() > 0) {
                 for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
-                    organizationJComboBox.addItem(organization);
+                    organizcbox.addItem(organization);
                 }
             } else {
                 JOptionPane.showMessageDialog(null,"NO Organization is Available");
@@ -66,14 +66,14 @@ public class PoliceManageUserAccountJPanel extends javax.swing.JPanel {
      public void populateEmployeeComboBox(Organization organization) {
         try {
             
-            employeeJComboBox.removeAllItems();
+            emplcbox.removeAllItems();
             if (organization.getEmployeeDirectory() == null) {
                 organization.setEmployeeDirectory(new EmployeeDirectory());
             }
             if (organization.getEmployeeDirectory().getEmployeeList().size() > 0) {
                
                 for (Employee employee : organization.getEmployeeDirectory().getEmployeeList()) {
-                    employeeJComboBox.addItem(employee);
+                    emplcbox.addItem(employee);
                 }
 
             } else {
@@ -106,7 +106,7 @@ public class PoliceManageUserAccountJPanel extends javax.swing.JPanel {
 
           try {
             
-            DefaultTableModel model = (DefaultTableModel) userJTable.getModel();
+            DefaultTableModel model = (DefaultTableModel) tbl.getModel();
 
             model.setRowCount(0);
             if (enterprise.getOrganizationDirectory() == null) {
@@ -122,7 +122,7 @@ public class PoliceManageUserAccountJPanel extends javax.swing.JPanel {
                         Object row[] = new Object[2];
                         row[0] = ua;
                         row[1] = ua.getRole();
-                        ((DefaultTableModel) userJTable.getModel()).addRow(row);
+                        ((DefaultTableModel) tbl.getModel()).addRow(row);
                     }
                 }
             } else {
@@ -146,14 +146,14 @@ public class PoliceManageUserAccountJPanel extends javax.swing.JPanel {
         nameJTextField = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        userJTable = new javax.swing.JTable();
+        tbl = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
         passwordJTextField = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        employeeJComboBox = new javax.swing.JComboBox();
+        emplcbox = new javax.swing.JComboBox();
         backjButton1 = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        organizationJComboBox = new javax.swing.JComboBox();
+        organizcbox = new javax.swing.JComboBox();
         jLabel4 = new javax.swing.JLabel();
         roleJComboBox = new javax.swing.JComboBox();
         lblwarning = new javax.swing.JLabel();
@@ -188,8 +188,8 @@ public class PoliceManageUserAccountJPanel extends javax.swing.JPanel {
         add(jLabel1);
         jLabel1.setBounds(390, 300, 70, 18);
 
-        userJTable.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        userJTable.setModel(new javax.swing.table.DefaultTableModel(
+        tbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        tbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -212,10 +212,10 @@ public class PoliceManageUserAccountJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(userJTable);
-        if (userJTable.getColumnModel().getColumnCount() > 0) {
-            userJTable.getColumnModel().getColumn(0).setResizable(false);
-            userJTable.getColumnModel().getColumn(1).setResizable(false);
+        jScrollPane1.setViewportView(tbl);
+        if (tbl.getColumnModel().getColumnCount() > 0) {
+            tbl.getColumnModel().getColumn(0).setResizable(false);
+            tbl.getColumnModel().getColumn(1).setResizable(false);
         }
 
         add(jScrollPane1);
@@ -242,10 +242,10 @@ public class PoliceManageUserAccountJPanel extends javax.swing.JPanel {
         add(jLabel3);
         jLabel3.setBounds(90, 340, 70, 18);
 
-        employeeJComboBox.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        employeeJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(employeeJComboBox);
-        employeeJComboBox.setBounds(200, 340, 146, 24);
+        emplcbox.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        emplcbox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(emplcbox);
+        emplcbox.setBounds(200, 340, 146, 24);
 
         backjButton1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         backjButton1.setText("<< Back");
@@ -264,15 +264,15 @@ public class PoliceManageUserAccountJPanel extends javax.swing.JPanel {
         add(jLabel5);
         jLabel5.setBounds(220, 30, 350, 17);
 
-        organizationJComboBox.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        organizationJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        organizationJComboBox.addActionListener(new java.awt.event.ActionListener() {
+        organizcbox.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        organizcbox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        organizcbox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                organizationJComboBoxActionPerformed(evt);
+                organizcboxActionPerformed(evt);
             }
         });
-        add(organizationJComboBox);
-        organizationJComboBox.setBounds(200, 300, 146, 24);
+        add(organizcbox);
+        organizcbox.setBounds(200, 300, 146, 24);
 
         jLabel4.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -314,14 +314,14 @@ public class PoliceManageUserAccountJPanel extends javax.swing.JPanel {
             String email = emailtxtfield.getText();
             String userName = nameJTextField.getText();
             String password = String.valueOf(passwordJTextField.getText());
-            if (employeeJComboBox.getSelectedItem() != null) {
+            if (emplcbox.getSelectedItem() != null) {
                 if (!((userName.equals("")))) {
                     if (!(password.equals(""))) {
                         if(!email.equals("")){
                        if (EcoSystem.checkIfUsernameIsUnique(userName,net)) {
                             
-                            Organization organization = (Organization) organizationJComboBox.getSelectedItem();
-                            Employee employee = (Employee) employeeJComboBox.getSelectedItem();
+                            Organization organization = (Organization) organizcbox.getSelectedItem();
+                            Employee employee = (Employee) emplcbox.getSelectedItem();
                             Role role = (Role) roleJComboBox.getSelectedItem();
                             if (!Validate.validatePassword(password)) {
                                 JOptionPane.showMessageDialog(null, "Password should Contain \n"
@@ -374,13 +374,13 @@ public class PoliceManageUserAccountJPanel extends javax.swing.JPanel {
         layout.previous(container);
     }//GEN-LAST:event_backjButton1ActionPerformed
 
-    private void organizationJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organizationJComboBoxActionPerformed
-        Organization organization = (Organization) organizationJComboBox.getSelectedItem();
+    private void organizcboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organizcboxActionPerformed
+        Organization organization = (Organization) organizcbox.getSelectedItem();
         if (organization != null){
             populateEmployeeComboBox(organization);
             populateRoleComboBox(organization);
         }
-    }//GEN-LAST:event_organizationJComboBoxActionPerformed
+    }//GEN-LAST:event_organizcboxActionPerformed
 
     private void passwordJTextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordJTextFieldFocusLost
         // TODO add your handling code here:
@@ -395,7 +395,7 @@ public class PoliceManageUserAccountJPanel extends javax.swing.JPanel {
     private javax.swing.JButton backjButton1;
     private javax.swing.JButton createUserJButton;
     private javax.swing.JTextField emailtxtfield;
-    private javax.swing.JComboBox employeeJComboBox;
+    private javax.swing.JComboBox emplcbox;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -406,9 +406,9 @@ public class PoliceManageUserAccountJPanel extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel lblwarning;
     private javax.swing.JTextField nameJTextField;
-    private javax.swing.JComboBox organizationJComboBox;
+    private javax.swing.JComboBox organizcbox;
     private javax.swing.JTextField passwordJTextField;
     private javax.swing.JComboBox roleJComboBox;
-    private javax.swing.JTable userJTable;
+    private javax.swing.JTable tbl;
     // End of variables declaration//GEN-END:variables
 }
