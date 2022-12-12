@@ -34,14 +34,14 @@ public class ResidentialHallManageOrganizationJPanel extends javax.swing.JPanel 
     }
     
     private void populateCombo(){
-        organizationJComboBox.removeAllItems();         
-        organizationJComboBox.addItem(Type.Tenant);
-        organizationJComboBox.addItem(Type.Supervisor);
+        organizationJCB.removeAllItems();         
+        organizationJCB.addItem(Type.Tenant);
+        organizationJCB.addItem(Type.Supervisor);
       
     }
 
     private void populateTable(){
-        DefaultTableModel model = (DefaultTableModel) organizationJTable.getModel();
+        DefaultTableModel model = (DefaultTableModel) organizationJT.getModel();
         
         model.setRowCount(0);
         
@@ -63,20 +63,20 @@ public class ResidentialHallManageOrganizationJPanel extends javax.swing.JPanel 
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        organizationJTable = new javax.swing.JTable();
+        organizationJT = new javax.swing.JTable();
         addJButton = new javax.swing.JButton();
-        organizationJComboBox = new javax.swing.JComboBox();
+        organizationJCB = new javax.swing.JComboBox();
         jLabel1 = new javax.swing.JLabel();
         backJButton = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        jLResHallMngOrg = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(76, 89, 115));
         setMaximumSize(new java.awt.Dimension(750, 750));
         setMinimumSize(new java.awt.Dimension(750, 750));
         setLayout(null);
 
-        organizationJTable.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        organizationJTable.setModel(new javax.swing.table.DefaultTableModel(
+        organizationJT.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        organizationJT.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null},
                 {null},
@@ -102,9 +102,9 @@ public class ResidentialHallManageOrganizationJPanel extends javax.swing.JPanel 
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(organizationJTable);
-        if (organizationJTable.getColumnModel().getColumnCount() > 0) {
-            organizationJTable.getColumnModel().getColumn(0).setResizable(false);
+        jScrollPane1.setViewportView(organizationJT);
+        if (organizationJT.getColumnModel().getColumnCount() > 0) {
+            organizationJT.getColumnModel().getColumn(0).setResizable(false);
         }
 
         add(jScrollPane1);
@@ -121,15 +121,15 @@ public class ResidentialHallManageOrganizationJPanel extends javax.swing.JPanel 
         add(addJButton);
         addJButton.setBounds(450, 450, 114, 22);
 
-        organizationJComboBox.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        organizationJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        organizationJComboBox.addActionListener(new java.awt.event.ActionListener() {
+        organizationJCB.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        organizationJCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        organizationJCB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                organizationJComboBoxActionPerformed(evt);
+                organizationJCBActionPerformed(evt);
             }
         });
-        add(organizationJComboBox);
-        organizationJComboBox.setBounds(340, 360, 220, 24);
+        add(organizationJCB);
+        organizationJCB.setBounds(340, 360, 220, 24);
 
         jLabel1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -148,16 +148,16 @@ public class ResidentialHallManageOrganizationJPanel extends javax.swing.JPanel 
         add(backJButton);
         backJButton.setBounds(140, 450, 54, 22);
 
-        jLabel2.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Residential Hall Manage Organization");
-        add(jLabel2);
-        jLabel2.setBounds(151, 100, 410, 30);
+        jLResHallMngOrg.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        jLResHallMngOrg.setForeground(new java.awt.Color(255, 255, 255));
+        jLResHallMngOrg.setText("Residential Hall Manage Organization");
+        add(jLResHallMngOrg);
+        jLResHallMngOrg.setBounds(151, 100, 410, 30);
     }// </editor-fold>//GEN-END:initComponents
 
     private void addJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJButtonActionPerformed
          
-        Type type = (Type) organizationJComboBox.getSelectedItem();
+        Type type = (Type) organizationJCB.getSelectedItem();
        
         directory.createOrganization(type);
         JOptionPane.showMessageDialog(null,"Organization added");
@@ -175,17 +175,17 @@ public class ResidentialHallManageOrganizationJPanel extends javax.swing.JPanel 
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_backJButtonActionPerformed
 
-    private void organizationJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organizationJComboBoxActionPerformed
+    private void organizationJCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organizationJCBActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_organizationJComboBoxActionPerformed
+    }//GEN-LAST:event_organizationJCBActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addJButton;
     private javax.swing.JButton backJButton;
+    private javax.swing.JLabel jLResHallMngOrg;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JComboBox organizationJComboBox;
-    private javax.swing.JTable organizationJTable;
+    private javax.swing.JComboBox organizationJCB;
+    private javax.swing.JTable organizationJT;
     // End of variables declaration//GEN-END:variables
 }
