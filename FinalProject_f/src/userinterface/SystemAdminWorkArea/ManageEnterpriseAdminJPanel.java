@@ -46,7 +46,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
     }
 
     private void populateTable() {
-        DefaultTableModel model = (DefaultTableModel) enterpriseJTable.getModel();
+        DefaultTableModel model = (DefaultTableModel) enterpriseJT.getModel();
 
         model.setRowCount(0);
         for (Network network : system.getNetworkList()) {
@@ -64,29 +64,29 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
     }
 
     private void populateNetworkComboBox(){
-             networkJComboBox.removeAllItems();
+             networkJCB.removeAllItems();
         if(system.getNetworkList().size()!=0){                     //Checking whether system contains any network
            for (Network network : system.getNetworkList()) {
-                networkJComboBox.addItem(network);
+                networkJCB.addItem(network);
             }
            
            
         }
         else{
              
-             usernameJTextField.setEnabled(false);
-             passwordJPasswordField.setEnabled(false);
-             submitJButton.setEnabled(false); 
-             nameJTextField.setEnabled(false);              
-             networkJComboBox.addItem("Please Add Networks");
+             usernameJTF.setEnabled(false);
+             passwordJPwdF.setEnabled(false);
+             submitJB.setEnabled(false); 
+             nameJTF.setEnabled(false);              
+             networkJCB.addItem("Please Add Networks");
         }
     }
     
     private void populateEnterpriseComboBox(Network network){
-        enterpriseJComboBox.removeAllItems();
+        enterpriseJCB.removeAllItems();
         
         for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()){
-            enterpriseJComboBox.addItem(enterprise);
+            enterpriseJCB.addItem(enterprise);
         }
         
     }
@@ -101,30 +101,30 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        enterpriseJTable = new javax.swing.JTable();
+        enterpriseJT = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
-        networkJComboBox = new javax.swing.JComboBox();
+        networkJCB = new javax.swing.JComboBox();
         jLabel2 = new javax.swing.JLabel();
-        usernameJTextField = new javax.swing.JTextField();
+        usernameJTF = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        enterpriseJComboBox = new javax.swing.JComboBox();
-        submitJButton = new javax.swing.JButton();
+        enterpriseJCB = new javax.swing.JComboBox();
+        submitJB = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        nameJTextField = new javax.swing.JTextField();
+        nameJTF = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        passwordJPasswordField = new javax.swing.JPasswordField();
-        backJButton = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
+        passwordJPwdF = new javax.swing.JPasswordField();
+        backJB = new javax.swing.JButton();
+        jLMngEnterAdmin = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        emailtxtfield = new javax.swing.JTextField();
+        emailTF = new javax.swing.JTextField();
 
         setBackground(new java.awt.Color(76, 89, 115));
         setMaximumSize(new java.awt.Dimension(750, 750));
         setMinimumSize(new java.awt.Dimension(750, 750));
         setLayout(null);
 
-        enterpriseJTable.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        enterpriseJTable.setModel(new javax.swing.table.DefaultTableModel(
+        enterpriseJT.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        enterpriseJT.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
                 {null, null, null},
@@ -143,7 +143,7 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(enterpriseJTable);
+        jScrollPane1.setViewportView(enterpriseJT);
 
         add(jScrollPane1);
         jScrollPane1.setBounds(50, 140, 620, 95);
@@ -153,119 +153,119 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         add(jLabel1);
         jLabel1.setBounds(90, 270, 52, 17);
 
-        networkJComboBox.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        networkJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        networkJComboBox.addActionListener(new java.awt.event.ActionListener() {
+        networkJCB.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        networkJCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        networkJCB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                networkJComboBoxActionPerformed(evt);
+                networkJCBActionPerformed(evt);
             }
         });
-        add(networkJComboBox);
-        networkJComboBox.setBounds(180, 270, 160, 21);
+        add(networkJCB);
+        networkJCB.setBounds(180, 270, 160, 21);
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel2.setText("Username");
         add(jLabel2);
         jLabel2.setBounds(410, 270, 60, 30);
 
-        usernameJTextField.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        add(usernameJTextField);
-        usernameJTextField.setBounds(490, 270, 136, 21);
+        usernameJTF.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        add(usernameJTF);
+        usernameJTF.setBounds(490, 270, 136, 21);
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel3.setText("Enterprise");
         add(jLabel3);
         jLabel3.setBounds(90, 300, 63, 40);
 
-        enterpriseJComboBox.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        enterpriseJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        enterpriseJComboBox.addActionListener(new java.awt.event.ActionListener() {
+        enterpriseJCB.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        enterpriseJCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        enterpriseJCB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                enterpriseJComboBoxActionPerformed(evt);
+                enterpriseJCBActionPerformed(evt);
             }
         });
-        add(enterpriseJComboBox);
-        enterpriseJComboBox.setBounds(180, 310, 160, 21);
+        add(enterpriseJCB);
+        enterpriseJCB.setBounds(180, 310, 160, 21);
 
-        submitJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        submitJButton.setText("Submit");
-        submitJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        submitJButton.addActionListener(new java.awt.event.ActionListener() {
+        submitJB.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        submitJB.setText("Submit");
+        submitJB.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        submitJB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitJButtonActionPerformed(evt);
+                submitJBActionPerformed(evt);
             }
         });
-        add(submitJButton);
-        submitJButton.setBounds(462, 480, 100, 22);
+        add(submitJB);
+        submitJB.setBounds(462, 480, 100, 22);
 
         jLabel4.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel4.setText("Password");
         add(jLabel4);
         jLabel4.setBounds(410, 310, 57, 30);
 
-        nameJTextField.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        add(nameJTextField);
-        nameJTextField.setBounds(180, 350, 160, 21);
+        nameJTF.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        add(nameJTF);
+        nameJTF.setBounds(180, 350, 160, 21);
 
         jLabel5.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel5.setText("Name");
         add(jLabel5);
         jLabel5.setBounds(90, 350, 60, 30);
 
-        passwordJPasswordField.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
-        add(passwordJPasswordField);
-        passwordJPasswordField.setBounds(490, 310, 134, 21);
+        passwordJPwdF.setFont(new java.awt.Font("Times New Roman", 1, 12)); // NOI18N
+        add(passwordJPwdF);
+        passwordJPwdF.setBounds(490, 310, 134, 21);
 
-        backJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        backJButton.setText("<< Back");
-        backJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        backJB.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        backJB.setText("<< Back");
+        backJB.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        backJB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                backJBActionPerformed(evt);
             }
         });
-        add(backJButton);
-        backJButton.setBounds(133, 480, 100, 22);
+        add(backJB);
+        backJB.setBounds(133, 480, 100, 22);
 
-        jLabel6.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Manage Enterprise Admin");
-        add(jLabel6);
-        jLabel6.setBounds(220, 60, 269, 30);
+        jLMngEnterAdmin.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        jLMngEnterAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        jLMngEnterAdmin.setText("Manage Enterprise Admin");
+        add(jLMngEnterAdmin);
+        jLMngEnterAdmin.setBounds(220, 60, 269, 30);
 
         jLabel7.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         jLabel7.setText("Email ID");
         add(jLabel7);
         jLabel7.setBounds(410, 350, 55, 30);
 
-        emailtxtfield.addActionListener(new java.awt.event.ActionListener() {
+        emailTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailtxtfieldActionPerformed(evt);
+                emailTFActionPerformed(evt);
             }
         });
-        add(emailtxtfield);
-        emailtxtfield.setBounds(490, 350, 136, 23);
+        add(emailTF);
+        emailTF.setBounds(490, 350, 136, 23);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void networkJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_networkJComboBoxActionPerformed
+    private void networkJCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_networkJCBActionPerformed
 
-        Network network = (Network) networkJComboBox.getSelectedItem();
+        Network network = (Network) networkJCB.getSelectedItem();
         if (network != null){
             populateEnterpriseComboBox(network);
         }
         
         
-    }//GEN-LAST:event_networkJComboBoxActionPerformed
+    }//GEN-LAST:event_networkJCBActionPerformed
 
-    private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
-         if(!nameJTextField.getText().equals("") && !usernameJTextField.getText().isEmpty() && !passwordJPasswordField.getText().isEmpty()){
+    private void submitJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJBActionPerformed
+         if(!nameJTF.getText().equals("") && !usernameJTF.getText().isEmpty() && !passwordJPwdF.getText().isEmpty()){
           
-        Enterprise enterprise = (Enterprise) enterpriseJComboBox.getSelectedItem();
+        Enterprise enterprise = (Enterprise) enterpriseJCB.getSelectedItem();
         
-        String username = usernameJTextField.getText();
-        String password = String.valueOf(passwordJPasswordField.getPassword());
-        String name = nameJTextField.getText();
-        String email = emailtxtfield.getText();
+        String username = usernameJTF.getText();
+        String password = String.valueOf(passwordJPwdF.getPassword());
+        String name = nameJTF.getText();
+        String email = emailTF.getText();
         Employee employee = enterprise.getEmployeeDirectory().createEmployee(name);
        
         if(Validate.validatePassword(password))
@@ -287,15 +287,15 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
           if(!Validate.validateEmail(email))
                             {
                                  JOptionPane.showMessageDialog(null,"Enter valid email id ");
-                                 emailtxtfield.setText("");
+                                 emailTF.setText("");
                                 return;
                             
                             }
           JOptionPane.showMessageDialog(null, "UserAccount created successfully", "Information", JOptionPane.INFORMATION_MESSAGE);
-            usernameJTextField.setText("");
-            passwordJPasswordField.setText("");
-            nameJTextField.setText("");
-            emailtxtfield.setText("");
+            usernameJTF.setText("");
+            passwordJPwdF.setText("");
+            nameJTF.setText("");
+            emailTF.setText("");
             populateTable();
             
          }
@@ -310,9 +310,9 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
              JOptionPane.showMessageDialog(null, "Enter all the value", "Warning", JOptionPane.WARNING_MESSAGE);
         }
         
-    }//GEN-LAST:event_submitJButtonActionPerformed
+    }//GEN-LAST:event_submitJBActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void backJBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJBActionPerformed
         userProcessContainer.remove(this);
          Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
@@ -320,33 +320,33 @@ public class ManageEnterpriseAdminJPanel extends javax.swing.JPanel {
         sysAdminwjp.populateTree();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_backJBActionPerformed
 
-    private void emailtxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailtxtfieldActionPerformed
+    private void emailTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_emailtxtfieldActionPerformed
+    }//GEN-LAST:event_emailTFActionPerformed
 
-    private void enterpriseJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterpriseJComboBoxActionPerformed
+    private void enterpriseJCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterpriseJCBActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_enterpriseJComboBoxActionPerformed
+    }//GEN-LAST:event_enterpriseJCBActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
-    private javax.swing.JTextField emailtxtfield;
-    private javax.swing.JComboBox enterpriseJComboBox;
-    private javax.swing.JTable enterpriseJTable;
+    private javax.swing.JButton backJB;
+    private javax.swing.JTextField emailTF;
+    private javax.swing.JComboBox enterpriseJCB;
+    private javax.swing.JTable enterpriseJT;
+    private javax.swing.JLabel jLMngEnterAdmin;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField nameJTextField;
-    private javax.swing.JComboBox networkJComboBox;
-    private javax.swing.JPasswordField passwordJPasswordField;
-    private javax.swing.JButton submitJButton;
-    private javax.swing.JTextField usernameJTextField;
+    private javax.swing.JTextField nameJTF;
+    private javax.swing.JComboBox networkJCB;
+    private javax.swing.JPasswordField passwordJPwdF;
+    private javax.swing.JButton submitJB;
+    private javax.swing.JTextField usernameJTF;
     // End of variables declaration//GEN-END:variables
 }
