@@ -56,10 +56,10 @@ public class CanteenEmergencyRequestJPanel extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         locationlbl = new javax.swing.JLabel();
-        sendemergency = new javax.swing.JButton();
-        combo = new javax.swing.JComboBox();
-        backJButton = new javax.swing.JButton();
-        locationfiield = new javax.swing.JTextField();
+        sendemergbtn = new javax.swing.JButton();
+        comboemergen = new javax.swing.JComboBox();
+        backbtn = new javax.swing.JButton();
+        locationtxt = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(76, 89, 115));
@@ -79,59 +79,59 @@ public class CanteenEmergencyRequestJPanel extends javax.swing.JPanel {
         add(locationlbl);
         locationlbl.setBounds(230, 350, 53, 18);
 
-        sendemergency.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        sendemergency.setText("Send Emergency");
-        sendemergency.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        sendemergency.addActionListener(new java.awt.event.ActionListener() {
+        sendemergbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        sendemergbtn.setText("Send Emergency");
+        sendemergbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        sendemergbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sendemergencyActionPerformed(evt);
+                sendemergbtnActionPerformed(evt);
             }
         });
-        add(sendemergency);
-        sendemergency.setBounds(480, 510, 105, 22);
+        add(sendemergbtn);
+        sendemergbtn.setBounds(435, 510, 150, 22);
 
-        combo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        combo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(combo);
-        combo.setBounds(340, 250, 190, 23);
+        comboemergen.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        comboemergen.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(comboemergen);
+        comboemergen.setBounds(340, 250, 190, 24);
 
-        backJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        backJButton.setText("Back");
-        backJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        backbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        backbtn.setText("Back");
+        backbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        backbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                backbtnActionPerformed(evt);
             }
         });
-        add(backJButton);
-        backJButton.setBounds(160, 510, 34, 22);
+        add(backbtn);
+        backbtn.setBounds(160, 510, 70, 22);
 
-        locationfiield.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        locationfiield.addActionListener(new java.awt.event.ActionListener() {
+        locationtxt.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        locationtxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                locationfiieldActionPerformed(evt);
+                locationtxtActionPerformed(evt);
             }
         });
-        add(locationfiield);
-        locationfiield.setBounds(340, 340, 190, 23);
+        add(locationtxt);
+        locationtxt.setBounds(340, 340, 190, 24);
 
-        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Canteen Emergency Request");
         add(jLabel2);
-        jLabel2.setBounds(220, 110, 340, 29);
+        jLabel2.setBounds(220, 110, 340, 30);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void sendemergencyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendemergencyActionPerformed
+    private void sendemergbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendemergbtnActionPerformed
         // TODO add your handling code here:
        
         
-        String location = locationfiield.getText();
+        String location = locationtxt.getText();
         erequest.setLocation(location);
-        erequest.setEmergencytype((Organization.Type) combo.getSelectedItem());
+        erequest.setEmergencytype((Organization.Type) comboemergen.getSelectedItem());
         erequest.setEmail(userAccount.getEmail());
          Organization org = null;
-         Organization.Type sel = (Organization.Type) combo.getSelectedItem();
+         Organization.Type sel = (Organization.Type) comboemergen.getSelectedItem();
       if(location.isEmpty())
       {
         System.out.println("Inside else block of sendComplaintActionPerformed ");
@@ -200,9 +200,9 @@ public class CanteenEmergencyRequestJPanel extends javax.swing.JPanel {
         
     }
         
-    }//GEN-LAST:event_sendemergencyActionPerformed
+    }//GEN-LAST:event_sendemergbtnActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void backbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbtnActionPerformed
 
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
@@ -212,36 +212,36 @@ public class CanteenEmergencyRequestJPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
 
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_backbtnActionPerformed
 
-    private void locationfiieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_locationfiieldActionPerformed
+    private void locationtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_locationtxtActionPerformed
         // TODO add your handling code here:
         
-        if(locationfiield.getText()!=""){
-        message1 = locationfiield.getText();
+        if(locationtxt.getText()!=""){
+        message1 = locationtxt.getText();
         System.out.println("sendComplaintActionPerformed 'messageJTextField' " + message1);
         }
         else JOptionPane.showMessageDialog(null,"Location field is empty");
         
-    }//GEN-LAST:event_locationfiieldActionPerformed
+    }//GEN-LAST:event_locationtxtActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
-    private javax.swing.JComboBox combo;
+    private javax.swing.JButton backbtn;
+    private javax.swing.JComboBox comboemergen;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField locationfiield;
     private javax.swing.JLabel locationlbl;
-    private javax.swing.JButton sendemergency;
+    private javax.swing.JTextField locationtxt;
+    private javax.swing.JButton sendemergbtn;
     // End of variables declaration//GEN-END:variables
 
     private void populateComboBox() {
         
-         combo.removeAllItems();
-        combo.addItem(Organization.Type.Theft);
-        combo.addItem(Organization.Type.Felony);
-        combo.addItem(Organization.Type.Misconduct);
+         comboemergen.removeAllItems();
+        comboemergen.addItem(Organization.Type.Theft);
+        comboemergen.addItem(Organization.Type.Felony);
+        comboemergen.addItem(Organization.Type.Misconduct);
        
     }
 }
