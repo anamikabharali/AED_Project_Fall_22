@@ -53,7 +53,7 @@ public class FelonyWorkAreaJPanel extends javax.swing.JPanel {
     }
     
     public void populateTable(){
-        DefaultTableModel model = (DefaultTableModel)workRequestJTable.getModel();
+        DefaultTableModel model = (DefaultTableModel)workRequesttbl.getModel();
         
         model.setRowCount(0);
         
@@ -72,7 +72,7 @@ public class FelonyWorkAreaJPanel extends javax.swing.JPanel {
  public void populateEmergencyTable()
     {
     
-            DefaultTableModel model = (DefaultTableModel)emergencytable.getModel();
+            DefaultTableModel model = (DefaultTableModel)emergencytbl.getModel();
         
         model.setRowCount(0);
         
@@ -98,14 +98,14 @@ public class FelonyWorkAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        workRequestJTable = new javax.swing.JTable();
-        assignJButton = new javax.swing.JButton();
-        processJButton = new javax.swing.JButton();
-        refreshJButton = new javax.swing.JButton();
+        workRequesttbl = new javax.swing.JTable();
+        assignbtn = new javax.swing.JButton();
+        btnprocess = new javax.swing.JButton();
+        refreshbtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        emergencytable = new javax.swing.JTable();
-        senteam = new javax.swing.JButton();
+        emergencytbl = new javax.swing.JTable();
+        senteambtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(76, 89, 115));
@@ -115,8 +115,8 @@ public class FelonyWorkAreaJPanel extends javax.swing.JPanel {
         setPreferredSize(new java.awt.Dimension(750, 750));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        workRequestJTable.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
+        workRequesttbl.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        workRequesttbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -142,47 +142,47 @@ public class FelonyWorkAreaJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(workRequestJTable);
+        jScrollPane1.setViewportView(workRequesttbl);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 560, 160));
 
-        assignJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        assignJButton.setText("Assign to me");
-        assignJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        assignJButton.addActionListener(new java.awt.event.ActionListener() {
+        assignbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        assignbtn.setText("Assign to me");
+        assignbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        assignbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                assignJButtonActionPerformed(evt);
+                assignbtnActionPerformed(evt);
             }
         });
-        add(assignJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 120, -1));
+        add(assignbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 120, -1));
 
-        processJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        processJButton.setText("Process");
-        processJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        processJButton.addActionListener(new java.awt.event.ActionListener() {
+        btnprocess.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        btnprocess.setText("Process");
+        btnprocess.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnprocess.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                processJButtonActionPerformed(evt);
+                btnprocessActionPerformed(evt);
             }
         });
-        add(processJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 330, 80, -1));
+        add(btnprocess, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 330, 80, -1));
 
-        refreshJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        refreshJButton.setText("Refresh");
-        refreshJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        refreshJButton.addActionListener(new java.awt.event.ActionListener() {
+        refreshbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        refreshbtn.setText("Refresh");
+        refreshbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        refreshbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                refreshJButtonActionPerformed(evt);
+                refreshbtnActionPerformed(evt);
             }
         });
-        add(refreshJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 140, 90, -1));
+        add(refreshbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 140, 90, -1));
 
         jLabel1.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Felony Organization Panel");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 70, -1, -1));
 
-        emergencytable.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        emergencytable.setModel(new javax.swing.table.DefaultTableModel(
+        emergencytbl.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        emergencytbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -190,19 +190,19 @@ public class FelonyWorkAreaJPanel extends javax.swing.JPanel {
                 "Location"
             }
         ));
-        jScrollPane2.setViewportView(emergencytable);
+        jScrollPane2.setViewportView(emergencytbl);
 
         add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 430, 550, 130));
 
-        senteam.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        senteam.setText("Send Team");
-        senteam.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        senteam.addActionListener(new java.awt.event.ActionListener() {
+        senteambtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        senteambtn.setText("Send Team");
+        senteambtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        senteambtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                senteamActionPerformed(evt);
+                senteambtnActionPerformed(evt);
             }
         });
-        add(senteam, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 430, -1, -1));
+        add(senteambtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 430, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 0, 0));
@@ -210,15 +210,15 @@ public class FelonyWorkAreaJPanel extends javax.swing.JPanel {
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 90, 20));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void assignJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignJButtonActionPerformed
+    private void assignbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignbtnActionPerformed
 
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = workRequesttbl.getSelectedRow();
         
         if (selectedRow < 0){
             return;
         }
         
-        StatusRequest request = (StatusRequest)workRequestJTable.getValueAt(selectedRow, 0);
+        StatusRequest request = (StatusRequest)workRequesttbl.getValueAt(selectedRow, 0);
         if(request.getReceiver()!=null)
         {
             JOptionPane.showMessageDialog(null,"Request has been assigned already ");
@@ -238,17 +238,17 @@ public class FelonyWorkAreaJPanel extends javax.swing.JPanel {
         }
         populateTable();
         
-    }//GEN-LAST:event_assignJButtonActionPerformed
+    }//GEN-LAST:event_assignbtnActionPerformed
 
-    private void processJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_processJButtonActionPerformed
+    private void btnprocessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnprocessActionPerformed
         
-        int selectedRow = workRequestJTable.getSelectedRow();
+        int selectedRow = workRequesttbl.getSelectedRow();
         
         if (selectedRow < 0){
             return;
         }
         
-        Complaints_Suggestions_Request request = (Complaints_Suggestions_Request)workRequestJTable.getValueAt(selectedRow, 0);
+        Complaints_Suggestions_Request request = (Complaints_Suggestions_Request)workRequesttbl.getValueAt(selectedRow, 0);
           if(request.getStatus()=="Completed")
           {    
                JOptionPane.showMessageDialog(null,"Request has been completed already");  
@@ -270,22 +270,22 @@ public class FelonyWorkAreaJPanel extends javax.swing.JPanel {
         layout.next(userProcessContainer);
           }
         
-    }//GEN-LAST:event_processJButtonActionPerformed
+    }//GEN-LAST:event_btnprocessActionPerformed
 
-    private void refreshJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshJButtonActionPerformed
+    private void refreshbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshbtnActionPerformed
         populateTable();
-    }//GEN-LAST:event_refreshJButtonActionPerformed
+    }//GEN-LAST:event_refreshbtnActionPerformed
 
-    private void senteamActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senteamActionPerformed
+    private void senteambtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_senteambtnActionPerformed
         // TODO add your handling code here:
 
-        int selectedRow = emergencytable.getSelectedRow();
+        int selectedRow = emergencytbl.getSelectedRow();
 
         if (selectedRow < 0){
             return;
         }
 
-        EmergencyRequest request = (EmergencyRequest)emergencytable.getValueAt(selectedRow, 0);
+        EmergencyRequest request = (EmergencyRequest)emergencytbl.getValueAt(selectedRow, 0);
         request.setReceiver(userAccount);
         
             ValidateMail valMail = new ValidateMail();
@@ -293,18 +293,18 @@ public class FelonyWorkAreaJPanel extends javax.swing.JPanel {
            
             JOptionPane.showMessageDialog(this,"Mail has been sent");
         
-    }//GEN-LAST:event_senteamActionPerformed
+    }//GEN-LAST:event_senteambtnActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton assignJButton;
-    private javax.swing.JTable emergencytable;
+    private javax.swing.JButton assignbtn;
+    private javax.swing.JButton btnprocess;
+    private javax.swing.JTable emergencytbl;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JButton processJButton;
-    private javax.swing.JButton refreshJButton;
-    private javax.swing.JButton senteam;
-    private javax.swing.JTable workRequestJTable;
+    private javax.swing.JButton refreshbtn;
+    private javax.swing.JButton senteambtn;
+    private javax.swing.JTable workRequesttbl;
     // End of variables declaration//GEN-END:variables
 }

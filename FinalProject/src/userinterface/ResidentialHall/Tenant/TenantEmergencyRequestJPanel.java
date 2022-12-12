@@ -53,10 +53,10 @@ public class TenantEmergencyRequestJPanel extends javax.swing.JPanel {
 
         jLabel1 = new javax.swing.JLabel();
         locationlbl = new javax.swing.JLabel();
-        locationtxtfield = new javax.swing.JTextField();
-        sendemergency = new javax.swing.JButton();
-        combo = new javax.swing.JComboBox();
-        backJButton = new javax.swing.JButton();
+        locationtxt = new javax.swing.JTextField();
+        sendemergencytxt = new javax.swing.JButton();
+        combotxt = new javax.swing.JComboBox();
+        backbtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(76, 89, 115));
@@ -78,41 +78,41 @@ public class TenantEmergencyRequestJPanel extends javax.swing.JPanel {
         add(locationlbl);
         locationlbl.setBounds(210, 310, 60, 18);
 
-        locationtxtfield.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        locationtxtfield.addActionListener(new java.awt.event.ActionListener() {
+        locationtxt.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        locationtxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                locationtxtfieldActionPerformed(evt);
+                locationtxtActionPerformed(evt);
             }
         });
-        add(locationtxtfield);
-        locationtxtfield.setBounds(310, 310, 240, 23);
+        add(locationtxt);
+        locationtxt.setBounds(310, 310, 240, 23);
 
-        sendemergency.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        sendemergency.setText("Send Emergency");
-        sendemergency.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        sendemergency.addActionListener(new java.awt.event.ActionListener() {
+        sendemergencytxt.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        sendemergencytxt.setText("Send Emergency");
+        sendemergencytxt.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        sendemergencytxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sendemergencyActionPerformed(evt);
+                sendemergencytxtActionPerformed(evt);
             }
         });
-        add(sendemergency);
-        sendemergency.setBounds(470, 440, 105, 22);
+        add(sendemergencytxt);
+        sendemergencytxt.setBounds(405, 440, 170, 22);
 
-        combo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        combo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(combo);
-        combo.setBounds(310, 210, 240, 23);
+        combotxt.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        combotxt.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(combotxt);
+        combotxt.setBounds(310, 210, 240, 23);
 
-        backJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        backJButton.setText("Back");
-        backJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        backbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        backbtn.setText("Back");
+        backbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        backbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                backbtnActionPerformed(evt);
             }
         });
-        add(backJButton);
-        backJButton.setBounds(180, 450, 34, 22);
+        add(backbtn);
+        backbtn.setBounds(180, 450, 100, 22);
 
         jLabel2.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -121,7 +121,7 @@ public class TenantEmergencyRequestJPanel extends javax.swing.JPanel {
         jLabel2.setBounds(220, 60, 320, 30);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void backbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbtnActionPerformed
 
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
@@ -130,17 +130,17 @@ public class TenantEmergencyRequestJPanel extends javax.swing.JPanel {
         sajp.populateRequestTable();
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_backbtnActionPerformed
 
-    private void sendemergencyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendemergencyActionPerformed
+    private void sendemergencytxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendemergencytxtActionPerformed
         // TODO add your handling code here:
         
-        String location = locationtxtfield.getText();
+        String location = locationtxt.getText();
         erequest.setLocation(location);
-        erequest.setEmergencytype((Organization.Type) combo.getSelectedItem());
+        erequest.setEmergencytype((Organization.Type) combotxt.getSelectedItem());
         erequest.setEmail(userAccount.getEmail());
          Organization org = null;
-         Organization.Type sel = (Organization.Type) combo.getSelectedItem();
+         Organization.Type sel = (Organization.Type) combotxt.getSelectedItem();
       if(location.isEmpty())
       {
         System.out.println("Inside else block of sendComplaintActionPerformed ");
@@ -209,34 +209,34 @@ public class TenantEmergencyRequestJPanel extends javax.swing.JPanel {
         
             
         }
-    }//GEN-LAST:event_sendemergencyActionPerformed
+    }//GEN-LAST:event_sendemergencytxtActionPerformed
 
-    private void locationtxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_locationtxtfieldActionPerformed
+    private void locationtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_locationtxtActionPerformed
         // TODO add your handling code here:
         
-        if(locationtxtfield.getText()!=""){
-        message1 = locationtxtfield.getText();
+        if(locationtxt.getText()!=""){
+        message1 = locationtxt.getText();
         System.out.println("sendComplaintActionPerformed 'messageJTextField' " + message1);
         }
         else JOptionPane.showMessageDialog(null,"Location field is empty");
         
-    }//GEN-LAST:event_locationtxtfieldActionPerformed
+    }//GEN-LAST:event_locationtxtActionPerformed
 private void populateComboBox() {
         
-         combo.removeAllItems();
-        combo.addItem(Organization.Type.Theft);
-        combo.addItem(Organization.Type.Felony);
-        combo.addItem(Organization.Type.Misconduct);
+         combotxt.removeAllItems();
+        combotxt.addItem(Organization.Type.Theft);
+        combotxt.addItem(Organization.Type.Felony);
+        combotxt.addItem(Organization.Type.Misconduct);
        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
-    private javax.swing.JComboBox combo;
+    private javax.swing.JButton backbtn;
+    private javax.swing.JComboBox combotxt;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel locationlbl;
-    private javax.swing.JTextField locationtxtfield;
-    private javax.swing.JButton sendemergency;
+    private javax.swing.JTextField locationtxt;
+    private javax.swing.JButton sendemergencytxt;
     // End of variables declaration//GEN-END:variables
 }

@@ -45,13 +45,13 @@ Network net;
     public void popOrganizationComboBox() {
        try {
             
-            organizationJComboBox.removeAllItems();
+            organizatiocbox.removeAllItems();
             if (enterprise.getOrganizationDirectory() == null) {
                 enterprise.setOrganizationDirectory(new OrganizationDirectory());
             }
             if (enterprise.getOrganizationDirectory().getOrganizationList().size() > 0) {
                 for (Organization organization : enterprise.getOrganizationDirectory().getOrganizationList()) {
-                    organizationJComboBox.addItem(organization);
+                    organizatiocbox.addItem(organization);
                 }
             } else {
                 JOptionPane.showMessageDialog(null,"NO Organization is Available");
@@ -64,14 +64,14 @@ Network net;
     public void populateEmployeeComboBox(Organization organization){
          try {
             
-            employeeJComboBox.removeAllItems();
+            employeecbox.removeAllItems();
             if (organization.getEmployeeDirectory() == null) {
                 organization.setEmployeeDirectory(new EmployeeDirectory());
             }
             if (organization.getEmployeeDirectory().getEmployeeList().size() > 0) {
               
                 for (Employee employee : organization.getEmployeeDirectory().getEmployeeList()) {
-                    employeeJComboBox.addItem(employee);
+                    employeecbox.addItem(employee);
                 }
 
             } else {
@@ -86,11 +86,11 @@ Network net;
     private void populateRoleComboBox(Organization organization){
        try {
             
-            roleJComboBox.removeAllItems();
+            rolecbox.removeAllItems();
             if (organization.getSupportedRole() != null) {
                 
                 for (Role role : organization.getSupportedRole()) {
-                    roleJComboBox.addItem(role);
+                    rolecbox.addItem(role);
                 }
             } else {
                   JOptionPane.showMessageDialog(null,"No Organization Available");
@@ -105,7 +105,7 @@ Network net;
 
          try {
             
-            DefaultTableModel model = (DefaultTableModel) userJTable.getModel();
+            DefaultTableModel model = (DefaultTableModel) usertble.getModel();
 
             model.setRowCount(0);
             if (enterprise.getOrganizationDirectory() == null) {
@@ -121,7 +121,7 @@ Network net;
                         Object row[] = new Object[2];
                         row[0] = ua;
                         row[1] = ua.getRole();
-                        ((DefaultTableModel) userJTable.getModel()).addRow(row);
+                        ((DefaultTableModel) usertble.getModel()).addRow(row);
                     }
                 }
             } else {
@@ -142,23 +142,23 @@ Network net;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        createUserJButton = new javax.swing.JButton();
-        nameJTextField = new javax.swing.JTextField();
+        createUserbtn = new javax.swing.JButton();
+        nameJTxt = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        userJTable = new javax.swing.JTable();
+        usertble = new javax.swing.JTable();
         jLabel2 = new javax.swing.JLabel();
-        passwordJTextField = new javax.swing.JTextField();
+        passwordJTxt = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        employeeJComboBox = new javax.swing.JComboBox();
-        backjButton1 = new javax.swing.JButton();
+        employeecbox = new javax.swing.JComboBox();
+        backbtn = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
-        organizationJComboBox = new javax.swing.JComboBox();
+        organizatiocbox = new javax.swing.JComboBox();
         jLabel4 = new javax.swing.JLabel();
-        roleJComboBox = new javax.swing.JComboBox();
+        rolecbox = new javax.swing.JComboBox();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        emailtxtfield = new javax.swing.JTextField();
+        emailtxt = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(76, 89, 115));
@@ -166,25 +166,25 @@ Network net;
         setMinimumSize(new java.awt.Dimension(750, 750));
         setLayout(null);
 
-        createUserJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        createUserJButton.setText("Create");
-        createUserJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        createUserJButton.addActionListener(new java.awt.event.ActionListener() {
+        createUserbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        createUserbtn.setText("Create");
+        createUserbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        createUserbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                createUserJButtonActionPerformed(evt);
+                createUserbtnActionPerformed(evt);
             }
         });
-        add(createUserJButton);
-        createUserJButton.setBounds(450, 510, 43, 22);
+        add(createUserbtn);
+        createUserbtn.setBounds(450, 510, 120, 22);
 
-        nameJTextField.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        nameJTextField.addActionListener(new java.awt.event.ActionListener() {
+        nameJTxt.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        nameJTxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nameJTextFieldActionPerformed(evt);
+                nameJTxtActionPerformed(evt);
             }
         });
-        add(nameJTextField);
-        nameJTextField.setBounds(520, 360, 146, 24);
+        add(nameJTxt);
+        nameJTxt.setBounds(520, 360, 146, 24);
 
         jLabel1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -192,8 +192,8 @@ Network net;
         add(jLabel1);
         jLabel1.setBounds(410, 360, 80, 18);
 
-        userJTable.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        userJTable.setModel(new javax.swing.table.DefaultTableModel(
+        usertble.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        usertble.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
             },
@@ -216,10 +216,10 @@ Network net;
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(userJTable);
-        if (userJTable.getColumnModel().getColumnCount() > 0) {
-            userJTable.getColumnModel().getColumn(0).setResizable(false);
-            userJTable.getColumnModel().getColumn(1).setResizable(false);
+        jScrollPane1.setViewportView(usertble);
+        if (usertble.getColumnModel().getColumnCount() > 0) {
+            usertble.getColumnModel().getColumn(0).setResizable(false);
+            usertble.getColumnModel().getColumn(1).setResizable(false);
         }
 
         add(jScrollPane1);
@@ -231,14 +231,14 @@ Network net;
         add(jLabel2);
         jLabel2.setBounds(410, 430, 70, 18);
 
-        passwordJTextField.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        passwordJTextField.addFocusListener(new java.awt.event.FocusAdapter() {
+        passwordJTxt.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        passwordJTxt.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
-                passwordJTextFieldFocusLost(evt);
+                passwordJTxtFocusLost(evt);
             }
         });
-        add(passwordJTextField);
-        passwordJTextField.setBounds(520, 430, 146, 24);
+        add(passwordJTxt);
+        passwordJTxt.setBounds(520, 430, 146, 24);
 
         jLabel3.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
@@ -246,21 +246,21 @@ Network net;
         add(jLabel3);
         jLabel3.setBounds(60, 360, 70, 18);
 
-        employeeJComboBox.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        employeeJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(employeeJComboBox);
-        employeeJComboBox.setBounds(180, 370, 146, 24);
+        employeecbox.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        employeecbox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(employeecbox);
+        employeecbox.setBounds(180, 370, 146, 24);
 
-        backjButton1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        backjButton1.setText("<< Back");
-        backjButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        backjButton1.addActionListener(new java.awt.event.ActionListener() {
+        backbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        backbtn.setText("<< Back");
+        backbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        backbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backjButton1ActionPerformed(evt);
+                backbtnActionPerformed(evt);
             }
         });
-        add(backjButton1);
-        backjButton1.setBounds(160, 510, 54, 22);
+        add(backbtn);
+        backbtn.setBounds(160, 510, 80, 22);
 
         jLabel5.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
@@ -268,15 +268,15 @@ Network net;
         add(jLabel5);
         jLabel5.setBounds(60, 310, 90, 18);
 
-        organizationJComboBox.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        organizationJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        organizationJComboBox.addActionListener(new java.awt.event.ActionListener() {
+        organizatiocbox.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        organizatiocbox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        organizatiocbox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                organizationJComboBoxActionPerformed(evt);
+                organizatiocboxActionPerformed(evt);
             }
         });
-        add(organizationJComboBox);
-        organizationJComboBox.setBounds(180, 310, 146, 24);
+        add(organizatiocbox);
+        organizatiocbox.setBounds(180, 310, 146, 24);
 
         jLabel4.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
@@ -284,10 +284,10 @@ Network net;
         add(jLabel4);
         jLabel4.setBounds(60, 420, 40, 18);
 
-        roleJComboBox.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        roleJComboBox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(roleJComboBox);
-        roleJComboBox.setBounds(180, 420, 146, 24);
+        rolecbox.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        rolecbox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(rolecbox);
+        rolecbox.setBounds(180, 420, 146, 24);
         add(jLabel6);
         jLabel6.setBounds(478, 265, 0, 0);
 
@@ -297,14 +297,14 @@ Network net;
         add(jLabel7);
         jLabel7.setBounds(410, 300, 70, 18);
 
-        emailtxtfield.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        emailtxtfield.addActionListener(new java.awt.event.ActionListener() {
+        emailtxt.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        emailtxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailtxtfieldActionPerformed(evt);
+                emailtxtActionPerformed(evt);
             }
         });
-        add(emailtxtfield);
-        emailtxtfield.setBounds(520, 300, 146, 24);
+        add(emailtxt);
+        emailtxt.setBounds(520, 300, 146, 24);
 
         jLabel8.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
@@ -313,20 +313,20 @@ Network net;
         jLabel8.setBounds(170, 40, 420, 30);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void createUserJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createUserJButtonActionPerformed
+    private void createUserbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createUserbtnActionPerformed
          
-            String email = emailtxtfield.getText();
-            String userName = nameJTextField.getText();
-            String password = passwordJTextField.getText();
-            if (employeeJComboBox.getSelectedItem() != null) {
+            String email = emailtxt.getText();
+            String userName = nameJTxt.getText();
+            String password = passwordJTxt.getText();
+            if (employeecbox.getSelectedItem() != null) {
                 if (!((userName.equals("")))) {
                     if (!(password.equals(""))) {
                         if(!email.equals("")){
                          if (EcoSystem.checkIfUsernameIsUnique(userName,net)) {
                             
-                            Organization organization = (Organization) organizationJComboBox.getSelectedItem();
-                            Employee employee = (Employee) employeeJComboBox.getSelectedItem();
-                            Role role = (Role) roleJComboBox.getSelectedItem();
+                            Organization organization = (Organization) organizatiocbox.getSelectedItem();
+                            Employee employee = (Employee) employeecbox.getSelectedItem();
+                            Role role = (Role) rolecbox.getSelectedItem();
                             if (!Validate.validatePassword(password)) {
                                 JOptionPane.showMessageDialog(null, "Password should Contain \n"
                                         + "       - At least one digit\n"
@@ -335,13 +335,13 @@ Network net;
                                         + "       - At least one special character(!@#$%^&+=~|?)\n"
                                         + "       - no whitespace allowed in the entire string\n"
                                         + "       - at least eight characters");
-                                passwordJTextField.setText("");
+                                passwordJTxt.setText("");
                                 return;
                             }
                             if(!Validate.validateEmail(email))
                             {
                                  JOptionPane.showMessageDialog(null,"Enter valid email id ");
-                                 emailtxtfield.setText("");
+                                 emailtxt.setText("");
                                 return;
                             
                             }
@@ -349,8 +349,8 @@ Network net;
 
                             organization.getUserAccountDirectory().createUserAccount(userName, password,email ,employee, role);
                             JOptionPane.showMessageDialog(null, "Account created succesfull");
-                            nameJTextField.setText("");
-                            passwordJTextField.setText("");
+                            nameJTxt.setText("");
+                            passwordJTxt.setText("");
                             popData();
                        } else {
                             JOptionPane.showMessageDialog(null, "Please enter unique username", "Warning", JOptionPane.WARNING_MESSAGE);
@@ -369,43 +369,43 @@ Network net;
                 JOptionPane.showMessageDialog(null, "No Employee available", "Warning", JOptionPane.WARNING_MESSAGE);
             }
         
-    }//GEN-LAST:event_createUserJButtonActionPerformed
+    }//GEN-LAST:event_createUserbtnActionPerformed
 
-    private void backjButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backjButton1ActionPerformed
+    private void backbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbtnActionPerformed
         // TODO add your handling code here:
         container.remove(this);
         CardLayout layout = (CardLayout) container.getLayout();
         layout.previous(container);
-    }//GEN-LAST:event_backjButton1ActionPerformed
+    }//GEN-LAST:event_backbtnActionPerformed
 
-    private void organizationJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organizationJComboBoxActionPerformed
-        Organization organization = (Organization) organizationJComboBox.getSelectedItem();
+    private void organizatiocboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organizatiocboxActionPerformed
+        Organization organization = (Organization) organizatiocbox.getSelectedItem();
         if (organization != null){
             populateEmployeeComboBox(organization);
             populateRoleComboBox(organization);
         }
-    }//GEN-LAST:event_organizationJComboBoxActionPerformed
+    }//GEN-LAST:event_organizatiocboxActionPerformed
 
-    private void passwordJTextFieldFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordJTextFieldFocusLost
+    private void passwordJTxtFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_passwordJTxtFocusLost
         // TODO add your handling code here:
        
         
         
-    }//GEN-LAST:event_passwordJTextFieldFocusLost
+    }//GEN-LAST:event_passwordJTxtFocusLost
 
-    private void emailtxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailtxtfieldActionPerformed
+    private void emailtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailtxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_emailtxtfieldActionPerformed
+    }//GEN-LAST:event_emailtxtActionPerformed
 
-    private void nameJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameJTextFieldActionPerformed
+    private void nameJTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nameJTxtActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_nameJTextFieldActionPerformed
+    }//GEN-LAST:event_nameJTxtActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backjButton1;
-    private javax.swing.JButton createUserJButton;
-    private javax.swing.JTextField emailtxtfield;
-    private javax.swing.JComboBox employeeJComboBox;
+    private javax.swing.JButton backbtn;
+    private javax.swing.JButton createUserbtn;
+    private javax.swing.JTextField emailtxt;
+    private javax.swing.JComboBox employeecbox;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -415,10 +415,10 @@ Network net;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField nameJTextField;
-    private javax.swing.JComboBox organizationJComboBox;
-    private javax.swing.JTextField passwordJTextField;
-    private javax.swing.JComboBox roleJComboBox;
-    private javax.swing.JTable userJTable;
+    private javax.swing.JTextField nameJTxt;
+    private javax.swing.JComboBox organizatiocbox;
+    private javax.swing.JTextField passwordJTxt;
+    private javax.swing.JComboBox rolecbox;
+    private javax.swing.JTable usertble;
     // End of variables declaration//GEN-END:variables
 }

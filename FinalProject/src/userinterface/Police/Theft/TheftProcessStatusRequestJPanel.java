@@ -37,10 +37,10 @@ public class TheftProcessStatusRequestJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        submitJButton = new javax.swing.JButton();
+        submitbtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        resultJTextField = new javax.swing.JTextField();
-        backJButton = new javax.swing.JButton();
+        resultxt = new javax.swing.JTextField();
+        backbtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(76, 89, 115));
@@ -48,16 +48,16 @@ public class TheftProcessStatusRequestJPanel extends javax.swing.JPanel {
         setMinimumSize(new java.awt.Dimension(750, 750));
         setLayout(null);
 
-        submitJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        submitJButton.setText("Submit Response");
-        submitJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        submitJButton.addActionListener(new java.awt.event.ActionListener() {
+        submitbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        submitbtn.setText("Submit Response");
+        submitbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        submitbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitJButtonActionPerformed(evt);
+                submitbtnActionPerformed(evt);
             }
         });
-        add(submitJButton);
-        submitJButton.setBounds(500, 450, 108, 22);
+        add(submitbtn);
+        submitbtn.setBounds(478, 450, 130, 22);
 
         jLabel1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -65,33 +65,33 @@ public class TheftProcessStatusRequestJPanel extends javax.swing.JPanel {
         add(jLabel1);
         jLabel1.setBounds(200, 300, 90, 30);
 
-        resultJTextField.addActionListener(new java.awt.event.ActionListener() {
+        resultxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                resultJTextFieldActionPerformed(evt);
+                resultxtActionPerformed(evt);
             }
         });
-        add(resultJTextField);
-        resultJTextField.setBounds(280, 300, 260, 20);
+        add(resultxt);
+        resultxt.setBounds(280, 300, 260, 20);
 
-        backJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        backJButton.setText("Back");
-        backJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        backbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        backbtn.setText("Back");
+        backbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        backbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                backbtnActionPerformed(evt);
             }
         });
-        add(backJButton);
-        backJButton.setBounds(140, 450, 34, 22);
+        add(backbtn);
+        backbtn.setBounds(140, 450, 80, 22);
 
         jLabel2.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Theft Process Status Request");
         add(jLabel2);
-        jLabel2.setBounds(230, 90, 300, 30);
+        jLabel2.setBounds(230, 130, 300, 30);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void backbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbtnActionPerformed
 
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
@@ -100,15 +100,15 @@ public class TheftProcessStatusRequestJPanel extends javax.swing.JPanel {
         dwjp.populateTable();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_backbtnActionPerformed
 
-    private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
+    private void submitbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitbtnActionPerformed
         
         String message = message1;
        
         if(message1!=null)
         {
-            message1 = resultJTextField.getText();
+            message1 = resultxt.getText();
             System.out.println("submitJButtonActionPerformed 'messageJTextField' " + message1);
             request.setResponse(message1);
             request.setStatus("Completed");
@@ -116,9 +116,9 @@ public class TheftProcessStatusRequestJPanel extends javax.swing.JPanel {
         }
         else JOptionPane.showMessageDialog(null,"Response field is empty");
         
-    }//GEN-LAST:event_submitJButtonActionPerformed
+    }//GEN-LAST:event_submitbtnActionPerformed
 
-    private void resultJTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultJTextFieldActionPerformed
+    private void resultxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resultxtActionPerformed
         // TODO add your handling code here:
 
         if(message1!=null)
@@ -132,13 +132,13 @@ public class TheftProcessStatusRequestJPanel extends javax.swing.JPanel {
            JOptionPane.showMessageDialog(null,"Text Field is Empty!");
         }
 
-    }//GEN-LAST:event_resultJTextFieldActionPerformed
+    }//GEN-LAST:event_resultxtActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
+    private javax.swing.JButton backbtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JTextField resultJTextField;
-    private javax.swing.JButton submitJButton;
+    private javax.swing.JTextField resultxt;
+    private javax.swing.JButton submitbtn;
     // End of variables declaration//GEN-END:variables
 }

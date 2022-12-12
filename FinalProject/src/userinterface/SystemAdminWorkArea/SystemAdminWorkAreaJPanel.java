@@ -95,11 +95,11 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         jTree = new javax.swing.JTree();
         jPanel2 = new javax.swing.JPanel();
         lblSelectedNode = new javax.swing.JLabel();
-        btnManageEnterprise = new javax.swing.JButton();
-        btnManageAdmin = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        btnManageNetwork1 = new javax.swing.JButton();
-        jbtnReport = new javax.swing.JButton();
+        mngEnterpriseBtn = new javax.swing.JButton();
+        mngAdminBtn = new javax.swing.JButton();
+        sysAdminTxt = new javax.swing.JLabel();
+        MngNetworkBtn = new javax.swing.JButton();
+        reportBtn = new javax.swing.JButton();
 
         setLayout(new java.awt.BorderLayout());
 
@@ -134,74 +134,74 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         jPanel2.add(lblSelectedNode);
         lblSelectedNode.setBounds(251, 25, 0, 0);
 
-        btnManageEnterprise.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        btnManageEnterprise.setText("Manage Enterprise");
-        btnManageEnterprise.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnManageEnterprise.addActionListener(new java.awt.event.ActionListener() {
+        mngEnterpriseBtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        mngEnterpriseBtn.setText("Manage Enterprise");
+        mngEnterpriseBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        mngEnterpriseBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageEnterpriseActionPerformed(evt);
+                mngEnterpriseBtnActionPerformed(evt);
             }
         });
-        jPanel2.add(btnManageEnterprise);
-        btnManageEnterprise.setBounds(270, 250, 116, 46);
+        jPanel2.add(mngEnterpriseBtn);
+        mngEnterpriseBtn.setBounds(270, 250, 116, 46);
 
-        btnManageAdmin.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        btnManageAdmin.setText("Manage Enterprise Admin");
-        btnManageAdmin.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnManageAdmin.addActionListener(new java.awt.event.ActionListener() {
+        mngAdminBtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        mngAdminBtn.setText("Manage Enterprise Admin");
+        mngAdminBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        mngAdminBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageAdminActionPerformed(evt);
+                mngAdminBtnActionPerformed(evt);
             }
         });
-        jPanel2.add(btnManageAdmin);
-        btnManageAdmin.setBounds(420, 250, 161, 46);
+        jPanel2.add(mngAdminBtn);
+        mngAdminBtn.setBounds(420, 250, 161, 46);
 
-        jLabel1.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("System Admin Panel");
-        jPanel2.add(jLabel1);
-        jLabel1.setBounds(210, 140, 213, 30);
+        sysAdminTxt.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        sysAdminTxt.setForeground(new java.awt.Color(255, 255, 255));
+        sysAdminTxt.setText("System Admin Panel");
+        jPanel2.add(sysAdminTxt);
+        sysAdminTxt.setBounds(210, 140, 213, 30);
 
-        btnManageNetwork1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        btnManageNetwork1.setText("Manage Network");
-        btnManageNetwork1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        btnManageNetwork1.addActionListener(new java.awt.event.ActionListener() {
+        MngNetworkBtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        MngNetworkBtn.setText("Manage Network");
+        MngNetworkBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        MngNetworkBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageNetwork1ActionPerformed(evt);
+                MngNetworkBtnActionPerformed(evt);
             }
         });
-        jPanel2.add(btnManageNetwork1);
-        btnManageNetwork1.setBounds(70, 250, 160, 46);
+        jPanel2.add(MngNetworkBtn);
+        MngNetworkBtn.setBounds(70, 250, 160, 46);
 
-        jbtnReport.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        jbtnReport.setText("Reporting Module");
-        jbtnReport.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jbtnReport.addActionListener(new java.awt.event.ActionListener() {
+        reportBtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        reportBtn.setText("Reporting Module");
+        reportBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        reportBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbtnReportActionPerformed(evt);
+                reportBtnActionPerformed(evt);
             }
         });
-        jPanel2.add(jbtnReport);
-        jbtnReport.setBounds(250, 350, 167, 50);
+        jPanel2.add(reportBtn);
+        reportBtn.setBounds(250, 350, 167, 50);
 
         jSplitPane.setRightComponent(jPanel2);
 
         add(jSplitPane, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnManageEnterpriseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageEnterpriseActionPerformed
+    private void mngEnterpriseBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mngEnterpriseBtnActionPerformed
         ManageEnterpriseJPanel manageEnterpriseJPanel=new ManageEnterpriseJPanel(userProcessContainer, ecosystem);
         userProcessContainer.add("manageEnterpriseJPanel",manageEnterpriseJPanel);
         CardLayout layout=(CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnManageEnterpriseActionPerformed
+    }//GEN-LAST:event_mngEnterpriseBtnActionPerformed
 
-    private void btnManageAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageAdminActionPerformed
+    private void mngAdminBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mngAdminBtnActionPerformed
         ManageEnterpriseAdminJPanel manageEnterpriseAdminJPanel=new ManageEnterpriseAdminJPanel(userProcessContainer, ecosystem);
         userProcessContainer.add("manageEnterpriseAdminJPanel",manageEnterpriseAdminJPanel);
         CardLayout layout=(CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnManageAdminActionPerformed
+    }//GEN-LAST:event_mngAdminBtnActionPerformed
 
     private void jTreeValueChanged(javax.swing.event.TreeSelectionEvent evt) {//GEN-FIRST:event_jTreeValueChanged
         
@@ -211,15 +211,15 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jTreeValueChanged
 
-    private void btnManageNetwork1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageNetwork1ActionPerformed
+    private void MngNetworkBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MngNetworkBtnActionPerformed
         // TODO add your handling code here:
         ManageNetworkJPanel manageNetworkJPanel=new ManageNetworkJPanel(userProcessContainer, ecosystem);
         userProcessContainer.add("manageNetworkJPanel",manageNetworkJPanel);
         CardLayout layout=(CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnManageNetwork1ActionPerformed
+    }//GEN-LAST:event_MngNetworkBtnActionPerformed
 
-    private void jbtnReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtnReportActionPerformed
+    private void reportBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_reportBtnActionPerformed
         // TODO add your handling code here:
         DefaultPieDataset PDataset = new DefaultPieDataset();  
 
@@ -234,20 +234,20 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         ChartFrame frame = new ChartFrame("Pie Chart",chart);
         frame.setVisible(true);
         frame.setSize(450,500);
-    }//GEN-LAST:event_jbtnReportActionPerformed
+    }//GEN-LAST:event_reportBtnActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnManageAdmin;
-    private javax.swing.JButton btnManageEnterprise;
-    private javax.swing.JButton btnManageNetwork1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton MngNetworkBtn;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSplitPane jSplitPane;
     private javax.swing.JTree jTree;
-    private javax.swing.JButton jbtnReport;
     private javax.swing.JLabel lblSelectedNode;
+    private javax.swing.JButton mngAdminBtn;
+    private javax.swing.JButton mngEnterpriseBtn;
+    private javax.swing.JButton reportBtn;
+    private javax.swing.JLabel sysAdminTxt;
     // End of variables declaration//GEN-END:variables
 }

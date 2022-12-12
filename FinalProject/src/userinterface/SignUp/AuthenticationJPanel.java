@@ -37,9 +37,9 @@ JPanel container;
         initComponents();
         this.container=container;
         this.sys=sys;
-         jLabel2.setVisible(false);
-            authtxtfield.setVisible(false);
-            authenticatetxtfield.setVisible(false);
+         plzEnterjLabel2.setVisible(false);
+            authCodetxtfield.setVisible(false);
+            authenticationtxtfield.setVisible(false);
     }
 
     /**
@@ -51,12 +51,12 @@ JPanel container;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        emailtxtfield = new javax.swing.JTextField();
-        authtxtfield = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        authenticatetxtfield = new javax.swing.JButton();
+        enterEmailText = new javax.swing.JLabel();
+        txtEmailfield = new javax.swing.JTextField();
+        authCodetxtfield = new javax.swing.JTextField();
+        sendEmailjButton1 = new javax.swing.JButton();
+        plzEnterjLabel2 = new javax.swing.JLabel();
+        authenticationtxtfield = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(76, 89, 115));
@@ -65,60 +65,60 @@ JPanel container;
         setPreferredSize(new java.awt.Dimension(750, 750));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Optima", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Enter your email id for the verification ");
-        add(jLabel1);
-        jLabel1.setBounds(200, 100, 320, 23);
+        enterEmailText.setFont(new java.awt.Font("Optima", 0, 18)); // NOI18N
+        enterEmailText.setForeground(new java.awt.Color(255, 255, 255));
+        enterEmailText.setText("Enter your email id for the verification ");
+        add(enterEmailText);
+        enterEmailText.setBounds(200, 100, 320, 23);
 
-        emailtxtfield.addActionListener(new java.awt.event.ActionListener() {
+        txtEmailfield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailtxtfieldActionPerformed(evt);
+                txtEmailfieldActionPerformed(evt);
             }
         });
-        add(emailtxtfield);
-        emailtxtfield.setBounds(240, 130, 238, 23);
+        add(txtEmailfield);
+        txtEmailfield.setBounds(240, 130, 238, 23);
 
-        authtxtfield.addActionListener(new java.awt.event.ActionListener() {
+        authCodetxtfield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                authtxtfieldActionPerformed(evt);
+                authCodetxtfieldActionPerformed(evt);
             }
         });
-        add(authtxtfield);
-        authtxtfield.setBounds(310, 360, 101, 23);
+        add(authCodetxtfield);
+        authCodetxtfield.setBounds(310, 360, 101, 23);
 
-        jButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        jButton1.setText("Send Mail");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        sendEmailjButton1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        sendEmailjButton1.setText("Send Mail");
+        sendEmailjButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                sendEmailjButton1ActionPerformed(evt);
             }
         });
-        add(jButton1);
-        jButton1.setBounds(320, 200, 92, 23);
+        add(sendEmailjButton1);
+        sendEmailjButton1.setBounds(320, 200, 92, 23);
 
-        jLabel2.setFont(new java.awt.Font("Optima", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Please enter the four digit code that has been sent to your email entered above");
-        add(jLabel2);
-        jLabel2.setBounds(70, 310, 607, 23);
+        plzEnterjLabel2.setFont(new java.awt.Font("Optima", 0, 18)); // NOI18N
+        plzEnterjLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        plzEnterjLabel2.setText("Please enter the four digit code that has been sent to your email entered above");
+        add(plzEnterjLabel2);
+        plzEnterjLabel2.setBounds(70, 310, 607, 23);
 
-        authenticatetxtfield.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        authenticatetxtfield.setText("Authenticate");
-        authenticatetxtfield.addActionListener(new java.awt.event.ActionListener() {
+        authenticationtxtfield.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        authenticationtxtfield.setText("Authenticate");
+        authenticationtxtfield.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                authenticatetxtfieldActionPerformed(evt);
+                authenticationtxtfieldActionPerformed(evt);
             }
         });
-        add(authenticatetxtfield);
-        authenticatetxtfield.setBounds(300, 420, 129, 23);
+        add(authenticationtxtfield);
+        authenticationtxtfield.setBounds(300, 420, 129, 23);
 
         jLabel3.setIcon(new javax.swing.ImageIcon("/Users/srivaishnaviaekkati/Downloads/AED_Project_Fall_22 2/back.png")); // NOI18N
         add(jLabel3);
         jLabel3.setBounds(0, 0, 750, 600);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void sendEmailjButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendEmailjButton1ActionPerformed
         // TODO add your handling code here:
     //     JOptionPane.showMessageDialog(emailtxtfield, n);
     //    JOptionPane.showMessageDialog(this, 56789);
@@ -128,11 +128,11 @@ JPanel container;
 //            authtxtfield.setVisible(true);
 //            authenticatetxtfield.setVisible(true);
             String email = null;
-        if(emailtxtfield.getText()!=null)
+        if(txtEmailfield.getText()!=null)
             {
-                if(Validate.validateEmail(emailtxtfield.getText()))
+                if(Validate.validateEmail(txtEmailfield.getText()))
                 {
-                    email = emailtxtfield.getText();
+                    email = txtEmailfield.getText();
                     System.out.println("email .. "+ email);
                     System.out.println("After If Statement .. ");
                     
@@ -153,9 +153,9 @@ JPanel container;
              }
               
             JOptionPane.showMessageDialog(this,"Mail has been sent");
-            jLabel2.setVisible(true);
-            authtxtfield.setVisible(true);
-            authenticatetxtfield.setVisible(true);
+            plzEnterjLabel2.setVisible(true);
+            authCodetxtfield.setVisible(true);
+            authenticationtxtfield.setVisible(true);
         } catch (MessagingException ex) {
             Logger.getLogger(FelonyWorkAreaJPanel.class.getName()).log(Level.SEVERE, null, ex);
             JOptionPane.showMessageDialog(this,"Mail has not  been sent");
@@ -175,9 +175,9 @@ JPanel container;
             }
 
          
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_sendEmailjButton1ActionPerformed
 
-    private void authenticatetxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_authenticatetxtfieldActionPerformed
+    private void authenticationtxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_authenticationtxtfieldActionPerformed
         // TODO add your handling code here:
     //    Integer num=Integer.parseInt(authtxtfield.getText());
         Integer num = n; 
@@ -187,7 +187,7 @@ JPanel container;
         {
         
         CardLayout layout = (CardLayout) container.getLayout();
-        container.add("SignUpJPanel", new SignUpJPanel(container, sys,emailtxtfield.getText()));
+        container.add("SignUpJPanel", new SignUpJPanel(container, sys,txtEmailfield.getText()));
         layout.next(container);
         
         }
@@ -197,24 +197,24 @@ JPanel container;
           JOptionPane.showMessageDialog(null,"Authentication failed");
         
         }
-    }//GEN-LAST:event_authenticatetxtfieldActionPerformed
+    }//GEN-LAST:event_authenticationtxtfieldActionPerformed
 
-    private void authtxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_authtxtfieldActionPerformed
+    private void authCodetxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_authCodetxtfieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_authtxtfieldActionPerformed
+    }//GEN-LAST:event_authCodetxtfieldActionPerformed
 
-    private void emailtxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailtxtfieldActionPerformed
+    private void txtEmailfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailfieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_emailtxtfieldActionPerformed
+    }//GEN-LAST:event_txtEmailfieldActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton authenticatetxtfield;
-    private javax.swing.JTextField authtxtfield;
-    private javax.swing.JTextField emailtxtfield;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JTextField authCodetxtfield;
+    private javax.swing.JButton authenticationtxtfield;
+    private javax.swing.JLabel enterEmailText;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel plzEnterjLabel2;
+    private javax.swing.JButton sendEmailjButton1;
+    private javax.swing.JTextField txtEmailfield;
     // End of variables declaration//GEN-END:variables
 }

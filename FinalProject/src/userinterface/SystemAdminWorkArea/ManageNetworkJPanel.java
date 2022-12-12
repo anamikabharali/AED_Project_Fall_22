@@ -35,7 +35,7 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
     }
 
     private void populateNetworkTable() {
-        DefaultTableModel model = (DefaultTableModel) networkJTable.getModel();
+        DefaultTableModel model = (DefaultTableModel) tableNetwork.getModel();
 
         model.setRowCount(0);
         for (Network network : system.getNetworkList()) {
@@ -55,20 +55,20 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        networkJTable = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
-        submitJButton = new javax.swing.JButton();
-        nameJTextField = new javax.swing.JTextField();
-        backJButton = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
+        tableNetwork = new javax.swing.JTable();
+        nameLabel = new javax.swing.JLabel();
+        btnSubmit = new javax.swing.JButton();
+        txtName = new javax.swing.JTextField();
+        btnBack = new javax.swing.JButton();
+        mngNetworkTxt = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(76, 89, 115));
         setMaximumSize(new java.awt.Dimension(750, 750));
         setMinimumSize(new java.awt.Dimension(750, 750));
         setLayout(null);
 
-        networkJTable.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        networkJTable.setModel(new javax.swing.table.DefaultTableModel(
+        tableNetwork.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        tableNetwork.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null},
                 {null},
@@ -94,54 +94,54 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane1.setViewportView(networkJTable);
-        if (networkJTable.getColumnModel().getColumnCount() > 0) {
-            networkJTable.getColumnModel().getColumn(0).setResizable(false);
+        jScrollPane1.setViewportView(tableNetwork);
+        if (tableNetwork.getColumnModel().getColumnCount() > 0) {
+            tableNetwork.getColumnModel().getColumn(0).setResizable(false);
         }
 
         add(jScrollPane1);
         jScrollPane1.setBounds(50, 150, 640, 160);
 
-        jLabel1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Name");
-        add(jLabel1);
-        jLabel1.setBounds(225, 360, 50, 20);
+        nameLabel.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        nameLabel.setForeground(new java.awt.Color(255, 255, 255));
+        nameLabel.setText("Name");
+        add(nameLabel);
+        nameLabel.setBounds(225, 360, 50, 20);
 
-        submitJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        submitJButton.setText("Submit");
-        submitJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        submitJButton.addActionListener(new java.awt.event.ActionListener() {
+        btnSubmit.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        btnSubmit.setText("Submit");
+        btnSubmit.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitJButtonActionPerformed(evt);
+                btnSubmitActionPerformed(evt);
             }
         });
-        add(submitJButton);
-        submitJButton.setBounds(580, 500, 47, 22);
-        add(nameJTextField);
-        nameJTextField.setBounds(300, 360, 210, 23);
+        add(btnSubmit);
+        btnSubmit.setBounds(580, 500, 47, 22);
+        add(txtName);
+        txtName.setBounds(300, 360, 210, 23);
 
-        backJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        backJButton.setText("<< Back");
-        backJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        btnBack.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        btnBack.setText("<< Back");
+        btnBack.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                btnBackActionPerformed(evt);
             }
         });
-        add(backJButton);
-        backJButton.setBounds(90, 490, 54, 22);
+        add(btnBack);
+        btnBack.setBounds(90, 490, 54, 22);
 
-        jLabel6.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Manage Network ");
-        add(jLabel6);
-        jLabel6.setBounds(270, 80, 188, 30);
+        mngNetworkTxt.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        mngNetworkTxt.setForeground(new java.awt.Color(255, 255, 255));
+        mngNetworkTxt.setText("Manage Network ");
+        add(mngNetworkTxt);
+        mngNetworkTxt.setBounds(270, 80, 188, 30);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
+    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
 
-        String name = nameJTextField.getText();int cou=0;
+        String name = txtName.getText();int cou=0;
         for(Network network : system.getNetworkList())
         {
             if(network.getName() == null ? name == null : network.getName().equals(name))
@@ -153,7 +153,7 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         network1.setName(name);
 
         populateNetworkTable();
-        nameJTextField.setText("");
+        txtName.setText("");
         }
         else
         {
@@ -161,9 +161,9 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         JOptionPane.showMessageDialog(null,"Network already exits");
         }
         
-    }//GEN-LAST:event_submitJButtonActionPerformed
+    }//GEN-LAST:event_btnSubmitActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         userProcessContainer.remove(this);
          Component[] componentArray = userProcessContainer.getComponents();
         Component component = componentArray[componentArray.length - 1];
@@ -171,15 +171,15 @@ public class ManageNetworkJPanel extends javax.swing.JPanel {
         sysAdminwjp.populateTree();
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_btnBackActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnSubmit;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField nameJTextField;
-    private javax.swing.JTable networkJTable;
-    private javax.swing.JButton submitJButton;
+    private javax.swing.JLabel mngNetworkTxt;
+    private javax.swing.JLabel nameLabel;
+    private javax.swing.JTable tableNetwork;
+    private javax.swing.JTextField txtName;
     // End of variables declaration//GEN-END:variables
 }

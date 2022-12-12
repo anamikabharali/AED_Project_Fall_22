@@ -46,7 +46,7 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
     
    
      public void populateRequestTable(){
-        DefaultTableModel model = (DefaultTableModel) workRequestJTable1.getModel();
+        DefaultTableModel model = (DefaultTableModel) workRequesttbl.getModel();
         
         model.setRowCount(0);
         for (StatusRequest request : userAccount.getStatusQueue().getStatusRequestList()){
@@ -73,18 +73,18 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane2 = new javax.swing.JScrollPane();
-        workRequestJTable1 = new javax.swing.JTable();
-        addcomplaintbtn = new javax.swing.JButton();
-        emergencybtn = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        workRequesttbl = new javax.swing.JTable();
+        addcomplaintbtn123 = new javax.swing.JButton();
+        emergencybtn123 = new javax.swing.JButton();
+        lbl = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(76, 89, 115));
         setMaximumSize(new java.awt.Dimension(750, 750));
         setMinimumSize(new java.awt.Dimension(750, 750));
         setLayout(null);
 
-        workRequestJTable1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        workRequestJTable1.setModel(new javax.swing.table.DefaultTableModel(
+        workRequesttbl.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        workRequesttbl.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -110,42 +110,42 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(workRequestJTable1);
+        jScrollPane2.setViewportView(workRequesttbl);
 
         add(jScrollPane2);
         jScrollPane2.setBounds(60, 220, 610, 240);
 
-        addcomplaintbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        addcomplaintbtn.setText("Add Complaint");
-        addcomplaintbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        addcomplaintbtn.addActionListener(new java.awt.event.ActionListener() {
+        addcomplaintbtn123.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        addcomplaintbtn123.setText("Add Complaint");
+        addcomplaintbtn123.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        addcomplaintbtn123.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addcomplaintbtnActionPerformed(evt);
+                addcomplaintbtn123ActionPerformed(evt);
             }
         });
-        add(addcomplaintbtn);
-        addcomplaintbtn.setBounds(300, 150, 150, 22);
+        add(addcomplaintbtn123);
+        addcomplaintbtn123.setBounds(300, 150, 150, 22);
 
-        emergencybtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        emergencybtn.setForeground(new java.awt.Color(255, 0, 0));
-        emergencybtn.setText("Emergency!!");
-        emergencybtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        emergencybtn.addActionListener(new java.awt.event.ActionListener() {
+        emergencybtn123.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        emergencybtn123.setForeground(new java.awt.Color(255, 0, 0));
+        emergencybtn123.setText("Emergency!!");
+        emergencybtn123.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        emergencybtn123.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emergencybtnActionPerformed(evt);
+                emergencybtn123ActionPerformed(evt);
             }
         });
-        add(emergencybtn);
-        emergencybtn.setBounds(290, 510, 190, 22);
+        add(emergencybtn123);
+        emergencybtn123.setBounds(290, 510, 190, 22);
 
-        jLabel1.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Supervisor Organisation Panel");
-        add(jLabel1);
-        jLabel1.setBounds(210, 70, 340, 30);
+        lbl.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        lbl.setForeground(new java.awt.Color(255, 255, 255));
+        lbl.setText("Supervisor Organisation Panel");
+        add(lbl);
+        lbl.setBounds(210, 70, 340, 30);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void addcomplaintbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addcomplaintbtnActionPerformed
+    private void addcomplaintbtn123ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addcomplaintbtn123ActionPerformed
         // TODO add your handling code here:
         
          CardLayout layout = (CardLayout) userProcessContainer.getLayout();
@@ -154,22 +154,22 @@ public class SupervisorWorkAreaJPanel extends javax.swing.JPanel {
         
          
         
-    }//GEN-LAST:event_addcomplaintbtnActionPerformed
+    }//GEN-LAST:event_addcomplaintbtn123ActionPerformed
 
-    private void emergencybtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emergencybtnActionPerformed
+    private void emergencybtn123ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emergencybtn123ActionPerformed
         // TODO add your handling code here:
         
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         userProcessContainer.add("FacultyemergencyrequestJpanel", new SupervisorEmergencyRequestJPanel(userProcessContainer, userAccount, enterprise,network));
         layout.next(userProcessContainer);
         
-    }//GEN-LAST:event_emergencybtnActionPerformed
+    }//GEN-LAST:event_emergencybtn123ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton addcomplaintbtn;
-    private javax.swing.JButton emergencybtn;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton addcomplaintbtn123;
+    private javax.swing.JButton emergencybtn123;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable workRequestJTable1;
+    private javax.swing.JLabel lbl;
+    private javax.swing.JTable workRequesttbl;
     // End of variables declaration//GEN-END:variables
 }

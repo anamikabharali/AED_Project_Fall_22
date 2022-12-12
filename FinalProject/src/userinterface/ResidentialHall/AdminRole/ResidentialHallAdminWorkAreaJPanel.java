@@ -22,7 +22,7 @@ public class ResidentialHallAdminWorkAreaJPanel extends javax.swing.JPanel {
         this.network=network;
         this.userProcessContainer = userProcessContainer;
         this.enterprise = enterprise;
-        valueLabel.setText(enterprise.getName());
+        valueLbl.setText(enterprise.getName());
     }
     
     /** This method is called from within the constructor to
@@ -34,11 +34,11 @@ public class ResidentialHallAdminWorkAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        userJButton = new javax.swing.JButton();
-        manageEmployeeJButton = new javax.swing.JButton();
-        manageOrganizationJButton = new javax.swing.JButton();
+        userbtn = new javax.swing.JButton();
+        manageEmployebtn = new javax.swing.JButton();
+        manageOrganizationbtn = new javax.swing.JButton();
         enterpriseLabel = new javax.swing.JLabel();
-        valueLabel = new javax.swing.JLabel();
+        valueLbl = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(76, 89, 115));
         setMaximumSize(new java.awt.Dimension(750, 750));
@@ -49,40 +49,40 @@ public class ResidentialHallAdminWorkAreaJPanel extends javax.swing.JPanel {
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Residential Hall Enterprise Panel");
         add(jLabel1);
-        jLabel1.setBounds(181, 100, 360, 30);
+        jLabel1.setBounds(210, 100, 360, 30);
 
-        userJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        userJButton.setText("Manage User");
-        userJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        userJButton.addActionListener(new java.awt.event.ActionListener() {
+        userbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        userbtn.setText("Manage User");
+        userbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        userbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userJButtonActionPerformed(evt);
+                userbtnActionPerformed(evt);
             }
         });
-        add(userJButton);
-        userJButton.setBounds(500, 350, 150, 60);
+        add(userbtn);
+        userbtn.setBounds(500, 350, 150, 60);
 
-        manageEmployeeJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        manageEmployeeJButton.setText("Manage Employee");
-        manageEmployeeJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        manageEmployeeJButton.addActionListener(new java.awt.event.ActionListener() {
+        manageEmployebtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        manageEmployebtn.setText("Manage Employee");
+        manageEmployebtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        manageEmployebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                manageEmployeeJButtonActionPerformed(evt);
+                manageEmployebtnActionPerformed(evt);
             }
         });
-        add(manageEmployeeJButton);
-        manageEmployeeJButton.setBounds(290, 350, 150, 60);
+        add(manageEmployebtn);
+        manageEmployebtn.setBounds(290, 350, 150, 60);
 
-        manageOrganizationJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        manageOrganizationJButton.setText("Manage Organization");
-        manageOrganizationJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        manageOrganizationJButton.addActionListener(new java.awt.event.ActionListener() {
+        manageOrganizationbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        manageOrganizationbtn.setText("Manage Organization");
+        manageOrganizationbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        manageOrganizationbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                manageOrganizationJButtonActionPerformed(evt);
+                manageOrganizationbtnActionPerformed(evt);
             }
         });
-        add(manageOrganizationJButton);
-        manageOrganizationJButton.setBounds(70, 350, 137, 60);
+        add(manageOrganizationbtn);
+        manageOrganizationbtn.setBounds(70, 350, 137, 60);
 
         enterpriseLabel.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         enterpriseLabel.setForeground(new java.awt.Color(255, 255, 255));
@@ -90,22 +90,22 @@ public class ResidentialHallAdminWorkAreaJPanel extends javax.swing.JPanel {
         add(enterpriseLabel);
         enterpriseLabel.setBounds(220, 200, 120, 40);
 
-        valueLabel.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        valueLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        add(valueLabel);
-        valueLabel.setBounds(320, 207, 170, 20);
+        valueLbl.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        valueLbl.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        add(valueLbl);
+        valueLbl.setBounds(320, 207, 170, 20);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void userJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userJButtonActionPerformed
+    private void userbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userbtnActionPerformed
         // TODO add your handling code here:
         ResidentialHallManageUserAccountJPanel muajp = new ResidentialHallManageUserAccountJPanel(userProcessContainer, enterprise,network);
         userProcessContainer.add("ManageUserAccountJPanel", muajp);
 
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_userJButtonActionPerformed
+    }//GEN-LAST:event_userbtnActionPerformed
 
-    private void manageEmployeeJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageEmployeeJButtonActionPerformed
+    private void manageEmployebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageEmployebtnActionPerformed
 
         ResidentialHallManageEmployeeJPanel manageEmployeeJPanel = new ResidentialHallManageEmployeeJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
         userProcessContainer.add("manageEmployeeJPanel", manageEmployeeJPanel);
@@ -113,24 +113,24 @@ public class ResidentialHallAdminWorkAreaJPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
         
-    }//GEN-LAST:event_manageEmployeeJButtonActionPerformed
+    }//GEN-LAST:event_manageEmployebtnActionPerformed
 
-    private void manageOrganizationJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageOrganizationJButtonActionPerformed
+    private void manageOrganizationbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageOrganizationbtnActionPerformed
 
         ResidentialHallManageOrganizationJPanel manageOrganizationJPanel = new ResidentialHallManageOrganizationJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
         userProcessContainer.add("manageOrganizationJPanel", manageOrganizationJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_manageOrganizationJButtonActionPerformed
+    }//GEN-LAST:event_manageOrganizationbtnActionPerformed
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel enterpriseLabel;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton manageEmployeeJButton;
-    private javax.swing.JButton manageOrganizationJButton;
-    private javax.swing.JButton userJButton;
-    private javax.swing.JLabel valueLabel;
+    private javax.swing.JButton manageEmployebtn;
+    private javax.swing.JButton manageOrganizationbtn;
+    private javax.swing.JButton userbtn;
+    private javax.swing.JLabel valueLbl;
     // End of variables declaration//GEN-END:variables
     
 }

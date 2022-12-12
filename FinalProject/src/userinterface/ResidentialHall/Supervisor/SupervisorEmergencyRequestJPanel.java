@@ -52,11 +52,11 @@ EmergencyRequest  erequest = new EmergencyRequest();
 
         jLabel1 = new javax.swing.JLabel();
         locationlbl = new javax.swing.JLabel();
-        locationtxtfield = new javax.swing.JTextField();
-        sendemergecy = new javax.swing.JButton();
-        combo = new javax.swing.JComboBox();
-        backJButton = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        locationtxt = new javax.swing.JTextField();
+        sendemergecytxt = new javax.swing.JButton();
+        combobox = new javax.swing.JComboBox();
+        backbtn = new javax.swing.JButton();
+        lbl = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(76, 89, 115));
         setMaximumSize(new java.awt.Dimension(750, 750));
@@ -75,58 +75,58 @@ EmergencyRequest  erequest = new EmergencyRequest();
         add(locationlbl);
         locationlbl.setBounds(220, 380, 53, 18);
 
-        locationtxtfield.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        locationtxtfield.addActionListener(new java.awt.event.ActionListener() {
+        locationtxt.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        locationtxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                locationtxtfieldActionPerformed(evt);
+                locationtxtActionPerformed(evt);
             }
         });
-        add(locationtxtfield);
-        locationtxtfield.setBounds(320, 370, 220, 24);
+        add(locationtxt);
+        locationtxt.setBounds(320, 370, 220, 24);
 
-        sendemergecy.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        sendemergecy.setText("Send Emergency");
-        sendemergecy.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        sendemergecy.addActionListener(new java.awt.event.ActionListener() {
+        sendemergecytxt.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        sendemergecytxt.setText("Send Emergency");
+        sendemergecytxt.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        sendemergecytxt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sendemergecyActionPerformed(evt);
+                sendemergecytxtActionPerformed(evt);
             }
         });
-        add(sendemergecy);
-        sendemergecy.setBounds(465, 500, 150, 22);
+        add(sendemergecytxt);
+        sendemergecytxt.setBounds(465, 500, 150, 22);
 
-        combo.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        combo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(combo);
-        combo.setBounds(320, 300, 220, 24);
+        combobox.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        combobox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(combobox);
+        combobox.setBounds(320, 300, 220, 24);
 
-        backJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        backJButton.setText("Back");
-        backJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        backbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        backbtn.setText("Back");
+        backbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        backbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                backbtnActionPerformed(evt);
             }
         });
-        add(backJButton);
-        backJButton.setBounds(90, 510, 80, 22);
+        add(backbtn);
+        backbtn.setBounds(90, 510, 80, 22);
 
-        jLabel2.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setText("Supervisor Emergency Request");
-        add(jLabel2);
-        jLabel2.setBounds(210, 120, 340, 30);
+        lbl.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        lbl.setForeground(new java.awt.Color(255, 255, 255));
+        lbl.setText("Supervisor Emergency Request");
+        add(lbl);
+        lbl.setBounds(210, 120, 340, 30);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void sendemergecyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendemergecyActionPerformed
+    private void sendemergecytxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendemergecytxtActionPerformed
         // TODO add your handling code here:
         
-         String location = locationtxtfield.getText();
+         String location = locationtxt.getText();
         erequest.setLocation(location);
-        erequest.setEmergencytype((Organization.Type) combo.getSelectedItem());
+        erequest.setEmergencytype((Organization.Type) combobox.getSelectedItem());
         erequest.setEmail(userAccount.getEmail());
          Organization org = null;
-         Organization.Type sel = (Organization.Type) combo.getSelectedItem();
+         Organization.Type sel = (Organization.Type) combobox.getSelectedItem();
       if(location.isEmpty())
       {
         System.out.println("Inside else block of sendComplaintActionPerformed ");
@@ -195,9 +195,9 @@ EmergencyRequest  erequest = new EmergencyRequest();
         
             
         }
-    }//GEN-LAST:event_sendemergecyActionPerformed
+    }//GEN-LAST:event_sendemergecytxtActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void backbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backbtnActionPerformed
 
         userProcessContainer.remove(this);
         Component[] componentArray = userProcessContainer.getComponents();
@@ -206,35 +206,35 @@ EmergencyRequest  erequest = new EmergencyRequest();
         
         CardLayout layout = (CardLayout)userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_backbtnActionPerformed
 
-    private void locationtxtfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_locationtxtfieldActionPerformed
+    private void locationtxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_locationtxtActionPerformed
         // TODO add your handling code here:
         
-        if(locationtxtfield.getText()!=""){
-        message1 = locationtxtfield.getText();
+        if(locationtxt.getText()!=""){
+        message1 = locationtxt.getText();
         System.out.println("sendComplaintActionPerformed 'messageJTextField' " + message1);
         }
         else JOptionPane.showMessageDialog(null,"Location field is empty");
         
         
-    }//GEN-LAST:event_locationtxtfieldActionPerformed
+    }//GEN-LAST:event_locationtxtActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton backJButton;
-    private javax.swing.JComboBox combo;
+    private javax.swing.JButton backbtn;
+    private javax.swing.JComboBox combobox;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel lbl;
     private javax.swing.JLabel locationlbl;
-    private javax.swing.JTextField locationtxtfield;
-    private javax.swing.JButton sendemergecy;
+    private javax.swing.JTextField locationtxt;
+    private javax.swing.JButton sendemergecytxt;
     // End of variables declaration//GEN-END:variables
 
     private void populateComboBox() {
-         combo.removeAllItems();
-        combo.addItem(Organization.Type.Theft);
-        combo.addItem(Organization.Type.Felony);
-        combo.addItem(Organization.Type.Misconduct);
+         combobox.removeAllItems();
+        combobox.addItem(Organization.Type.Theft);
+        combobox.addItem(Organization.Type.Felony);
+        combobox.addItem(Organization.Type.Misconduct);
     }
 }
