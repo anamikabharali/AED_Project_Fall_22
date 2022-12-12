@@ -47,7 +47,7 @@ public class TenantWorkAreaJPanel extends javax.swing.JPanel {
     
    
      public void populateRequestTable(){
-        DefaultTableModel model = (DefaultTableModel) workRequestJTable1.getModel();
+        DefaultTableModel model = (DefaultTableModel) workRequestJT.getModel();
         
         model.setRowCount(0);
         for (StatusRequest request : userAccount.getStatusQueue().getStatusRequestList()){
@@ -74,9 +74,9 @@ public class TenantWorkAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jScrollPane2 = new javax.swing.JScrollPane();
-        workRequestJTable1 = new javax.swing.JTable();
-        addcomplaintbtn = new javax.swing.JButton();
-        emergencybtn = new javax.swing.JButton();
+        workRequestJT = new javax.swing.JTable();
+        addcomplaintBtn = new javax.swing.JButton();
+        emergencyBtn = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(76, 89, 115));
@@ -84,8 +84,8 @@ public class TenantWorkAreaJPanel extends javax.swing.JPanel {
         setMinimumSize(new java.awt.Dimension(750, 750));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        workRequestJTable1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        workRequestJTable1.setModel(new javax.swing.table.DefaultTableModel(
+        workRequestJT.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        workRequestJT.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -111,30 +111,30 @@ public class TenantWorkAreaJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        jScrollPane2.setViewportView(workRequestJTable1);
+        jScrollPane2.setViewportView(workRequestJT);
 
         add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 160, 610, 310));
 
-        addcomplaintbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        addcomplaintbtn.setText("Add Complaint");
-        addcomplaintbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        addcomplaintbtn.addActionListener(new java.awt.event.ActionListener() {
+        addcomplaintBtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        addcomplaintBtn.setText("Add Complaint");
+        addcomplaintBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        addcomplaintBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addcomplaintbtnActionPerformed(evt);
+                addcomplaintBtnActionPerformed(evt);
             }
         });
-        add(addcomplaintbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 110, -1));
+        add(addcomplaintBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, 110, -1));
 
-        emergencybtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        emergencybtn.setForeground(new java.awt.Color(255, 0, 0));
-        emergencybtn.setText("Emergency!!");
-        emergencybtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        emergencybtn.addActionListener(new java.awt.event.ActionListener() {
+        emergencyBtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        emergencyBtn.setForeground(new java.awt.Color(255, 0, 0));
+        emergencyBtn.setText("Emergency!!");
+        emergencyBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        emergencyBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emergencybtnActionPerformed(evt);
+                emergencyBtnActionPerformed(evt);
             }
         });
-        add(emergencybtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 500, 190, -1));
+        add(emergencyBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 500, 190, -1));
 
         jLabel1.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -142,7 +142,7 @@ public class TenantWorkAreaJPanel extends javax.swing.JPanel {
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 50, 300, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void addcomplaintbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addcomplaintbtnActionPerformed
+    private void addcomplaintBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addcomplaintBtnActionPerformed
         // TODO add your handling code here:
         
          CardLayout layout = (CardLayout) userProcessContainer.getLayout();
@@ -151,22 +151,22 @@ public class TenantWorkAreaJPanel extends javax.swing.JPanel {
         
          
         
-    }//GEN-LAST:event_addcomplaintbtnActionPerformed
+    }//GEN-LAST:event_addcomplaintBtnActionPerformed
 
-    private void emergencybtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emergencybtnActionPerformed
+    private void emergencyBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emergencyBtnActionPerformed
         // TODO add your handling code here:
         
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         userProcessContainer.add("FacultyemergencyrequestJpanel", new TenantEmergencyRequestJPanel(userProcessContainer, userAccount, enterprise,network));
         layout.next(userProcessContainer);
         
-    }//GEN-LAST:event_emergencybtnActionPerformed
+    }//GEN-LAST:event_emergencyBtnActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton addcomplaintbtn;
-    private javax.swing.JButton emergencybtn;
+    private javax.swing.JButton addcomplaintBtn;
+    private javax.swing.JButton emergencyBtn;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTable workRequestJTable1;
+    private javax.swing.JTable workRequestJT;
     // End of variables declaration//GEN-END:variables
 }
