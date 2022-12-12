@@ -132,14 +132,14 @@ public class ValidateMail {
             ArrayList<String> emailReceipients = new ArrayList<>();
             //emailReceipients.add("srivaishnavi.a@gmail.com");
             emailReceipients.add(receipent);
-		mimeMessage = new MimeMessage(newSession);
+            mimeMessage = new MimeMessage(newSession);
 		
-		for (String rec:emailReceipients)
-		{
-			mimeMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(rec));
-		}
-		mimeMessage.setSubject(emailSubject);
-                mimeMessage.setContent(emailBody, "text/html");
+            for (String rec:emailReceipients)
+            {
+		mimeMessage.addRecipient(Message.RecipientType.TO, new InternetAddress(rec));
+            }
+            mimeMessage.setSubject(emailSubject);
+            mimeMessage.setContent(emailBody, "text/html");
 	   
       // CREATE MIMEMESSAGE 
 	    // CREATE MESSAGE BODY PARTS 
