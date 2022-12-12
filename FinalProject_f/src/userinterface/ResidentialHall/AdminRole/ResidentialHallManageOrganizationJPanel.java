@@ -64,10 +64,10 @@ public class ResidentialHallManageOrganizationJPanel extends javax.swing.JPanel 
 
         jScrollPane1 = new javax.swing.JScrollPane();
         organizationJT = new javax.swing.JTable();
-        addJButton = new javax.swing.JButton();
+        addJBtn = new javax.swing.JButton();
         organizationJCB = new javax.swing.JComboBox();
         jLabel1 = new javax.swing.JLabel();
-        backJButton = new javax.swing.JButton();
+        backJBtn = new javax.swing.JButton();
         jLResHallMngOrg = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(76, 89, 115));
@@ -110,16 +110,16 @@ public class ResidentialHallManageOrganizationJPanel extends javax.swing.JPanel 
         add(jScrollPane1);
         jScrollPane1.setBounds(40, 190, 660, 92);
 
-        addJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        addJButton.setText("Add Organization");
-        addJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        addJButton.addActionListener(new java.awt.event.ActionListener() {
+        addJBtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        addJBtn.setText("Add Organization");
+        addJBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        addJBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addJButtonActionPerformed(evt);
+                addJBtnActionPerformed(evt);
             }
         });
-        add(addJButton);
-        addJButton.setBounds(450, 450, 114, 22);
+        add(addJBtn);
+        addJBtn.setBounds(450, 450, 114, 22);
 
         organizationJCB.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         organizationJCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
@@ -137,16 +137,16 @@ public class ResidentialHallManageOrganizationJPanel extends javax.swing.JPanel 
         add(jLabel1);
         jLabel1.setBounds(178, 360, 130, 18);
 
-        backJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        backJButton.setText("<< Back");
-        backJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        backJBtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        backJBtn.setText("<< Back");
+        backJBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        backJBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                backJBtnActionPerformed(evt);
             }
         });
-        add(backJButton);
-        backJButton.setBounds(140, 450, 54, 22);
+        add(backJBtn);
+        backJBtn.setBounds(140, 450, 54, 22);
 
         jLResHallMngOrg.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
         jLResHallMngOrg.setForeground(new java.awt.Color(255, 255, 255));
@@ -155,7 +155,7 @@ public class ResidentialHallManageOrganizationJPanel extends javax.swing.JPanel 
         jLResHallMngOrg.setBounds(151, 100, 410, 30);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void addJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJButtonActionPerformed
+    private void addJBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJBtnActionPerformed
          
         Type type = (Type) organizationJCB.getSelectedItem();
        
@@ -166,22 +166,22 @@ public class ResidentialHallManageOrganizationJPanel extends javax.swing.JPanel 
         
             
         populateTable();
-    }//GEN-LAST:event_addJButtonActionPerformed
+    }//GEN-LAST:event_addJBtnActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void backJBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJBtnActionPerformed
 
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_backJBtnActionPerformed
 
     private void organizationJCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organizationJCBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_organizationJCBActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton addJButton;
-    private javax.swing.JButton backJButton;
+    private javax.swing.JButton addJBtn;
+    private javax.swing.JButton backJBtn;
     private javax.swing.JLabel jLResHallMngOrg;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
