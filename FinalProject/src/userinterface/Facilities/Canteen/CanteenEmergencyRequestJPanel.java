@@ -126,17 +126,25 @@ public class CanteenEmergencyRequestJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
        
         
-        String location = null;
+        String location = locationfiield.getText();
         erequest.setLocation(location);
         erequest.setEmergencytype((Organization.Type) combo.getSelectedItem());
         erequest.setEmail(userAccount.getEmail());
          Organization org = null;
          Organization.Type sel = (Organization.Type) combo.getSelectedItem();
-      if(location != null)
-      {   
-        if(sel.equals(Organization.Type.Theft))
+      if(location.isEmpty())
+      {
+        System.out.println("Inside else block of sendComplaintActionPerformed ");
+            JOptionPane.showMessageDialog(null,"Location field is empty");     
+    }
+        
+        else
+        {
+            
+            
+            if(sel.equals(Organization.Type.Theft))
         {   
-         for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
+        for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
             {
                   for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
                   {
@@ -144,7 +152,8 @@ public class CanteenEmergencyRequestJPanel extends javax.swing.JPanel {
                 org = organization;
                 break;
             } 
-        }}
+                  }
+        }
         if (org!=null){
             org.getStatusQueue().getStatusRequestList().add(erequest);
             userAccount.getStatusQueue().getStatusRequestList().add(erequest);
@@ -153,15 +162,14 @@ public class CanteenEmergencyRequestJPanel extends javax.swing.JPanel {
           else if(sel.equals(Organization.Type.Felony))
         {
         
-         for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
+        for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
             {
                   for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
                   {
             if (organization instanceof FelonyOrganization){
                 org = organization;
                 break;
-            } 
-                  }
+            } }
         }
         if (org!=null){
             org.getStatusQueue().getStatusRequestList().add(erequest);
@@ -180,23 +188,17 @@ public class CanteenEmergencyRequestJPanel extends javax.swing.JPanel {
                 org = organization;
                 break;
             } 
-                  }
+            }
         }
         if (org!=null){
             org.getStatusQueue().getStatusRequestList().add(erequest);
             userAccount.getStatusQueue().getStatusRequestList().add(erequest);
         }
-      }
+        }
         
-         JOptionPane.showMessageDialog(null,"Your emergency request has been sent! An officer will notify you shortly");
+          JOptionPane.showMessageDialog(null,"Your emergency request has been sent! An officer will notify you shortly");
         
     }
-        
-        else
-        {
-            System.out.println("Inside else block of sendComplaintActionPerformed ");
-            JOptionPane.showMessageDialog(null,"Location field is empty");
-        }
         
     }//GEN-LAST:event_sendemergencyActionPerformed
 

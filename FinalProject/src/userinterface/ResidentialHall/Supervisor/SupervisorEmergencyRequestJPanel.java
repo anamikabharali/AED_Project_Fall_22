@@ -121,7 +121,7 @@ EmergencyRequest  erequest = new EmergencyRequest();
     private void sendemergecyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendemergecyActionPerformed
         // TODO add your handling code here:
         
-         String location = message1;
+         String location = locationtxtfield.getText();
         erequest.setLocation(location);
         erequest.setEmergencytype((Organization.Type) combo.getSelectedItem());
         erequest.setEmail(userAccount.getEmail());

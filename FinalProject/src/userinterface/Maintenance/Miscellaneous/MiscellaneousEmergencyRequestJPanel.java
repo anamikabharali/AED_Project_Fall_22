@@ -122,7 +122,17 @@ EmergencyRequest  erequest = new EmergencyRequest();
         erequest.setEmail(userAccount.getEmail());
          Organization org = null;
          Organization.Type sel = (Organization.Type) combo.getSelectedItem();
-        if(sel.equals(Organization.Type.Theft))
+      if(location.isEmpty())
+      {
+        System.out.println("Inside else block of sendComplaintActionPerformed ");
+            JOptionPane.showMessageDialog(null,"Location field is empty");     
+    }
+        
+        else
+        {
+            
+            
+            if(sel.equals(Organization.Type.Theft))
         {   
         for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
             {
@@ -176,8 +186,9 @@ EmergencyRequest  erequest = new EmergencyRequest();
         }
         }
         
-         JOptionPane.showMessageDialog(null,"Your emergency request has been sent! An officer will notify you shortly");
+          JOptionPane.showMessageDialog(null,"Your emergency request has been sent! An officer will notify you shortly");
         
+        }
     }//GEN-LAST:event_sendemergecyActionPerformed
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed

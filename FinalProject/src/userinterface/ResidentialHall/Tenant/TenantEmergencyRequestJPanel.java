@@ -135,15 +135,23 @@ public class TenantEmergencyRequestJPanel extends javax.swing.JPanel {
     private void sendemergencyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendemergencyActionPerformed
         // TODO add your handling code here:
         
-        String location = message1;
+        String location = locationtxtfield.getText();
         erequest.setLocation(location);
         erequest.setEmergencytype((Organization.Type) combo.getSelectedItem());
+        erequest.setEmail(userAccount.getEmail());
          Organization org = null;
          Organization.Type sel = (Organization.Type) combo.getSelectedItem();
-         
-      if(location != null)
+      if(location.isEmpty())
       {
-        if(sel.equals(Organization.Type.Theft))
+        System.out.println("Inside else block of sendComplaintActionPerformed ");
+            JOptionPane.showMessageDialog(null,"Location field is empty");     
+    }
+        
+        else
+        {
+            
+            
+            if(sel.equals(Organization.Type.Theft))
         {   
         for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
             {
@@ -170,8 +178,7 @@ public class TenantEmergencyRequestJPanel extends javax.swing.JPanel {
             if (organization instanceof FelonyOrganization){
                 org = organization;
                 break;
-            } 
-            }
+            } }
         }
         if (org!=null){
             org.getStatusQueue().getStatusRequestList().add(erequest);
@@ -190,7 +197,6 @@ public class TenantEmergencyRequestJPanel extends javax.swing.JPanel {
                 org = organization;
                 break;
             } 
-            
             }
         }
         if (org!=null){
@@ -198,14 +204,10 @@ public class TenantEmergencyRequestJPanel extends javax.swing.JPanel {
             userAccount.getStatusQueue().getStatusRequestList().add(erequest);
         }
         }
-         JOptionPane.showMessageDialog(null,"Your emergency request has been sent! An officer will notify you shortly");
         
-    }
+          JOptionPane.showMessageDialog(null,"Your emergency request has been sent! An officer will notify you shortly");
         
-        else
-        {
-            System.out.println("Inside else block of sendComplaintActionPerformed ");
-            JOptionPane.showMessageDialog(null,"Location field is empty");
+            
         }
     }//GEN-LAST:event_sendemergencyActionPerformed
 
