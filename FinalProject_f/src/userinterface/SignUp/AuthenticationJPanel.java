@@ -20,11 +20,6 @@ import userinterface.Police.felony.FelonyWorkAreaJPanel;
 //import utility.Mail;
 import utility.ValidateMail;
 
-
-
-
-
-
 /**
  *
  * @author srivaishnaviaekkati
