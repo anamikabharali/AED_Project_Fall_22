@@ -23,7 +23,7 @@ public class MaintenanceAdminWorkAreaJPanel extends javax.swing.JPanel {
         this.network=network;
         this.userProcessContainer = userProcessContainer;
         this.enterprise = enterprise;
-        valueLabel.setText(enterprise.getName());
+        valuelbl.setText(enterprise.getName());
     }
     
     /** This method is called from within the constructor to
@@ -35,11 +35,11 @@ public class MaintenanceAdminWorkAreaJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        userJButton = new javax.swing.JButton();
-        manageEmployeeJButton = new javax.swing.JButton();
-        manageOrganizationJButton = new javax.swing.JButton();
-        enterpriseLabel = new javax.swing.JLabel();
-        valueLabel = new javax.swing.JLabel();
+        userbtn = new javax.swing.JButton();
+        manageEmployeebtn = new javax.swing.JButton();
+        manageOrganizationbtn = new javax.swing.JButton();
+        enterpriselbl = new javax.swing.JLabel();
+        valuelbl = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(76, 89, 115));
         setMaximumSize(new java.awt.Dimension(750, 750));
@@ -51,53 +51,54 @@ public class MaintenanceAdminWorkAreaJPanel extends javax.swing.JPanel {
         jLabel1.setText("Maintenance Enterprise Panel");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 100, -1, -1));
 
-        userJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        userJButton.setText("Manage User");
-        userJButton.addActionListener(new java.awt.event.ActionListener() {
+        userbtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        userbtn.setText("Manage User");
+        userbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userJButtonActionPerformed(evt);
+                userbtnActionPerformed(evt);
             }
         });
-        add(userJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 350, 150, 60));
+        add(userbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 350, 150, 60));
 
-        manageEmployeeJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        manageEmployeeJButton.setText("Manage Employee");
-        manageEmployeeJButton.addActionListener(new java.awt.event.ActionListener() {
+        manageEmployeebtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        manageEmployeebtn.setText("Manage Employee");
+        manageEmployeebtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                manageEmployeeJButtonActionPerformed(evt);
+                manageEmployeebtnActionPerformed(evt);
             }
         });
-        add(manageEmployeeJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 350, 150, 60));
+        add(manageEmployeebtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 350, 150, 60));
 
-        manageOrganizationJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
-        manageOrganizationJButton.setText("Manage Organization");
-        manageOrganizationJButton.addActionListener(new java.awt.event.ActionListener() {
+        manageOrganizationbtn.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        manageOrganizationbtn.setText("Manage Organization");
+        manageOrganizationbtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                manageOrganizationJButtonActionPerformed(evt);
+                manageOrganizationbtnActionPerformed(evt);
             }
         });
-        add(manageOrganizationJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, -1, 60));
+        add(manageOrganizationbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, -1, 60));
 
-        enterpriseLabel.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        enterpriseLabel.setForeground(new java.awt.Color(255, 255, 255));
-        enterpriseLabel.setText("Enterprise :");
-        add(enterpriseLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 210, 70, 30));
+        enterpriselbl.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        enterpriselbl.setForeground(new java.awt.Color(255, 255, 255));
+        enterpriselbl.setText("Enterprise :");
+        add(enterpriselbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 210, 70, 30));
 
-        valueLabel.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        valueLabel.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
-        add(valueLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, 180, 30));
+        valuelbl.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        valuelbl.setForeground(new java.awt.Color(255, 255, 255));
+        valuelbl.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        add(valuelbl, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 200, 180, 30));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void userJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userJButtonActionPerformed
+    private void userbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userbtnActionPerformed
         // TODO add your handling code here:
         MaintenanceManageUserAccountJPanel muajp = new MaintenanceManageUserAccountJPanel(userProcessContainer, enterprise,network);
         userProcessContainer.add("ManageUserAccountJPanel", muajp);
 
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_userJButtonActionPerformed
+    }//GEN-LAST:event_userbtnActionPerformed
 
-    private void manageEmployeeJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageEmployeeJButtonActionPerformed
+    private void manageEmployeebtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageEmployeebtnActionPerformed
 
         MaintenanceManageEmployeeJPanel manageEmployeeJPanel = new MaintenanceManageEmployeeJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
         userProcessContainer.add("manageEmployeeJPanel", manageEmployeeJPanel);
@@ -105,24 +106,24 @@ public class MaintenanceAdminWorkAreaJPanel extends javax.swing.JPanel {
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
         
-    }//GEN-LAST:event_manageEmployeeJButtonActionPerformed
+    }//GEN-LAST:event_manageEmployeebtnActionPerformed
 
-    private void manageOrganizationJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageOrganizationJButtonActionPerformed
+    private void manageOrganizationbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_manageOrganizationbtnActionPerformed
 
         MaintenanceManageOrganizationJPanel manageOrganizationJPanel = new MaintenanceManageOrganizationJPanel(userProcessContainer, enterprise.getOrganizationDirectory());
         userProcessContainer.add("manageOrganizationJPanel", manageOrganizationJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_manageOrganizationJButtonActionPerformed
+    }//GEN-LAST:event_manageOrganizationbtnActionPerformed
     
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel enterpriseLabel;
+    private javax.swing.JLabel enterpriselbl;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JButton manageEmployeeJButton;
-    private javax.swing.JButton manageOrganizationJButton;
-    private javax.swing.JButton userJButton;
-    private javax.swing.JLabel valueLabel;
+    private javax.swing.JButton manageEmployeebtn;
+    private javax.swing.JButton manageOrganizationbtn;
+    private javax.swing.JButton userbtn;
+    private javax.swing.JLabel valuelbl;
     // End of variables declaration//GEN-END:variables
     
 }
