@@ -30,8 +30,8 @@ public class CanteenEmergencyRequestJPanel extends javax.swing.JPanel {
      * Creates new form CanteenEmergencyRequestJPanel
      */
     
-    
-        private JPanel userProcessContainer;
+    public String message1 = null;
+    private JPanel userProcessContainer;
     private Enterprise enterprise;
     private UserAccount userAccount; 
     private Network network;
@@ -60,82 +60,66 @@ public class CanteenEmergencyRequestJPanel extends javax.swing.JPanel {
         combo = new javax.swing.JComboBox();
         backJButton = new javax.swing.JButton();
         locationfiield = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(0, 153, 153));
+        setBackground(new java.awt.Color(76, 89, 115));
         setMaximumSize(new java.awt.Dimension(750, 750));
         setMinimumSize(new java.awt.Dimension(750, 750));
+        setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Emergency Type");
+        add(jLabel1);
+        jLabel1.setBounds(190, 260, 101, 18);
 
-        locationlbl.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        locationlbl.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        locationlbl.setForeground(new java.awt.Color(255, 255, 255));
         locationlbl.setText("Location");
+        add(locationlbl);
+        locationlbl.setBounds(230, 350, 53, 18);
 
-        sendemergency.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        sendemergency.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         sendemergency.setText("Send Emergency");
+        sendemergency.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         sendemergency.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 sendemergencyActionPerformed(evt);
             }
         });
+        add(sendemergency);
+        sendemergency.setBounds(480, 510, 105, 22);
 
         combo.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
         combo.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(combo);
+        combo.setBounds(340, 250, 190, 23);
 
-        backJButton.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        backJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         backJButton.setText("Back");
+        backJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
             }
         });
+        add(backJButton);
+        backJButton.setBounds(160, 510, 34, 22);
 
         locationfiield.setFont(new java.awt.Font("Times New Roman", 1, 14)); // NOI18N
+        locationfiield.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                locationfiieldActionPerformed(evt);
+            }
+        });
+        add(locationfiield);
+        locationfiield.setBounds(340, 340, 190, 23);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(50, 50, 50)
-                        .addComponent(backJButton))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(283, 283, 283)
-                        .addComponent(sendemergency)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(105, 105, 105)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(locationlbl)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(locationfiield, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 298, Short.MAX_VALUE)
-                        .addComponent(combo, javax.swing.GroupLayout.PREFERRED_SIZE, 99, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(147, 147, 147))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(174, 174, 174)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel1)
-                            .addComponent(combo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(111, 111, 111)
-                        .addComponent(locationlbl))
-                    .addComponent(locationfiield, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 114, Short.MAX_VALUE)
-                .addComponent(sendemergency)
-                .addGap(106, 106, 106)
-                .addComponent(backJButton)
-                .addGap(161, 161, 161))
-        );
+        jLabel2.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("Canteen Emergency Request");
+        add(jLabel2);
+        jLabel2.setBounds(220, 110, 340, 29);
     }// </editor-fold>//GEN-END:initComponents
 
     private void sendemergencyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sendemergencyActionPerformed
@@ -148,9 +132,19 @@ public class CanteenEmergencyRequestJPanel extends javax.swing.JPanel {
         erequest.setEmail(userAccount.getEmail());
          Organization org = null;
          Organization.Type sel = (Organization.Type) combo.getSelectedItem();
-        if(sel.equals(Organization.Type.Theft))
+      if(location.isEmpty())
+      {
+        System.out.println("Inside else block of sendComplaintActionPerformed ");
+            JOptionPane.showMessageDialog(null,"Location field is empty");     
+    }
+        
+        else
+        {
+            
+            
+            if(sel.equals(Organization.Type.Theft))
         {   
-         for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
+        for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
             {
                   for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
                   {
@@ -158,7 +152,8 @@ public class CanteenEmergencyRequestJPanel extends javax.swing.JPanel {
                 org = organization;
                 break;
             } 
-        }}
+                  }
+        }
         if (org!=null){
             org.getStatusQueue().getStatusRequestList().add(erequest);
             userAccount.getStatusQueue().getStatusRequestList().add(erequest);
@@ -167,15 +162,14 @@ public class CanteenEmergencyRequestJPanel extends javax.swing.JPanel {
           else if(sel.equals(Organization.Type.Felony))
         {
         
-         for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
+        for (Enterprise enterprise: network.getEnterpriseDirectory().getEnterpriseList())
             {
                   for(Organization organization:enterprise.getOrganizationDirectory().getOrganizationList())
                   {
             if (organization instanceof FelonyOrganization){
                 org = organization;
                 break;
-            } 
-                  }
+            } }
         }
         if (org!=null){
             org.getStatusQueue().getStatusRequestList().add(erequest);
@@ -194,7 +188,7 @@ public class CanteenEmergencyRequestJPanel extends javax.swing.JPanel {
                 org = organization;
                 break;
             } 
-                  }
+            }
         }
         if (org!=null){
             org.getStatusQueue().getStatusRequestList().add(erequest);
@@ -202,15 +196,9 @@ public class CanteenEmergencyRequestJPanel extends javax.swing.JPanel {
         }
         }
         
+          JOptionPane.showMessageDialog(null,"Your emergency request has been sent! An officer will notify you shortly");
         
-        
-        
-        
-        
-         JOptionPane.showMessageDialog(null,"Your emergency request has been sent! An officer will notify you shortly");
-        
-        
-        
+    }
         
     }//GEN-LAST:event_sendemergencyActionPerformed
 
@@ -226,11 +214,23 @@ public class CanteenEmergencyRequestJPanel extends javax.swing.JPanel {
 
     }//GEN-LAST:event_backJButtonActionPerformed
 
+    private void locationfiieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_locationfiieldActionPerformed
+        // TODO add your handling code here:
+        
+        if(locationfiield.getText()!=""){
+        message1 = locationfiield.getText();
+        System.out.println("sendComplaintActionPerformed 'messageJTextField' " + message1);
+        }
+        else JOptionPane.showMessageDialog(null,"Location field is empty");
+        
+    }//GEN-LAST:event_locationfiieldActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backJButton;
     private javax.swing.JComboBox combo;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JTextField locationfiield;
     private javax.swing.JLabel locationlbl;
     private javax.swing.JButton sendemergency;

@@ -28,7 +28,6 @@ public class ValidateMail {
         public void preparetoSendEmail(String emailSubject, String emailBody, String receipent) throws MessagingException, AddressException, IOException{
                 setupServerProperties();
 		mimeMessage = draftEmail(emailSubject,emailBody,receipent);
-                
 		sendEmail();
         }
         
@@ -63,7 +62,6 @@ public class ValidateMail {
 		transport.sendMessage(mimeMessage, mimeMessage.getAllRecipients());
 		transport.close();
 		System.out.println("Email successfully sent!!!");
-                
 	}
         
         
@@ -108,7 +106,7 @@ public class ValidateMail {
 
      
      
-                    String file = "/Users/akshitapathania/Downloads//620287eaa88698331bc3940e_61de99e8171cc6468145551d_flowchart-symbols-800.png";
+                    String file = "//Users//srivaishnaviaekkati//Downloads//model_diag.jpeg";
                     String fileName = "Hello";
                     messageBodyPart = new MimeBodyPart();   
                     DataSource source = new FileDataSource(file);      
@@ -142,7 +140,6 @@ public class ValidateMail {
 		}
 		mimeMessage.setSubject(emailSubject);
                 mimeMessage.setContent(emailBody, "text/html");
-                
 	   
       // CREATE MIMEMESSAGE 
 	    // CREATE MESSAGE BODY PARTS 
