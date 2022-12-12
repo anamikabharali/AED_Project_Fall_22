@@ -34,7 +34,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
         this.sys=sys;
                this.email=email;  
         PopNetworkCombo();
-        emailtextfield.setText(email);
+        emailTF.setText(email);
         
     }
          
@@ -53,15 +53,15 @@ public class SignUpJPanel extends javax.swing.JPanel {
         if(sys.getNetworkList().size()>0)
     {
         
-          combonetwork.removeAllItems();
+          networkCB.removeAllItems();
        for(Network net: sys.getNetworkList())
        {
            
-           combonetwork.addItem(net); 
+           networkCB.addItem(net); 
        
        
        }
-       comboenterprise.setEnabled(true);
+       enterpriseCB.setEnabled(true);
         
        
     }
@@ -75,7 +75,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
     
      public void PopEnterpriseCombo(Network network)
     {        
-       comboenterprise.removeAllItems();
+       enterpriseCB.removeAllItems();
              //Network network = (Network) combonetwork.getSelectedItem();
          
            if(network.getEnterpriseDirectory().getEnterpriseList().size()>0)
@@ -84,7 +84,7 @@ public class SignUpJPanel extends javax.swing.JPanel {
                
                 for(Enterprise en: network.getEnterpriseDirectory().getEnterpriseList())
                 {
-                     comboenterprise.addItem(en);
+                     enterpriseCB.addItem(en);
                 }
   
           
@@ -92,8 +92,8 @@ public class SignUpJPanel extends javax.swing.JPanel {
            
            else
            {
-                combo_organization.setEnabled(false);
-                comborole.setEnabled(false);
+                combo_organizationCB.setEnabled(false);
+                roleCB.setEnabled(false);
                 JOptionPane.showMessageDialog(null,"Sorry !No enterprise available for this network");
            
                
@@ -104,19 +104,19 @@ public class SignUpJPanel extends javax.swing.JPanel {
   public void PopOrganizationCombo(Enterprise ent)
     { 
         
-         combo_organization.removeAllItems();
+         combo_organizationCB.removeAllItems();
         
-          combo_organization.setEnabled(true);
+          combo_organizationCB.setEnabled(true);
                   
              if (ent.getOrganizationDirectory().getOrganizationList().size() > 0) {
                 for (Organization organization : ent.getOrganizationDirectory().getOrganizationList()) {
-                    combo_organization.addItem(organization);
+                    combo_organizationCB.addItem(organization);
                 }
             }
              else
              {
              
-                  comborole.setEnabled(false);
+                  roleCB.setEnabled(false);
                  JOptionPane.showMessageDialog(null,"Sorry !No organization available for this network");
              
              }
@@ -127,14 +127,14 @@ public class SignUpJPanel extends javax.swing.JPanel {
      public void PopRoleCombo(Organization org)
     { 
         
-            comborole.removeAllItems();
-             comborole.setEnabled(true);
+            roleCB.removeAllItems();
+             roleCB.setEnabled(true);
      
              
                   
              if (org.getSupportedRole().size()>0) {
                 for (Role role : org.getSupportedRole()) {
-                    comborole.addItem(role);
+                    roleCB.addItem(role);
                 }
             }
            
@@ -150,24 +150,24 @@ public class SignUpJPanel extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jEditorPane1 = new javax.swing.JEditorPane();
-        jLabel1 = new javax.swing.JLabel();
+        jLSignUp = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        signupbtn = new javax.swing.JButton();
-        emailtextfield = new javax.swing.JTextField();
-        combonetwork = new javax.swing.JComboBox();
-        comboenterprise = new javax.swing.JComboBox();
-        combo_organization = new javax.swing.JComboBox();
+        signupBT = new javax.swing.JButton();
+        emailTF = new javax.swing.JTextField();
+        networkCB = new javax.swing.JComboBox();
+        enterpriseCB = new javax.swing.JComboBox();
+        combo_organizationCB = new javax.swing.JComboBox();
         jLabel6 = new javax.swing.JLabel();
-        usernametxtfield = new javax.swing.JTextField();
+        usernameTF = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        passwordtxtfield = new javax.swing.JTextField();
+        passwordTF = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
-        emptxtfield = new javax.swing.JTextField();
+        empNameTF = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        comborole = new javax.swing.JComboBox();
+        roleCB = new javax.swing.JComboBox();
         jLabel10 = new javax.swing.JLabel();
 
         jScrollPane1.setViewportView(jEditorPane1);
@@ -177,11 +177,11 @@ public class SignUpJPanel extends javax.swing.JPanel {
         setMinimumSize(new java.awt.Dimension(750, 750));
         setLayout(null);
 
-        jLabel1.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setText("Sign Up Form");
-        add(jLabel1);
-        jLabel1.setBounds(278, 88, 144, 30);
+        jLSignUp.setFont(new java.awt.Font("Optima", 1, 24)); // NOI18N
+        jLSignUp.setForeground(new java.awt.Color(255, 255, 255));
+        jLSignUp.setText("Sign Up Form");
+        add(jLSignUp);
+        jLSignUp.setBounds(278, 88, 144, 30);
 
         jLabel2.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -207,52 +207,52 @@ public class SignUpJPanel extends javax.swing.JPanel {
         add(jLabel5);
         jLabel5.setBounds(400, 271, 53, 18);
 
-        signupbtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        signupbtn.setText("Sign Up");
-        signupbtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        signupbtn.addActionListener(new java.awt.event.ActionListener() {
+        signupBT.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        signupBT.setText("Sign Up");
+        signupBT.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        signupBT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                signupbtnActionPerformed(evt);
+                signupBTActionPerformed(evt);
             }
         });
-        add(signupbtn);
-        signupbtn.setBounds(342, 491, 95, 22);
+        add(signupBT);
+        signupBT.setBounds(342, 491, 95, 22);
 
-        emailtextfield.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        emailtextfield.addActionListener(new java.awt.event.ActionListener() {
+        emailTF.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        emailTF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailtextfieldActionPerformed(evt);
+                emailTFActionPerformed(evt);
             }
         });
-        add(emailtextfield);
-        emailtextfield.setBounds(459, 268, 152, 24);
+        add(emailTF);
+        emailTF.setBounds(459, 268, 152, 24);
 
-        combonetwork.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        combonetwork.addActionListener(new java.awt.event.ActionListener() {
+        networkCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        networkCB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                combonetworkActionPerformed(evt);
+                networkCBActionPerformed(evt);
             }
         });
-        add(combonetwork);
-        combonetwork.setBounds(162, 226, 151, 23);
+        add(networkCB);
+        networkCB.setBounds(162, 226, 151, 23);
 
-        comboenterprise.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        comboenterprise.addActionListener(new java.awt.event.ActionListener() {
+        enterpriseCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        enterpriseCB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                comboenterpriseActionPerformed(evt);
+                enterpriseCBActionPerformed(evt);
             }
         });
-        add(comboenterprise);
-        comboenterprise.setBounds(162, 267, 151, 23);
+        add(enterpriseCB);
+        enterpriseCB.setBounds(162, 267, 151, 23);
 
-        combo_organization.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        combo_organization.addActionListener(new java.awt.event.ActionListener() {
+        combo_organizationCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        combo_organizationCB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                combo_organizationActionPerformed(evt);
+                combo_organizationCBActionPerformed(evt);
             }
         });
-        add(combo_organization);
-        combo_organization.setBounds(162, 308, 151, 23);
+        add(combo_organizationCB);
+        combo_organizationCB.setBounds(162, 308, 151, 23);
 
         jLabel6.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
@@ -260,9 +260,9 @@ public class SignUpJPanel extends javax.swing.JPanel {
         add(jLabel6);
         jLabel6.setBounds(388, 309, 65, 18);
 
-        usernametxtfield.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        add(usernametxtfield);
-        usernametxtfield.setBounds(459, 306, 152, 24);
+        usernameTF.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        add(usernameTF);
+        usernameTF.setBounds(459, 306, 152, 24);
 
         jLabel7.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
@@ -270,9 +270,9 @@ public class SignUpJPanel extends javax.swing.JPanel {
         add(jLabel7);
         jLabel7.setBounds(396, 354, 57, 18);
 
-        passwordtxtfield.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        add(passwordtxtfield);
-        passwordtxtfield.setBounds(459, 348, 152, 24);
+        passwordTF.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        add(passwordTF);
+        passwordTF.setBounds(459, 348, 152, 24);
 
         jLabel8.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
@@ -280,9 +280,9 @@ public class SignUpJPanel extends javax.swing.JPanel {
         add(jLabel8);
         jLabel8.setBounds(416, 231, 37, 18);
 
-        emptxtfield.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        add(emptxtfield);
-        emptxtfield.setBounds(459, 228, 152, 24);
+        empNameTF.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        add(empNameTF);
+        empNameTF.setBounds(459, 228, 152, 24);
 
         jLabel9.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
@@ -290,33 +290,32 @@ public class SignUpJPanel extends javax.swing.JPanel {
         add(jLabel9);
         jLabel9.setBounds(89, 352, 28, 18);
 
-        comborole.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        add(comborole);
-        comborole.setBounds(162, 349, 151, 23);
+        roleCB.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        add(roleCB);
+        roleCB.setBounds(162, 349, 151, 23);
 
-        jLabel10.setIcon(new javax.swing.ImageIcon("/Users/srivaishnaviaekkati/Downloads/AED_Project_Fall_22 2/back.png")); // NOI18N
         jLabel10.setToolTipText("");
         add(jLabel10);
         jLabel10.setBounds(0, 0, 750, 600);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void combo_organizationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_organizationActionPerformed
+    private void combo_organizationCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combo_organizationCBActionPerformed
         // TODO add your handling code here:
-         Organization org = (Organization) combo_organization.getSelectedItem();
+         Organization org = (Organization) combo_organizationCB.getSelectedItem();
         if (org != null){
             PopRoleCombo(org);
          
         }
         
-    }//GEN-LAST:event_combo_organizationActionPerformed
+    }//GEN-LAST:event_combo_organizationCBActionPerformed
 
-    private void emailtextfieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailtextfieldActionPerformed
+    private void emailTFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailTFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_emailtextfieldActionPerformed
+    }//GEN-LAST:event_emailTFActionPerformed
 
-    private void combonetworkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_combonetworkActionPerformed
+    private void networkCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_networkCBActionPerformed
         // TODO add your handling code here:
-    Network network = (Network) combonetwork.getSelectedItem();
+    Network network = (Network) networkCB.getSelectedItem();
         if (network != null){
             PopEnterpriseCombo(network);
       
@@ -325,15 +324,15 @@ public class SignUpJPanel extends javax.swing.JPanel {
             
         
         
-    }//GEN-LAST:event_combonetworkActionPerformed
+    }//GEN-LAST:event_networkCBActionPerformed
 
-    private void signupbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupbtnActionPerformed
+    private void signupBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signupBTActionPerformed
         // TODO add your handling code here:
         
-        Network network = (Network) combonetwork.getSelectedItem();
-        Enterprise enterprise = (Enterprise) comboenterprise.getSelectedItem();
-        Organization organization = (Organization)combo_organization.getSelectedItem();
-        Role role = (Role) comborole.getSelectedItem();
+        Network network = (Network) networkCB.getSelectedItem();
+        Enterprise enterprise = (Enterprise) enterpriseCB.getSelectedItem();
+        Organization organization = (Organization)combo_organizationCB.getSelectedItem();
+        Role role = (Role) roleCB.getSelectedItem();
         
         for(Network net : sys.getNetworkList() )
         {
@@ -348,25 +347,25 @@ public class SignUpJPanel extends javax.swing.JPanel {
                                   
                              if(org.equals(organization))
                              { 
-                                 if(emptxtfield.getText()!=null)
+                                 if(empNameTF.getText()!=null)
                                  { Employee emp= new Employee();
-                                    emp.setName(emptxtfield.getText());
+                                    emp.setName(empNameTF.getText());
                                   
-                                 if(emailtextfield.getText()!=null)
+                                 if(emailTF.getText()!=null)
                                  {
-                                        if(Validate.validateEmail(emailtextfield.getText()))
+                                        if(Validate.validateEmail(emailTF.getText()))
                                         {
-                                             if(usernametxtfield.getText()!=null)
+                                             if(usernameTF.getText()!=null)
                                              {  
-                                                 if(!EcoSystem.checkIfUsernameIsUnique(usernametxtfield.getText(),net))
+                                                 if(!EcoSystem.checkIfUsernameIsUnique(usernameTF.getText(),net))
                                                  {
                                                      
-                                                     JOptionPane.showMessageDialog(null, usernametxtfield.getText() + " " + "is already taken please enter new username");
+                                                     JOptionPane.showMessageDialog(null, usernameTF.getText() + " " + "is already taken please enter new username");
                                                      return;
                                                  }
-                                                   if(passwordtxtfield.getText()!=null)
+                                                   if(passwordTF.getText()!=null)
                                                    {
-                                                       if (!Validate.validatePassword(passwordtxtfield.getText())) {
+                                                       if (!Validate.validatePassword(passwordTF.getText())) {
                                 JOptionPane.showMessageDialog(null, "Password should Contain \n"
                                         + "       - At least one digit\n"
                                         + "       - At least one lower case letter\n"
@@ -374,14 +373,14 @@ public class SignUpJPanel extends javax.swing.JPanel {
                                         + "       - At least one special character(!@#$%^&+=~|?)\n"
                                         + "       - no whitespace allowed in the entire string\n"
                                         + "       - at least eight characters");
-                                passwordtxtfield.setText("");
+                                passwordTF.setText("");
                                 return;
-                            }organization.getUserAccountDirectory().createUserAccount(usernametxtfield.getText(), passwordtxtfield.getText(),emailtextfield.getText() ,emp, role);
+                            }organization.getUserAccountDirectory().createUserAccount(usernameTF.getText(), passwordTF.getText(),emailTF.getText() ,emp, role);
                                                                    JOptionPane.showMessageDialog(null, "Account created succesfull");
-                                                                     usernametxtfield.setText("");
-                                                                        passwordtxtfield.setText("");
-                                                                        emailtextfield.setText("");
-                                                                        emptxtfield.setText("");
+                                                                     usernameTF.setText("");
+                                                                        passwordTF.setText("");
+                                                                        emailTF.setText("");
+                                                                        empNameTF.setText("");
                                                                         
                                                                         
                                                         
@@ -437,28 +436,26 @@ public class SignUpJPanel extends javax.swing.JPanel {
         
         
         
-    }//GEN-LAST:event_signupbtnActionPerformed
+    }//GEN-LAST:event_signupBTActionPerformed
 
-    private void comboenterpriseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboenterpriseActionPerformed
+    private void enterpriseCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterpriseCBActionPerformed
         // TODO add your handling code here:
-        Enterprise  ent = (Enterprise) comboenterprise.getSelectedItem();
+        Enterprise  ent = (Enterprise) enterpriseCB.getSelectedItem();
         if (ent != null){
             PopOrganizationCombo(ent);
             
         }
        
-    }//GEN-LAST:event_comboenterpriseActionPerformed
+    }//GEN-LAST:event_enterpriseCBActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox combo_organization;
-    private javax.swing.JComboBox comboenterprise;
-    private javax.swing.JComboBox combonetwork;
-    private javax.swing.JComboBox comborole;
-    private javax.swing.JTextField emailtextfield;
-    private javax.swing.JTextField emptxtfield;
+    private javax.swing.JComboBox combo_organizationCB;
+    private javax.swing.JTextField emailTF;
+    private javax.swing.JTextField empNameTF;
+    private javax.swing.JComboBox enterpriseCB;
     private javax.swing.JEditorPane jEditorPane1;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLSignUp;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -469,8 +466,10 @@ public class SignUpJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextField passwordtxtfield;
-    private javax.swing.JButton signupbtn;
-    private javax.swing.JTextField usernametxtfield;
+    private javax.swing.JComboBox networkCB;
+    private javax.swing.JTextField passwordTF;
+    private javax.swing.JComboBox roleCB;
+    private javax.swing.JButton signupBT;
+    private javax.swing.JTextField usernameTF;
     // End of variables declaration//GEN-END:variables
 }
