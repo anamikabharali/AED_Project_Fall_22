@@ -67,8 +67,8 @@ public class ResidentialHallManageEmployeeJPanel extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         organizationJT = new javax.swing.JTable();
-        addJButton = new javax.swing.JButton();
-        backJButton = new javax.swing.JButton();
+        addJBtn = new javax.swing.JButton();
+        backJBtn = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         nameJTF = new javax.swing.JTextField();
         organizationEmpJCB = new javax.swing.JComboBox();
@@ -115,27 +115,27 @@ public class ResidentialHallManageEmployeeJPanel extends javax.swing.JPanel {
         add(jScrollPane1);
         jScrollPane1.setBounds(50, 110, 640, 160);
 
-        addJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        addJButton.setText("Create Employee");
-        addJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        addJButton.addActionListener(new java.awt.event.ActionListener() {
+        addJBtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        addJBtn.setText("Create Employee");
+        addJBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        addJBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addJButtonActionPerformed(evt);
+                addJBtnActionPerformed(evt);
             }
         });
-        add(addJButton);
-        addJButton.setBounds(490, 500, 107, 22);
+        add(addJBtn);
+        addJBtn.setBounds(490, 500, 107, 22);
 
-        backJButton.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
-        backJButton.setText("<< Back");
-        backJButton.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        backJButton.addActionListener(new java.awt.event.ActionListener() {
+        backJBtn.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
+        backJBtn.setText("<< Back");
+        backJBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        backJBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                backJButtonActionPerformed(evt);
+                backJBtnActionPerformed(evt);
             }
         });
-        add(backJButton);
-        backJButton.setBounds(180, 500, 54, 22);
+        add(backJBtn);
+        backJBtn.setBounds(180, 500, 54, 22);
 
         jLabel2.setFont(new java.awt.Font("Optima", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -175,7 +175,7 @@ public class ResidentialHallManageEmployeeJPanel extends javax.swing.JPanel {
         jLResHallEnterPanel.setBounds(180, 60, 360, 30);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void addJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJButtonActionPerformed
+    private void addJBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addJBtnActionPerformed
         
         Organization organization = (Organization) organizationEmpJCB.getSelectedItem();
     //    String name = nameJTextField.getText();
@@ -195,14 +195,14 @@ public class ResidentialHallManageEmployeeJPanel extends javax.swing.JPanel {
             nameJTF.setText("");
             JOptionPane.showMessageDialog(null,"Employee Created");
         }
-    }//GEN-LAST:event_addJButtonActionPerformed
+    }//GEN-LAST:event_addJBtnActionPerformed
 
-    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+    private void backJBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJBtnActionPerformed
 
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-    }//GEN-LAST:event_backJButtonActionPerformed
+    }//GEN-LAST:event_backJBtnActionPerformed
 
     private void organizationEmpJCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_organizationEmpJCBActionPerformed
         // TODO add your handling code here:
@@ -222,8 +222,8 @@ public class ResidentialHallManageEmployeeJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_nameJTFActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton addJButton;
-    private javax.swing.JButton backJButton;
+    private javax.swing.JButton addJBtn;
+    private javax.swing.JButton backJBtn;
     private javax.swing.JLabel jLResHallEnterPanel;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
